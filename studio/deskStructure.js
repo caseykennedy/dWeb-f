@@ -14,7 +14,7 @@ const hiddenTypes = [
 
 export default () =>
   S.list()
-    .title("BC Leaks Content")
+    .title("HNSF Content")
     .items([
       // Settings
       // _________________________________________________________________

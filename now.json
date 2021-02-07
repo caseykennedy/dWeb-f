@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "bc-leaks",
+  "name": "handshake-foundation",
   "builds": [
     {
       "src": "web/package.json",
@@ -20,5 +20,5 @@
       "src": "/(.*)", "dest": "/web/$1"
     }
   ],
-  "alias": ["bc-leaks.now.sh"]
+  "alias": ["hnsf.now.sh"]
 }

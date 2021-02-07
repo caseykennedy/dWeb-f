@@ -175,15 +175,14 @@ const Typography = css`
 
   h1,
   .text--xxl {
-    font-size: calc(${theme.fontSizes[4]});
+    font-size: calc(${theme.fontSizes[5]});
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[6]} / 1.25);
-      line-height: calc(${theme.root.font.headingLineHeight} / 1.15);
+      font-size: ${theme.fontSizes[6]};
     }
 
     @media ${theme.mq.desktop} {
-      font-size: ${theme.fontSizes[6]};
+      font-size: ${theme.fontSizes[7]};
     }
   }
 
@@ -235,13 +234,11 @@ const Typography = css`
 
   p,
   .text--base {
-    color: ${theme.colors.lightgray};
     font-size: ${theme.fontSizes[2]};
     line-height: ${theme.root.font.bodyLineHeight};
     margin: 0 0 ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[2]} * 1.25);
     }
 
     &:last-child {
@@ -298,17 +295,14 @@ const Typography = css`
   }
 
   a {
-    text-decoration: none;
+    color: ${theme.colors.primary};
+    text-decoration: underline;
     position: relative;
-
     transition: ${theme.transition.all};
-
-    color: ${theme.colors.text};
 
     &:hover,
     &:focus {
       text-decoration: none;
-      color: ${darken(0.15, theme.colors.white)};
     }
   }
 

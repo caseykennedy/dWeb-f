@@ -24,12 +24,6 @@ import GetDate from '../GetDate'
 
 import Typist from 'react-typist'
 
-import {
-  IdentityModal,
-  useIdentityContext
-} from 'react-netlify-identity-widget'
-import 'react-netlify-identity-widget/styles.css' // delete if you want to bring your own CSS
-
 // ___________________________________________________________________
 
 type HeaderShape = { mainRef: React.RefObject<HTMLDivElement> }
@@ -39,43 +33,22 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleMenu = () => {
     setNavOpen(!isNavOpen)
-    // gtag.event({
-    //   category: 'Header utilities',
-    //   action: 'Click',
-    //   label: 'Header hamburger toggle'
-    // })
   }
-
-  const identity = useIdentityContext()
-  const [dialog, setDialog] = React.useState(false)
 
   return (
     <>
-      <IdentityModal
-        showDialog={dialog}
-        onCloseDialog={() => setDialog(false)}
-        onLogin={() => navigate('/app/profile')}
-        onSignup={() => navigate('/app/profile')}
-        aria-label="Log in"
-      />
-
       <Modal open={isNavOpen} close={toggleMenu}>
         <MobileNav open={isNavOpen} handleExitOnClick={toggleMenu} />
       </Modal>
 
-      <S.Utilities px={theme.gutter.axis} py={2}>
+      {/* <S.Utilities px={theme.gutter.axis} py={2}>
         <Flex className="date">
           <GetDate />
         </Flex>
+      </S.Utilities> */}
 
-        <Flex className="account">
-          <button onClick={() => setDialog(true)}>log in</button>
-          <button onClick={() => setDialog(true)}>sign up</button>
-        </Flex>
-      </S.Utilities>
-
-      <S.Header as="header">
-        <Flex className="inner">
+      <S.Header as="header" p={theme.gutter.axis}>
+        <Flex className="header-inner">
           <S.Toggle onClick={toggleMenu} aria-label="toggle menu">
             <HamburgerMenu
               isOpen={!isNavOpen ? false : true}
@@ -84,25 +57,14 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
               height={12}
               strokeWidth={1.5}
               rotate={0}
-              color="white"
+              color="black"
               borderRadius={0}
               animationDuration={0.333}
             />
           </S.Toggle>
 
-          <Link
-            to="/"
-            className="logo-symbol"
-            aria-label="BC Leaks, back to home"
-          >
-            <S.Logo>
-              <Box className="logo-symbol">
-                <Symbol />
-              </Box>
-              <Flex className="logo-lettermark">
-                <Lettermark />
-              </Flex>
-            </S.Logo>
+          <Link to="/" className="logo-symbol" aria-label="HNSF, back to home">
+            <S.Logo>HNSF</S.Logo>
           </Link>
 
           <S.Menu>
@@ -115,11 +77,3 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 }
 
 export default Header
-
-const cursorProps = {
-  show: false,
-  blink: true,
-  element: '|',
-  hideWhenDone: false,
-  hideWhenDoneDelay: 1000
-}

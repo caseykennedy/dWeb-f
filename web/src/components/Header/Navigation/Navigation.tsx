@@ -36,15 +36,15 @@ export default Navigation
 
 const data = [
   {
-    name: 'videos',
-    link: '/videos'
+    name: 'donate',
+    link: '/donate'
   },
   {
-    name: 'articles',
-    link: '/articles'
+    name: 'blog',
+    link: '/blog'
   },
   {
-    name: 'community',
-    link: '/community'
+    name: 'contact',
+    link: '/contact'
   }
 ]

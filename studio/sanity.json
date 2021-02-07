@@ -1,12 +1,12 @@
 {
   "root": true,
-  "api": {
-    "projectId": "kz04ueht",
-    "dataset": "production"
-  },
   "project": {
-    "name": "BC Leaks Sanity",
+    "name": "handshake-foundation",
     "basePath": "/studio"
+  },
+  "api": {
+    "projectId": "w5oqszet",
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",

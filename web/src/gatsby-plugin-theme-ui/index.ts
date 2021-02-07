@@ -82,29 +82,20 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   colors: {
-    text: '#f5f5f5',
-    background: '#121212',
+    text: '#000000',
+    background: '#f9f9fa',
 
-    primary: '#00ff9b',
-    secondary: '#0d0d0d',
+    primary: 'blue',
+    secondary: '#d3d3d4',
     tertiary: '#808080',
-    quaternary: '#545454',
-    quinary: '#101010',
 
     black: '#000000',
-    white: '#ffffff',
+    white: '#FFFFFF',
     red: '#FF0000',
 
-    lightgray: '#e1e1e1',
+    lightgray: '#d3d3d4',
     gray: '#C4C4c4',
     darkgray: '#545454',
-    
-    moss: '#a8ffdc',
-    blue: '#1be8ff',
-    pink: '#f700de',
-    purple: '#bc58ff',
-    orange: '#ff9900',
-    yellow: '#e2fb00'
   },
 
   // Space
@@ -132,8 +123,8 @@ const theme: ThemeShape = {
     mobile: 4,
     tablet: 5,
     desktop: 5,
-    vertical: [4, 5, 5],
-    axis: [4, 5, 5]
+    vertical: [4, 5, 6],
+    axis: [4, 5, 6]
   },
 
 
@@ -196,7 +187,7 @@ const theme: ThemeShape = {
     }
   },
 
-  border: '1px solid #303030',
+  border: '1px solid #d3d3d4',
   borderRadius: '4px',
   shadow: '2rem 1.5rem 1rem #9D9FA2',
 
