@@ -49,6 +49,19 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 
       <S.Header as="header" py={4} px={theme.gutter.axis}>
         <Flex className="header-inner">
+          <Link to="/" className="logo" aria-label="HNSF, back to home">
+            <S.Logo>
+              <Box className="symbol">
+                <Symbol bg={theme.colors.primary} color={theme.colors.white} />
+              </Box>
+              <Box className="wordmark" aria-label="The Handshake Foundation" />
+            </S.Logo>
+          </Link>
+
+          <S.Menu>
+            <Navigation />
+          </S.Menu>
+
           <S.Toggle onClick={toggleMenu} aria-label="toggle menu">
             <HamburgerMenu
               isOpen={!isNavOpen ? false : true}
@@ -62,21 +75,6 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
               animationDuration={0.333}
             />
           </S.Toggle>
-
-          <Link to="/" className="logo" aria-label="HNSF, back to home">
-            <S.Logo>
-              <Box className="symbol">
-                <Symbol bg={theme.colors.primary} color={theme.colors.white} />
-              </Box>
-              <Box className="wordmark">
-                handshake foundation
-              </Box>
-            </S.Logo>
-          </Link>
-
-          <S.Menu>
-            <Navigation />
-          </S.Menu>
         </Flex>
       </S.Header>
     </>

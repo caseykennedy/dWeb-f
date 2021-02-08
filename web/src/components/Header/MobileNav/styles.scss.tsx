@@ -24,14 +24,13 @@ export const NavLink = styled(Flex)`
 
   .nav-mobile {
     &__link {
-      font-size: ${theme.fontSizes[2]};
-      text-transform: uppercase;
+      font-size: ${theme.fontSizes[4]};
+      font-weight: 600;
       padding: ${theme.space[4]};
     }
 
     &-sub {
       padding: ${theme.fontSizes[1]} 0 ${theme.fontSizes[1]} 0;
-      border-bottom: ${theme.border};
 
       &__link {
         display: block;

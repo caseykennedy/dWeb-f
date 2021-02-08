@@ -31,8 +31,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   // eslint-disable-next-line no-console
   console.log(
-    `%c BC Leaks — crafted with care. [ caseykennedy.hns.to ] `,
-    `background: #2cc48a; color: #000000`
+    `%c HNSF | crafted with care | caseykennedy.hns.to `,
+    `background: #5700ff; color: #ffffff`
   )
   return (
     <S.Wrapper>

@@ -21,7 +21,7 @@ export const Header = styled(Box)`
     justify-content: space-between;
 
     margin: 0 auto;
-    max-width: ${theme.maxWidth};
+    /* max-width: ${theme.maxWidth}; */
     width: 100%;
   }
 
@@ -45,7 +45,11 @@ export const Logo = styled(Flex)`
   align-items: center;
 
   .symbol {
-    max-height: calc(${theme.space[5]} * 1.25);
+    max-height: ${theme.space[5]};
+
+    @media ${theme.mq.tablet} {
+      max-height: calc(${theme.space[5]} * 1.25);
+    }
 
     svg {
       width: ${theme.space[5]};
@@ -61,6 +65,14 @@ export const Logo = styled(Flex)`
     margin-left: ${theme.space[2]};
     font-weight: 600;
     text-decoration: none;
+
+    &:before {
+      content: 'HNSFoundation';
+
+      @media ${theme.mq.tablet} {
+        content: 'handshake foundation';
+      }
+    }
   }
 `
 
