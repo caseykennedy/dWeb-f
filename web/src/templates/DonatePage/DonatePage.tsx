@@ -21,7 +21,17 @@ const DonatePage: React.FC = () => {
   return (
     <S.DonatePage>
       <Section>
-        <Heading as="h1">Donate</Heading>
+        <Heading as="h2">Donate</Heading>
+
+        <Box width={[1, 1 / 2]} mt={7}>
+          <Heading as="h3">Handshake</Heading>
+          <Text as="p">
+            Handshake is a decentralized, permissionless naming protocol where
+            every peer is validating and in charge of managing the root DNS
+            naming zone with the goal of creating an alternative to existing
+            Certificate Authorities and naming systems.
+          </Text>
+        </Box>
       </Section>
     </S.DonatePage>
   )

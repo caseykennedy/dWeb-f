@@ -24,7 +24,7 @@ export const Footer = styled(Flex)`
     justify-content: space-between;
 
     margin: 0 auto;
-    /* max-width: ${theme.maxWidth}; */
+    max-width: ${theme.maxWidth};
     width: 100%;
   }
 `
