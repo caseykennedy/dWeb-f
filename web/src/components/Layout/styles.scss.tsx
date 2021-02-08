@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { animated } from 'react-spring'
 
 import { Box, Flex } from '../ui'
 import theme from '../../gatsby-plugin-theme-ui'
@@ -17,7 +16,7 @@ export const Wrapper = styled(Flex)`
   background: ${theme.colors.background};
 `
 
-export const Main = styled(animated.main)`
+export const Main = styled.main`
   max-height: 100%;
   position: relative;
   width: ${theme.siteWidth};

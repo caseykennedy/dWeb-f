@@ -132,8 +132,8 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   fonts: {
-    body: `"SuisseMono", Consolas, Liberation Mono, Menlo, Courier, monospace`,
-    heading: `"SuisseMono", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    body: `"Suisse", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    heading: `"Suisse", Consolas, Liberation Mono, Menlo, Courier, monospace`,
     sans: `"Suisse", Consolas, Liberation Mono, Menlo, Courier, monospace`,
     display: `"Rubik", Arial`
   },

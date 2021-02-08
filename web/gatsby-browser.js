@@ -10,7 +10,6 @@ import GlobalStyles from './src/styles/global'
 // Providers
 import ContextProvider from './src/provider/ContextProvider'
 import { ThemeProvider } from 'styled-components'
-import { ParallaxProvider } from 'react-scroll-parallax'
 
 // ___________________________________________________________________
 
@@ -25,7 +24,7 @@ export const wrapRootElement = ({ element }) => {
     <ContextProvider>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <ParallaxProvider>{element}</ParallaxProvider>
+        {element}
       </ThemeProvider>
     </ContextProvider>
   )
