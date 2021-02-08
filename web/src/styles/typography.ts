@@ -18,6 +18,12 @@ import AeonikLightWoff2 from './fonts/AeonikLight.woff2'
 import AeonikLightWoff from './fonts/AeonikLight.woff'
 import AeonikLightOtf from './fonts/AeonikLight.otf'
 
+// Aeonik Medium
+import AeonikMediumEot from './fonts/Aeonik-Medium.eot'
+import AeonikMediumWoff2 from './fonts/Aeonik-Medium.woff2'
+import AeonikMediumWoff from './fonts/Aeonik-Medium.woff'
+import AeonikMediumTtf from './fonts/Aeonik-Medium.ttf'
+
 // Aeonik Bold
 import AeonikBoldEot from './fonts/AeonikBold.eot'
 import AeonikBoldWoff2 from './fonts/AeonikBold.woff2'
@@ -29,6 +35,18 @@ import AeonikBlackEot from './fonts/AeonikBlack.eot'
 import AeonikBlackWoff2 from './fonts/AeonikBlack.woff2'
 import AeonikBlackWoff from './fonts/AeonikBlack.woff'
 import AeonikBlackOtf from './fonts/AeonikBlack.otf'
+
+// Suisse Works Book
+import SuisseWorksBookEot from './fonts/SuisseWorks-Book.eot'
+import SuisseWorksBookWoff2 from './fonts/SuisseWorks-Book.woff2'
+import SuisseWorksBookWoff from './fonts/SuisseWorks-Book.woff'
+import SuisseWorksBookTtf from './fonts/SuisseWorks-Book.ttf'
+
+// Suisse Works Bold
+import SuisseWorksBoldEot from './fonts/SuisseWorks-Bold.eot'
+import SuisseWorksBoldWoff2 from './fonts/SuisseWorks-Bold.woff2'
+import SuisseWorksBoldWoff from './fonts/SuisseWorks-Bold.woff'
+import SuisseWorksBoldTtf from './fonts/SuisseWorks-Bold.ttf'
 
 // Suisse Mono Regular
 import SuisseIntlMonoRegularEot from './fonts/SuisseIntlMono-Regular.eot'
@@ -77,6 +95,19 @@ const Typography = css`
     font-display: swap;
   }
 
+  /* Aeonik Medium */
+  @font-face {
+    font-family: 'Aeonik';
+    src: url(${AeonikMediumEot});
+    src: url(${AeonikMediumWoff2}) format('woff2'),
+      url(${AeonikMediumWoff}) format('woff'),
+      url(${AeonikMediumTtf}) format('truetype'),
+      url(${AeonikMediumEot}?#iefix) format('embedded-opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
   /* Aeonik Bold */
   @font-face {
     font-family: 'Aeonik';
@@ -99,6 +130,32 @@ const Typography = css`
       url(${AeonikBlackOtf}) format('opentype'),
       url(${AeonikBlackEot}?#iefix) format('embedded-opentype');
     font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Suisse Works Book */
+  @font-face {
+    font-family: 'SuisseWorks';
+    src: url(${SuisseWorksBookEot});
+    src: url(${SuisseWorksBookWoff2}) format('woff2'),
+      url(${SuisseWorksBookWoff}) format('woff'),
+      url(${SuisseWorksBookTtf}) format('truetype'),
+      url(${SuisseWorksBookEot}?#iefix) format('embedded-opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Suisse Works Bold */
+  @font-face {
+    font-family: 'SuisseWorks';
+    src: url(${SuisseWorksBoldEot});
+    src: url(${SuisseWorksBoldWoff2}) format('woff2'),
+      url(${SuisseWorksBoldWoff}) format('woff'),
+      url(${SuisseWorksBoldTtf}) format('truetype'),
+      url(${SuisseWorksBoldEot}?#iefix) format('embedded-opentype');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
   }
@@ -213,6 +270,8 @@ const Typography = css`
 
   h1,
   .text--xxl {
+    font-family: ${theme.fonts.display};
+    font-weight: 600;
     font-size: calc(${theme.fontSizes[5]});
 
     @media ${theme.mq.tablet} {
@@ -226,15 +285,14 @@ const Typography = css`
 
   h2,
   .text--xl {
-    font-size: calc(${theme.fontSizes[4]} / 1.15);
+    font-size: ${theme.fontSizes[4]};
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[5]} / 1.25);
-      line-height: calc(${theme.root.font.headingLineHeight} / 1.15);
+      font-size: ${theme.fontSizes[5]};
     }
 
     @media ${theme.mq.desktop} {
-      font-size: ${theme.fontSizes[5]};
+      font-size: ${theme.fontSizes[6]};
     }
   }
 

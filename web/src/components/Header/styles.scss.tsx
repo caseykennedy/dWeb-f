@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { lighten } from 'polished'
 
 // Theme
 import theme from '../../gatsby-plugin-theme-ui'
@@ -25,6 +24,10 @@ export const Header = styled(Box)`
     max-width: ${theme.maxWidth};
     width: 100%;
   }
+
+  .logo {
+    text-decoration: none;
+  }
 `
 
 export const Menu = styled(Flex)`
@@ -38,8 +41,26 @@ export const Menu = styled(Flex)`
 `
 
 export const Logo = styled(Flex)`
-  svg {
-    width: 275px;
+  display: flex;
+  align-items: center;
+
+  .symbol {
+    max-height: calc(${theme.space[5]} * 1.25);
+
+    svg {
+      width: ${theme.space[5]};
+
+      @media ${theme.mq.tablet} {
+        max-height: calc(${theme.space[5]} * 1.25);
+        width: calc(${theme.space[5]} * 1.25);
+      }
+    }
+  }
+
+  .wordmark {
+    margin-left: ${theme.space[2]};
+    font-weight: 600;
+    text-decoration: none;
   }
 `
 

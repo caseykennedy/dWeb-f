@@ -83,17 +83,19 @@ const theme: ThemeShape = {
 
   colors: {
     text: '#1d1c1a',
-    background: '#faf9f9',
+    background: '#f9f9f8',
 
-    primary: '#4d37d1',
+    primary: '#5700ff',
     secondary: '#d3d3d4',
     tertiary: '#f5eddb',
 
     black: '#1d1c1a',
     white: '#FFFFFF',
     red: '#FF0000',
-    indigo: '#4d37d1',
-    yellow: '#ffffa1',
+    indigo: '#3100ff',
+    yellow: '#fcffb8',
+    goldenrod: '#DAA520',
+    darkgoldenrod: '#b8860b',
 
     lightgray: '#d3d3d4',
     gray: '#C4C4c4',
@@ -137,7 +139,7 @@ const theme: ThemeShape = {
     body: `"Aeonik", Consolas, Liberation Mono, Menlo, Courier, monospace`,
     heading: `"Aeonik", Consolas, Liberation Mono, Menlo, Courier, monospace`,
     sans: `"Aeonik", Consolas, Liberation Mono, Menlo, Courier, monospace`,
-    display: `"SuisseWorks", Arial`,
+    display: `"SuisseWorks", Georgia, Times`,
     mono: `"SuisseMono", Consolas, Liberation Mono, Menlo, Courier, monospace`,
   },
 

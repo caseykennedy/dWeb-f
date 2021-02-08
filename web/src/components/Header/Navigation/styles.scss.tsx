@@ -19,7 +19,7 @@ export const Nav = styled.nav`
   width: 100%;
 
   a {
-    font-weight: 400;
+    font-weight: 500;
     text-decoration: none;
     margin-left: ${theme.space[5]};
 

@@ -4,7 +4,7 @@
 // ___________________________________________________________________
 
 import React, { useState } from 'react'
-import { Link, navigate } from 'gatsby'
+import { Link } from 'gatsby'
 
 import Headroom from 'react-headroom'
 import HamburgerMenu from 'react-hamburger-menu'
@@ -16,7 +16,6 @@ import { Box, Flex, Text } from '../ui'
 
 // Components
 import Symbol from '../Symbol'
-import SymbolInline from '../SymbolInline'
 import Lettermark from '../Lettermark'
 import Navigation from './Navigation'
 import MobileNav from './MobileNav'
@@ -64,9 +63,14 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
             />
           </S.Toggle>
 
-          <Link to="/" className="logo-symbol" aria-label="HNSF, back to home">
+          <Link to="/" className="logo" aria-label="HNSF, back to home">
             <S.Logo>
-              <SymbolInline />
+              <Box className="symbol">
+                <Symbol bg={theme.colors.primary} color={theme.colors.white} />
+              </Box>
+              <Box className="wordmark">
+                handshake foundation
+              </Box>
             </S.Logo>
           </Link>
 
