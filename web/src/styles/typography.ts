@@ -295,13 +295,16 @@ const Typography = css`
   }
 
   a {
-    color: ${theme.colors.primary};
+    color: ${theme.colors.black};
     text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    
     position: relative;
     transition: ${theme.transition.all};
 
     &:hover,
     &:focus {
+      color: ${theme.colors.primary};
       text-decoration: none;
     }
   }

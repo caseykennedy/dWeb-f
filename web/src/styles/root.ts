@@ -37,20 +37,14 @@ const RootVariables = css`
     --body-line-height: 1.65;
 
     /* letter-spacing */
-    --heading-letter-spacing: -1px;
-    --body-letter-spacing: 0.5px;
+    --heading-letter-spacing: 0px;
+    --body-letter-spacing: 0px;
 
     @media ${theme.mq.tablet} {
       :root {
-        --text-base-size: 0.95em;
+        --text-base-size: 1.15em;
         --body-line-height: 1.75;
         --heading-line-height: 1.25;
-      }
-    }
-
-    @media ${theme.mq.desktop} {
-      :root {
-        --text-base-size: 0.95em;
       }
     }
 

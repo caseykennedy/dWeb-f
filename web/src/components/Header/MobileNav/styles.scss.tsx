@@ -6,9 +6,7 @@ import styled from 'styled-components'
 
 // Theme
 import theme from '../../../gatsby-plugin-theme-ui'
-
-// Elements
-import { Flex, AnimatedFlex } from '../../ui'
+import { Flex } from '../../ui'
 
 // Begin Styles
 // ___________________________________________________________________
@@ -19,7 +17,7 @@ export const MobileNav = styled(Flex)`
   width: 100%;
 `
 
-export const NavLink = styled(AnimatedFlex)`
+export const NavLink = styled(Flex)`
   flex-direction: column;
   width: 100%;
   /* padding: ${theme.space[2]} 0; */

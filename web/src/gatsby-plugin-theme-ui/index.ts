@@ -85,7 +85,7 @@ const theme: ThemeShape = {
     text: '#000000',
     background: '#f9f9fa',
 
-    primary: 'blue',
+    primary: 'darkgoldenrod',
     secondary: '#d3d3d4',
     tertiary: '#808080',
 
@@ -123,8 +123,8 @@ const theme: ThemeShape = {
     mobile: 4,
     tablet: 5,
     desktop: 5,
-    vertical: [4, 5, 6],
-    axis: [4, 5, 6]
+    vertical: [4, 5, 7],
+    axis: [4, 5, 5]
   },
 
 
@@ -187,7 +187,7 @@ const theme: ThemeShape = {
     }
   },
 
-  border: '1px solid #d3d3d4',
+  border: '1px solid #e1e1e1',
   borderRadius: '4px',
   shadow: '2rem 1.5rem 1rem #9D9FA2',
 
