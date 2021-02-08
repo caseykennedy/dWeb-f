@@ -6,17 +6,29 @@ import { css } from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui'
 import { darken, lighten } from 'polished'
 
-// Rubik Bold
-import RubikBoldEot from './fonts/Rubik-Bold.eot'
-import RubikBoldWoff2 from './fonts/Rubik-Bold.woff2'
-import RubikBoldWoff from './fonts/Rubik-Bold.woff'
-import RubikBoldOtf from './fonts/Rubik-Bold.otf'
+// Aeonik Regular
+import AeonikRegularEot from './fonts/AeonikRegular.eot'
+import AeonikRegularWoff2 from './fonts/AeonikRegular.woff2'
+import AeonikRegularWoff from './fonts/AeonikRegular.woff'
+import AeonikRegularOtf from './fonts/AeonikRegular.otf'
 
-// Suisse Regular
-import SuisseIntlRegularEot from './fonts/SuisseIntl-Regular.eot'
-import SuisseIntlRegularWoff2 from './fonts/SuisseIntl-Regular.woff2'
-import SuisseIntlRegularWoff from './fonts/SuisseIntl-Regular.woff'
-import SuisseIntlRegularOtf from './fonts/SuisseIntl-Regular.otf'
+// Aeonik Light
+import AeonikLightEot from './fonts/AeonikLight.eot'
+import AeonikLightWoff2 from './fonts/AeonikLight.woff2'
+import AeonikLightWoff from './fonts/AeonikLight.woff'
+import AeonikLightOtf from './fonts/AeonikLight.otf'
+
+// Aeonik Bold
+import AeonikBoldEot from './fonts/AeonikBold.eot'
+import AeonikBoldWoff2 from './fonts/AeonikBold.woff2'
+import AeonikBoldWoff from './fonts/AeonikBold.woff'
+import AeonikBoldOtf from './fonts/AeonikBold.otf'
+
+// Aeonik Black
+import AeonikBlackEot from './fonts/AeonikBlack.eot'
+import AeonikBlackWoff2 from './fonts/AeonikBlack.woff2'
+import AeonikBlackWoff from './fonts/AeonikBlack.woff'
+import AeonikBlackOtf from './fonts/AeonikBlack.otf'
 
 // Suisse Mono Regular
 import SuisseIntlMonoRegularEot from './fonts/SuisseIntlMono-Regular.eot'
@@ -39,28 +51,54 @@ import SuisseIntlMonoBoldOtf from './fonts/SuisseIntlMono-Bold.otf'
 // ___________________________________________________________________
 
 const Typography = css`
-  /* Rubik Bold */
+  /* Aeonik Regular */
   @font-face {
-    font-family: 'Rubik';
-    src: url(${RubikBoldEot});
-    src: url(${RubikBoldWoff2}) format('woff2'),
-      url(${RubikBoldWoff}) format('woff'),
-      url(${RubikBoldOtf}) format('opentype'),
-      url(${RubikBoldEot}?#iefix) format('embedded-opentype');
+    font-family: 'Aeonik';
+    src: url(${AeonikRegularEot});
+    src: url(${AeonikRegularWoff2}) format('woff2'),
+      url(${AeonikRegularWoff}) format('woff'),
+      url(${AeonikRegularOtf}) format('opentype'),
+      url(${AeonikRegularEot}?#iefix) format('embedded-opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Aeonik Light */
+  @font-face {
+    font-family: 'Aeonik';
+    src: url(${AeonikLightEot});
+    src: url(${AeonikLightWoff2}) format('woff2'),
+      url(${AeonikLightWoff}) format('woff'),
+      url(${AeonikLightOtf}) format('opentype'),
+      url(${AeonikLightEot}?#iefix) format('embedded-opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Aeonik Bold */
+  @font-face {
+    font-family: 'Aeonik';
+    src: url(${AeonikBoldEot});
+    src: url(${AeonikBoldWoff2}) format('woff2'),
+      url(${AeonikBoldWoff}) format('woff'),
+      url(${AeonikBoldOtf}) format('opentype'),
+      url(${AeonikBoldEot}?#iefix) format('embedded-opentype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Suisse Regular */
+  /* Aeonik Black */
   @font-face {
-    font-family: 'Suisse';
-    src: url(${SuisseIntlRegularEot});
-    src: url(${SuisseIntlRegularWoff2}) format('woff2'),
-      url(${SuisseIntlRegularWoff}) format('woff'),
-      url(${SuisseIntlRegularOtf}) format('opentype'),
-      url(${SuisseIntlRegularEot}?#iefix) format('embedded-opentype');
-    font-weight: 400;
+    font-family: 'Aeonik';
+    src: url(${AeonikBlackEot});
+    src: url(${AeonikBlackWoff2}) format('woff2'),
+      url(${AeonikBlackWoff}) format('woff'),
+      url(${AeonikBlackOtf}) format('opentype'),
+      url(${AeonikBlackEot}?#iefix) format('embedded-opentype');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
   }
@@ -152,7 +190,7 @@ const Typography = css`
   h5,
   h6 {
     font-family: ${theme.fonts.heading};
-    font-weight: ${theme.fontWeights.regular};
+    font-weight: 600;
     line-height: ${theme.root.font.headingLineHeight};
     letter-spacing: ${theme.root.font.headingLetterSpacing};
     margin: 0 0 ${theme.space[3]};
@@ -298,7 +336,7 @@ const Typography = css`
     color: ${theme.colors.black};
     text-decoration: underline;
     text-decoration-thickness: 1.5px;
-    
+
     position: relative;
     transition: ${theme.transition.all};
 

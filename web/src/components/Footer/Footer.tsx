@@ -24,16 +24,16 @@ const Footer: React.FC = () => {
   return (
     <S.Footer as="footer" p={theme.gutter.axis}>
       <Box className="footer-inner">
-        <Box as="nav">
-          <a href="">Legal</a>
-        </Box>
-
         <Flex>
           <Box mr={4}>&copy; {getYear()}</Box>
           <Link to="/" className="logo-symbol" aria-label="HNSF, back to home">
             HNSF
           </Link>
         </Flex>
+
+        <Box as="nav">
+          <a href="">Legal</a>
+        </Box>
       </Box>
     </S.Footer>
   )

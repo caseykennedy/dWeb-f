@@ -24,7 +24,6 @@ export const NavLink = styled(Flex)`
 
   .nav-mobile {
     &__link {
-      color: ${theme.colors.white};
       font-size: ${theme.fontSizes[2]};
       text-transform: uppercase;
       padding: ${theme.space[4]};

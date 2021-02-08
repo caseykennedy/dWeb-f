@@ -82,16 +82,18 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   colors: {
-    text: '#000000',
-    background: '#f9f9fa',
+    text: '#1d1c1a',
+    background: '#faf9f9',
 
-    primary: 'darkgoldenrod',
+    primary: '#4d37d1',
     secondary: '#d3d3d4',
-    tertiary: '#808080',
+    tertiary: '#f5eddb',
 
-    black: '#000000',
+    black: '#1d1c1a',
     white: '#FFFFFF',
     red: '#FF0000',
+    indigo: '#4d37d1',
+    yellow: '#ffffa1',
 
     lightgray: '#d3d3d4',
     gray: '#C4C4c4',
@@ -132,10 +134,11 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   fonts: {
-    body: `"Suisse", Consolas, Liberation Mono, Menlo, Courier, monospace`,
-    heading: `"Suisse", Consolas, Liberation Mono, Menlo, Courier, monospace`,
-    sans: `"Suisse", Consolas, Liberation Mono, Menlo, Courier, monospace`,
-    display: `"Rubik", Arial`
+    body: `"Aeonik", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    heading: `"Aeonik", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    sans: `"Aeonik", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    display: `"SuisseWorks", Arial`,
+    mono: `"SuisseMono", Consolas, Liberation Mono, Menlo, Courier, monospace`,
   },
 
   fontSizes: [

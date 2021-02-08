@@ -19,7 +19,10 @@ export const Nav = styled.nav`
   width: 100%;
 
   a {
-    margin-left: ${theme.space[4]};
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: ${theme.space[5]};
+
     &.active,
     &:hover {
       color: ${theme.colors.primary};;

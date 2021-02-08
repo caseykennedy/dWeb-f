@@ -37,7 +37,11 @@ export const Menu = styled(Flex)`
   }
 `
 
-export const Logo = styled(Flex)``
+export const Logo = styled(Flex)`
+  svg {
+    width: 275px;
+  }
+`
 
 export const Utilities = styled(Flex)``
 

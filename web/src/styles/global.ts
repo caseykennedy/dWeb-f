@@ -17,28 +17,11 @@ const GlobalStyles = createGlobalStyle`
   ${RootVars}
   ${Reset}
   ${Typography}
-
-  ::-webkit-scrollbar {
-    width: ${theme.space[3]};
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: ${theme.colors.black};
-    border-left: ${theme.border};
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: ${theme.colors.black};
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: ${theme.colors.primary};
-  }
   
-  body {    
+  html,
+  body {  
+    background: ${theme.colors.yellow};  
+    
     border: 0;
     margin: 0;
     padding: 0;

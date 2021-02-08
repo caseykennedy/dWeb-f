@@ -16,6 +16,7 @@ import { Box, Flex, Text } from '../ui'
 
 // Components
 import Symbol from '../Symbol'
+import SymbolInline from '../SymbolInline'
 import Lettermark from '../Lettermark'
 import Navigation from './Navigation'
 import MobileNav from './MobileNav'
@@ -47,7 +48,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         </Flex>
       </S.Utilities> */}
 
-      <S.Header as="header" p={theme.gutter.axis}>
+      <S.Header as="header" py={4} px={theme.gutter.axis}>
         <Flex className="header-inner">
           <S.Toggle onClick={toggleMenu} aria-label="toggle menu">
             <HamburgerMenu
@@ -64,7 +65,9 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           </S.Toggle>
 
           <Link to="/" className="logo-symbol" aria-label="HNSF, back to home">
-            <S.Logo>HNSF</S.Logo>
+            <S.Logo>
+              <SymbolInline />
+            </S.Logo>
           </Link>
 
           <S.Menu>
