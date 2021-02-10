@@ -47,7 +47,7 @@ const HomePage: React.FC = () => {
         </Flex>
       </Section>
 
-      <Section border={true}>
+      {/* <Section border={true}>
         <Flex width={[1]}>
           <Box flex={1}>
             <Heading as="h4">partners</Heading>
@@ -61,14 +61,10 @@ const HomePage: React.FC = () => {
             ))}
           </Box>
         </Flex>
-      </Section>
+      </Section> */}
 
       <Section border={true}>
         <Flex width={1}>
-          <Box flex={1}>
-            <Heading as="h4">learn</Heading>
-          </Box>
-
           <Box flex={2}>
             {posts.map(({ node: post }, idx) => (
               <CardPost inline={true} post={post} key={idx} />
@@ -77,7 +73,7 @@ const HomePage: React.FC = () => {
         </Flex>
       </Section>
 
-      <Section border={true}>
+      <Section bg="yellow" border={true}>
         <a href="/">
           <Text className="text--xl">donate</Text>
         </a>

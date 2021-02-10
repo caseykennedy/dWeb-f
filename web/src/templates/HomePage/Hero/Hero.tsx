@@ -27,12 +27,14 @@ const Hero: React.FC<Props> = () => {
   return (
     <S.Hero>
       <Section>
-        <Box width={[1]}>
-          <Heading as="h1">
-            Advancing participation in building a more secure, decentralized
-            internet.
-          </Heading>
-        </Box>
+        <Flex flexWrap="wrap">
+          <Box flex={[1, 0.7]}>
+            <Heading as="h1">
+              Advancing participation in building a more secure, decentralized
+              internet.
+            </Heading>
+          </Box>
+        </Flex>
       </Section>
     </S.Hero>
   )

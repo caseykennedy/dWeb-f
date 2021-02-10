@@ -33,9 +33,9 @@ const CardPost: React.FC<Props> = ({
 }) => {
   const pagePrefix = !video ? `articles` : `videos`
   return (
-    <Link to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}>
-      <S.CardPost inline={inline}>
-        <Box width={!inline ? 1 : 1 / 3}>
+    <S.CardPost inline={inline}>
+      <Box width={!inline ? 1 : 1 / 3}>
+        <Link to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}>
           <Box className="bg">
             <Box className="figure">
               {post.figure.asset.fluid && (
@@ -51,17 +51,20 @@ const CardPost: React.FC<Props> = ({
               )}
             </Box>
           </Box>
-        </Box>
+        </Link>
+      </Box>
 
-        <Flex width={!inline ? 1 : 2 / 3} className="content">
-          <Box mb={5}>
+      <Flex width={!inline ? 1 : 2 / 3} className="content">
+        <Box mb={5}>
+          <Link to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}>
             <Heading
               className={`title  ${!small ? `text--md` : `title--small`}`}
             >
               {post.title && post.title}
             </Heading>
+          </Link>
 
-            {/* {post.tags && (
+          {/* {post.tags && (
               <Flex className="pillbox">
                 {post.tags.slice(0, 3).map((item, idx) => (
                   <Pill mb={2} key={idx}>
@@ -70,15 +73,15 @@ const CardPost: React.FC<Props> = ({
                 ))}
               </Flex>
             )} */}
-          </Box>
+        </Box>
 
-          <PostMeta
-            authors={post.authors}
-            categories={post.categories}
-            publishedAt={post.publishedAt}
-          />
+        <PostMeta
+          authors={post.authors}
+          categories={post.categories}
+          publishedAt={post.publishedAt}
+        />
 
-          {/* {video && (
+        {/* {video && (
             <Box as="span" className="text--small">
               <Text as="span" color="white" mb={0}>
                 {publishedAt}
@@ -91,9 +94,8 @@ const CardPost: React.FC<Props> = ({
               </Link>
             </Box>
           )} */}
-        </Flex>
-      </S.CardPost>
-    </Link>
+      </Flex>
+    </S.CardPost>
   )
 }
 

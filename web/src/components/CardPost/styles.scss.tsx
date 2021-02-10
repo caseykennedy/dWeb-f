@@ -82,7 +82,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
     }
 
     .title {
-      color: ${theme.colors.primary};
+      /* color: ${theme.colors.primary}; */
     }
   }
 
