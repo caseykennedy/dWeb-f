@@ -13,6 +13,5 @@ import Section from '../../../components/Section'
 
 export const Hero = styled(Box)`
   border-bottom: ${theme.border};
-  min-height: 50vh;
   width: 100%;
 `

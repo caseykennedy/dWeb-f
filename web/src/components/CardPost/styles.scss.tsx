@@ -46,7 +46,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
     @media ${theme.mq.tablet} {
       padding: ${p =>
         !p.inline
-          ? `${theme.space[3]} ${theme.space[4]}`
+          ? `${theme.space[4]} ${theme.space[4]}`
           : `0 0 ${theme.space[5]} ${theme.space[5]}`};
     }
 
@@ -90,11 +90,9 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   }
 
   .title {
-    color: ${theme.colors.white};
     /* font-family: ${theme.fonts.sans}; */
-    font-size: calc(${theme.fontSizes[2]});
+    font-size: calc(${theme.fontSizes[3]});
     line-height: ${theme.root.font.headingLineHeight};
-    text-transform: uppercase;
 
     margin-bottom: ${theme.space[6]};
 

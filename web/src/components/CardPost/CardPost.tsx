@@ -54,14 +54,14 @@ const CardPost: React.FC<Props> = ({
         </Box>
 
         <Flex width={!inline ? 1 : 2 / 3} className="content">
-          <Box>
+          <Box mb={5}>
             <Heading
               className={`title  ${!small ? `text--md` : `title--small`}`}
             >
               {post.title && post.title}
             </Heading>
 
-            {post.tags && (
+            {/* {post.tags && (
               <Flex className="pillbox">
                 {post.tags.slice(0, 3).map((item, idx) => (
                   <Pill mb={2} key={idx}>
@@ -69,7 +69,7 @@ const CardPost: React.FC<Props> = ({
                   </Pill>
                 ))}
               </Flex>
-            )}
+            )} */}
           </Box>
 
           <PostMeta

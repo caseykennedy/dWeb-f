@@ -252,8 +252,6 @@ const Typography = css`
     letter-spacing: ${theme.root.font.headingLetterSpacing};
     margin: 0 0 ${theme.space[3]};
     transition: ${theme.transition.all};
-
-    text-transform: capitalize;
   }
 
   .text--xxxl {

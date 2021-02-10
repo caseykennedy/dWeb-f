@@ -27,20 +27,8 @@ const PostMeta: React.FC<MetaShape> = ({
   publishedAt
 }) => {
   let pillColor
-  if (categories[0].title === 'Altcoin') {
+  if (categories[0].title === 'Learn') {
     pillColor = theme.colors.blue
-  } else if (categories[0].title === 'Bitcoin') {
-    pillColor = theme.colors.orange
-  } else if (categories[0].title === 'Crypto Picks') {
-    pillColor = theme.colors.pink
-  } else if (categories[0].title === 'DeFi') {
-    pillColor = theme.colors.yellow
-  } else if (categories[0].title === 'Ethereum') {
-    pillColor = theme.colors.purple
-  } else if (categories[0].title === 'Investigations') {
-    pillColor = theme.colors.gray
-  } else if (categories[0].title === 'Live Streams') {
-    pillColor = theme.colors.white
   } else {
     pillColor = theme.colors.tertiary
   }
@@ -83,12 +71,10 @@ PostMeta.defaultProps = {}
 
 const Meta = styled(Flex)`
   align-items: center;
-  color: ${theme.colors.tertiary};
   margin-bottom: 0;
   width: 100%;
 
   .date {
-    color: ${theme.colors.white};
     margin-bottom: 0;
     white-space: nowrap;
   }
@@ -96,8 +82,6 @@ const Meta = styled(Flex)`
   .category {
     /* background: ${theme.colors.primary}; */
     border-radius: 2px;
-
-    color: ${theme.colors.black};
     font-size: ${theme.fontSizes[0]};
     font-weight: 500;
     text-transform: uppercase;

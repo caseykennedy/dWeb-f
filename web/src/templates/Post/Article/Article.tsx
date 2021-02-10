@@ -47,25 +47,8 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
         pathname={`/articles/${post.slug.current}`}
       />
       <S.Article>
-        {post.categories && (
-          <S.PageTitle px={theme.gutter.axis}>
-            <Heading as="h4" color="white" mb={0} className="text--uppercase">
-              {post.categories[0].title}
-            </Heading>
 
-            {post.tags && (
-              <Flex className="pillbox">
-                {post.tags.slice(0, 3).map((item, idx) => (
-                  <Pill my={[1, 2]} key={idx}>
-                    <span>#{item.tag}</span>
-                  </Pill>
-                ))}
-              </Flex>
-            )}
-          </S.PageTitle>
-        )}
-
-        <Section bg="black" border={true}>
+        <Section border={true}>
           <Box width={1} mb={0}>
             <Text as="p" className="text--small  text--uppercase">
               {post.publishedAt}
@@ -89,7 +72,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
           </Box>
         </Section>
 
-        <Box bg="black" width={1}>
+        <Box width={1}>
           <Box width={1} maxWidth={theme.maxWidth}>
             {post.figure && (
               <>
@@ -107,7 +90,6 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
                 {post.figure.caption && (
                   <Text
                     as="figcaption"
-                    color="tertiary"
                     fontSize={0}
                     p={theme.gutter.axis}
                   >
@@ -133,7 +115,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
                   {post.sources[0] && (
                     <Flex mt={5} mb={4}>
                       <AnchorLink offset={theme.headerHeight} href={`#sources`}>
-                        <Button bg="transparent" color={theme.colors.tertiary}>
+                        <Button bg="transparent">
                           <Icon name="document" /> View Sources
                         </Button>
                       </AnchorLink>
@@ -143,7 +125,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
               </Box>
 
               <Box flex={[1, 2]} width={1}>
-                <Text color="lightgray" fontFamily="sans">
+                <Text fontFamily="sans">
                   {post._rawBody && (
                     <BlockContent blocks={post._rawBody || []} />
                   )}
@@ -185,21 +167,18 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
           </Section>
         )}
 
-        <Section bg="secondary" border={true} overflow="hidden">
+        <Section border={true} overflow="hidden">
           <Heading
             as="h4"
-            color="tertiary"
-            fontFamily="display"
-            className="text--uppercase"
           >
-            Related
+            related
           </Heading>
 
           <Box width={1}>
             <CardSlider pagination={true} slidesPerView={3}>
               {posts.slice(0, 6).map(({ node: post }, idx) => (
                 <Flex key={idx}>
-                  <CardLeak post={post} small={true} />
+                  <CardLeak post={post} />
                 </Flex>
               ))}
             </CardSlider>

@@ -16,17 +16,27 @@ import Hero from './Hero'
 
 // Components
 import ImgMatch from '../../components/ImgMatch'
+import Icon from '../../components/Icons'
 import Section from '../../components/Section'
+import CardPost from '../../components/CardPost'
+
+// Data
+import usePost from '../../hooks/usePost'
 
 // ___________________________________________________________________
 
 const HomePage: React.FC = () => {
-  // const data = useHomePage()
+  const posts = usePost()
   return (
     <S.HomePage>
       <Hero />
+
       <Section>
         <Flex width={[1]}>
+          <Box flex={1}>
+            <Icon name="arrow" />
+          </Box>
+
           <Box flex={2}>
             <Heading as="h3">
               The Handshake Foundation puts action behind our belief in
@@ -34,13 +44,56 @@ const HomePage: React.FC = () => {
               range of ______ by providing ______.
             </Heading>
           </Box>
+        </Flex>
+      </Section>
+
+      <Section border={true}>
+        <Flex width={[1]}>
           <Box flex={1}>
-            <ImgMatch src="nature.jpg" altText="" />
+            <Heading as="h4">partners</Heading>
+          </Box>
+
+          <Box flex={2}>
+            {partners.map((partner, idx) => (
+              <Text as="a" fontSize={[4]} key={idx}>
+                {partner}
+              </Text>
+            ))}
           </Box>
         </Flex>
+      </Section>
+
+      <Section border={true}>
+        <Flex width={1}>
+          <Box flex={1}>
+            <Heading as="h4">learn</Heading>
+          </Box>
+
+          <Box flex={2}>
+            {posts.map(({ node: post }, idx) => (
+              <CardPost inline={true} post={post} key={idx} />
+            ))}
+          </Box>
+        </Flex>
+      </Section>
+
+      <Section border={true}>
+        <a href="/">
+          <Text fontSize={7}>donate</Text>
+        </a>
+        <a href="/">
+          <Text fontSize={7}>apply for grants</Text>
+        </a>
       </Section>
     </S.HomePage>
   )
 }
 
 export default HomePage
+
+const partners = [
+  'Handshake FTW',
+  'Decentral GO',
+  'Ready, aim, fire!',
+  'Re:Build'
+]

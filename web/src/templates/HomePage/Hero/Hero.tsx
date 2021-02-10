@@ -27,8 +27,8 @@ const Hero: React.FC<Props> = () => {
   return (
     <S.Hero>
       <Section>
-        <Box width={[1, 2 / 3]}>
-          <Heading as="h1" className="text--xl">
+        <Box width={[1]}>
+          <Heading as="h1">
             Advancing participation in building a more secure, decentralized
             internet.
           </Heading>

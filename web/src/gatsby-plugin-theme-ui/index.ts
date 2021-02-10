@@ -82,14 +82,14 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   colors: {
-    text: '#1d1c1a',
+    text: '#000000',
     background: '#f9f9f8',
 
     primary: '#5700ff',
     secondary: '#d3d3d4',
     tertiary: '#f5eddb',
 
-    black: '#1d1c1a',
+    black: '#000000',
     white: '#FFFFFF',
     red: '#FF0000',
     indigo: '#3100ff',
