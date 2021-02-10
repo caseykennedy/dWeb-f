@@ -19,13 +19,13 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   /* justify-content: stretch; */
   flex-direction: ${p => (!p.inline ? `column` : `row-reverse`)};
 
-  border-bottom: ${theme.border};
-  padding: ${p => (!p.inline ? 0 : `${theme.space[4]} 0 0 0`)};
+  border: ${theme.border};
+  padding: ${p => (!p.inline ? 0 : `${theme.space[3]} ${theme.space[3]} ${theme.space[3]} 0 `)};
+  margin-bottom: ${p => (!p.inline ? 0 : `${theme.space[4]}`)};
 
   @media ${theme.mq.tablet} {
-    align-items: flex-end;
     flex-direction: ${p => (!p.inline ? `column` : `row`)};
-    padding: ${p => (!p.inline ? 0 : `${theme.space[6]} 0 0 0`)};
+  padding: ${p => (!p.inline ? 0 : `${theme.space[4]} ${theme.space[4]} ${theme.space[4]} 0 `)};
   }
 
   .content {
@@ -68,20 +68,17 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
 
   .figure {
     background: ${theme.colors.secondary};
-    border: ${theme.border};
-    border-color: transparent;
 
     width: 100%;
 
     position: relative;
-    transform: matrix(1, 0, 0, 1, 0, 0);
+    top: 0;
     transition: all 0.222s ease-in-out 0s;
   }
 
   &:hover {
     .figure {
-      border-color: ${theme.colors.primary};
-      transform: matrix(1, 0, 0, 1, 5, -5);
+      top: calc(${theme.space[3]} * -1);
     }
 
     .title {
@@ -103,7 +100,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
     -webkit-box-orient: vertical;
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[3]});
+      font-size: calc(${theme.fontSizes[4]});
       -webkit-line-clamp: 2; /* number of lines to show */
       margin-bottom: ${theme.space[2]};
     }

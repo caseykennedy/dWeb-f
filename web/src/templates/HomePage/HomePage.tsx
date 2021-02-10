@@ -79,10 +79,10 @@ const HomePage: React.FC = () => {
 
       <Section border={true}>
         <a href="/">
-          <Text fontSize={7}>donate</Text>
+          <Text className="text--xl">donate</Text>
         </a>
         <a href="/">
-          <Text fontSize={7}>apply for grants</Text>
+          <Text className="text--xxxl">apply for grants</Text>
         </a>
       </Section>
     </S.HomePage>
