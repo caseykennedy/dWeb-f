@@ -13,6 +13,7 @@ import { Box, Flex, Heading, Text } from '../../../components/ui'
 // Components
 import Button from '../../../components/ui/Button'
 import Icon from '../../../components/Icons'
+import Section from '../../../components/Section'
 
 // Data
 import usePost from '../../../hooks/usePost'
@@ -25,25 +26,14 @@ const Hero: React.FC<Props> = () => {
   const posts = usePost()
   return (
     <S.Hero>
-      <Box width={[1, 1 / 2]}>
-        <Heading as="h1">The Handshake Foundation</Heading>
-        <Text as="p">
-          Handshake is a decentralized, permissionless naming protocol where
-          every peer is validating and in charge of managing the root DNS naming
-          zone with the goal of creating an alternative to existing Certificate
-          Authorities and naming systems.
-        </Text>
-      </Box>
-
-      <Box width={[1, 1 / 2]} mt={7}>
-        <Heading as="h2">Handshake</Heading>
-        <Text as="p">
-          Handshake is a decentralized, permissionless naming protocol where
-          every peer is validating and in charge of managing the root DNS naming
-          zone with the goal of creating an alternative to existing Certificate
-          Authorities and naming systems.
-        </Text>
-      </Box>
+      <Section>
+        <Box width={[1, 2 / 3]}>
+          <Heading as="h1" className="text--xl">
+            Advancing participation in building a more secure, decentralized
+            internet.
+          </Heading>
+        </Box>
+      </Section>
     </S.Hero>
   )
 }

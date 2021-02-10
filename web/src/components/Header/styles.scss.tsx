@@ -13,15 +13,16 @@ import { Box, Flex } from '../ui'
 // ___________________________________________________________________
 
 export const Header = styled(Box)`
-  border-bottom: ${theme.border};
+  /* border-bottom: ${theme.border}; */
   width: 100%;
 
   .header-inner {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
     margin: 0 auto;
-    max-width: ${theme.maxWidth};
+    /* max-width: ${theme.maxWidth}; */
     width: 100%;
   }
 

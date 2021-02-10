@@ -247,7 +247,7 @@ const Typography = css`
   h5,
   h6 {
     font-family: ${theme.fonts.heading};
-    font-weight: 600;
+    font-weight: 400;
     line-height: ${theme.root.font.headingLineHeight};
     letter-spacing: ${theme.root.font.headingLetterSpacing};
     margin: 0 0 ${theme.space[3]};
@@ -270,8 +270,7 @@ const Typography = css`
 
   h1,
   .text--xxl {
-    font-family: ${theme.fonts.display};
-    font-weight: 600;
+    /* font-family: ${theme.fonts.display}; */
     font-size: calc(${theme.fontSizes[5]});
 
     @media ${theme.mq.tablet} {

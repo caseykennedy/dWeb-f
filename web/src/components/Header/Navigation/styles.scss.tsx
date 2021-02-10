@@ -19,8 +19,11 @@ export const Nav = styled.nav`
   width: 100%;
 
   a {
-    font-weight: 500;
+    font-size: ${theme.fontSizes[3]};
+    font-weight: 400;
     text-decoration: none;
+    text-transform: lowercase;
+
     margin-left: ${theme.space[5]};
 
     &.active,

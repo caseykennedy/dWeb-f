@@ -11,5 +11,8 @@ import Section from '../../../components/Section'
 
 // ___________________________________________________________________
 
-export const Hero = styled(Section)`
+export const Hero = styled(Box)`
+  border-bottom: ${theme.border};
+  min-height: 50vh;
+  width: 100%;
 `

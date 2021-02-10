@@ -36,15 +36,15 @@ export default Navigation
 
 const data = [
   {
-    name: 'Blog',
+    name: 'Learn',
     link: '/blog'
-  },
-  {
-    name: 'Apply for a grant',
-    link: '/apply'
   },
   {
     name: 'Donate',
     link: '/donate'
-  }
+  },
+  {
+    name: 'Apply for grants',
+    link: '/apply'
+  },
 ]
