@@ -37,7 +37,7 @@ const HomePage: React.FC = () => {
             <Icon name="arrow" />
           </Box>
 
-          <Box flex={2}>
+          <Box flex={[3, 2]}>
             <Heading as="h3">
               The Handshake Foundation puts action behind our belief in
               decentralization. We partner with organizations that support a
@@ -53,9 +53,9 @@ const HomePage: React.FC = () => {
             <Heading as="h4">partners</Heading>
           </Box>
 
-          <Box flex={2}>
+          <Box flex={[3, 2]}>
             {partners.map((partner, idx) => (
-              <Text as="a" fontSize={[4]} key={idx}>
+              <Text as="a" className="text--lg" key={idx}>
                 {partner}
               </Text>
             ))}
@@ -82,7 +82,7 @@ const HomePage: React.FC = () => {
           <Text className="text--xl">donate</Text>
         </a>
         <a href="/">
-          <Text className="text--xxxl">apply for grants</Text>
+          <Text className="text--xl">apply for grants</Text>
         </a>
       </Section>
     </S.HomePage>
