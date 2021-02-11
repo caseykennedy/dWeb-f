@@ -19,7 +19,6 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   /* justify-content: stretch; */
   flex-direction: ${p => (!p.inline ? `column` : `row-reverse`)};
 
-  border: ${theme.border};
   padding: ${p => (!p.inline ? 0 : `${theme.space[3]} ${theme.space[3]} ${theme.space[3]} 0 `)};
   margin-bottom: ${p => (!p.inline ? 0 : `${theme.space[4]}`)};
 
@@ -34,19 +33,16 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
     flex-direction: column;
     justify-content: space-between;
 
-    border-right: ${p => (!p.inline ? theme.border : `none`)};
-    border-left: ${p => (!p.inline ? theme.border : `none`)};
-
     height: 100%;
     padding: ${p =>
       !p.inline
-        ? `${theme.space[3]} ${theme.space[3]}`
+        ? `${theme.space[3]} 0`
         : `0 ${theme.space[4]} ${theme.space[4]} 0`};
 
     @media ${theme.mq.tablet} {
       padding: ${p =>
         !p.inline
-          ? `${theme.space[4]} ${theme.space[4]}`
+          ? `${theme.space[4]} 0`
           : `0 0 ${theme.space[5]} ${theme.space[5]}`};
     }
 
@@ -91,18 +87,16 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
     font-size: calc(${theme.fontSizes[3]});
     line-height: ${theme.root.font.headingLineHeight};
 
-    margin-bottom: ${theme.space[6]};
-
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 5; /* number of lines to show */
     -webkit-box-orient: vertical;
+    margin-bottom: ${theme.space[1]};
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[4]});
       -webkit-line-clamp: 2; /* number of lines to show */
-      margin-bottom: ${theme.space[2]};
     }
 
     &--small {

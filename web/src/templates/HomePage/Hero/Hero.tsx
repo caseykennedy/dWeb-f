@@ -52,8 +52,8 @@ const Hero: React.FC<Props> = () => {
           </Box>
         </Flex>
       </Section>
-      <Box className="figure">
-        <ImgMatch src="pins.jpg" altText="" />
+      <Box className="figure" mx={4}>
+        <ImgMatch src="lines.jpg" altText="" />
       </Box>
     </S.Hero>
   )

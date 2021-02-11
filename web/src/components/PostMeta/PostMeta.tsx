@@ -34,7 +34,7 @@ const PostMeta: React.FC<MetaShape> = ({
   }
   return (
     <Meta as="span" className="text--small">
-      {authors && (
+      {/* {authors && (
         <Avatar>
           <Img
             fluid={{
@@ -47,17 +47,10 @@ const PostMeta: React.FC<MetaShape> = ({
             className="author__img"
           />
         </Avatar>
-      )}
+      )} */}
       <Box>
-        <Text as="span" className="date">
-          {publishedAt}
-        </Text>
-        by <strong>{authors && authors.name}</strong> in{' '}
-        <Link to={``}>
-          <Box as="span" bg={pillColor} className="category">
-            {categories && categories[0].title}
-          </Box>
-        </Link>
+        {/* by <strong>{authors && authors.name}</strong> on */}
+        {publishedAt}
       </Box>
     </Meta>
   )
@@ -73,6 +66,8 @@ const Meta = styled(Flex)`
   align-items: center;
   margin-bottom: 0;
   width: 100%;
+
+  font-size: ${theme.fontSizes[0]};
 
   .date {
     margin-bottom: 0;
@@ -97,7 +92,7 @@ const Meta = styled(Flex)`
 const Avatar = styled(Flex)`
   display: block;
   margin-right: ${theme.space[4]};
-  max-width: 48px;
+  max-width: 32px;
   width: 100%;
 
   img {

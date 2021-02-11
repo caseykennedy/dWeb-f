@@ -10,6 +10,7 @@ import * as S from './styles.scss'
 
 // UI
 import { Box, Flex, Heading, Text } from '../../components/ui'
+import { Grid } from 'theme-ui'
 
 // Sections
 import Hero from './Hero'
@@ -31,8 +32,6 @@ const HomePage: React.FC = () => {
     <S.HomePage>
       <Hero />
 
-      
-
       {/* <Section border={true}>
         <Flex width={[1]}>
           <Box flex={1}>
@@ -50,16 +49,16 @@ const HomePage: React.FC = () => {
       </Section> */}
 
       <Section>
-        <Flex flexWrap="wrap" width={1}>
-          <Box flex={`1 1 300px`}>
-            <Heading as="h4">learn</Heading>
+        <Flex flexDirection="column" width={1}>
+          <Box>
+            <Heading as="h2">learn</Heading>
           </Box>
 
-          <Box flex={5}>
-            {posts.map(({ node: post }, idx) => (
-              <CardPost inline={true} post={post} key={idx} />
+          <Grid columns={[2]} gap={4}>
+            {posts.slice(1, 3).map(({ node: post }, idx) => (
+              <CardPost inline={false} post={post} key={idx} />
             ))}
-          </Box>
+          </Grid>
         </Flex>
       </Section>
 
