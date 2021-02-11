@@ -12,6 +12,13 @@ import Section from '../../../components/Section'
 // ___________________________________________________________________
 
 export const Hero = styled(Box)`
-  border-bottom: ${theme.border};
   width: 100%;
+
+  .figure {
+    background: ${theme.colors.primary};
+
+    img {
+      mix-blend-mode: luminosity;
+    }
+  }
 `

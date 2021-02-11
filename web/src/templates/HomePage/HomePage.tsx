@@ -31,21 +31,7 @@ const HomePage: React.FC = () => {
     <S.HomePage>
       <Hero />
 
-      <Section>
-        <Flex width={[1]}>
-          <Box flex={1}>
-            <Icon name="arrow" />
-          </Box>
-
-          <Box flex={[3, 2]}>
-            <Heading as="h3">
-              The Handshake Foundation puts action behind our belief in
-              decentralization. We partner with organizations that support a
-              range of ______ by providing ______.
-            </Heading>
-          </Box>
-        </Flex>
-      </Section>
+      
 
       {/* <Section border={true}>
         <Flex width={[1]}>
@@ -63,9 +49,13 @@ const HomePage: React.FC = () => {
         </Flex>
       </Section> */}
 
-      <Section border={true}>
-        <Flex width={1}>
-          <Box flex={2}>
+      <Section>
+        <Flex flexWrap="wrap" width={1}>
+          <Box flex={`1 1 300px`}>
+            <Heading as="h4">learn</Heading>
+          </Box>
+
+          <Box flex={5}>
             {posts.map(({ node: post }, idx) => (
               <CardPost inline={true} post={post} key={idx} />
             ))}
