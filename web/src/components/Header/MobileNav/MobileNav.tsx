@@ -54,7 +54,7 @@ export default MobileNav
 
 const data = [
   {
-    name: 'Learn',
+    name: 'Blog',
     link: '/blog'
   },
   {

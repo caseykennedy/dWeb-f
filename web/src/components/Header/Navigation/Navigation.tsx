@@ -36,7 +36,7 @@ export default Navigation
 
 const data = [
   {
-    name: 'Learn',
+    name: 'Blog',
     link: '/blog'
   },
   {

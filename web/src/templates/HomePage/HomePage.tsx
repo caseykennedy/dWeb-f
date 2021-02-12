@@ -3,6 +3,8 @@
 // ___________________________________________________________________
 
 import React from 'react'
+import { Link } from 'gatsby'
+import { Parallax } from 'react-scroll-parallax'
 
 // Theme + Styles
 import theme from '../../gatsby-plugin-theme-ui'
@@ -32,6 +34,17 @@ const HomePage: React.FC = () => {
     <S.HomePage>
       <Hero />
 
+      <Section>
+        <Box style={{ maxHeight: '444px', overflow: 'hidden' }}>
+          <Parallax className="custom-class" y={[-20, 12]} tagOuter="figure">
+            <ImgMatch
+              src="web.png"
+              altText="Graphic of a grid web being broken and destructured with a neon gradient background."
+            />
+          </Parallax>
+        </Box>
+      </Section>
+
       {/* <Section border={true}>
         <Flex width={[1]}>
           <Box flex={1}>
@@ -51,7 +64,7 @@ const HomePage: React.FC = () => {
       <Section>
         <Flex flexDirection="column" width={1}>
           <Box>
-            <Heading as="h2">learn</Heading>
+            <Heading as="h2">blog</Heading>
           </Box>
 
           <Grid columns={[2]} gap={4}>
@@ -63,12 +76,12 @@ const HomePage: React.FC = () => {
       </Section>
 
       <Section bg="yellow" border={true}>
-        <a href="/">
+        <Link to="/donate">
           <Text className="text--xl">donate</Text>
-        </a>
-        <a href="/">
+        </Link>
+        <Link to="/apply">
           <Text className="text--xl">apply for grants</Text>
-        </a>
+        </Link>
       </Section>
     </S.HomePage>
   )

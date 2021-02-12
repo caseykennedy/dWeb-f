@@ -21,4 +21,14 @@ export const Hero = styled(Box)`
       mix-blend-mode: luminosity;
     }
   }
+
+  .symbol {
+    svg {
+      width: 24px;
+
+      @media ${theme.mq.tablet} {
+        width: inherit;
+      }
+    }
+  }
 `

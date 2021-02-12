@@ -25,16 +25,15 @@ const Footer: React.FC = () => {
     <S.Footer as="footer" py={theme.gutter.axis} px={theme.gutter.axis}>
       <Box className="footer-inner">
         {/* <Text as="a" className="text--xxl">donate</Text> */}
-        
+
         <Flex>
           <Box mr={4}>&copy; {getYear()}</Box>
-          <Link to="/" className="logo-symbol" aria-label="HNSF, back to home">
-            HNSF
-          </Link>
         </Flex>
 
         <Box as="nav">
-          <a href="">Legal</a>
+          <Link to="/" className="logo-symbol" aria-label="HNSF, back to home">
+            dWeb Foundation
+          </Link>
         </Box>
       </Box>
     </S.Footer>

@@ -269,7 +269,7 @@ const Typography = css`
   h1,
   .text--xxl {
     /* font-family: ${theme.fonts.display}; */
-    font-size: calc(${theme.fontSizes[5]});
+    font-size: calc(${theme.fontSizes[4]});
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.fontSizes[6]};

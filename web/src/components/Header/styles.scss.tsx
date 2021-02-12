@@ -67,13 +67,13 @@ export const Logo = styled(Flex)`
     font-weight: 600;
     text-decoration: none;
 
-    &:before {
-      content: 'HNSFoundation';
+    /* &:before {
+      content: 'dWeb Foundation';
 
       @media ${theme.mq.tablet} {
-        content: 'handshake foundation';
+        content: 'dWeb Foundation';
       }
-    }
+    } */
   }
 `
 

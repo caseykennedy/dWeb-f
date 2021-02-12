@@ -37,8 +37,8 @@ const RootVariables = css`
     --body-line-height: 1.5;
 
     /* letter-spacing */
-    --heading-letter-spacing: 0px;
-    --body-letter-spacing: 0px;
+    --heading-letter-spacing: 0.5px;
+    --body-letter-spacing: 0.5px;
 
     @media ${theme.mq.tablet} {
       :root {

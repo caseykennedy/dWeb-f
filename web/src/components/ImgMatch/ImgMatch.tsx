@@ -26,7 +26,7 @@ const ImgMatch: React.FC<Props> = ({
           node {
             relativePath
             childImageSharp {
-              fluid(maxWidth: 1600) {
+              fluid(maxWidth: 1900) {
                 ...GatsbyImageSharpFluid
               }
             }

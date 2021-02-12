@@ -20,7 +20,7 @@ const defaultProps = {}
 
 const Modal: React.FC<ModalProps> = ({ children, open, close }) => {
   return (
-    <ReactModal open={open} onClose={close} styles={modalStyles} center={true} showCloseIcon={false}>
+    <ReactModal open={open} onClose={close} styles={modalStyles} focusTrapped={false} center={true} showCloseIcon={false}>
       {children}
     </ReactModal>
   )
