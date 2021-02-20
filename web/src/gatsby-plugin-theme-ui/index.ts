@@ -87,15 +87,15 @@ const theme: ThemeShape = {
 
     primary: '#5700ff',
     secondary: '#e0e0e7',
-    tertiary: '#f5eddb',
+    tertiary: '#eeecfa',
 
     black: '#000000',
     white: '#FFFFFF',
-    yellow: '#fcffb8',
+    yellow: '#fdffd4',
 
-    lightgray: '#ededf1',
-    gray: '#C4C4c4',
-    darkgray: '#545454',
+    lightgray: '#eceef0',
+    gray: '#c2c4c5',
+    darkgray: '#88898a',
   },
 
   // Space

@@ -34,7 +34,7 @@ export const Header = styled(Box)`
 export const Menu = styled(Flex)`
   align-items: center;
   flex-direction: row;
-  display: none;
+  display: flex;
 
   @media ${theme.mq.tablet} {
     display: flex;
@@ -80,7 +80,7 @@ export const Logo = styled(Flex)`
 export const Utilities = styled(Flex)``
 
 export const Toggle = styled(Box)`
-  display: flex;
+  display: none;
   align-items: flex-start;
   box-sizing: content-box;
 

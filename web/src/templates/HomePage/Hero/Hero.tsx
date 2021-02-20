@@ -30,17 +30,22 @@ const Hero: React.FC<Props> = () => {
       <Section>
         <Flex flexWrap="wrap">
           <Box flex={[1]}>
-            <Heading as="h1" fontFamily="display" textAlign="center" className="text--xxl">
+            <Heading
+              as="h1"
+              fontFamily="display"
+              textAlign="center"
+              className="text--xxl"
+            >
               Handshake — one small step for domains, one giant leap for
               decentralized web.
             </Heading>
             <Box px={[0, 7, 9]}>
-            <Heading as="p" textAlign="center">
-              The dWeb Foundation is a community-organized effort that's pushing
-              the frontier of ushering in a decentralized internet, with
-              Handshake at the root.
-            </Heading>
-          </Box>
+              <Heading as="p" textAlign="center">
+                The dWeb Foundation is a community-organized effort that's
+                pushing the frontier of ushering in a decentralized internet,
+                with Handshake at the root.
+              </Heading>
+            </Box>
           </Box>
         </Flex>
       </Section>

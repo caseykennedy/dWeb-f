@@ -18,6 +18,7 @@ import { Grid } from 'theme-ui'
 import Hero from './Hero'
 
 // Components
+import Accordion from '../../components/Accordion'
 import ImgMatch from '../../components/ImgMatch'
 import Icon from '../../components/Icons'
 import Section from '../../components/Section'
@@ -42,6 +43,16 @@ const HomePage: React.FC = () => {
           grants
         </Link>
       </Flex>
+
+      {/* <Section border={true}>
+        <Box px={[0, 7, 9]}>
+          <Text as="p" fontSize={[2, 3]} textAlign="center">
+            The dWeb Foundation is a community-organized effort that's pushing
+            the frontier of ushering in a decentralized internet, with Handshake
+            at the root.
+          </Text>
+        </Box>
+      </Section> */}
 
       <Section border={true}>
         <Flex flexDirection="column" width={1}>
@@ -76,4 +87,20 @@ const partners = [
   'Decentral GO',
   'Ready, aim, fire!',
   'Re:Build'
+]
+
+const data = [
+  {
+    question: 'How do I spray my eOn sanitizing mist? ',
+    answer:
+      'Twist to unlock the cap, after you hear a click, the circular opening should line up with the spray actuator. Next, place your finger on the top of the cap and locate the small groove near the back-end of the spray button. With your finger there—press down firmly to mist. Press and hold for a continuous spray. ',
+    note: 'Sprays from any angle. Requires no shaking, uses no propellant.'
+  },
+  {
+    question: 'Does eOn sanitizing mist have an odor? ',
+    answer:
+      'eOn multi-surface disinfectant is an odorless substance, though some natural variation in concentration may lead a light, harmless scent of chlorine that disappears after drying. ',
+    note:
+      'eOn hand sanitizer is 80%, 190 proof ethyl alcohol and carries the sharp, fresh scent of alcohol.'
+  }
 ]

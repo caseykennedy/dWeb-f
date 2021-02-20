@@ -30,10 +30,10 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
     flex-direction: column;
     justify-content: space-between;
 
-    padding: ${theme.space[4]};
+    padding: ${theme.space[3]};
 
     @media ${theme.mq.tablet} {
-      padding: ${theme.space[5]};
+      padding: ${theme.space[4]}
     }
   }
 

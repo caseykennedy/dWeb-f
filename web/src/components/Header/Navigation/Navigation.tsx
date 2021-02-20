@@ -38,13 +38,5 @@ const data = [
   {
     name: 'Blog',
     link: '/blog'
-  },
-  {
-    name: 'Donate',
-    link: '/donate'
-  },
-  {
-    name: 'Apply for grants',
-    link: '/apply'
-  },
+  }
 ]
