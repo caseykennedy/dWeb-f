@@ -394,11 +394,11 @@ const Typography = css`
     position: relative;
     transition: ${theme.transition.all};
 
-    &:hover,
+    /* &:hover,
     &:focus {
       color: ${theme.colors.primary};
       text-decoration: none;
-    }
+    } */
   }
 
   mark {

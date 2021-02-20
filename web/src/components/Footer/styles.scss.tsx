@@ -16,7 +16,8 @@ export const Footer = styled(Flex)`
   flex-wrap: wrap;
   justify-content: space-between;
 
-  background: ${theme.colors.yellow};
+  border: ${theme.border};
+  /* background: ${theme.colors.yellow}; */
   position: relative;
 
   .footer-inner {

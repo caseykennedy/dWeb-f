@@ -4,7 +4,6 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
-import { Parallax } from 'react-scroll-parallax'
 
 // Theme + Styles
 import theme from '../../gatsby-plugin-theme-ui'
@@ -18,7 +17,6 @@ import { Grid } from 'theme-ui'
 import Hero from './Hero'
 
 // Components
-import Accordion from '../../components/Accordion'
 import ImgMatch from '../../components/ImgMatch'
 import Icon from '../../components/Icons'
 import Section from '../../components/Section'
@@ -44,6 +42,17 @@ const HomePage: React.FC = () => {
         </Link>
       </Flex>
 
+      <Flex className="ethos" px={theme.gutter.axis} py={[8, 9]}>
+        <Heading as="h3" className="message">
+          Handshake — one small step for domains, one giant leap for
+          decentralized web.
+        </Heading>
+
+        <Flex width={1} className="wallpaper">
+          <ImgMatch src="web.png" altText="waves from above" />
+        </Flex>
+      </Flex>
+
       {/* <Section border={true}>
         <Box px={[0, 7, 9]}>
           <Text as="p" fontSize={[2, 3]} textAlign="center">
@@ -57,7 +66,7 @@ const HomePage: React.FC = () => {
       <Section border={true}>
         <Flex flexDirection="column" width={1}>
           <Box>
-            <Heading as="h4">blog</Heading>
+            <Heading as="h4">latest blog</Heading>
           </Box>
 
           <Grid columns={[1, 2]} gap={theme.gutter.axis}>
