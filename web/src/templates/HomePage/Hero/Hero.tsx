@@ -27,28 +27,20 @@ const Hero: React.FC<Props> = () => {
   const posts = usePost()
   return (
     <S.Hero>
-      <Section pt={7} pb={4}>
+      <Section>
         <Flex flexWrap="wrap">
           <Box flex={[1]}>
-            <Heading as="h1" mb={0}>
+            <Heading as="h1" fontFamily="display" textAlign="center" className="text--xxl">
               Handshake — one small step for domains, one giant leap for
               decentralized web.
             </Heading>
-          </Box>
-        </Flex>
-      </Section>
-      <Section>
-        <Flex width={[1]}>
-          <Box flex={1}>
-            <Icon name="arrow" className="symbol" />
-          </Box>
-
-          <Box flex={[3, 2]}>
-            <Heading as="h3">
+            <Box px={[0, 7, 9]}>
+            <Heading as="p" textAlign="center">
               The dWeb Foundation is a community-organized effort that's pushing
-              the frontier of ushering in a decventralized internet, with
+              the frontier of ushering in a decentralized internet, with
               Handshake at the root.
             </Heading>
+          </Box>
           </Box>
         </Flex>
       </Section>

@@ -35,25 +35,23 @@ const CardPost: React.FC<Props> = ({
   return (
     <Link to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}>
       <S.CardPost inline={inline}>
-        <Box width={!inline ? 1 : 1 / 3}>
-          <Box className="bg">
-            <Box className="figure">
-              {post.figure.asset.fluid && (
-                <Img
-                  fluid={{
-                    ...post.figure.asset.fluid,
-                    aspectRatio: `${aspectRatio}`
-                  }}
-                  objectFit="cover"
-                  objectPosition="50% 50%"
-                  alt={post.title}
-                />
-              )}
-            </Box>
+        <Box width={!inline ? 1 : 1 / 2}>
+          <Box className="figure">
+            {post.figure.asset.fluid && (
+              <Img
+                fluid={{
+                  ...post.figure.asset.fluid,
+                  aspectRatio: `${aspectRatio}`
+                }}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt={post.title}
+              />
+            )}
           </Box>
         </Box>
 
-        <Flex width={!inline ? 1 : 2 / 3} className="content">
+        <Flex width={!inline ? 1 : 1 / 2} className="content">
           <Heading className={`title  ${!small ? `text--md` : `title--small`}`}>
             {post.title && post.title}
           </Heading>
@@ -74,7 +72,7 @@ export default CardPost
 // ___________________________________________________________________
 
 CardPost.defaultProps = {
-  aspectRatio: 16 / 9,
+  aspectRatio: 1 / 1,
   bg: theme.colors.background,
   small: false
 }

@@ -19,7 +19,7 @@ export const Nav = styled.nav`
   width: 100%;
 
   a {
-    font-size: ${theme.fontSizes[2]};
+    font-size: ${theme.fontSizes[1]};
     font-weight: 400;
     text-decoration: none;
     text-transform: lowercase;

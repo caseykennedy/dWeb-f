@@ -61,7 +61,7 @@ type ThemeShape = {
 // Begin theme
 // ___________________________________________________________________
 
-const breakpoints: string[] = ['600px', '1024px']
+const breakpoints: string[] = ['800px', '1024px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -83,21 +83,17 @@ const theme: ThemeShape = {
 
   colors: {
     text: '#000000',
-    background: '#f9f9f8',
+    background: '#ffffff',
 
     primary: '#5700ff',
-    secondary: '#d3d3d4',
+    secondary: '#e0e0e7',
     tertiary: '#f5eddb',
 
     black: '#000000',
     white: '#FFFFFF',
-    red: '#FF0000',
-    indigo: '#3100ff',
     yellow: '#fcffb8',
-    goldenrod: '#DAA520',
-    darkgoldenrod: '#b8860b',
 
-    lightgray: '#d3d3d4',
+    lightgray: '#ededf1',
     gray: '#C4C4c4',
     darkgray: '#545454',
   },
@@ -127,8 +123,8 @@ const theme: ThemeShape = {
     mobile: 4,
     tablet: 5,
     desktop: 5,
-    vertical: [4, 5, 5],
-    axis: [4]
+    vertical: [5, 6, 7],
+    axis: [4, 5, 6]
   },
 
 
@@ -166,7 +162,7 @@ const theme: ThemeShape = {
 
   strokeWidth: '2px',
 
-  maxWidth: '1680px',
+  maxWidth: '1440px',
   siteWidth: '100%',
   logoWidth: '',
   headerHeight: '74px',

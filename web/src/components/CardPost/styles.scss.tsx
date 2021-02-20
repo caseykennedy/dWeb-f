@@ -15,45 +15,25 @@ import { Box, Flex } from '../ui'
 
 export const CardPost = styled(Flex)<{ inline?: boolean }>`
   display: flex;
-  align-items: flex-start;
-  /* justify-content: stretch; */
+  align-items: stretch;
   flex-direction: ${p => (!p.inline ? `column` : `row-reverse`)};
 
-  padding: ${p => (!p.inline ? 0 : `${theme.space[3]} ${theme.space[3]} ${theme.space[3]} 0 `)};
-  margin-bottom: ${p => (!p.inline ? 0 : `${theme.space[4]}`)};
+  background: ${theme.colors.lightgray};
+  /* margin-bottom: ${p => (!p.inline ? 0 : `${theme.space[4]}`)}; */
 
   @media ${theme.mq.tablet} {
     flex-direction: ${p => (!p.inline ? `column` : `row`)};
-  padding: ${p => (!p.inline ? 0 : `${theme.space[4]} ${theme.space[4]} ${theme.space[4]} 0 `)};
   }
 
   .content {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    height: 100%;
-    padding: ${p =>
-      !p.inline
-        ? `${theme.space[3]} 0`
-        : `0 ${theme.space[4]} ${theme.space[4]} 0`};
+    padding: ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
-      padding: ${p =>
-        !p.inline
-          ? `${theme.space[4]} 0`
-          : `0 0 ${theme.space[5]} ${theme.space[5]}`};
-    }
-
-    .pillbox {
-      display: none;
-      margin-bottom: ${theme.space[6]};
-      width: 100%;
-
-      @media ${theme.mq.tablet} {
-        display: flex;
-      }
+      padding: ${theme.space[5]};
     }
   }
 
@@ -63,7 +43,8 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   }
 
   .figure {
-    background: ${theme.colors.secondary};
+    /* background: ${theme.colors.secondary}; */
+    mix-blend-mode: luminosity;
 
     width: 100%;
 
@@ -74,17 +55,13 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
 
   &:hover {
     .figure {
-      top: calc(${theme.space[3]} * -1);
-    }
-
-    .title {
-      /* color: ${theme.colors.primary}; */
+      mix-blend-mode: normal;
     }
   }
 
   .title {
     /* font-family: ${theme.fonts.sans}; */
-    font-size: calc(${theme.fontSizes[3]});
+    font-size: calc(${theme.fontSizes[2]});
     line-height: ${theme.root.font.headingLineHeight};
 
     overflow: hidden;
@@ -95,7 +72,6 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
     margin-bottom: ${theme.space[1]};
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[4]});
       -webkit-line-clamp: 2; /* number of lines to show */
     }
 
@@ -107,24 +83,5 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
         font-size: calc(${theme.fontSizes[3]} / 1.25);
       }
     }
-  }
-
-  .bg {
-    position: relative;
-
-    &::before {
-      background: ${theme.colors.primary};
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-  .horizontal {
   }
 `
