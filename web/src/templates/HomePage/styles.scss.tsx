@@ -25,35 +25,6 @@ export const HomePage = styled(Box)`
     @media ${theme.mq.tablet} {
       flex-direction: row;
     }
-
-    a {
-      flex: 1;
-      align-items: center;
-      justify-content: center;
-
-      border-bottom: ${theme.border};
-      padding: ${theme.space[6]} 0;
-
-      letter-spacing: 1rem;
-      text-align: center;
-      text-transform: uppercase;
-
-      transition: background-color ${theme.transition.global};
-
-      @media ${theme.mq.tablet} {
-        border-right: ${theme.border};
-        border-bottom: none;
-      }
-
-      &:last-child {
-        border-right: none;
-        border-bottom: none;
-      }
-
-      &:hover {
-        background: ${theme.colors.lightgray};
-      }
-    }
   }
 
   .ethos {

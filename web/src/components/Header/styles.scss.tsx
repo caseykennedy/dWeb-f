@@ -64,7 +64,7 @@ export const Logo = styled(Flex)`
 
   .wordmark {
     margin-left: ${theme.space[2]};
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
 
     /* &:before {

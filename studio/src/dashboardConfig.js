@@ -1,24 +1,24 @@
 export default {
   widgets: [
     {
-      name: "sanity-tutorials"
+      name: 'sanity-tutorials'
     },
     {
-      name: "project-info"
+      name: 'project-info'
     },
     {
-      name: "project-users"
+      name: 'project-users'
     },
     {
-      name: "netlify",
+      name: 'netlify',
       options: {
-        title: "My Netlify deploys",
+        title: 'My Netlify deploys',
         sites: [
           {
-            title: "Handshake Foundation",
-            apiId: "cf7c4f2c-cc93-4156-8dc5-0a187c42343d",
-            buildHookId: "5ff8ba04cf1152467f6f36c7",
-            name: "HNSF"
+            title: 'Handshake Foundation',
+            apiId: '0ba0a0e1-042b-46e1-81e5-4b3f3442df2b',
+            buildHookId: '603b1856379495d918798aa9',
+            name: 'HNSF'
           }
         ]
       }

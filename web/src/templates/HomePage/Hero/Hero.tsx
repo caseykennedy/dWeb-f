@@ -32,12 +32,11 @@ const Hero: React.FC<Props> = () => {
           <Box flex={[1]}>
             <Heading
               as="h1"
-              fontFamily="display"
+              fontWeight={400}
               textAlign="center"
               className="text--xxl"
             >
-              Handshake — one small step for domains, one giant leap for
-              decentralized web.
+              Handshake—one small step for domains, one giant leap for decentralized web.
             </Heading>
             <Box px={[0, 7, 9]}>
               <Heading as="p" textAlign="center">

@@ -17,6 +17,7 @@ import { Grid } from 'theme-ui'
 import Hero from './Hero'
 
 // Components
+import Accordion from '../../components/Accordion'
 import ImgMatch from '../../components/ImgMatch'
 import Icon from '../../components/Icons'
 import Section from '../../components/Section'
@@ -34,12 +35,8 @@ const HomePage: React.FC = () => {
       <Hero />
 
       <Flex className="wayfinder">
-        <Link to={`/`} className="text--md">
-          donate
-        </Link>
-        <Link to={`/`} className="text--md">
-          grants
-        </Link>
+        <Accordion title="donate">donate</Accordion>
+        <Accordion title="grants">donate</Accordion>
       </Flex>
 
       <Flex className="ethos" px={theme.gutter.axis} py={[8, 9]}>
