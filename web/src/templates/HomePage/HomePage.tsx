@@ -39,6 +39,7 @@ const HomePage: React.FC = () => {
         <Accordion title="grants">donate</Accordion>
       </Flex>
 
+
       <Flex className="ethos" px={theme.gutter.axis} py={[8, 9]}>
         <Heading as="h3" className="message">
           Handshake — one small step for domains, one giant leap for

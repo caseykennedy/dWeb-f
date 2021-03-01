@@ -349,7 +349,6 @@ const Typography = css`
     }
 
     strong {
-      color: ${theme.colors.white};
     }
   }
 
@@ -418,7 +417,6 @@ const Typography = css`
     }
 
     li {
-      color: ${darken(0.15, theme.colors.white)};
       font-size: ${theme.fontSizes[2]};
       margin: 0 0 ${theme.space[4]};
 
@@ -442,7 +440,6 @@ const Typography = css`
       }
 
       strong {
-        color: ${theme.colors.white};
       }
     }
   }
