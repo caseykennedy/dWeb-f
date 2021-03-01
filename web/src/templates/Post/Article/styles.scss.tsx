@@ -35,7 +35,7 @@ export const Article = styled.div`
   .utilities {
     @media ${theme.mq.tablet} {
       position: sticky;
-      top: calc(${theme.headerHeight} + ${theme.space[5]});
+      top: calc(${theme.headerHeight});
     }
   }
 `

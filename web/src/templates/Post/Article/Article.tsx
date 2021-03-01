@@ -54,7 +54,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
               {post.publishedAt}
             </Text>
 
-            <Heading as="h1" mb={4} className="text--xxl  text--uppercase">
+            <Heading as="h1" mb={4} className="text--xxl">
               {post.title}
             </Heading>
 
@@ -73,7 +73,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
         </Section>
 
         <Box width={1}>
-          <Box width={1} maxWidth={theme.maxWidth}>
+          <Box width={1} maxWidth={theme.maxWidth} mx="auto">
             {post.figure && (
               <>
                 <Img
@@ -91,7 +91,8 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
                   <Text
                     as="figcaption"
                     fontSize={0}
-                    p={theme.gutter.axis}
+                    py={4}
+                    px={[4, 0]}
                   >
                     {post.figure.caption}
                   </Text>
@@ -167,7 +168,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
           </Section>
         )}
 
-        <Section border={true} overflow="hidden">
+        {/* <Section border={true} overflow="hidden">
           <Heading
             as="h4"
           >
@@ -183,7 +184,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
               ))}
             </CardSlider>
           </Box>
-        </Section>
+        </Section> */}
         {/* <PrevNext pageContext={pageContext} /> */}
       </S.Article>
     </>

@@ -35,10 +35,14 @@ const HomePage: React.FC = () => {
       <Hero />
 
       <Flex className="wayfinder">
-        <Accordion title="donate">donate</Accordion>
-        <Accordion title="grants">donate</Accordion>
+        <Accordion title="donate">
+          <Flex width={1} mx="auto" p={theme.gutter.axis} maxWidth="800px">
+            <Text as="p" textAlign="center" width={1}>
+              Donate to our BTC wallet:
+            </Text>
+          </Flex>
+        </Accordion>
       </Flex>
-
 
       <Flex className="ethos" px={theme.gutter.axis} py={[8, 9]}>
         <Heading as="h3" className="message">
@@ -94,20 +98,4 @@ const partners = [
   'Decentral GO',
   'Ready, aim, fire!',
   'Re:Build'
-]
-
-const data = [
-  {
-    question: 'How do I spray my eOn sanitizing mist? ',
-    answer:
-      'Twist to unlock the cap, after you hear a click, the circular opening should line up with the spray actuator. Next, place your finger on the top of the cap and locate the small groove near the back-end of the spray button. With your finger there—press down firmly to mist. Press and hold for a continuous spray. ',
-    note: 'Sprays from any angle. Requires no shaking, uses no propellant.'
-  },
-  {
-    question: 'Does eOn sanitizing mist have an odor? ',
-    answer:
-      'eOn multi-surface disinfectant is an odorless substance, though some natural variation in concentration may lead a light, harmless scent of chlorine that disappears after drying. ',
-    note:
-      'eOn hand sanitizer is 80%, 190 proof ethyl alcohol and carries the sharp, fresh scent of alcohol.'
-  }
 ]

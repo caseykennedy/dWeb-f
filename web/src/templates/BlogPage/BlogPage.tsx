@@ -7,31 +7,45 @@ import React from 'react'
 // Theme + Styles
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
+import { Grid } from 'theme-ui'
 
 // UI
 import { Box, Flex, Heading, Text } from '../../components/ui'
 
 // Components
 import Section from '../../components/Section'
+import CardPost from '../../components/CardPost'
+
+// Data
+import usePost from '../../hooks/usePost'
 
 // ___________________________________________________________________
 
 const BlogPage: React.FC = () => {
-  // const data = useHomePage()
+  const posts = usePost()
   return (
     <S.BlogPage>
       <Section>
-        <Heading as="h2">Blog</Heading>
-
-        <Box width={[1, 1 / 2]} mt={7}>
-          <Heading as="h3">Handshake</Heading>
+        <Box width={[1, 1 / 2]}>
+          <Heading as="h2">Blog</Heading>
           <Text as="p">
-            Handshake is a decentralized, permissionless naming protocol where
-            every peer is validating and in charge of managing the root DNS
-            naming zone with the goal of creating an alternative to existing
-            Certificate Authorities and naming systems.
+            The latest Handshake buzz.
           </Text>
         </Box>
+      </Section>
+
+      <Section border={true}>
+        <Flex flexDirection="column" width={1}>
+          <Box>
+            <Heading as="h4">latest blog</Heading>
+          </Box>
+
+          <Grid columns={[1, 2]} gap={theme.gutter.axis}>
+            {posts.map(({ node: post }, idx) => (
+              <CardPost inline={true} post={post} key={idx} />
+            ))}
+          </Grid>
+        </Flex>
       </Section>
     </S.BlogPage>
   )
