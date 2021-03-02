@@ -43,7 +43,6 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   }
 
   .figure {
-    mix-blend-mode: luminosity;
     transition: ${theme.transition.all};
 
     width: 100%;
