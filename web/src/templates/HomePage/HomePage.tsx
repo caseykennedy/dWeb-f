@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
+import QRCode from 'react-qr-code'
 
 // Theme + Styles
 import theme from '../../gatsby-plugin-theme-ui'
@@ -35,10 +35,34 @@ const HomePage: React.FC = () => {
       <Hero />
 
       <Flex className="wayfinder">
-        <Accordion title="donate">
-          <Flex width={1} mx="auto" p={theme.gutter.axis} maxWidth="800px">
-            <Text as="p" textAlign="center" width={1}>
-              Donate to our BTC wallet:
+        <Accordion title="Donate">
+          <Flex
+            flexDirection="column"
+            width={1}
+            mx="auto"
+            p={theme.gutter.axis}
+            maxWidth={theme.maxWidth}
+          >
+            <Grid columns={[1]} gap={theme.gutter.axis}>
+              {wallets.map((wallet, idx) => (
+                <S.DonateCard key={idx}>
+                  <Heading as="h4" mb={5}>
+                    {wallet.coin} wallet:
+                  </Heading>
+
+                  <Flex mx="auto" mb={7}>
+                    <QRCode size={156} value={wallet.address} />
+                  </Flex>
+
+                  <Text as="p" className="address  text--small">
+                    {wallet.address}
+                  </Text>
+                </S.DonateCard>
+              ))}
+            </Grid>
+
+            <Text textAlign="center" mt={theme.gutter.axis}>
+              Thank you!
             </Text>
           </Flex>
         </Accordion>
@@ -98,4 +122,19 @@ const partners = [
   'Decentral GO',
   'Ready, aim, fire!',
   'Re:Build'
+]
+
+const wallets = [
+  {
+    coin: 'Bitcoin',
+    address: '3HFWAoKYAtyg2qcrVEQdguRxohBrUXAqgm'
+  },
+  {
+    coin: 'Ethereum',
+    address: '0xdf3e12d5523a23df9531054034d880d363bbfb52'
+  },
+  {
+    coin: 'Handshake',
+    address: 'hs1qnk57nmawc5gmlnvrl3j4hsvg56sm2nnw2c6d2z'
+  }
 ]

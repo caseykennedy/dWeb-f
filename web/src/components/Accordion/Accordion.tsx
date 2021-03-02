@@ -138,13 +138,13 @@ export default Accordion
 // ___________________________________________________________________
 
 const defaultProps = {
-  pt: [4, 6],
-  pb: [4, 6],
+  pt: [5],
+  pb: [5],
   pr: theme.gutter.axis,
   pl: theme.gutter.axis,
   title: 'title',
   color: theme.colors.text,
-  colorActive: theme.colors.primary,
+  colorActive: theme.colors.white,
   fontSize: [2, 3],
   chevronColor: theme.colors.text,
   chevronWidth: theme.space[3],

@@ -27,7 +27,7 @@ const BlogPage: React.FC = () => {
     <S.BlogPage>
       <Section>
         <Box width={[1, 1 / 2]}>
-          <Heading as="h2">Blog</Heading>
+          <Heading as="h3">Blog</Heading>
           <Text as="p">
             The latest Handshake buzz.
           </Text>
@@ -36,10 +36,6 @@ const BlogPage: React.FC = () => {
 
       <Section border={true}>
         <Flex flexDirection="column" width={1}>
-          <Box>
-            <Heading as="h4">latest blog</Heading>
-          </Box>
-
           <Grid columns={[1, 2]} gap={theme.gutter.axis}>
             {posts.map(({ node: post }, idx) => (
               <CardPost inline={true} post={post} key={idx} />

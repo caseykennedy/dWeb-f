@@ -20,7 +20,6 @@ import { Box, Flex } from '../ui'
 export const AccordionContainer = styled.div<{ borderColor?: string, borderTop?: boolean }>`
   width: 100%;
   position: relative;
-  border-bottom: ${theme.border};
 
   /* &:first-child {
     border-top: none;
@@ -52,9 +51,7 @@ export const AccordionToggle = styled(Flex)<{ bg?: string, colorActive?: string,
   }
 
   .title {
-    letter-spacing: 1rem;
     text-align: center;
-    text-transform: uppercase;
       
     left: 0;
     position: relative;
@@ -63,7 +60,7 @@ export const AccordionToggle = styled(Flex)<{ bg?: string, colorActive?: string,
 
   &:hover,
   &.active  {
-    /* background: ${darken(0.05, theme.colors.background)}; */
+    background: ${theme.colors.primary};
     color: ${p => p.colorActive};
 
     .title {

@@ -73,6 +73,7 @@
     "react-helmet": "^5.2.1",
     "react-id-swiper": "^3.0.0",
     "react-is": "^16.13.1",
+    "react-qr-code": "^1.1.1",
     "react-responsive-modal": "^6.0.1",
     "react-scroll-parallax": "^2.3.5",
     "react-typist": "^2.0.5",

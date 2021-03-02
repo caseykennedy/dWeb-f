@@ -40,7 +40,7 @@ export const HomePage = styled(Box)`
       position: relative;
       z-index: 1;
     }
-    
+
     .wallpaper {
       position: absolute;
       top: 0;
@@ -53,5 +53,18 @@ export const HomePage = styled(Box)`
       mix-blend-mode: luminosity;
       opacity: 0.25;
     }
+  }
+`
+
+export const DonateCard = styled(Flex)`
+  display: flex;
+  flex-direction: column;
+  background: ${theme.colors.lightgray};
+  border: ${theme.border};
+  padding: ${theme.space[4]};
+
+  .address {
+    overflow-wrap: break-word;
+    line-break: anywhere;
   }
 `
