@@ -41,9 +41,8 @@ const HomePage: React.FC = () => {
             width={1}
             mx="auto"
             p={theme.gutter.axis}
-            maxWidth={theme.maxWidth}
           >
-            <Grid columns={[1, 2]} gap={theme.gutter.axis}>
+            <Grid columns={[1, 3]} gap={theme.gutter.axis}>
               {wallets.map((wallet, idx) => (
                 <S.DonateCard key={idx}>
                   <Heading as="h4" mb={5}>

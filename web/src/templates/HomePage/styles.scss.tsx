@@ -28,7 +28,7 @@ export const HomePage = styled(Box)`
   }
 
   .ethos {
-    background: ${theme.colors.black};
+    background: ${theme.colors.primary};
     position: relative;
 
     .message {
@@ -50,7 +50,8 @@ export const HomePage = styled(Box)`
       height: 100%;
       width: 100%;
       z-index: 0;
-      opacity: 0.33;
+      mix-blend-mode: hard-light;
+      opacity: 0.6;
     }
   }
 `
@@ -60,6 +61,7 @@ export const DonateCard = styled(Flex)`
   flex-direction: column;
   background: ${theme.colors.lightgray};
   border: ${theme.border};
+  border-radius: ${theme.borderRadius};
   padding: ${theme.space[4]};
 
   .address {
