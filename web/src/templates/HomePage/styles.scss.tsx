@@ -50,8 +50,7 @@ export const HomePage = styled(Box)`
       height: 100%;
       width: 100%;
       z-index: 0;
-      mix-blend-mode: luminosity;
-      opacity: 0.25;
+      opacity: 0.33;
     }
   }
 `
