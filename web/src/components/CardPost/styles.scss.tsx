@@ -18,7 +18,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   align-items: stretch;
   flex-direction: ${p => (!p.inline ? `column` : `row-reverse`)};
 
-  background: ${theme.colors.lightgray};
+  background: ${theme.colors.gray};
   transition: ${theme.transition.all};
 
   @media ${theme.mq.tablet} {
@@ -55,7 +55,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   }
 
   &:hover {
-    background: ${theme.colors.yellow};
+    background: ${theme.colors.darkgray};
 
     .figure {
       /* mix-blend-mode: normal; */
@@ -78,7 +78,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
     margin-bottom: ${theme.space[1]};
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[5]});
+      font-size: calc(${theme.fontSizes[4]});
     }
 
     &--small {

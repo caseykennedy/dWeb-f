@@ -87,15 +87,15 @@ const theme: ThemeShape = {
 
     primary: '#5700ff',
     secondary: '#e0e0e7',
-    tertiary: '#eeecfa',
+    tertiary: '#d2d2d9',
 
     black: '#000000',
     white: '#FFFFFF',
     yellow: '#fdffd4',
 
-    lightgray: '#eceef0',
-    gray: '#c2c4c5',
-    darkgray: '#88898a',
+    lightgray: '#f9f9fb',
+    gray: '#ededf1',
+    darkgray: '#d2d2d9',
   },
 
   // Space
@@ -123,8 +123,8 @@ const theme: ThemeShape = {
     mobile: 4,
     tablet: 5,
     desktop: 5,
-    vertical: [5, 6],
-    axis: [4, 5, 6]
+    vertical: [4, 5],
+    axis: [4, 5]
   },
 
 
@@ -188,7 +188,7 @@ const theme: ThemeShape = {
     }
   },
 
-  border: '1px solid #e1e1e1',
+  border: '1px solid #ededf1',
   borderRadius: '4px',
   shadow: '2rem 1.5rem 1rem #9D9FA2',
 

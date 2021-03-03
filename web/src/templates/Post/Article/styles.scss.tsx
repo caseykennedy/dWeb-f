@@ -35,7 +35,7 @@ export const Article = styled.div`
   .utilities {
     @media ${theme.mq.tablet} {
       position: sticky;
-      top: ${theme.space[6]};
+      top: ${theme.space[5]};
     }
   }
 `

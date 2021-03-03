@@ -73,6 +73,6 @@ export default CardPost
 
 CardPost.defaultProps = {
   aspectRatio: 1 / 1,
-  bg: theme.colors.background,
+  bg: theme.colors.gray,
   small: false
 }

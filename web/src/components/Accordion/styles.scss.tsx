@@ -42,7 +42,7 @@ export const AccordionToggle = styled(Flex)<{ bg?: string, colorActive?: string,
   color: ${p => p.color};
   cursor: pointer;
 
-  border: none;
+  border-top: ${theme.border};
   outline: none;
   transition: background-color ${theme.transition.global};
 
@@ -60,7 +60,8 @@ export const AccordionToggle = styled(Flex)<{ bg?: string, colorActive?: string,
 
   &:hover,
   &.active  {
-    background: ${theme.colors.yellow};
+    background: ${theme.colors.gray};
+    border-color: ${theme.colors.darkgray};
     color: ${p => p.colorActive};
 
     .title {
@@ -88,11 +89,9 @@ export const AccordionToggleInner = styled(Flex)`
 export const AccordionContent = styled(Box)`
   overflow: hidden;
   transition: max-height ${theme.transition.global};
-  border-top: ${theme.border};
 
   .content {
     flex-wrap: wrap;
-    border-top: 1px solid ${theme.colors.gray};
     padding-top: ${theme.space[4]};
     padding-bottom: ${theme.space[4]};
   }

@@ -15,6 +15,7 @@ import { Grid } from 'theme-ui'
 
 // Sections
 import Hero from './Hero'
+import GrantForm from './ContactForm'
 
 // Components
 import Accordion from '../../components/Accordion'
@@ -34,9 +35,10 @@ const HomePage: React.FC = () => {
     <S.HomePage>
       <Hero />
 
-      <Flex className="wayfinder">
+      <Flex className="wayfinder" mt={5}>
         <Accordion title="Donate">
           <Flex
+            bg="gray"
             flexDirection="column"
             width={1}
             mx="auto"
@@ -63,6 +65,19 @@ const HomePage: React.FC = () => {
             <Text textAlign="center" mt={theme.gutter.axis}>
               Thank you!
             </Text>
+          </Flex>
+        </Accordion>
+
+        <Accordion title="Apply for a grant">
+          <Flex
+            bg="gray"
+            flexDirection={['column', 'row']}
+            p={theme.gutter.axis}
+            width={1}
+          >
+            <Flex width={1} maxWidth={theme.maxWidth} mx="auto">
+            <GrantForm />
+            </Flex>
           </Flex>
         </Accordion>
       </Flex>

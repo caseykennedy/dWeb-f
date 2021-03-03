@@ -19,12 +19,7 @@ export const HomePage = styled(Box)`
 
   .wayfinder {
     display: flex;
-    flex-direction: column;
-    border-top: ${theme.border};
-
-    @media ${theme.mq.tablet} {
-      flex-direction: row;
-    }
+    flex-direction: column;    
   }
 
   .ethos {
@@ -59,9 +54,7 @@ export const HomePage = styled(Box)`
 export const DonateCard = styled(Flex)`
   display: flex;
   flex-direction: column;
-  background: ${theme.colors.lightgray};
-  border: ${theme.border};
-  border-radius: ${theme.borderRadius};
+  background: ${theme.colors.darkgray};
   padding: ${theme.space[4]};
 
   .address {
