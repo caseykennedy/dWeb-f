@@ -60,7 +60,7 @@ export const AccordionToggle = styled(Flex)<{ bg?: string, colorActive?: string,
 
   &:hover,
   &.active  {
-    background: ${theme.colors.primary};
+    background: ${theme.colors.yellow};
     color: ${p => p.colorActive};
 
     .title {
@@ -88,6 +88,7 @@ export const AccordionToggleInner = styled(Flex)`
 export const AccordionContent = styled(Box)`
   overflow: hidden;
   transition: max-height ${theme.transition.global};
+  border-top: ${theme.border};
 
   .content {
     flex-wrap: wrap;

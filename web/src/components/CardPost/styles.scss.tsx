@@ -78,8 +78,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
     margin-bottom: ${theme.space[1]};
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[1]});
-      -webkit-line-clamp: 2; /* number of lines to show */
+      font-size: calc(${theme.fontSizes[5]});
     }
 
     &--small {
@@ -87,7 +86,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
       margin-bottom: ${theme.space[2]};
 
       @media ${theme.mq.tablet} {
-        font-size: calc(${theme.fontSizes[3]} / 1.25);
+        font-size: calc(${theme.fontSizes[1]});
       }
     }
   }

@@ -28,17 +28,19 @@ const BlogPage: React.FC = () => {
       <Section>
         <Box width={[1, 1 / 2]}>
           <Heading as="h3">Blog</Heading>
-          <Text as="p">
-            The latest Handshake buzz.
-          </Text>
+          <Text as="p">Let us explore Handshake and it's possibilites.</Text>
         </Box>
       </Section>
 
       <Section border={true}>
         <Flex flexDirection="column" width={1}>
-          <Grid columns={[1, 2]} gap={theme.gutter.axis}>
+          <Grid columns={[1]} gap={theme.gutter.axis}>
             {posts.map(({ node: post }, idx) => (
-              <CardPost inline={true} post={post} key={idx} />
+              <CardPost
+                inline={true}
+                post={post}
+                key={idx}
+              />
             ))}
           </Grid>
         </Flex>

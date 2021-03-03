@@ -17,6 +17,26 @@ const GlobalStyles = createGlobalStyle`
   ${RootVars}
   ${Reset}
   ${Typography}
+
+  ::-webkit-scrollbar {
+    width: ${theme.space[3]};
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: ${theme.colors.yellow};
+    border-left: ${theme.border};
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: ${theme.colors.secondary};
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${theme.colors.primary};
+  }
   
   html,
   body {  

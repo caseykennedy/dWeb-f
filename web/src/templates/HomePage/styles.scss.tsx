@@ -35,7 +35,7 @@ export const HomePage = styled(Box)`
       color: ${theme.colors.white};
       text-align: center;
 
-      max-width: 900px;
+      max-width: 1024px;
       margin: 0 auto;
       position: relative;
       z-index: 1;

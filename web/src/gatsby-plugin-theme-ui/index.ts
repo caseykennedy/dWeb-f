@@ -123,7 +123,7 @@ const theme: ThemeShape = {
     mobile: 4,
     tablet: 5,
     desktop: 5,
-    vertical: [5, 6, 7],
+    vertical: [5, 6],
     axis: [4, 5, 6]
   },
 
@@ -162,7 +162,7 @@ const theme: ThemeShape = {
 
   strokeWidth: '2px',
 
-  maxWidth: '1440px',
+  maxWidth: '1280px',
   siteWidth: '100%',
   logoWidth: '',
   headerHeight: '74px',

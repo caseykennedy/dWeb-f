@@ -45,11 +45,11 @@ const HomePage: React.FC = () => {
             <Grid columns={[1, 3]} gap={theme.gutter.axis}>
               {wallets.map((wallet, idx) => (
                 <S.DonateCard key={idx}>
-                  <Heading as="h4" mb={5}>
-                    {wallet.coin} wallet:
+                  <Heading as="h4" fontWeight={500} mb={5}>
+                    {wallet.coin}:
                   </Heading>
 
-                  <Flex mx="auto" mb={7}>
+                  <Flex mx="auto" mb={6}>
                     <QRCode size={156} value={wallet.address} />
                   </Flex>
 
@@ -67,10 +67,13 @@ const HomePage: React.FC = () => {
         </Accordion>
       </Flex>
 
-      <Flex className="ethos" px={theme.gutter.axis} py={[8, 9]}>
-        <Heading as="h3" className="message">
-          Handshake — one small step for domains, one giant leap for
-          decentralized web.
+      <Flex className="ethos" px={theme.gutter.axis} py={[7, 8]}>
+        <Heading as="h4" className="message">
+          Operating out of Singapore, we are supporters of the early
+          decentralized internet, aiming to enable integrations, secondary and
+          tertiary layer infrastructure on top of Handshake, and the new
+          generation of internet pioneers to join us in charting the frontier of
+          the third era of the internet.
         </Heading>
 
         <Flex width={1} className="wallpaper">
@@ -96,7 +99,7 @@ const HomePage: React.FC = () => {
 
           <Grid columns={[1, 2]} gap={theme.gutter.axis}>
             {posts.map(({ node: post }, idx) => (
-              <CardPost inline={true} post={post} key={idx} />
+              <CardPost inline={true} post={post} small={true} key={idx} />
             ))}
           </Grid>
         </Flex>
@@ -125,15 +128,15 @@ const partners = [
 
 const wallets = [
   {
-    coin: 'Bitcoin',
+    coin: 'BTC',
     address: '3HFWAoKYAtyg2qcrVEQdguRxohBrUXAqgm'
   },
   {
-    coin: 'Ethereum',
+    coin: 'ETH',
     address: '0xdf3e12d5523a23df9531054034d880d363bbfb52'
   },
   {
-    coin: 'Handshake',
+    coin: 'HNS',
     address: 'hs1qnk57nmawc5gmlnvrl3j4hsvg56sm2nnw2c6d2z'
   }
 ]

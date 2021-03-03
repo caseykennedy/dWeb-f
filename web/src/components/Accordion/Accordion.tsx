@@ -144,7 +144,7 @@ const defaultProps = {
   pl: theme.gutter.axis,
   title: 'title',
   color: theme.colors.text,
-  colorActive: theme.colors.white,
+  colorActive: theme.colors.text,
   fontSize: [2, 3],
   chevronColor: theme.colors.text,
   chevronWidth: theme.space[3],

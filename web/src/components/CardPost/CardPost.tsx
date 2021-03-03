@@ -52,7 +52,7 @@ const CardPost: React.FC<Props> = ({
         </Box>
 
         <Flex width={!inline ? 1 : 1 / 2} className="content">
-          <Heading className={`title  ${!small ? `text--md` : `title--small`}`}>
+          <Heading className={`title  ${!small ? `text--lg` : `title--small`}`}>
             {post.title && post.title}
           </Heading>
 
