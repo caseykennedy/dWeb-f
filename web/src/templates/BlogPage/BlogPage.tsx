@@ -28,7 +28,7 @@ const BlogPage: React.FC = () => {
       <Section>
         <Box width={[1, 1 / 2]}>
           <Heading as="h3">Blog</Heading>
-          <Text as="p">Let us explore Handshake and it's possibilites.</Text>
+          <Text as="p">Venture into a truly unstoppable web.</Text>
         </Box>
       </Section>
 

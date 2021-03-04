@@ -68,7 +68,7 @@ const HomePage: React.FC = () => {
           </Flex>
         </Accordion>
 
-        <Accordion title="Apply for a grant">
+        <Accordion title="Grant Application">
           <Flex
             bg="gray"
             flexDirection={['column', 'row']}
