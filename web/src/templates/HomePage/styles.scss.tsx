@@ -54,7 +54,8 @@ export const HomePage = styled(Box)`
 export const DonateCard = styled(Flex)`
   display: flex;
   flex-direction: column;
-  background: ${theme.colors.darkgray};
+  border: ${theme.border};
+  border-color: ${theme.colors.black};
   padding: ${theme.space[4]};
 
   .address {

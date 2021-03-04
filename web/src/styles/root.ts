@@ -30,7 +30,7 @@ const RootVariables = css`
 
     /* set base values */
     --text-base-size: 1em;
-    --text-scale-ratio: 1.333;
+    --text-scale-ratio: 1.3;
 
     /* line-height */
     --heading-line-height: 1.15;

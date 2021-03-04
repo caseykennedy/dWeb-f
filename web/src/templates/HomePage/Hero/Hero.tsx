@@ -27,14 +27,13 @@ const Hero: React.FC<Props> = () => {
   const posts = usePost()
   return (
     <S.Hero>
-      <Section>
+      <Section pt={7} pb={7}>
         <Flex flexWrap="wrap">
-          <Box flex={[1]}>
+          <Box flex={1}>
             <Heading
               as="h1"
               fontWeight={400}
               textAlign="center"
-              className="text--xxl"
             >
               Handshake—one small step for domains, one giant leap for
               decentralized web.

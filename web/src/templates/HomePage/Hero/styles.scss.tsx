@@ -11,7 +11,12 @@ import Section from '../../../components/Section'
 
 // ___________________________________________________________________
 
-export const Hero = styled(Box)`
+export const Hero = styled(Flex)`
+  display: flex;
+  align-items: center;
+
+  min-height: 50vh;
+  height: inherit;
   width: 100%;
 
   .figure {
