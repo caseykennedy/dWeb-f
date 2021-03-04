@@ -142,7 +142,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Header mainRef={mainRef} />
       <S.Main ref={mainRef}>{children}</S.Main>
       <Footer />
-      <FormHidden />
     </S.Wrapper>
   )
 }
