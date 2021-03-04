@@ -105,9 +105,9 @@ const ContactForm: React.FC = () => {
         </Box>
 
         <Flex justifyContent="center" mt={4} width={1}>
-          <button type="submit" value="submit">
+          <Box as="button" flex={[1, 0.5]} type="submit" value="submit">
             Submit
-          </button>
+          </Box>
         </Flex>
       </fieldset>
     </S.Form>

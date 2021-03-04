@@ -75,8 +75,8 @@ const HomePage: React.FC = () => {
             p={theme.gutter.axis}
             width={1}
           >
-            <Flex width={1} maxWidth={theme.maxWidth} mx="auto">
-            <GrantForm />
+            <Flex width={1} maxWidth="1024px" mx="auto">
+              <GrantForm />
             </Flex>
           </Flex>
         </Accordion>

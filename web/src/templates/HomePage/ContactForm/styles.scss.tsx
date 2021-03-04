@@ -32,22 +32,23 @@ export const Form = styled.form`
     input,
     textarea,
     select {
-      background: ${theme.colors.background};
-      border: ${theme.border};
-      color: ${theme.colors.primary};
+      background: transparent;
+      border: 0;
+      border-bottom: ${theme.border};
+      border-color: ${theme.colors.black};
+      border-radius: 0;
       margin: 0;
-      padding: ${theme.space[4]};
+      padding: ${theme.space[4]} 0 ${theme.space[2]};
       width: 100%;
 
       &:focus {
-        border: ${theme.border};
+        border-color: ${theme.colors.primary};
         outline: none;
-        box-shadow: 0 0 15px 3px ${lighten(0.4, theme.colors.primary)};
-        box-shadow: 0 0 0 3px -moz-mac-focusring;
+        /* box-shadow: 0 0 15px 3px ${lighten(0.4, theme.colors.primary)};
+        box-shadow: 0 0 0 3px -moz-mac-focusring; */
       }
 
       &::placeholder {
-        color: ${lighten(0.5, theme.colors.black)};
       }
     }
 
@@ -82,15 +83,21 @@ export const Form = styled.form`
   }
 
   button {
-    transition: ${theme.transition.all};
-    background: ${theme.colors.primary};
-    border: ${theme.border};
-    border-radius: ${theme.borderRadius};
-    color: ${theme.colors.white};
+    background: transparent;
+    border: 0;
+    border-bottom: ${theme.border};
+    border-color: ${theme.colors.black};
+    color: ${theme.colors.text};
+
     margin: 0;
     padding: ${theme.space[4]};
     cursor: pointer;
-    width: 86%;
+    transition: ${theme.transition.all};
+
+    &:hover {
+      background: ${theme.colors.primary};
+      color: ${theme.colors.white};
+    }
   }
 
   .errors {
