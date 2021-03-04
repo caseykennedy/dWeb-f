@@ -24,7 +24,7 @@ const ContactForm: React.FC = () => {
       <input type="hidden" name="bot-field" />
       <input
         type="hidden"
-        name="grant-application-form"
+        name="form-name"
         value="Apply for a grant — dWeb"
       />
 
