@@ -37,6 +37,7 @@ export const Form = styled.form`
       border-bottom: ${theme.border};
       border-color: ${theme.colors.black};
       border-radius: 0;
+      color: ${theme.colors.black};
 
       font-size: ${theme.fontSizes[3]};
       margin: 0;
@@ -51,6 +52,7 @@ export const Form = styled.form`
       }
 
       &::placeholder {
+        color: ${theme.colors.black};
       }
     }
 
@@ -89,7 +91,7 @@ export const Form = styled.form`
     border: 0;
     border-bottom: ${theme.border};
     border-color: ${theme.colors.black};
-    color: ${theme.colors.text};
+    color: ${theme.colors.black};
     font-size: ${theme.fontSizes[3]};
 
     margin: 0;
@@ -99,7 +101,7 @@ export const Form = styled.form`
 
     &:hover {
       background: ${theme.colors.primary};
-      color: ${theme.colors.white};
+      color: ${theme.colors.black};
     }
   }
 

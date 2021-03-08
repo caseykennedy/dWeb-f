@@ -70,7 +70,7 @@ export const Logo = styled(Flex)`
 
     @media ${theme.mq.tablet} {
       
-    font-size: ${theme.fontSizes[2]};
+    /* font-size: ${theme.fontSizes[2]}; */
     }
   }
 `

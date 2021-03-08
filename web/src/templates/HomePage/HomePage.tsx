@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
       <Flex className="wayfinder" mt={5}>
         <Accordion title="Donate">
           <Flex
-            bg="gray"
+            bg="black"
             flexDirection="column"
             width={1}
             mx="auto"
@@ -62,7 +62,12 @@ const HomePage: React.FC = () => {
               ))}
             </Grid>
 
-            <Text as="p" textAlign="center" mt={theme.gutter.axis}>
+            <Text
+              as="p"
+              color={theme.colors.white}
+              textAlign="center"
+              mt={theme.gutter.axis}
+            >
               Thank you!
             </Text>
           </Flex>
@@ -72,10 +77,16 @@ const HomePage: React.FC = () => {
           <Flex
             bg="gray"
             flexDirection={['column', 'row']}
-            p={theme.gutter.axis}
+            py={[5, 6]}
+            px={theme.gutter.axis}
             width={1}
           >
-            <Flex width={1} maxWidth="1024px" mx="auto">
+            <Flex flexDirection="column" width={1} maxWidth="1024px" mx="auto">
+              <Text as="p" mb={6}>
+                We look forward to reviewing
+                <br />
+                your applications 😄
+              </Text>
               <GrantForm />
             </Flex>
           </Flex>
@@ -114,7 +125,13 @@ const HomePage: React.FC = () => {
 
           <Grid columns={[1, 2]} gap={theme.gutter.axis}>
             {posts.map(({ node: post }, idx) => (
-              <CardPost aspectRatio={4/3} inline={true} post={post} small={true} key={idx} />
+              <CardPost
+                aspectRatio={4 / 3}
+                inline={true}
+                post={post}
+                small={true}
+                key={idx}
+              />
             ))}
           </Grid>
         </Flex>

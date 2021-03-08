@@ -269,7 +269,7 @@ const Typography = css`
   h1,
   .text--xxl {
     /* font-family: ${theme.fonts.display}; */
-    font-size: calc(${theme.fontSizes[5]} / 1.25);
+    font-size: calc(${theme.fontSizes[5]} / 1.15);
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.fontSizes[6]};
@@ -326,11 +326,12 @@ const Typography = css`
 
   p,
   .text--base {
-    font-size: ${theme.fontSizes[3]};
+    font-size: ${theme.fontSizes[2]};
     line-height: ${theme.root.font.bodyLineHeight};
     margin: 0 0 ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
+      font-size: ${theme.fontSizes[3]};
     }
 
     &:last-child {

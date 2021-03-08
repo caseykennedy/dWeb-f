@@ -19,7 +19,6 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   flex-direction: ${p => (!p.inline ? `column` : `row-reverse`)};
 
   background: ${theme.colors.gray};
-  border-bottom: ${theme.border};
   transition: ${theme.transition.all};
 
   @media ${theme.mq.tablet} {

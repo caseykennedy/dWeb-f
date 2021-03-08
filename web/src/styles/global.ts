@@ -40,7 +40,7 @@ const GlobalStyles = createGlobalStyle`
   
   html,
   body {  
-    background: ${theme.colors.yellow};  
+    background: ${theme.colors.black};  
     
     border: 0;
     margin: 0;
