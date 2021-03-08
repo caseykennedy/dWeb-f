@@ -27,7 +27,7 @@ const Hero: React.FC<Props> = () => {
   const posts = usePost()
   return (
     <S.Hero>
-      <Section pt={7} pb={7}>
+      <Section pt={[5, 6]} pb={[5, 6]}>
         <Flex flexWrap="wrap">
           <Box flex={1}>
             <Heading

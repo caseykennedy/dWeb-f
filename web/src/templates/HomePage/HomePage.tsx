@@ -62,7 +62,7 @@ const HomePage: React.FC = () => {
               ))}
             </Grid>
 
-            <Text textAlign="center" mt={theme.gutter.axis}>
+            <Text as="p" textAlign="center" mt={theme.gutter.axis}>
               Thank you!
             </Text>
           </Flex>
@@ -83,13 +83,13 @@ const HomePage: React.FC = () => {
       </Flex>
 
       <Flex className="ethos" px={theme.gutter.axis} py={[7, 8]}>
-        <Heading as="h4" className="message">
+        <Text as="p" className="message">
           Operating out of Singapore, we are supporters of the early
           decentralized internet, aiming to enable integrations, secondary and
           tertiary layer infrastructure on top of Handshake, and the new
           generation of internet pioneers to join us in charting the frontier of
           the third era of the internet.
-        </Heading>
+        </Text>
 
         <Flex width={1} className="wallpaper">
           <ImgMatch src="web.png" altText="waves from above" />
@@ -109,12 +109,12 @@ const HomePage: React.FC = () => {
       <Section border={true}>
         <Flex flexDirection="column" width={1}>
           <Box>
-            <Heading as="h4">latest blog</Heading>
+            <Heading as="h4">Latest blog</Heading>
           </Box>
 
           <Grid columns={[1, 2]} gap={theme.gutter.axis}>
             {posts.map(({ node: post }, idx) => (
-              <CardPost inline={true} post={post} small={true} key={idx} />
+              <CardPost aspectRatio={4/3} inline={true} post={post} small={true} key={idx} />
             ))}
           </Grid>
         </Flex>

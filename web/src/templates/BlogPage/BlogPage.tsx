@@ -25,7 +25,7 @@ const BlogPage: React.FC = () => {
   const posts = usePost()
   return (
     <S.BlogPage>
-      <Section>
+      <Section pt={7}>
         <Box width={[1, 1 / 2]}>
           <Heading as="h3">Blog</Heading>
           <Text as="p">Venture into a truly unstoppable web.</Text>
@@ -37,6 +37,7 @@ const BlogPage: React.FC = () => {
           <Grid columns={[1]} gap={theme.gutter.axis}>
             {posts.map(({ node: post }, idx) => (
               <CardPost
+                aspectRatio={4 / 3}
                 inline={true}
                 post={post}
                 key={idx}

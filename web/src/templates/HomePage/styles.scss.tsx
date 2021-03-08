@@ -24,6 +24,7 @@ export const HomePage = styled(Box)`
 
   .ethos {
     background: ${theme.colors.primary};
+    border-top: ${theme.border};
     position: relative;
 
     .message {

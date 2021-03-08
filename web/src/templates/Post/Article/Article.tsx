@@ -47,7 +47,6 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
         pathname={`/articles/${post.slug.current}`}
       />
       <S.Article>
-
         <Section border={true}>
           <Box width={1} mb={0}>
             <Text as="p" className="text--small  text--uppercase">
@@ -66,8 +65,6 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
                   )}
                 </Text>
               </Box>
-
-              
             </Flex>
           </Box>
         </Section>
@@ -79,7 +76,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
                 <Img
                   fluid={{
                     ...post.figure.asset.fluid,
-                    aspectRatio: 16 / 9
+                    aspectRatio: 16 / 11
                   }}
                   objectFit="cover"
                   objectPosition="50% 50%"
@@ -88,12 +85,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
                 />
 
                 {post.figure.caption && (
-                  <Text
-                    as="figcaption"
-                    fontSize={0}
-                    py={4}
-                    px={[4, 0]}
-                  >
+                  <Text as="figcaption" fontSize={0} py={4} px={[4, 0]}>
                     {post.figure.caption}
                   </Text>
                 )}

@@ -30,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: ${theme.colors.secondary};
+    background: ${theme.colors.black};
   }
 
   /* Handle on hover */

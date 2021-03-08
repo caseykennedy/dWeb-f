@@ -64,16 +64,14 @@ export const Logo = styled(Flex)`
 
   .wordmark {
     margin-left: ${theme.space[2]};
+    font-size: ${theme.fontSizes[1]};
     font-weight: 500;
     text-decoration: none;
 
-    /* &:before {
-      content: 'dWeb Foundation';
-
-      @media ${theme.mq.tablet} {
-        content: 'dWeb Foundation';
-      }
-    } */
+    @media ${theme.mq.tablet} {
+      
+    font-size: ${theme.fontSizes[2]};
+    }
   }
 `
 

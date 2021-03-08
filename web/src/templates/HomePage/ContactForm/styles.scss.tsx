@@ -37,6 +37,8 @@ export const Form = styled.form`
       border-bottom: ${theme.border};
       border-color: ${theme.colors.black};
       border-radius: 0;
+
+      font-size: ${theme.fontSizes[3]};
       margin: 0;
       padding: ${theme.space[4]} 0 ${theme.space[2]};
       width: 100%;
@@ -88,6 +90,7 @@ export const Form = styled.form`
     border-bottom: ${theme.border};
     border-color: ${theme.colors.black};
     color: ${theme.colors.text};
+    font-size: ${theme.fontSizes[3]};
 
     margin: 0;
     padding: ${theme.space[4]};

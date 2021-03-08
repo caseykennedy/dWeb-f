@@ -22,7 +22,7 @@ const getYear = () => new Date().getFullYear()
 
 const Footer: React.FC = () => {
   return (
-    <S.Footer as="footer" py={theme.gutter.axis} px={theme.gutter.axis}>
+    <S.Footer as="footer" pt={4} px={theme.gutter.axis} pb={6}>
       <Box className="footer-inner">
         {/* <Text as="a" className="text--xxl">donate</Text> */}
 
