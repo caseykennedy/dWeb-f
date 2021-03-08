@@ -22,7 +22,6 @@ export const Nav = styled.nav`
     font-size: ${theme.fontSizes[1]};
     font-weight: 400;
     text-decoration: none;
-    text-transform: lowercase;
 
     margin-left: ${theme.space[5]};
 

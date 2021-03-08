@@ -94,7 +94,7 @@ const HomePage: React.FC = () => {
       </Flex>
 
       <Flex className="ethos" px={theme.gutter.axis} py={[7, 8]}>
-        <Text as="p" className="message">
+        <Text as="p" fontSize={3} className="message">
           Operating out of Singapore, we are supporters of the early
           decentralized internet, aiming to enable integrations, secondary and
           tertiary layer infrastructure on top of Handshake, and the new
@@ -106,16 +106,6 @@ const HomePage: React.FC = () => {
           <ImgMatch src="web.png" altText="waves from above" />
         </Flex>
       </Flex>
-
-      {/* <Section border={true}>
-        <Box px={[0, 7, 9]}>
-          <Text as="p" fontSize={[2, 3]} textAlign="center">
-            The dWeb Foundation is a community-organized effort that's pushing
-            the frontier of ushering in a decentralized internet, with Handshake
-            at the root.
-          </Text>
-        </Box>
-      </Section> */}
 
       <Section border={true}>
         <Flex flexDirection="column" width={1}>
@@ -136,27 +126,11 @@ const HomePage: React.FC = () => {
           </Grid>
         </Flex>
       </Section>
-
-      {/* <Section border={true}>
-        <Link to="/donate">
-          <Text className="text--xl">donate</Text>
-        </Link>
-        <Link to="/apply">
-          <Text className="text--xl">apply for grants</Text>
-        </Link>
-      </Section> */}
     </S.HomePage>
   )
 }
 
 export default HomePage
-
-const partners = [
-  'Handshake FTW',
-  'Decentral GO',
-  'Ready, aim, fire!',
-  'Re:Build'
-]
 
 const wallets = [
   {

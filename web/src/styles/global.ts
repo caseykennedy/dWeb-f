@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: ${theme.colors.yellow};
+    background: ${theme.colors.background};
     border-left: ${theme.border};
   }
 
@@ -35,7 +35,6 @@ const GlobalStyles = createGlobalStyle`
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: ${theme.colors.primary};
   }
   
   html,
