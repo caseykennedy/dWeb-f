@@ -101,7 +101,7 @@ export const Form = styled.form`
 
     &:hover {
       background: ${theme.colors.primary};
-      color: ${theme.colors.black};
+      color: ${theme.colors.white};
     }
   }
 
