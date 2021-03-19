@@ -28,16 +28,13 @@ const AboutPage: React.FC = () => {
     <S.AboutPage>
       <Section pt={7}>
         <Box width={[1, 2 / 3]}>
-          <Heading as="h3">
-            About
-          </Heading>
-          <Heading as="p" className="text--justify">
+          <Text as="p" mb={0} className="text--lg  text--justify">
             Operating out of Singapore, we are supporters of the early
             decentralized internet, aiming to enable integrations, secondary and
             tertiary layer infrastructure on top of Handshake, and the new
             generation of internet pioneers to join us in charting the frontier
             of the third era of the internet.
-          </Heading>
+          </Text>
         </Box>
       </Section>
 

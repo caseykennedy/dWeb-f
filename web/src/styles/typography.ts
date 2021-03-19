@@ -296,7 +296,6 @@ const Typography = css`
   h3,
   .text--lg {
     font-size: calc(${theme.fontSizes[3]});
-    font-weight: 500;
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[4]});

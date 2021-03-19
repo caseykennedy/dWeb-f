@@ -30,11 +30,11 @@ const Hero: React.FC<Props> = () => {
       <Section>
         <Flex flexWrap="wrap">
           <Box flex={[1, 2 / 3]}>
-            <Heading as="h3" mb={0} fontWeight={400} className="text--justify">
+            <Text as="p" mb={0} className="text--lg  text--justify">
               The dWeb Foundation is a community-organized effort that's
               charting the frontier toward a decentralized internet, with
               Handshake at the root.
-            </Heading>
+            </Text>
             {/* <Box>
               <Heading as="p">
               Handshake—one small step for domains, one giant leap for
