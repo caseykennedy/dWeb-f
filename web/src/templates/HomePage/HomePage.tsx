@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import QRCode from 'react-qr-code'
+import { Link } from 'gatsby'
 
 // Theme + Styles
 import theme from '../../gatsby-plugin-theme-ui'
@@ -15,14 +15,11 @@ import { Grid } from 'theme-ui'
 
 // Sections
 import Hero from './Hero'
-import GrantForm from './ContactForm'
 
 // Components
-import Accordion from '../../components/Accordion'
-import ImgMatch from '../../components/ImgMatch'
-import Icon from '../../components/Icons'
 import Section from '../../components/Section'
 import CardPost from '../../components/CardPost'
+import Icon from '../../components/Icons'
 
 // Data
 import usePost from '../../hooks/usePost'
@@ -108,6 +105,17 @@ const HomePage: React.FC = () => {
       </Flex> */}
 
       <Section bg="black" color="white">
+        <Flex className="wayfinder" width={1}>
+          <Link to={`/donate`}>
+            Donate <Icon name="arrow" />
+          </Link>
+          <Link to={`/grants`}>
+            Grants <Icon name="arrow" />
+          </Link>
+        </Flex>
+      </Section>
+
+      <Section bg="black" color="white" border={true}>
         <Flex flexDirection="column" width={1}>
           <Box mb={3}>
             <Heading as="h4">Latest</Heading>

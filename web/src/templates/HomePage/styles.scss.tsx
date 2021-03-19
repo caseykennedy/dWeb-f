@@ -19,7 +19,38 @@ export const HomePage = styled(Box)`
 
   .wayfinder {
     display: flex;
-    flex-direction: column;    
+    align-items: flex-start;
+    flex-direction: column;
+
+    a {
+      display: flex;
+      justify-content: space-between;
+
+      width: 100%;
+      color: ${theme.colors.white};
+      font-size: ${theme.fontSizes[7]};
+
+      span {
+        svg {
+          fill: ${theme.colors.white};
+        }
+      }
+
+      &:hover {
+        color: ${theme.colors.primary};
+
+        span {
+        svg {
+          fill: ${theme.colors.primary};
+        }
+      }
+      }
+    }
+  }
+
+  .wayfinder {
+    display: flex;
+    flex-direction: column;
   }
 
   .ethos {
