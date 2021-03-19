@@ -387,7 +387,9 @@ const Typography = css`
   }
 
   .text--justify {
-    text-align: justify;
+    @media ${theme.mq.tablet} {
+      text-align: justify;
+    }
   }
 
   a {
