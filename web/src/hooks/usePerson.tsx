@@ -10,7 +10,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 const usePerson = () => {
   const data = useStaticQuery<PersonShape>(graphql`
     query PersonQuery {
-      people: allSanityPerson {
+      people: allSanityPerson(sort: {order: DESC, fields: _createdAt}) {
         edges {
           node {
             _createdAt

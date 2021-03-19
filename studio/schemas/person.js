@@ -38,6 +38,11 @@ export default {
       options: {
         hotspot: true
       }
+    },
+    {
+      name: "bio",
+      title: "Bio",
+      type: "blockText",
     }
   ],
   preview: {
