@@ -7,13 +7,13 @@ import theme from '../gatsby-plugin-theme-ui'
 type Props = {} & typeof defaultProps
 
 const defaultProps = {
-  bg: theme.colors.primary,
+  bg: theme.colors.black,
   color: theme.colors.white
 }
 
 const Symbol: React.FC<Props> = ({ bg, color }) => (
   <SVG width="100%" viewBox="0 0 11.29 11.29">
-    <circle fill={bg} cx="5.65" cy="5.65" r="5.65" />
+    <rect fill={bg} width="100" height="100" rx="1.5" />
     <path
       fill={color}
       fillRule="evenodd"

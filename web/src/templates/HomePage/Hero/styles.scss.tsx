@@ -13,27 +13,9 @@ import Section from '../../../components/Section'
 
 export const Hero = styled(Flex)`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 
-  min-height: 50vh;
+  min-height: 30vh;
   height: inherit;
   width: 100%;
-
-  .figure {
-    background: ${theme.colors.primary};
-
-    img {
-      mix-blend-mode: luminosity;
-    }
-  }
-
-  .symbol {
-    svg {
-      width: 24px;
-
-      @media ${theme.mq.tablet} {
-        width: inherit;
-      }
-    }
-  }
 `

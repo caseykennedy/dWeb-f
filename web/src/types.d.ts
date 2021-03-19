@@ -104,62 +104,23 @@ type PostContextShape = {
 }
 
 
-// Video post shape
+// Person shape
 // ___________________________________________________________________
 
-type VideoShape = {
-  videos: {
-    edges: PostEdges[]
+type PersonShape = {
+  people: {
+    edges: PersonEdges[]
   }
 }
 
-type VideoEdges = {
-  node: PostQuery
+type PersonEdges = {
+  node: PersonQuery
 }
 
-type VideoData = {
-  post: PostQuery
-}
-
-type VideoQuery = {
-  videoUrl: string
-  title: string
-  _rawBody: string
+type PersonQuery = {
+  _createdAt: string
   _id: string
-  publishedAt: string
-  slug: {
-    current: string
-  }
-  tags: {
-    tag: string
-  }[]
-  sources: {
-    title
-    url
-  }[]
-  figure: {
-    alt: string
-    asset: {
-      fluid: {
-        src: string
-        aspectRatio: number
-        base64: string
-        sizes: string
-        srcSet: string
-        srcSetWebp: string
-        srcWebp: string
-      }
-    }
-  }
-  categories: {
-    title: string
-  }[]
-  authors: PostAuthor
-}
-
-type VideoAuthor = {
-  name: string
-  role: string
+  _rawBio: string
   avatar: {
     asset: {
       fluid: {
@@ -173,22 +134,8 @@ type VideoAuthor = {
       }
     }
   }
-}
-
-type VideoContextShape = {
-  pageContext: {
-    post: VideoQuery
-    prev: {
-      title: string
-      slug: {
-        current: string
-      }
-    }
-    next: {
-      title: string
-      slug: {
-        current: string
-      }
-    }
+  name: string
+  role: string
+  slug: {
+    current: string
   }
-}

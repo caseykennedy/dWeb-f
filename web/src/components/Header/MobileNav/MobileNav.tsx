@@ -54,15 +54,19 @@ export default MobileNav
 
 const data = [
   {
-    name: 'Blog',
-    link: '/blog'
+    name: 'about',
+    link: '/about'
   },
   {
-    name: 'Donate',
+    name: 'donate',
     link: '/donate'
   },
   {
-    name: 'Apply for grants',
-    link: '/apply'
+    name: 'grants',
+    link: '/grants'
   },
+  {
+    name: 'blog',
+    link: '/blog'
+  }
 ]

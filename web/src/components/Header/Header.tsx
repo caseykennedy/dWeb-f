@@ -52,7 +52,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           <Link to="/" className="logo" aria-label="HNSF, back to home">
             <S.Logo>
               <Box className="symbol">
-                <Symbol bg={theme.colors.primary} color={theme.colors.white} />
+                <Symbol bg="black" color={theme.colors.white} />
               </Box>
               <Box className="wordmark" aria-label="The Handshake Foundation">
                 dWeb Foundation

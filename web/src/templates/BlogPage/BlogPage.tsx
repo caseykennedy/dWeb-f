@@ -32,7 +32,7 @@ const BlogPage: React.FC = () => {
         </Box>
       </Section>
 
-      <Section border={true}>
+      <Section bg="black" color="white">
         <Flex flexDirection="column" width={1}>
           <Grid columns={[1]} gap={theme.gutter.axis}>
             {posts.map(({ node: post }, idx) => (

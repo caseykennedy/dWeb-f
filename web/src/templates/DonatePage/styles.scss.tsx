@@ -17,3 +17,24 @@ export const DonatePage = styled(Box)`
   @media ${theme.mq.tablet} {
   }
 `
+
+export const DonateCard = styled(Flex)`
+  display: flex;
+  flex-direction: column;
+
+  background: ${theme.colors.black};
+  border: ${theme.border};
+  color: ${theme.colors.white};
+  padding: ${theme.space[4]};
+
+  transition: border-color ${theme.transition.global};
+
+  .address {
+    overflow-wrap: break-word;
+    line-break: anywhere;
+  }
+
+  &:hover {
+    border-color: ${theme.colors.primary};
+  }
+`

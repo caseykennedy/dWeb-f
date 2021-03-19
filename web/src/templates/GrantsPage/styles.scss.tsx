@@ -1,4 +1,4 @@
-// ApplyPage Styles:
+// GrantsPage Styles:
 
 // ___________________________________________________________________
 
@@ -11,7 +11,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-export const ApplyPage = styled(Box)`
+export const GrantsPage = styled(Box)`
   width: 100%;
 
   @media ${theme.mq.tablet} {

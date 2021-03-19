@@ -19,11 +19,16 @@ export const Nav = styled.nav`
   width: 100%;
 
   a {
+    color: ${theme.colors.black};
     font-size: ${theme.fontSizes[1]};
     font-weight: 400;
     text-decoration: none;
 
-    margin-left: ${theme.space[5]};
+    margin-left: ${theme.space[3]};
+
+    @media ${theme.mq.tablet} {
+      margin-left: ${theme.space[4]};
+    }
 
     &.active,
     &:hover {

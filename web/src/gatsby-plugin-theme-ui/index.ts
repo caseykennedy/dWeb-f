@@ -162,7 +162,7 @@ const theme: ThemeShape = {
 
   strokeWidth: '2px',
 
-  maxWidth: '1280px',
+  maxWidth: '1680px',
   siteWidth: '100%',
   logoWidth: '',
   headerHeight: '74px',
@@ -188,7 +188,7 @@ const theme: ThemeShape = {
     }
   },
 
-  border: '2px solid #000000',
+  border: '1px solid #d2d2d9',
   borderRadius: '4px',
   shadow: '2rem 1.5rem 1rem #9D9FA2',
 

@@ -296,6 +296,7 @@ const Typography = css`
   h3,
   .text--lg {
     font-size: calc(${theme.fontSizes[3]});
+    font-weight: 500;
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[4]});
@@ -328,7 +329,7 @@ const Typography = css`
   .text--base {
     font-size: ${theme.fontSizes[2]};
     line-height: ${theme.root.font.bodyLineHeight};
-    margin: 0 0 ${theme.space[4]};
+    margin: 0 0 ${theme.space[3]};
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.fontSizes[3]};
@@ -386,8 +387,11 @@ const Typography = css`
     text-decoration: underline;
   }
 
+  .text--justify {
+    text-align: justify;
+  }
+
   a {
-    color: ${theme.colors.black};
     text-decoration: none;
     /* text-decoration-thickness: 1.5px; */
 

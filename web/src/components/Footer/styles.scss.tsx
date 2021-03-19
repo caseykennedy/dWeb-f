@@ -16,10 +16,15 @@ export const Footer = styled(Flex)`
   flex-wrap: wrap;
   justify-content: space-between;
 
-  /* border-top: ${theme.border}; */
-  /* background: ${theme.colors.black}; */
-  /* color: ${theme.colors.white}; */
+  border-top: ${theme.border};
+  border-color: #3f3f42;
+  background: ${theme.colors.black};
+  color: ${theme.colors.white};
   position: relative;
+
+  a {
+    color: ${theme.colors.white};
+  }
 
   .footer-inner {
     display: flex;

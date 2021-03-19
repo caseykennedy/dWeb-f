@@ -44,8 +44,6 @@ const RootVariables = css`
       --text-base-size: 1.15em;
       --body-line-height: 1.5;
       --heading-line-height: 1.15;
-      --heading-letter-spacing: 1px;
-      --body-letter-spacing: 1px;
     }
 
     /* type scale */

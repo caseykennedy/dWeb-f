@@ -16,6 +16,10 @@ export const Header = styled(Box)`
   /* border-bottom: ${theme.border}; */
   width: 100%;
 
+  a {
+    color: ${theme.colors.black};
+  }
+
   .header-inner {
     display: flex;
     align-items: center;
@@ -34,7 +38,7 @@ export const Header = styled(Box)`
 export const Menu = styled(Flex)`
   align-items: center;
   flex-direction: row;
-  display: flex;
+  display: none;
 
   @media ${theme.mq.tablet} {
     display: flex;
@@ -66,6 +70,7 @@ export const Logo = styled(Flex)`
     margin-left: ${theme.space[2]};
     font-size: ${theme.fontSizes[1]};
     font-weight: 500;
+    line-height: 1;
     text-decoration: none;
 
     @media ${theme.mq.tablet} {
@@ -78,7 +83,7 @@ export const Logo = styled(Flex)`
 export const Utilities = styled(Flex)``
 
 export const Toggle = styled(Box)`
-  display: none;
+  display: initial;
   align-items: flex-start;
   box-sizing: content-box;
 

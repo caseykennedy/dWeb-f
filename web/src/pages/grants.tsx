@@ -1,27 +1,23 @@
-// Apply page
+// Grants page
 
 // ___________________________________________________________________
 
 // Libraries
 import React from 'react'
 
-// Elements
-
 // Components
 import SEO from '../components/SEO'
-import ApplyPage from '../templates/ApplyPage'
+import GrantsPage from '../templates/GrantsPage'
 
 // ___________________________________________________________________
 
-const Apply = () => {
+const Donate = () => {
   return (
     <>
       <SEO />
-      <ApplyPage />
+      <GrantsPage />
     </>
   )
 }
 
-export default Apply
-
-// ___________________________________________________________________
+export default Donate

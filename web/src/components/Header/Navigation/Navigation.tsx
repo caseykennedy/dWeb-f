@@ -36,7 +36,19 @@ export default Navigation
 
 const data = [
   {
-    name: 'Blog',
+    name: 'about',
+    link: '/about'
+  },
+  {
+    name: 'donate',
+    link: '/donate'
+  },
+  {
+    name: 'grants',
+    link: '/grants'
+  },
+  {
+    name: 'blog',
     link: '/blog'
   }
 ]

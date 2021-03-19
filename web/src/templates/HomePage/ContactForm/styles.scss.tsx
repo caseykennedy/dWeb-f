@@ -35,9 +35,8 @@ export const Form = styled.form`
       background: transparent;
       border: 0;
       border-bottom: ${theme.border};
-      border-color: ${theme.colors.black};
       border-radius: 0;
-      color: ${theme.colors.black};
+      color: ${theme.colors.darkgray};
 
       font-size: ${theme.fontSizes[3]};
       margin: 0;
@@ -52,7 +51,7 @@ export const Form = styled.form`
       }
 
       &::placeholder {
-        color: ${theme.colors.black};
+        color: ${theme.colors.darkgray};
       }
     }
 
@@ -89,9 +88,7 @@ export const Form = styled.form`
   button {
     background: transparent;
     border: 0;
-    border-bottom: ${theme.border};
-    border-color: ${theme.colors.black};
-    color: ${theme.colors.black};
+    color: ${theme.colors.darkgray};
     font-size: ${theme.fontSizes[3]};
 
     margin: 0;

@@ -105,8 +105,8 @@ const ContactForm: React.FC = () => {
           </Box>
         </Box>
 
-        <Flex justifyContent="center" mt={4} width={1}>
-          <Box as="button" flex={[1, 0.5]} type="submit" value="submit">
+        <Flex mt={4} width={1}>
+          <Box as="button" flex={[1]} type="submit" value="submit">
             Submit
           </Box>
         </Flex>

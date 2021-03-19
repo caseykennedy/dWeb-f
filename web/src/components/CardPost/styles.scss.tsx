@@ -16,9 +16,11 @@ import { Box, Flex } from '../ui'
 export const CardPost = styled(Flex)<{ inline?: boolean }>`
   display: flex;
   align-items: stretch;
-  flex-direction: ${p => (!p.inline ? `column` : `row-reverse`)};
+  flex-direction: ${p => (!p.inline ? `column` : `row`)};
 
-  background: ${theme.colors.gray};
+  /* background: ${theme.colors.gray}; */
+  border: ${theme.border};
+  color: ${theme.colors.white};
   transition: ${theme.transition.all};
 
   @media ${theme.mq.tablet} {
@@ -55,7 +57,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   }
 
   &:hover {
-    background: ${theme.colors.darkgray};
+    border-color: ${theme.colors.primary};
 
     .figure {
       /* mix-blend-mode: normal; */
@@ -67,7 +69,6 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   }
 
   .title {
-    font-size: calc(${theme.fontSizes[2]});
     line-height: ${theme.root.font.headingLineHeight};
 
     overflow: hidden;
@@ -76,10 +77,6 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
     -webkit-line-clamp: 4; /* number of lines to show */
     -webkit-box-orient: vertical;
     margin-bottom: ${theme.space[1]};
-
-    @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[4]});
-    }
 
     &--small {
       font-size: calc(${theme.fontSizes[2]});

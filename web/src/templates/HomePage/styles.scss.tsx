@@ -51,19 +51,3 @@ export const HomePage = styled(Box)`
     }
   }
 `
-
-export const DonateCard = styled(Flex)`
-  display: flex;
-  flex-direction: column;
-
-  background: ${theme.colors.black};
-  border: ${theme.border};
-  border-color: ${theme.colors.white};
-  color: ${theme.colors.white};
-  padding: ${theme.space[4]};
-
-  .address {
-    overflow-wrap: break-word;
-    line-break: anywhere;
-  }
-`

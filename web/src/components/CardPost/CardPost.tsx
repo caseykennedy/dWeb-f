@@ -35,7 +35,19 @@ const CardPost: React.FC<Props> = ({
   return (
     <Link to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}>
       <S.CardPost inline={inline}>
-        <Box width={!inline ? 1 : 1 / 2}>
+        <Flex flex={[0.6, 0.8]} width={1} className="content">
+          <Heading className={`title  ${!small ? `text--md` : `title--small`}`} fontWeight={500}>
+            {post.title && post.title}
+          </Heading>
+
+          <PostMeta
+            authors={post.authors}
+            categories={post.categories}
+            publishedAt={post.publishedAt}
+          />
+        </Flex>
+
+        <Box width={[0.4, 0.2]} p={2}>
           <Box className="figure">
             {post.figure.asset.fluid && (
               <Img
@@ -50,18 +62,6 @@ const CardPost: React.FC<Props> = ({
             )}
           </Box>
         </Box>
-
-        <Flex width={!inline ? 1 : 1 / 2} className="content">
-          <Heading className={`title  ${!small ? `text--lg` : `title--small`}`}>
-            {post.title && post.title}
-          </Heading>
-
-          <PostMeta
-            authors={post.authors}
-            categories={post.categories}
-            publishedAt={post.publishedAt}
-          />
-        </Flex>
       </S.CardPost>
     </Link>
   )

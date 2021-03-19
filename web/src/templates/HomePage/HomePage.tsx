@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
     <S.HomePage>
       <Hero />
 
-      <Flex className="wayfinder" mt={5}>
+      {/* <Flex className="wayfinder" mt={5}>
         <Accordion title="Donate">
           <Flex
             bg="black"
@@ -91,9 +91,9 @@ const HomePage: React.FC = () => {
             </Flex>
           </Flex>
         </Accordion>
-      </Flex>
+      </Flex> */}
 
-      <Flex className="ethos" px={theme.gutter.axis} py={[7, 8]}>
+      {/* <Flex className="ethos" px={theme.gutter.axis} py={[7, 8]}>
         <Text as="p" fontSize={3} className="message">
           Operating out of Singapore, we are supporters of the early
           decentralized internet, aiming to enable integrations, secondary and
@@ -105,21 +105,20 @@ const HomePage: React.FC = () => {
         <Flex width={1} className="wallpaper">
           <ImgMatch src="web.png" altText="waves from above" />
         </Flex>
-      </Flex>
+      </Flex> */}
 
-      <Section border={true}>
+      <Section bg="black" color="white">
         <Flex flexDirection="column" width={1}>
-          <Box>
-            <Heading as="h4">Latest blog</Heading>
+          <Box mb={3}>
+            <Heading as="h4">Latest</Heading>
           </Box>
 
-          <Grid columns={[1, 2]} gap={theme.gutter.axis}>
+          <Grid columns={[1]} gap={theme.gutter.axis}>
             {posts.map(({ node: post }, idx) => (
               <CardPost
                 aspectRatio={4 / 3}
                 inline={true}
                 post={post}
-                small={true}
                 key={idx}
               />
             ))}

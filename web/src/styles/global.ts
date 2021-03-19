@@ -24,13 +24,14 @@ const GlobalStyles = createGlobalStyle`
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: ${theme.colors.background};
-    border-left: ${theme.border};
+    background: ${theme.colors.black};
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: ${theme.colors.black};
+    background: ${theme.colors.background};
+    border-left: ${theme.border};
+    border-color: ${theme.colors.black};
   }
 
   /* Handle on hover */
