@@ -56,11 +56,11 @@ const AboutPage: React.FC = () => {
                 <Text as="p" mt={4}>
                   {person.name}
                 </Text>
-                <Box fontSize={0}>
+                {/* <Box fontSize={0}>
                   {person._rawBio && (
                     <BlockContent blocks={person._rawBio || []} />
                   )}
-                </Box>
+                </Box> */}
               </Box>
             ))}
           </Grid>
