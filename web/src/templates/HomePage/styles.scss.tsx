@@ -5,7 +5,7 @@
 import styled from 'styled-components'
 import { darken } from 'polished'
 
-import { Box, Flex, Heading } from '../../components/ui'
+import { Box } from '../../components/ui'
 
 import theme from '../../gatsby-plugin-theme-ui'
 
@@ -40,10 +40,10 @@ export const HomePage = styled(Box)`
         color: ${theme.colors.primary};
 
         span {
-        svg {
-          fill: ${theme.colors.primary};
+          svg {
+            fill: ${theme.colors.primary};
+          }
         }
-      }
       }
     }
   }

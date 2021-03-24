@@ -46,7 +46,7 @@ const GrantsPage: React.FC = () => {
       <Section bg="primary" color="black" pt={7} pb={7}>
         <Flex flexDirection="column" width={1}>
           <Text as="p" mb={6}>
-            We look forward to reviewing your applications 😄
+            We look forward to reviewing your application 😄
           </Text>
         </Flex>
       </Section>
