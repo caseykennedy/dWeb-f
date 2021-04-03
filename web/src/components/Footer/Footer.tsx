@@ -27,12 +27,17 @@ const Footer: React.FC = () => {
         {/* <Text as="a" className="text--xxl">donate</Text> */}
 
         <Flex>
-          <Box mr={4}>&copy; {getYear()}</Box>
+          <Box mr={4}>
+            &copy;{getYear()} — {' '}
+            <a href="mailto:info@decentralizedinter.net?subject=Contact from dWeb—F">
+              Contact
+            </a>
+          </Box>
         </Flex>
 
         <Box as="nav" color="white">
           <Link to="/" className="logo-symbol" aria-label="HNSF, back to home">
-            dWeb Foundation
+            dWeb
           </Link>
         </Box>
       </Box>

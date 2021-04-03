@@ -36,7 +36,7 @@ const CardPost: React.FC<Props> = ({
     <Link to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}>
       <S.CardPost inline={inline}>
         <Flex flex={[0.6, 0.8]} width={1} className="content">
-          <Heading className={`title  ${!small ? `text--md` : `title--small`}`} fontWeight={500}>
+          <Heading className={`title  ${!small ? `text--md` : `title--small`}`}>
             {post.title && post.title}
           </Heading>
 

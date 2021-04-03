@@ -20,7 +20,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
 
   /* background: ${theme.colors.gray}; */
   border: ${theme.border};
-  color: ${theme.colors.white};
+  color: ${theme.colors.tertiary};
   transition: ${theme.transition.all};
 
   @media ${theme.mq.tablet} {
@@ -58,6 +58,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
 
   &:hover {
     border-color: ${theme.colors.primary};
+    color: ${theme.colors.white};
 
     .figure {
       /* mix-blend-mode: normal; */

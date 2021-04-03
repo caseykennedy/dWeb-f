@@ -24,6 +24,10 @@ export const Footer = styled(Flex)`
 
   a {
     color: ${theme.colors.white};
+
+    &:hover {
+      color: ${theme.colors.primary};
+    }
   }
 
   .footer-inner {

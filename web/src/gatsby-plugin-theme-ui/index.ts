@@ -188,7 +188,7 @@ const theme: ThemeShape = {
     }
   },
 
-  border: '1px solid #d2d2d9',
+  border: '1px solid #3e3f40',
   borderRadius: '4px',
   shadow: '2rem 1.5rem 1rem #9D9FA2',
 

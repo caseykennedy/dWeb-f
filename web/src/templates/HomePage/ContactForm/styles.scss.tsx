@@ -87,9 +87,10 @@ export const Form = styled.form`
 
   button {
     background: transparent;
-    border: 0;
+    border: ${theme.border};
     color: ${theme.colors.darkgray};
     font-size: ${theme.fontSizes[3]};
+    text-transform: uppercase;
 
     margin: 0;
     padding: ${theme.space[4]};
@@ -97,8 +98,7 @@ export const Form = styled.form`
     transition: ${theme.transition.all};
 
     &:hover {
-      background: ${theme.colors.primary};
-      color: ${theme.colors.white};
+      border-color: ${theme.colors.primary};
     }
   }
 

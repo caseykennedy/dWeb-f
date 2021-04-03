@@ -21,7 +21,6 @@ export const Nav = styled.nav`
   a {
     color: ${theme.colors.black};
     font-size: ${theme.fontSizes[1]};
-    font-weight: 400;
     text-decoration: none;
 
     margin-left: ${theme.space[3]};

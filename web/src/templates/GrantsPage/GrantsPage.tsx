@@ -25,7 +25,7 @@ const GrantsPage: React.FC = () => {
         <Heading as="h3">Grants</Heading>
 
         <Box width={[1, 2 / 3]}>
-          <Text as="p" className="text--justify">
+          <Text as="p">
             Our grant program's aim is to steward the Handshake network and
             carefully manage dWeb Foundation resources. We provide grants that
             we believe will return the highest impact on the Handshake network
@@ -43,9 +43,9 @@ const GrantsPage: React.FC = () => {
         </Flex>
       </Section>
 
-      <Section bg="primary" color="black" pt={7} pb={7}>
+      <Section bg="black" color="white" pt={7} pb={7} border={true}>
         <Flex flexDirection="column" width={1}>
-          <Text as="p" mb={6}>
+          <Text as="p" mb={6} fontSize={1}>
             We look forward to reviewing your application 😄
           </Text>
         </Flex>

@@ -3,15 +3,13 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { darken } from 'polished'
-
 import { Box } from '../../components/ui'
-
 import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
 export const HomePage = styled(Box)`
+  background: ${theme.colors.black};
   width: 100%;
 
   @media ${theme.mq.tablet} {
@@ -20,15 +18,33 @@ export const HomePage = styled(Box)`
   .wayfinder {
     display: flex;
     align-items: flex-start;
-    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 99;
 
-    a {
+    &__btn {
+      flex: 1;
       display: flex;
-      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
 
-      width: 100%;
-      color: ${theme.colors.white};
-      font-size: ${theme.fontSizes[7]};
+      background: rgba(0,0,0,0.5);
+      border: ${theme.border};
+
+      color: ${theme.colors.tertiary};
+      padding: ${theme.space[4]};
+
+      &:last-child {
+        margin-left: ${theme.space[4]};
+
+        @media ${theme.mq.tablet} {
+          margin-left: ${theme.space[5]};
+        }
+      }
+
+      @media ${theme.mq.tablet} {
+        padding: ${theme.space[5]};
+      }
 
       span {
         svg {
@@ -37,26 +53,43 @@ export const HomePage = styled(Box)`
       }
 
       &:hover {
-        color: ${theme.colors.primary};
+        background: ${theme.colors.black};
+        border-color: ${theme.colors.primary};
+        color: ${theme.colors.white};
 
         span {
           svg {
-            fill: ${theme.colors.primary};
+            fill: ${theme.colors.black};
           }
         }
       }
     }
   }
 
-  .wayfinder {
-    display: flex;
-    flex-direction: column;
-  }
-
   .ethos {
-    background: ${theme.colors.primary};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: ${theme.colors.black};
     border-top: ${theme.border};
     position: relative;
+    margin-bottom: calc(${theme.space[5]} * -5);
+    min-height: 175px;
+
+    &::after {
+      background: rgb(0,0,0);
+      background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 63%);
+
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
 
     .message {
       color: ${theme.colors.white};

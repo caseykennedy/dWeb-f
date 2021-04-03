@@ -11,9 +11,6 @@ import theme from '../../../gatsby-plugin-theme-ui'
 import { Box, Flex, Heading, Text } from '../../../components/ui'
 
 // Components
-import ImgMatch from '../../../components/ImgMatch'
-import Button from '../../../components/ui/Button'
-import Icon from '../../../components/Icons'
 import Section from '../../../components/Section'
 
 // Data
@@ -28,21 +25,13 @@ const Hero: React.FC<Props> = () => {
   return (
     <S.Hero>
       <Section>
-        <Flex flexWrap="wrap">
-          <Box flex={[1, 2 / 3]}>
-            <Text as="p" mb={0} className="text--lg  text--justify">
-              The dWeb Foundation is a community-organized effort that's
-              charting the frontier toward a decentralized internet, with
-              Handshake at the root.
-            </Text>
-            {/* <Box>
-              <Heading as="p">
-              Handshake—one small step for domains, one giant leap for
-              decentralized web.
-              </Heading>
-            </Box> */}
-          </Box>
-        </Flex>
+        <Box width={[1, 8 / 10]}>
+          <Heading as="h1" mb={0} className="text--xl">
+            The dWeb Foundation is a community-organized effort that's charting
+            the frontier toward a decentralized internet, with Handshake at the
+            root.
+          </Heading>
+        </Box>
       </Section>
     </S.Hero>
   )

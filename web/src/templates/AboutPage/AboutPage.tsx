@@ -28,7 +28,7 @@ const AboutPage: React.FC = () => {
     <S.AboutPage>
       <Section pt={7}>
         <Box width={[1, 2 / 3]}>
-          <Text as="p" mb={0} className="text--lg  text--justify">
+          <Text as="p" mb={0}>
             Operating out of Singapore, we are supporters of the early
             decentralized internet, aiming to enable integrations, secondary and
             tertiary layer infrastructure on top of Handshake, and the new
@@ -39,10 +39,10 @@ const AboutPage: React.FC = () => {
       </Section>
 
       <Section bg="black" color="white">
-        <Flex flexDirection="column" width={1}>
-          <Grid columns={[1, 3]} gap={theme.gutter.axis}>
-            {people.slice(1, 4).map(({ node: person }, idx) => (
-              <Box key={idx}>
+        <Flex flexDirection="column" width={[1, 2 / 3]}>
+          {people.map(({ node: person }, idx) => (
+            <Flex className="biobox" key={idx}>
+              <Box className="avatar">
                 <Img
                   fluid={{
                     ...person.avatar.asset.fluid,
@@ -51,19 +51,18 @@ const AboutPage: React.FC = () => {
                   objectFit="cover"
                   objectPosition="50% 50%"
                   alt={person.name}
-                  className="avatar"
                 />
-                <Text as="p" mt={4}>
-                  {person.name}
-                </Text>
-                {/* <Box fontSize={0}>
+              </Box>
+              <Text as="p">
+                {person.name}
+              </Text>
+              {/* <Box fontSize={0}>
                   {person._rawBio && (
                     <BlockContent blocks={person._rawBio || []} />
                   )}
                 </Box> */}
-              </Box>
-            ))}
-          </Grid>
+            </Flex>
+          ))}
         </Flex>
       </Section>
     </S.AboutPage>

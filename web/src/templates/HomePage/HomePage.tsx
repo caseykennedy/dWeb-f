@@ -20,6 +20,7 @@ import Hero from './Hero'
 import Section from '../../components/Section'
 import CardPost from '../../components/CardPost'
 import Icon from '../../components/Icons'
+import ImgMatch from '../../components/ImgMatch'
 
 // Data
 import usePost from '../../hooks/usePost'
@@ -90,35 +91,32 @@ const HomePage: React.FC = () => {
         </Accordion>
       </Flex> */}
 
-      {/* <Flex className="ethos" px={theme.gutter.axis} py={[7, 8]}>
-        <Text as="p" fontSize={3} className="message">
-          Operating out of Singapore, we are supporters of the early
-          decentralized internet, aiming to enable integrations, secondary and
-          tertiary layer infrastructure on top of Handshake, and the new
-          generation of internet pioneers to join us in charting the frontier of
-          the third era of the internet.
-        </Text>
-
+      <Flex className="ethos" px={theme.gutter.axis}>
         <Flex width={1} className="wallpaper">
-          <ImgMatch src="web.png" altText="waves from above" />
+          <ImgMatch src="colin-carter.jpg" altText="waves from above" />
         </Flex>
-      </Flex> */}
+      </Flex>
 
-      <Section bg="black" color="white">
+      <Section bg="transparent" color="white" pt={7} pb={6}>
         <Flex className="wayfinder" width={1}>
-          <Link to={`/donate`}>
-            Donate <Icon name="arrow" />
+          <Link to={`/donate`} className="wayfinder__btn">
+            <Box as="span" fontSize={4}>
+              Donate
+            </Box>
           </Link>
-          <Link to={`/grants`}>
-            Grants <Icon name="arrow" />
+
+          <Link to={`/grants`} className="wayfinder__btn">
+            <Box as="span" fontSize={4}>
+              Grants
+            </Box>
           </Link>
         </Flex>
       </Section>
 
-      <Section bg="black" color="white" border={true}>
+      <Section bg="black" color="white">
         <Flex flexDirection="column" width={1}>
           <Box mb={3}>
-            <Heading as="h4">Latest</Heading>
+            <Heading as="h4">Blog</Heading>
           </Box>
 
           <Grid columns={[1]} gap={theme.gutter.axis}>

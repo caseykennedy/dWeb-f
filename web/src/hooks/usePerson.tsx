@@ -10,7 +10,10 @@ import { graphql, useStaticQuery } from 'gatsby'
 const usePerson = () => {
   const data = useStaticQuery<PersonShape>(graphql`
     query PersonQuery {
-      people: allSanityPerson(sort: {order: DESC, fields: _createdAt}) {
+      people: allSanityPerson(
+        sort: { order: ASC, fields: _createdAt }
+        filter: { role: { eq: "admin" } }
+      ) {
         edges {
           node {
             _createdAt

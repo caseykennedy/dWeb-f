@@ -42,8 +42,8 @@ const RootVariables = css`
 
     @media ${theme.mq.tablet} {
       --text-base-size: 1.15em;
-      --body-line-height: 1.333;
-      --heading-line-height: 1.;
+      --body-line-height: 1.25;
+      --heading-line-height: 1.25;
     }
 
     /* type scale */

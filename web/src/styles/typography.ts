@@ -221,7 +221,7 @@ const Typography = css`
 
     font-size: ${theme.root.font.baseSize};
     font-family: ${theme.fonts.body};
-    font-weight: ${theme.fontWeights.regular};
+    font-weight: ${theme.fontWeights.medium};
     line-height: ${theme.root.font.bodyLineHeight};
     letter-spacing: ${theme.root.font.baseLetterSpacing};
 
@@ -269,14 +269,10 @@ const Typography = css`
   h1,
   .text--xxl {
     /* font-family: ${theme.fonts.display}; */
-    font-size: calc(${theme.fontSizes[5]} / 1.15);
+    font-size: calc(${theme.fontSizes[5]});
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.fontSizes[6]};
-    }
-
-    @media ${theme.mq.desktop} {
-      font-size: ${theme.fontSizes[7]};
     }
   }
 
@@ -286,10 +282,6 @@ const Typography = css`
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.fontSizes[5]};
-    }
-
-    @media ${theme.mq.desktop} {
-      font-size: ${theme.fontSizes[6]};
     }
   }
 
