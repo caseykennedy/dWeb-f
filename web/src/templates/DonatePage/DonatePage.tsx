@@ -34,7 +34,7 @@ const DonatePage: React.FC = () => {
       </Section>
 
       <Section bg="black" color="white">
-        <Grid columns={[1, 3]} gap={theme.gutter.axis}>
+        <Grid columns={[1]} gap={theme.gutter.axis}>
           {wallets.map((wallet, idx) => (
             <S.DonateCard key={idx}>
               <Heading as="h4" fontWeight={500} mb={5}>
