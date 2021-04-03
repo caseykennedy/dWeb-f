@@ -45,7 +45,7 @@ const GrantsPage: React.FC = () => {
 
       <Section bg="black" color="white" pt={7} pb={7} border={true}>
         <Flex flexDirection="column" width={1}>
-          <Text as="p" mb={6} fontSize={1}>
+          <Text as="p" mb={6} fontSize={[3, 2]}>
             We look forward to reviewing your application 😄
           </Text>
         </Flex>

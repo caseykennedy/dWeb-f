@@ -38,7 +38,7 @@ export const Form = styled.form`
       border-radius: 0;
       color: ${theme.colors.darkgray};
 
-      font-size: ${theme.fontSizes[3]};
+      font-size: ${theme.fontSizes[2]};
       margin: 0;
       padding: ${theme.space[4]} 0 ${theme.space[2]};
       width: 100%;
@@ -89,7 +89,7 @@ export const Form = styled.form`
     background: transparent;
     border: ${theme.border};
     color: ${theme.colors.darkgray};
-    font-size: ${theme.fontSizes[3]};
+    font-size: ${theme.fontSizes[2]};
     text-transform: uppercase;
 
     margin: 0;

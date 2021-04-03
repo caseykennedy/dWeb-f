@@ -18,9 +18,15 @@ export const HomePage = styled(Box)`
   .wayfinder {
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
     flex-wrap: wrap;
     position: relative;
     z-index: 99;
+
+    @media ${theme.mq.tablet} {
+      flex-direction: row;
+      padding: ${theme.space[5]};
+    }
 
     &__btn {
       flex: 1;
@@ -28,16 +34,18 @@ export const HomePage = styled(Box)`
       align-items: center;
       justify-content: center;
 
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       border: ${theme.border};
 
       color: ${theme.colors.tertiary};
       padding: ${theme.space[4]};
+      width: 100%;
 
       &:last-child {
-        margin-left: ${theme.space[4]};
+        margin-top: ${theme.space[4]};
 
         @media ${theme.mq.tablet} {
+          margin-top: 0;
           margin-left: ${theme.space[5]};
         }
       }
@@ -78,8 +86,12 @@ export const HomePage = styled(Box)`
     min-height: 175px;
 
     &::after {
-      background: rgb(0,0,0);
-      background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 63%);
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(255, 255, 255, 0) 63%
+      );
 
       content: '';
       position: absolute;
