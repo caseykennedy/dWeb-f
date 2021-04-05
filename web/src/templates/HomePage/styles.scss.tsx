@@ -25,7 +25,7 @@ export const HomePage = styled(Box)`
 
     @media ${theme.mq.tablet} {
       flex-direction: row;
-      padding: ${theme.space[5]};
+      padding: ${theme.space[6]} 0;
     }
 
     &__btn {

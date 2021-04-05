@@ -91,13 +91,7 @@ const HomePage: React.FC = () => {
         </Accordion>
       </Flex> */}
 
-      <Flex className="ethos" px={theme.gutter.axis}>
-        <Flex width={1} className="wallpaper">
-          <ImgMatch src="colin-carter.jpg" altText="waves from above" />
-        </Flex>
-      </Flex>
-
-      <Section bg="transparent" color="white" pt={7} pb={6}>
+      <Section bg="transparent" color="white">
         <Flex className="wayfinder" width={1}>
           <Link to={`/donate`} className="wayfinder__btn">
             <Box as="span" fontSize={4}>
@@ -113,7 +107,7 @@ const HomePage: React.FC = () => {
         </Flex>
       </Section>
 
-      <Section bg="black" color="white">
+      <Section bg="black" color="white" border={true}>
         <Flex flexDirection="column" width={1}>
           <Box mb={3}>
             <Heading as="h4">Blog</Heading>
