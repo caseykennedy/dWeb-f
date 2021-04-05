@@ -9,12 +9,18 @@ import { Box } from '../ui'
 const Figure = (props: any) => {
   const fluidProps = getFluidGatsbyImage(
     props.asset._ref,
-    { maxWidth: 910 },
+    { maxWidth: 600 },
     sanityConfig.api
   )
 
   return (
-    <Box as="figure" my={6}>
+    <Box
+      as="figure"
+      my={6}
+      mx="auto"
+      width="auto"
+      style={{ maxWidth: '600px' }}
+    >
       {props.asset && <Img fluid={fluidProps} alt={props.alt} />}
       <figcaption>{props.caption}</figcaption>
     </Box>

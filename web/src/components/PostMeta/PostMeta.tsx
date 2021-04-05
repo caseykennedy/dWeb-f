@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import * as React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image/withIEPolyfill'
 
@@ -34,7 +33,7 @@ const PostMeta: React.FC<MetaShape> = ({
   }
   return (
     <Meta as="span" className="text--small">
-      {/* {authors && (
+      {authors && (
         <Avatar>
           <Img
             fluid={{
@@ -47,10 +46,14 @@ const PostMeta: React.FC<MetaShape> = ({
             className="author__img"
           />
         </Avatar>
-      )} */}
+      )}
       <Box>
-        {/* by <strong>{authors && authors.name}</strong> on */}
-        {publishedAt}
+        <Text as="p" fontWeight={500} mb={0}>
+          {authors && authors.name}
+        </Text>
+        <Text as="p" mb={0} className="text--small">
+          {publishedAt}
+        </Text>
       </Box>
     </Meta>
   )
@@ -92,12 +95,12 @@ const Meta = styled(Flex)`
 const Avatar = styled(Flex)`
   display: block;
   margin-right: ${theme.space[4]};
-  max-width: 32px;
+  max-width: 40px;
   width: 100%;
 
   img {
-    border: 1px solid ${theme.colors.tertiary};
-    border-radius: 100rem;
+    /* border: 1px solid ${theme.colors.primary}; */
+    border-top-left-radius: ${theme.borderRadius};
   }
 
   @media ${theme.mq.tablet} {

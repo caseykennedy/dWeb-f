@@ -15,7 +15,7 @@ export const Hero = styled(Flex)`
   display: flex;
   align-items: flex-end;
 
-  background: ${theme.colors.white};
+  background: ${theme.colors.background};
   max-height: 500px;
   min-height: 250px;
   height: 44vh;

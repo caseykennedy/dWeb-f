@@ -83,7 +83,7 @@ const theme: ThemeShape = {
 
   colors: {
     text: '#000000',
-    background: '#ffffff',
+    background: '#e0e0e7',
 
     primary: '#5700ff',
     secondary: '#e0e0e7',
@@ -162,7 +162,7 @@ const theme: ThemeShape = {
 
   strokeWidth: '2px',
 
-  maxWidth: '1680px',
+  maxWidth: '1440px',
   siteWidth: '100%',
   logoWidth: '',
   headerHeight: '74px',

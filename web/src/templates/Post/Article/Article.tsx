@@ -4,7 +4,6 @@
 
 // Libraries
 import React from 'react'
-import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
@@ -17,15 +16,13 @@ import { Grid } from 'theme-ui'
 // Components
 import Button from '../../../components/ui/Button'
 import Pill from '../../../components/ui/Pill'
-import Layout from '../../../components/Layout'
 import SEO from '../../../components/SEO'
 import Section from '../../../components/Section'
 import BlockContent from '../../../components/BlockContent'
-import CardLeak from '../../../components/CardPost'
-import CardSlider from '../../../components/CardSlider'
 import Icon from '../../../components/Icons'
 import PostMeta from '../../../components/PostMeta'
 import Source from '../../../components/Source'
+import PrevNext from '../PrevNext'
 
 // Data
 import usePost from '../../../hooks/usePost'
@@ -48,7 +45,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
       />
       <S.Article>
         <Section border={true}>
-          <Box width={1} mb={0}>
+          <Box width={[1, 1 / 2]} mb={0}>
             <Text as="p" className="text--small  text--uppercase">
               {post.publishedAt}
             </Text>
@@ -70,13 +67,22 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
         </Section>
 
         <Box width={1}>
-          <Box width={1} maxWidth={theme.maxWidth} mx="auto">
+          <Box
+            width={1}
+            maxWidth={theme.maxWidth}
+            mx="auto"
+            style={{
+              marginBottom: `calc(${theme.space[8]} * -1.15)`,
+              zIndex: 99,
+              position: 'relative'
+            }}
+          >
             {post.figure && (
               <>
                 <Img
                   fluid={{
                     ...post.figure.asset.fluid,
-                    aspectRatio: 16 / 11
+                    aspectRatio: 16 / 9
                   }}
                   objectFit="cover"
                   objectPosition="50% 50%"
@@ -94,10 +100,10 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
           </Box>
         </Box>
 
-        <Section border={true}>
+        <Section bg="black" color="secondary" pt={9}>
           <Flex flexDirection="column">
             <Flex flexDirection={[`column`, `row`]} position="relative">
-              <Box flex={1} mb={4} width={1}>
+              <Box flex={1} mr={theme.gutter.axis} mb={4} width={1}>
                 <Box className="utilities">
                   <PostMeta
                     authors={post.authors}
@@ -118,7 +124,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
               </Box>
 
               <Box flex={[1, 2]} width={1}>
-                <Text fontFamily="sans">
+                <Text>
                   {post._rawBody && (
                     <BlockContent blocks={post._rawBody || []} />
                   )}
@@ -177,7 +183,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
             </CardSlider>
           </Box>
         </Section> */}
-        {/* <PrevNext pageContext={pageContext} /> */}
+        <PrevNext pageContext={pageContext} />
       </S.Article>
     </>
   )

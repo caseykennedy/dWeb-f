@@ -32,13 +32,6 @@ const PrevNext: React.FC<PostContextShape> = ({ pageContext }) => {
         <S.Button to={`/${path}`}>View all</S.Button>
       ) : (
         <S.Button to={`/${path}/${prev.slug.current}`}>
-          <Flex className="button__title">
-            previous
-            <span>
-              <Icon name="nextArrow" />
-            </span>
-          </Flex>
-
           {prev.title}
         </S.Button>
       )}
@@ -47,12 +40,6 @@ const PrevNext: React.FC<PostContextShape> = ({ pageContext }) => {
       ) : (
         <S.Button to={`/${path}/${next.slug.current}`}>
           {next.title}
-          <Flex className="button__title button__title--next">
-            next
-            <span>
-              <Icon name="nextArrow" />
-            </span>
-          </Flex>
         </S.Button>
       )}
     </S.PrevNext>
