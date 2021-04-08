@@ -28,14 +28,12 @@ export const Button = styled(Link)`
   flex-wrap: wrap;
   justify-content: center;
 
-  color: ${theme.colors.tertiary};
   font-family: ${theme.fonts.heading};
   font-weight: 500;
   line-height: 1.15;
   text-align: center;
   text-transform: uppercase;
 
-  background: ${theme.colors.black};
   border-left: none;
   padding: ${theme.space[6]} ${theme.space[4]};
 
@@ -50,7 +48,7 @@ export const Button = styled(Link)`
   }
 
   &:hover {
-    background: ${theme.colors.primary};
+    background: ${theme.colors.tertiary};
     color: ${theme.colors.text};
   }
 `

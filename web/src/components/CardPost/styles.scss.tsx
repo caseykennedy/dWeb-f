@@ -15,7 +15,6 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
 
   /* background: ${theme.colors.gray}; */
   border: ${theme.border};
-  color: ${theme.colors.tertiary};
   transition: ${theme.transition.all};
 
   @media ${theme.mq.tablet} {
@@ -35,6 +34,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   }
 
   a {
+    color: ${theme.colors.text};
     flex: 1;
     width: 100%;
   }
@@ -53,7 +53,6 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
 
   &:hover {
     border-color: ${theme.colors.primary};
-    color: ${theme.colors.white};
 
     .figure {
       /* mix-blend-mode: normal; */

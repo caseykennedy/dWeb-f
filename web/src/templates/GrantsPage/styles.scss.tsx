@@ -16,4 +16,15 @@ export const GrantsPage = styled(Box)`
 
   @media ${theme.mq.tablet} {
   }
+
+  .highlight {
+    background: ${theme.colors.secondary};
+    background: linear-gradient(
+      312deg,
+      ${theme.colors.secondary} 0%,
+      ${theme.colors.primary} 84%
+    );
+
+    color: ${theme.colors.white};
+  }
 `

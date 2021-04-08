@@ -83,19 +83,19 @@ const theme: ThemeShape = {
 
   colors: {
     text: '#000000',
-    background: '#e0e0e7',
+    background: '#ffffff',
 
     primary: '#5700ff',
-    secondary: '#e0e0e7',
-    tertiary: '#d2d2d9',
+    secondary: '#1d2bf8',
+    tertiary: '#f2f2f2',
 
     black: '#000000',
-    white: '#FFFFFF',
+    white: '#ffffff',
     yellow: '#fdffd4',
 
-    lightgray: '#f9f9fb',
-    gray: '#ededf1',
-    darkgray: '#d2d2d9',
+    lightgray: '#ededf1',
+    gray: '#d2d2d9',
+    darkgray: '#b2b2bc',
   },
 
   // Space
@@ -188,7 +188,7 @@ const theme: ThemeShape = {
     }
   },
 
-  border: '1px solid #3e3f40',
+  border: '1px solid #d2d2d9',
   borderRadius: '4px',
   shadow: '2rem 1.5rem 1rem #9D9FA2',
 

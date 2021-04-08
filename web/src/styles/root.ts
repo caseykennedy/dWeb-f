@@ -30,7 +30,7 @@ const RootVariables = css`
 
     /* set base values */
     --text-base-size: 1em;
-    --text-scale-ratio: 1.333;
+    --text-scale-ratio: 1.2;
 
     /* line-height */
     --heading-line-height: 1.15;
@@ -48,9 +48,9 @@ const RootVariables = css`
 
     /* type scale */
     --text-xs: calc(
-      1.5em / (var(--text-scale-ratio) * var(--text-scale-ratio))
+      1.25em / (var(--text-scale-ratio) * var(--text-scale-ratio))
     );
-    --text-sm: calc(1.25em / var(--text-scale-ratio));
+    --text-sm: calc(1em / var(--text-scale-ratio));
     --text-md: calc(1em * var(--text-scale-ratio));
     --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
     --text-xl: calc(

@@ -40,11 +40,7 @@ const CardPost: React.FC<Props> = ({
             {post.title && post.title}
           </Heading>
 
-          <PostMeta
-            authors={post.authors}
-            categories={post.categories}
-            publishedAt={post.publishedAt}
-          />
+          <Text fontSize={[1, 0]}>{post.publishedAt}</Text>
         </Flex>
 
         <Box width={[0.4, 0.2]} p={2}>

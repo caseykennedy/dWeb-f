@@ -100,7 +100,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
           </Box>
         </Box>
 
-        <Section bg="black" color="secondary" pt={9}>
+        <Section pt={9}>
           <Flex flexDirection="column">
             <Flex flexDirection={[`column`, `row`]} position="relative">
               <Box flex={1} mr={theme.gutter.axis} mb={4} width={1}>

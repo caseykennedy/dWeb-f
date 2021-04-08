@@ -382,6 +382,7 @@ const Typography = css`
   }
 
   a {
+    color: inherit;
     text-decoration: none;
     /* text-decoration-thickness: 1.5px; */
 

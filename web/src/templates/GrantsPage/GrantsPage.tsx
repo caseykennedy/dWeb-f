@@ -34,22 +34,27 @@ const GrantsPage: React.FC = () => {
         </Box>
       </Section>
 
-      <Section bg="black" color="white">
-        <Flex flexDirection="column" width={1} maxWidth="1024px">
+      <Section>
+        <Flex flexDirection="column" width={1}>
           <Text as="p" mb={6}>
-            Help advance the internet. Apply here:
+            Help advance the internet:
           </Text>
           <GrantForm />
         </Flex>
       </Section>
 
-      <Section bg="black" color="white" pt={7} pb={7} border={true}>
-        <Flex flexDirection="column" width={1}>
+      <Box py={7} px={theme.gutter.axis} className="highlight">
+        <Flex
+          flexDirection="column"
+          width={1}
+          mx="auto"
+          maxWidth={theme.maxWidth}
+        >
           <Text as="p" mb={6} fontSize={[3, 2]}>
             We look forward to reviewing your application 😄
           </Text>
         </Flex>
-      </Section>
+      </Box>
     </S.GrantsPage>
   )
 }

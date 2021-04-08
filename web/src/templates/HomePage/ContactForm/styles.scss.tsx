@@ -36,7 +36,6 @@ export const Form = styled.form`
       border: 0;
       border-bottom: ${theme.border};
       border-radius: 0;
-      color: ${theme.colors.darkgray};
 
       font-size: ${theme.fontSizes[2]};
       margin: 0;
@@ -88,7 +87,6 @@ export const Form = styled.form`
   button {
     background: transparent;
     border: ${theme.border};
-    color: ${theme.colors.darkgray};
     font-size: ${theme.fontSizes[2]};
     text-transform: uppercase;
 

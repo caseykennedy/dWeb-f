@@ -1,6 +1,3 @@
-// import * as useSiteSettings from '../src/hooks/useSiteSettings'
-// const settings = useSiteSettings
-
 const settings = require.resolve('../src/hooks/useSiteSettings.tsx')
 
 module.exports = {
@@ -26,11 +23,8 @@ module.exports = {
   userTwitter: settings.userTwitter, // Twitter Username
   ogSiteName: settings.ogSiteName, // Facebook Site Name
   ogLanguage: settings.ogLanguage, // og:language
-  // googleAnalyticsID: settings.googleAnalyticsID,
 
-  googleAnalyticsID: 'G-29NFE5QM0T',
-  googleMeasurementID: 'G-29NFE5QM0T',
-  googleTagManagerID: 'GTM-5KBCX6Z',
+  googleTagID: 'GTM-56KNG2F',
 
   // Manifest and Progress color
   themeColor: settings.themeColor,

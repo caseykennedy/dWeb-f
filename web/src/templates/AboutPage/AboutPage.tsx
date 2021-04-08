@@ -38,8 +38,8 @@ const AboutPage: React.FC = () => {
         </Box>
       </Section>
 
-      <Section bg="black" color="white">
-        <Flex flexDirection="column" width={[1, 2 / 3]}>
+      <Section>
+        <Flex flexDirection="column">
           {people.map(({ node: person }, idx) => (
             <Flex className="biobox" key={idx}>
               <Box className="avatar">

@@ -9,7 +9,6 @@ import theme from '../../gatsby-plugin-theme-ui'
 // ___________________________________________________________________
 
 export const HomePage = styled(Box)`
-  background: ${theme.colors.black};
   width: 100%;
 
   @media ${theme.mq.tablet} {
@@ -25,7 +24,6 @@ export const HomePage = styled(Box)`
 
     @media ${theme.mq.tablet} {
       flex-direction: row;
-      padding: ${theme.space[6]} 0;
     }
 
     &__btn {
@@ -34,10 +32,7 @@ export const HomePage = styled(Box)`
       align-items: center;
       justify-content: center;
 
-      background: rgba(0, 0, 0, 0.5);
       border: ${theme.border};
-
-      color: ${theme.colors.tertiary};
       padding: ${theme.space[4]};
       width: 100%;
 
@@ -61,9 +56,9 @@ export const HomePage = styled(Box)`
       }
 
       &:hover {
-        background: ${theme.colors.black};
+        /* background: ${theme.colors.black}; */
         border-color: ${theme.colors.primary};
-        color: ${theme.colors.white};
+        color: ${theme.colors.primary};
 
         span {
           svg {

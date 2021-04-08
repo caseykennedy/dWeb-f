@@ -33,7 +33,7 @@ const DonatePage: React.FC = () => {
         </Box>
       </Section>
 
-      <Section bg="black" color="white">
+      <Section>
         <Grid columns={[1]} gap={theme.gutter.axis}>
           {wallets.map((wallet, idx) => (
             <S.DonateCard key={idx}>
@@ -60,15 +60,15 @@ export default DonatePage
 
 const wallets = [
   {
+    coin: 'HNS',
+    address: 'hs1qnk57nmawc5gmlnvrl3j4hsvg56sm2nnw2c6d2z'
+  },
+  {
     coin: 'BTC',
     address: '3HFWAoKYAtyg2qcrVEQdguRxohBrUXAqgm'
   },
   {
     coin: 'ETH',
     address: '0xdf3e12d5523a23df9531054034d880d363bbfb52'
-  },
-  {
-    coin: 'HNS',
-    address: 'hs1qnk57nmawc5gmlnvrl3j4hsvg56sm2nnw2c6d2z'
   }
 ]
