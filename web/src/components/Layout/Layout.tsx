@@ -109,7 +109,7 @@ const FormHidden = () => {
           <div>
             <label htmlFor="grant-amount">Grant amount:</label>
             <select id="grant-amount">
-              <option>Grant amount</option>
+              <option value="" disabled={true} selected={true}>Grant amount</option>
               <option value="500-2500">500 - 2,500</option>
               <option value="2500-10000">2,500 - 10,000</option>
               <option value="10000-25000">10,000 - 25,000</option>

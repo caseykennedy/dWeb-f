@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
           </Box>
         </Flex>
 
-        <Box as="nav" color="white">
+        <Box as="nav">
           <a href="mailto:info@decentralizedinter.net?subject=Contact from dWeb—F">
             contact
           </a>

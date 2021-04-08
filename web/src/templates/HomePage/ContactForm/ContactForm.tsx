@@ -22,11 +22,7 @@ const ContactForm: React.FC = () => {
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="bot-field" />
-      <input
-        type="hidden"
-        name="form-name"
-        value="Apply for a grant — dWeb"
-      />
+      <input type="hidden" name="form-name" value="Apply for a grant — dWeb" />
 
       <fieldset>
         <Box width={1} className="form-group">
@@ -95,13 +91,15 @@ const ContactForm: React.FC = () => {
           </Box>
           <Box width={[1, 1, 1 / 2]} className="form-group__box">
             <label htmlFor="grant-amount">Grant amount:</label>
-            <Select id="grant-amount">
-              <option>Grant amount (in HNS)</option>
+            <select id="grant-amount">
+              <option value="" disabled={true} selected={true}>
+                Grant amount (in HNS)
+              </option>
               <option value="500-2500">500 - 2,500</option>
               <option value="2500-10000">2,500 - 10,000</option>
               <option value="10000-25000">10,000 - 25,000</option>
               <option value="25000+">25,000+</option>
-            </Select>
+            </select>
           </Box>
         </Box>
 
