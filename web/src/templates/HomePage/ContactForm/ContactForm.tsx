@@ -7,7 +7,7 @@ import React, { useState } from 'react'
 // Theme + ui
 import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
-import { Box, Flex, Heading, Text } from '../../../components/ui'
+import { Box, Flex } from '../../../components/ui'
 import { Input, Select } from 'theme-ui'
 
 // ___________________________________________________________________
@@ -91,7 +91,7 @@ const ContactForm: React.FC = () => {
           </Box>
           <Box width={[1, 1, 1 / 2]} className="form-group__box">
             <label htmlFor="grant-amount">Grant amount:</label>
-            <select id="grant-amount">
+            <Select id="grant-amount">
               <option value="" disabled={true} selected={true}>
                 Grant amount (in HNS)
               </option>
@@ -99,7 +99,7 @@ const ContactForm: React.FC = () => {
               <option value="2500-10000">2,500 - 10,000</option>
               <option value="10000-25000">10,000 - 25,000</option>
               <option value="25000+">25,000+</option>
-            </select>
+            </Select>
           </Box>
         </Box>
 
