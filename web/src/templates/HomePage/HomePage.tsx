@@ -3,24 +3,14 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
 
 // Theme + Styles
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 // UI
-import { Box, Flex, Heading, Text } from '../../components/ui'
+import { Heading } from '../../components/ui'
 import { Grid } from 'theme-ui'
-
-// Sections
-import Hero from './Hero'
-
-// Components
-import Section from '../../components/Section'
-import CardPost from '../../components/CardPost'
-import Icon from '../../components/Icons'
-import ImgMatch from '../../components/ImgMatch'
 
 // Data
 import usePost from '../../hooks/usePost'
@@ -31,59 +21,9 @@ const HomePage: React.FC = () => {
   const posts = usePost()
   return (
     <S.HomePage>
-      <Hero />
-
-      <Section>
-        <Flex className="wayfinder" width={1}>
-          <Link to={`/donate`} className="wayfinder__btn">
-            <Box as="span" fontSize={4}>
-              Donate
-            </Box>
-          </Link>
-
-          <Link to={`/grants`} className="wayfinder__btn">
-            <Box as="span" fontSize={4}>
-              Grants
-            </Box>
-          </Link>
-        </Flex>
-      </Section>
-
-      <Section border={true}>
-        <Flex flexDirection="column" width={1}>
-          <Box mb={3}>
-            <Heading as="h4">Blog</Heading>
-          </Box>
-
-          <Grid columns={[1]} gap={theme.gutter.axis}>
-            {posts.map(({ node: post }, idx) => (
-              <CardPost
-                aspectRatio={4 / 3}
-                inline={true}
-                post={post}
-                key={idx}
-              />
-            ))}
-          </Grid>
-        </Flex>
-      </Section>
+      <Heading as="h1">Hello there</Heading>
     </S.HomePage>
   )
 }
 
 export default HomePage
-
-const wallets = [
-  {
-    coin: 'BTC',
-    address: '3HFWAoKYAtyg2qcrVEQdguRxohBrUXAqgm'
-  },
-  {
-    coin: 'ETH',
-    address: '0xdf3e12d5523a23df9531054034d880d363bbfb52'
-  },
-  {
-    coin: 'HNS',
-    address: 'hs1qnk57nmawc5gmlnvrl3j4hsvg56sm2nnw2c6d2z'
-  }
-]

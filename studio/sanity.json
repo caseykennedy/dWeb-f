@@ -1,12 +1,12 @@
 {
   "root": true,
-  "project": {
-    "name": "handshake-foundation",
-    "basePath": "/studio"
-  },
   "api": {
-    "projectId": "w5oqszet",
+    "projectId": "kl1fvmo1",
     "dataset": "production"
+  },
+  "project": {
+    "name": "naturalmystic",
+    "basePath": "/studio"
   },
   "plugins": [
     "@sanity/base",

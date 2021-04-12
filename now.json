@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "handshake-foundation",
+  "name": "naturalmystic",
   "builds": [
     {
       "src": "web/package.json",
