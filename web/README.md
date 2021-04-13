@@ -1,4 +1,4 @@
-# Natural Mystic Massage
+# Handshake Foundation
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0ba0a0e1-042b-46e1-81e5-4b3f3442df2b/deploy-status)](https://app.netlify.com/sites/decentralizedinternet/deploys)
 
