@@ -92,7 +92,7 @@ const GlobalStyles = createGlobalStyle`
           padding: 0;
           height: auto;
 
-          transition: opacity 0.222s ease-in-out 0s;
+          transition: opacity 0.111 ease-in-out 0s;
 
           &:hover {
             opacity: 1;
