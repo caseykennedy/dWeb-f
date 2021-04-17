@@ -4,6 +4,7 @@
 
 // Libraries
 import React from 'react'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import Img from 'gatsby-image/withIEPolyfill'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
@@ -38,7 +39,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
     <>
       <SEO
         article={true}
-        banner={`${post.figure.asset.fluid.src}`}
+        banner={`${post.figure.asset.url}`}
         title={`${post.title} | ${siteSettings.titleShort}`}
         desc={`${post.title}`}
         pathname={`/articles/${post.slug.current}`}
@@ -74,16 +75,13 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
             style={{
               marginBottom: `calc(${theme.space[8]} * -1.15)`,
               zIndex: 99,
-              position: 'relative'
+              position: 'relative',
             }}
           >
             {post.figure && (
               <>
-                <Img
-                  fluid={{
-                    ...post.figure.asset.fluid,
-                    aspectRatio: 16 / 9
-                  }}
+                <GatsbyImage
+                  image={post.figure.asset.gatsbyImageData}
                   objectFit="cover"
                   objectPosition="50% 50%"
                   alt={post.figure.alt}

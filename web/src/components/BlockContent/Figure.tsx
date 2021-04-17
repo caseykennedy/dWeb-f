@@ -1,18 +1,8 @@
 import React from 'react'
-import sanityConfig from '../../../../studio/sanity.json'
-import { getFluidGatsbyImage } from 'gatsby-source-sanity'
-import Img from 'gatsby-image/withIEPolyfill'
-import { buildImageObj } from '../../utils/helpers'
-import { imageUrlFor } from '../../utils/image-url'
+import Image from 'gatsby-plugin-sanity-image'
 import { Box } from '../ui'
 
 const Figure = (props: any) => {
-  const fluidProps = getFluidGatsbyImage(
-    props.asset._ref,
-    { maxWidth: 600 },
-    sanityConfig.api
-  )
-
   return (
     <Box
       as="figure"
@@ -21,7 +11,20 @@ const Figure = (props: any) => {
       width="auto"
       style={{ maxWidth: '600px' }}
     >
-      {props.asset && <Img fluid={fluidProps} alt={props.alt} />}
+      {props.asset && (
+        <Image
+          {...props}
+          alt={props.alt}
+          width={500}
+          height={300}
+          // style it how you want it
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
+        />
+      )}
       <figcaption>{props.caption}</figcaption>
     </Box>
   )

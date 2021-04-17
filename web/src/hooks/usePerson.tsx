@@ -21,15 +21,8 @@ const usePerson = () => {
             _rawBio
             avatar {
               asset {
-                fluid {
-                  aspectRatio
-                  base64
-                  sizes
-                  src
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                }
+                gatsbyImageData(fit: FILLMAX, placeholder: BLURRED)
+                url
               }
             }
             name

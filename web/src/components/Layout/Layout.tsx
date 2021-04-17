@@ -10,7 +10,6 @@ import Footer from '../Footer'
 
 // Styles + Theme
 import * as S from './styles.scss'
-import 'swiper/css/swiper.css'
 import 'react-responsive-modal/styles.css'
 
 // ___________________________________________________________________

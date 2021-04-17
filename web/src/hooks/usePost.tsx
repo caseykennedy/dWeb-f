@@ -26,15 +26,12 @@ const usePost = () => {
             }
             figure {
               asset {
-                fluid(maxWidth: 800) {
-                  srcWebp
-                  srcSetWebp
-                  srcSet
-                  src
-                  sizes
-                  base64
-                  aspectRatio
-                }
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                )
+                url
               }
             }
             categories {
@@ -45,15 +42,12 @@ const usePost = () => {
               role
               avatar {
                 asset {
-                  fluid(maxWidth: 600) {
-                    aspectRatio
-                    base64
-                    sizes
-                    src
-                    srcSet
-                    srcSetWebp
-                    srcWebp
-                  }
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                  )
+                  url
                 }
               }
             }

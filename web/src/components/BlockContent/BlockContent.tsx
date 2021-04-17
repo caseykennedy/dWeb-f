@@ -1,7 +1,5 @@
 import BaseBlockContent from '@sanity/block-content-to-react'
 import React from 'react'
-import Img from 'gatsby-image/withIEPolyfill'
-import theme from '../../gatsby-plugin-theme-ui'
 import { Heading, Text } from '../ui'
 
 import Figure from './Figure'
@@ -15,11 +13,7 @@ const serializers = {
     block(props: any) {
       switch (props.node.style) {
         case 'h1':
-          return (
-            <Heading as="h1">
-              {props.children}
-            </Heading>
-          )
+          return <Heading as="h1">{props.children}</Heading>
 
         case 'h2':
           return (
@@ -64,12 +58,16 @@ const serializers = {
     },
     figure(props: any) {
       return <Figure {...props.node} />
-    }
-  }
+    },
+  },
 }
 
 const BlockContent: React.FC<BlockShape> = ({ blocks }) => (
-  <BaseBlockContent blocks={blocks} serializers={serializers} />
+  <BaseBlockContent
+    blocks={blocks}
+    imageOptions={{ w: 320, h: 240, fit: 'max' }}
+    serializers={serializers}
+  />
 )
 
 export default BlockContent

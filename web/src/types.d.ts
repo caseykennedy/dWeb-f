@@ -11,6 +11,8 @@ type ImageShape = {
   srcSetWebp: string
 }
 
+type IGatsbyImageData = IGatsbyImageData
+
 // Post shape
 // ___________________________________________________________________
 
@@ -39,15 +41,8 @@ type PostQuery = {
   figure: {
     alt: string
     asset: {
-      fluid: {
-        src: string
-        aspectRatio: number
-        base64: string
-        sizes: string
-        srcSet: string
-        srcSetWebp: string
-        srcWebp: string
-      }
+      gatsbyImageData: IGatsbyImageData
+      url: string
     }
     caption: string
   }
@@ -70,15 +65,8 @@ type PostAuthor = {
   role: string
   avatar: {
     asset: {
-      fluid: {
-        aspectRatio: number
-        base64: string
-        sizes: string
-        src: string
-        srcSet: string
-        srcSetWebp: string
-        srcWebp: string
-      }
+      gatsbyImageData: IGatsbyImageData
+      url: string
     }
   }
 }
@@ -123,15 +111,7 @@ type PersonQuery = {
   _rawBio: string
   avatar: {
     asset: {
-      fluid: {
-        aspectRatio: number
-        base64: string
-        sizes: string
-        src: string
-        srcSet: string
-        srcSetWebp: string
-        srcWebp: string
-      }
+      url: string
     }
   }
   name: string

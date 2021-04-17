@@ -25,15 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
             figure {
               alt
               asset {
-                fluid(maxWidth: 800) {
-                  srcWebp
-                  srcSetWebp
-                  srcSet
-                  src
-                  sizes
-                  base64
-                  aspectRatio
-                }
+                url
               }
               caption
             }
@@ -45,15 +37,7 @@ exports.createPages = ({ graphql, actions }) => {
               role
               avatar {
                 asset {
-                  fluid(maxWidth: 300) {
-                    srcWebp
-                    srcSetWebp
-                    srcSet
-                    src
-                    sizes
-                    base64
-                    aspectRatio
-                  }
+                  url
                 }
               }
             }

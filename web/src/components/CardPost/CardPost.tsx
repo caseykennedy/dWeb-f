@@ -4,13 +4,11 @@
 
 import * as React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
 import { Box, Flex, Heading, Text } from '../ui'
-import Pill from '../ui/Pill'
-import PostMeta from '../PostMeta'
 
 // ___________________________________________________________________
 
@@ -29,7 +27,7 @@ const CardPost: React.FC<Props> = ({
   inline,
   post,
   small,
-  video
+  video,
 }) => {
   const pagePrefix = `blog`
   return (
@@ -45,15 +43,12 @@ const CardPost: React.FC<Props> = ({
 
         <Box width={[0.4, 0.2]} p={2}>
           <Box className="figure">
-            {post.figure.asset.fluid && (
-              <Img
-                fluid={{
-                  ...post.figure.asset.fluid,
-                  aspectRatio: `${aspectRatio}`
-                }}
+            {post.figure.asset && (
+              <GatsbyImage
+                image={post.figure.asset.gatsbyImageData}
+                alt="image"
                 objectFit="cover"
                 objectPosition="50% 50%"
-                alt={post.title}
               />
             )}
           </Box>
@@ -70,5 +65,5 @@ export default CardPost
 CardPost.defaultProps = {
   aspectRatio: 1 / 1,
   bg: theme.colors.gray,
-  small: false
+  small: false,
 }
