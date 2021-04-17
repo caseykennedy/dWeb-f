@@ -22,7 +22,6 @@ export const Header = styled(Box)`
 
   .header-inner {
     display: flex;
-    align-items: center;
     justify-content: space-between;
 
     margin: 0 auto;
@@ -36,8 +35,7 @@ export const Header = styled(Box)`
 `
 
 export const Menu = styled(Flex)`
-  align-items: center;
-  flex-direction: row;
+  align-items: flex-start;
   display: none;
 
   @media ${theme.mq.tablet} {
@@ -47,30 +45,23 @@ export const Menu = styled(Flex)`
 
 export const Logo = styled(Flex)`
   display: flex;
-  align-items: center;
+  flex-direction: column;
 
   .symbol {
-    max-height: ${theme.space[5]};
-
-    @media ${theme.mq.tablet} {
-      max-height: calc(${theme.space[5]} * 1.25);
-    }
-
     svg {
       width: ${theme.space[5]};
 
       @media ${theme.mq.tablet} {
-        max-height: calc(${theme.space[5]} * 1.25);
-        width: calc(${theme.space[5]} * 1.25);
+        width: calc(${theme.space[5]} / 1.05);
       }
     }
   }
 
   .wordmark {
-    margin-left: ${theme.space[2]};
+    margin-top: ${theme.space[4]};
     font-size: ${theme.fontSizes[1]};
     font-weight: 500;
-    line-height: 1;
+    line-height: 1.25;
     text-decoration: none;
 
     @media ${theme.mq.tablet} {

@@ -37,7 +37,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
       />
       <S.Article>
         <Section>
-          <Box width={[1, 1 / 2]} mb={0}>
+          <Box width={[1, 2 / 3]} mb={0}>
             <Text as="p" className="text--small  text--uppercase">
               {post.publishedAt}
             </Text>
@@ -104,7 +104,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
             </Flex>
           </Flex>
         </Section>
-        
+
         <PrevNext pageContext={pageContext} />
       </S.Article>
     </>

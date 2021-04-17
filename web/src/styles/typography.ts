@@ -318,7 +318,7 @@ const Typography = css`
 
   p,
   .text--base {
-    font-size: ${theme.fontSizes[2]};
+    font-size: calc(${theme.fontSizes[2]} / 1.25);
     font-weight: 400;
     line-height: ${theme.root.font.bodyLineHeight};
     margin: 0 0 ${theme.space[3]};

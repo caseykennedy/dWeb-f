@@ -5,8 +5,6 @@
 
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
-
-import Headroom from 'react-headroom'
 import HamburgerMenu from 'react-hamburger-menu'
 
 // Theme + ui
@@ -16,13 +14,9 @@ import { Box, Flex, Text } from '../ui'
 
 // Components
 import Symbol from '../Symbol'
-import Lettermark from '../Lettermark'
 import Navigation from './Navigation'
 import MobileNav from './MobileNav'
 import Modal from '../Modal'
-import GetDate from '../GetDate'
-
-import Typist from 'react-typist'
 
 // ___________________________________________________________________
 
@@ -52,10 +46,12 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           <Link to="/" className="logo" aria-label="HNSF, back to home">
             <S.Logo>
               <Box className="symbol">
-                <Symbol bg="black" color={theme.colors.white} />
+                <Symbol color={theme.colors.white} />
               </Box>
               <Box className="wordmark" aria-label="The Handshake Foundation">
-                dWeb Foundation
+                dWeb
+                <br />
+                Foundation
               </Box>
             </S.Logo>
           </Link>
