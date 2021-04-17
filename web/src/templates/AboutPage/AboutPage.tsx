@@ -3,20 +3,17 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import Img from 'gatsby-image/withIEPolyfill'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 // Theme + Styles
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import { Grid } from 'theme-ui'
 
 // UI
 import { Box, Flex, Heading, Text } from '../../components/ui'
 
 // Components
 import Section from '../../components/Section'
-import BlockContent from '../../components/BlockContent'
 
 // Data
 import usePerson from '../../hooks/usePerson'

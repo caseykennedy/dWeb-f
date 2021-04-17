@@ -5,8 +5,6 @@
 // Libraries
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import Img from 'gatsby-image/withIEPolyfill'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 // Theme + UI
 import * as S from './styles.scss'
@@ -15,14 +13,10 @@ import { Box, Flex, Text, Heading } from '../../../components/ui'
 import { Grid } from 'theme-ui'
 
 // Components
-import Button from '../../../components/ui/Button'
 import Pill from '../../../components/ui/Pill'
 import SEO from '../../../components/SEO'
 import Section from '../../../components/Section'
 import BlockContent from '../../../components/BlockContent'
-import Icon from '../../../components/Icons'
-import PostMeta from '../../../components/PostMeta'
-import Source from '../../../components/Source'
 import PrevNext from '../PrevNext'
 
 // Data
