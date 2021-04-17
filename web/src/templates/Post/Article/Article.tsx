@@ -10,7 +10,6 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
 import { Box, Flex, Text, Heading } from '../../../components/ui'
-import { Grid } from 'theme-ui'
 
 // Components
 import Pill from '../../../components/ui/Pill'
@@ -104,45 +103,8 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
               </Box>
             </Flex>
           </Flex>
-          <a id="sources" />
         </Section>
-
-        {post.sources[0] && (
-          <Section border={true} maxWidth={theme.maxWidth}>
-            <Heading
-              as="h4"
-              fontFamily="display"
-              mb={5}
-              className="text--uppercase"
-            >
-              Sources
-            </Heading>
-
-            <Grid columns={[1, 2, 4]} gap={6}>
-              {post.sources.map((source, idx) => (
-                <Source source={source} key={idx} />
-              ))}
-            </Grid>
-          </Section>
-        )}
-
-        {/* <Section border={true} overflow="hidden">
-          <Heading
-            as="h4"
-          >
-            related
-          </Heading>
-
-          <Box width={1}>
-            <CardSlider pagination={true} slidesPerView={3}>
-              {posts.slice(0, 6).map(({ node: post }, idx) => (
-                <Flex key={idx}>
-                  <CardLeak post={post} />
-                </Flex>
-              ))}
-            </CardSlider>
-          </Box>
-        </Section> */}
+        
         <PrevNext pageContext={pageContext} />
       </S.Article>
     </>
