@@ -26,14 +26,12 @@ import Source from '../../../components/Source'
 import PrevNext from '../PrevNext'
 
 // Data
-import usePost from '../../../hooks/usePost'
 import useSiteSettings from '../../../hooks/useSiteSettings'
 
 // ___________________________________________________________________
 
 const Article: React.FC<PostContextShape> = ({ pageContext }) => {
   const post = pageContext.post
-  const posts = usePost()
   const siteSettings = useSiteSettings()
   return (
     <>
@@ -79,13 +77,12 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
             }}
           >
             {post.figure && (
-              <>
+              <Box width={1}>
                 <GatsbyImage
                   image={post.figure.asset.gatsbyImageData}
                   objectFit="cover"
                   objectPosition="50% 50%"
                   alt={post.figure.alt}
-                  className="article__img"
                 />
 
                 {post.figure.caption && (
@@ -93,7 +90,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
                     {post.figure.caption}
                   </Text>
                 )}
-              </>
+              </Box>
             )}
           </Box>
         </Box>

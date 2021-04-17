@@ -4,7 +4,7 @@
 
 import * as React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 // import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
@@ -23,22 +23,16 @@ type MetaShape = {
 const PostMeta: React.FC<MetaShape> = ({
   authors,
   categories,
-  publishedAt
+  publishedAt,
 }) => {
-  let pillColor
-  if (categories[0].title === 'Learn') {
-    pillColor = theme.colors.blue
-  } else {
-    pillColor = theme.colors.tertiary
-  }
   return (
     <Meta as="span" className="text--small">
       {authors && (
         <Avatar>
-          <Img
-            fluid={{
-              ...authors.avatar.asset.fluid,
-              aspectRatio: 1 / 1
+          <GatsbyImage
+            image={{
+              ...authors.avatar.asset.gatsbyImageData,
+              aspecRatio: 16 / 4,
             }}
             objectFit="cover"
             objectPosition="50% 50%"
@@ -95,14 +89,6 @@ const Meta = styled(Flex)`
 const Avatar = styled(Flex)`
   display: block;
   margin-right: ${theme.space[4]};
-  max-width: 32px;
+  max-width: 42px;
   width: 100%;
-
-  img {
-    /* border: 1px solid ${theme.colors.primary}; */
-    border-top-left-radius: ${theme.borderRadius};
-  }
-
-  @media ${theme.mq.tablet} {
-  }
 `

@@ -21,7 +21,13 @@ const usePerson = () => {
             _rawBio
             avatar {
               asset {
-                gatsbyImageData(fit: FILLMAX, placeholder: BLURRED)
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  aspectRatio: 1
+                )
                 url
               }
             }

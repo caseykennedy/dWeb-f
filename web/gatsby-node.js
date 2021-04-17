@@ -25,6 +25,13 @@ exports.createPages = ({ graphql, actions }) => {
             figure {
               alt
               asset {
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  aspectRatio: 1.6
+                )
                 url
               }
               caption
@@ -37,6 +44,13 @@ exports.createPages = ({ graphql, actions }) => {
               role
               avatar {
                 asset {
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                    aspectRatio: 1
+                  )
                   url
                 }
               }
@@ -63,11 +77,11 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       Promise.reject(result.errors)
     }
-    result.data.posts.edges.forEach(edge => {
+    result.data.posts.edges.forEach((edge) => {
       createPage({
         path: `/blog/${edge.node.slug.current}`,
         component: PostTemplate,
@@ -75,8 +89,8 @@ exports.createPages = ({ graphql, actions }) => {
           slug: edge.node.slug.current,
           post: edge.node,
           next: edge.next,
-          prev: edge.previous
-        }
+          prev: edge.previous,
+        },
       })
     })
   })

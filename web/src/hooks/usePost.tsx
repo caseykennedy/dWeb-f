@@ -14,6 +14,7 @@ const usePost = () => {
         edges {
           node {
             title
+            _rawFigure
             _rawExcerpt
             _rawBody
             _id
@@ -30,6 +31,8 @@ const usePost = () => {
                   fit: FILLMAX
                   layout: FULL_WIDTH
                   placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  aspectRatio: 1.6
                 )
                 url
               }
@@ -46,6 +49,7 @@ const usePost = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
                   )
                   url
                 }

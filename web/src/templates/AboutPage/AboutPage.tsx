@@ -4,6 +4,7 @@
 
 import React from 'react'
 import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 // Theme + Styles
 import theme from '../../gatsby-plugin-theme-ui'
@@ -43,19 +44,14 @@ const AboutPage: React.FC = () => {
           {people.map(({ node: person }, idx) => (
             <Flex className="biobox" key={idx}>
               <Box className="avatar">
-                <Img
-                  fluid={{
-                    ...person.avatar.asset.fluid,
-                    aspectRatio: 1 / 1
-                  }}
+                <GatsbyImage
+                  image={person.avatar.asset.gatsbyImageData}
                   objectFit="cover"
                   objectPosition="50% 50%"
                   alt={person.name}
                 />
               </Box>
-              <Text as="p">
-                {person.name}
-              </Text>
+              <Text as="p">{person.name}</Text>
               {/* <Box fontSize={0}>
                   {person._rawBio && (
                     <BlockContent blocks={person._rawBio || []} />

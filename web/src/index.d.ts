@@ -1,17 +1,19 @@
 // TODO: More consistent naming / nesting
 
-type ImageShape = {
+type GatsbyImageDataShape = {
   aspectRatio: number
-  src: string
-  srcSet: string
+  backgroundColor: string
+  breakpoints: number
+  fit: string
+  formats: string[]
+  height: number
+  images: any
+  layout: string
+  outputPixelDensities: number
+  placeholder: string
   sizes: string
-  base64: string
-  tracedSVG: string
-  srcWebp: string
-  srcSetWebp: string
+  width: number
 }
-
-type IGatsbyImageData = IGatsbyImageData
 
 // Post shape
 // ___________________________________________________________________
@@ -31,6 +33,7 @@ type PostData = {
 }
 
 type PostQuery = {
+  _rawFigure: string
   _rawExcerpt: string
   _rawBody: string
   _id: string
@@ -91,7 +94,6 @@ type PostContextShape = {
   }
 }
 
-
 // Person shape
 // ___________________________________________________________________
 
@@ -111,6 +113,7 @@ type PersonQuery = {
   _rawBio: string
   avatar: {
     asset: {
+      gatsbyImageData: IGatsbyImageData
       url: string
     }
   }
@@ -119,3 +122,4 @@ type PersonQuery = {
   slug: {
     current: string
   }
+}

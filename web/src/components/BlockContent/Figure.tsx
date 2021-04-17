@@ -16,7 +16,6 @@ const Figure = (props: any) => {
           {...props}
           alt={props.alt}
           width={500}
-          height={300}
           // style it how you want it
           style={{
             width: '100%',

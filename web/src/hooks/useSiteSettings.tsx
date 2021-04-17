@@ -15,7 +15,7 @@ type Props = {
         backgroundColor: string
         banner: {
           asset: {
-            gatsbyImageData: IGatsbyImageData
+            gatsbyImageData: any
             url: string
           }
         }
