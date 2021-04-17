@@ -10,6 +10,8 @@ import { Box, Flex } from '../../../components/ui'
 // ___________________________________________________________________
 
 export const Article = styled.div`
+  max-width: 1024px;
+  margin: 0 auto;
 
   .swiper-container {
     overflow: visible;

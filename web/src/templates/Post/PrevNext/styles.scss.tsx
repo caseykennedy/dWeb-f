@@ -32,7 +32,6 @@ export const Button = styled(Link)`
   font-weight: 500;
   line-height: 1.15;
   text-align: center;
-  text-transform: uppercase;
 
   border-left: none;
   padding: ${theme.space[6]} ${theme.space[4]};

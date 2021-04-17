@@ -43,7 +43,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
         pathname={`/articles/${post.slug.current}`}
       />
       <S.Article>
-        <Section border={true}>
+        <Section>
           <Box width={[1, 1 / 2]} mb={0}>
             <Text as="p" className="text--small  text--uppercase">
               {post.publishedAt}
@@ -66,18 +66,9 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
         </Section>
 
         <Box width={1}>
-          <Box
-            width={1}
-            maxWidth={theme.maxWidth}
-            mx="auto"
-            style={{
-              marginBottom: `calc(${theme.space[8]} * -1.15)`,
-              zIndex: 99,
-              position: 'relative',
-            }}
-          >
+          <Box width={1} maxWidth={800} ml="auto">
             {post.figure && (
-              <Box width={1}>
+              <>
                 <GatsbyImage
                   image={post.figure.asset.gatsbyImageData}
                   objectFit="cover"
@@ -90,34 +81,14 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
                     {post.figure.caption}
                   </Text>
                 )}
-              </Box>
+              </>
             )}
           </Box>
         </Box>
 
-        <Section pt={9}>
+        <Section>
           <Flex flexDirection="column">
             <Flex flexDirection={[`column`, `row`]} position="relative">
-              <Box flex={1} mr={theme.gutter.axis} mb={4} width={1}>
-                <Box className="utilities">
-                  <PostMeta
-                    authors={post.authors}
-                    categories={post.categories}
-                    publishedAt={post.publishedAt}
-                  />
-
-                  {post.sources[0] && (
-                    <Flex mt={5} mb={4}>
-                      <AnchorLink offset={theme.headerHeight} href={`#sources`}>
-                        <Button bg="transparent">
-                          <Icon name="document" /> View Sources
-                        </Button>
-                      </AnchorLink>
-                    </Flex>
-                  )}
-                </Box>
-              </Box>
-
               <Box flex={[1, 2]} width={1}>
                 <Text>
                   {post._rawBody && (
