@@ -25,14 +25,12 @@ type HeaderShape = { mainRef: React.RefObject<HTMLDivElement> }
 const Header: React.FC<HeaderShape> = ({ mainRef }) => {
   // Navigation portal
   const [isNavOpen, setNavOpen] = useState(false)
-  const toggleMenu = () => {
-    setNavOpen(!isNavOpen)
-  }
+  const toggleMenu = () => setNavOpen(!isNavOpen)
 
   return (
     <>
       <Modal open={isNavOpen} close={toggleMenu}>
-        <MobileNav open={isNavOpen} handleExitOnClick={toggleMenu} />
+        <MobileNav isOpen={isNavOpen} handleExitOnClick={toggleMenu} />
       </Modal>
 
       {/* <S.Utilities px={theme.gutter.axis} py={2}>

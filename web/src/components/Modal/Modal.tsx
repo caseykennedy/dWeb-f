@@ -26,7 +26,7 @@ const Modal: React.FC<ModalProps> = ({ children, open, close }) => {
       styles={modalStyles}
       focusTrapped={false}
       center={true}
-      showCloseIcon={true}
+      showCloseIcon={false}
     >
       {children}
     </ReactModal>
@@ -48,7 +48,7 @@ const modalStyles = {
     boxShadow: 'none',
     boxSizing: 'border-box',
     margin: '0',
-    padding: `${theme.space[8]} 0 0`,
+    padding: `${theme.space[4]} 0 0`,
     height: '100%',
     width: '100%'
   }

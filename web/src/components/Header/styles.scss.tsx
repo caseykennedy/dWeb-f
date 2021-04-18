@@ -83,6 +83,9 @@ export const Toggle = styled(Box)`
   font-weight: 400;
   cursor: pointer;
 
+  position: relative;
+  z-index: 9999;
+
   @media ${theme.mq.tablet} {
     display: none;
   }
