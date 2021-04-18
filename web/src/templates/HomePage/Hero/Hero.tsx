@@ -26,7 +26,7 @@ const Hero: React.FC<Props> = () => {
     <S.Hero>
       <Section>
         <Box width={[1, 8 / 10]}>
-          <Heading as="h1" mb={0} className="text--xl">
+          <Heading as="h1" mb={0} className="text--lg">
             The dWeb Foundation is a community-organized effort that's charting
             the frontier toward a decentralized internet, with Handshake at the
             root.

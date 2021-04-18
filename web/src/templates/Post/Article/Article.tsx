@@ -58,7 +58,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
           </Box>
         </Section>
 
-        <Box width={1}>
+        <Section>
           <Box width={1} maxWidth={800} ml="auto">
             {post.figure && (
               <>
@@ -77,10 +77,10 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
               </>
             )}
           </Box>
-        </Box>
+        </Section>
 
         <Section>
-          <Flex flexDirection="column">
+          <Flex width={[1, 2 / 3]} flexDirection="column">
             <Flex flexDirection={[`column`, `row`]} position="relative">
               <Box flex={[1, 2]} width={1}>
                 <Text>

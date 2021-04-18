@@ -34,13 +34,13 @@ const HomePage: React.FC = () => {
       <Section>
         <Flex className="wayfinder" width={1}>
           <Link to={`/donate`} className="wayfinder__btn">
-            <Box as="span" fontSize={4}>
+            <Box as="span" fontSize={3}>
               Donate
             </Box>
           </Link>
 
           <Link to={`/grants`} className="wayfinder__btn">
-            <Box as="span" fontSize={4}>
+            <Box as="span" fontSize={3}>
               Grants
             </Box>
           </Link>
@@ -50,7 +50,7 @@ const HomePage: React.FC = () => {
       <Section border={true}>
         <Flex flexDirection="column" width={1}>
           <Box mb={3}>
-            <Heading as="h4">Blog</Heading>
+            <Heading as="h5">Blog</Heading>
           </Box>
 
           <Grid columns={[1]} gap={theme.gutter.axis}>

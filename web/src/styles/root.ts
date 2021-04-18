@@ -19,7 +19,7 @@ const RootVariables = css`
     --space-xxs: calc(0.25 * var(--space-unit));
     --space-xs: calc(0.5 * var(--space-unit));
     --space-sm: calc(0.75 * var(--space-unit));
-    --space-md: calc(1.25 * var(--space-unit));
+    --space-md: calc(1 * var(--space-unit));
     --space-lg: calc(2 * var(--space-unit));
     --space-xl: calc(3.25 * var(--space-unit));
     --space-xxl: calc(5.25 * var(--space-unit));
@@ -29,7 +29,7 @@ const RootVariables = css`
     -------------------------------- */
 
     /* set base values */
-    --text-base-size: 1em;
+    --text-base-size: 1.15em;
     --text-scale-ratio: 1.333;
 
     /* line-height */
