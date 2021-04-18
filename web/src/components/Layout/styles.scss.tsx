@@ -18,6 +18,7 @@ export const Wrapper = styled(Flex)`
 export const Main = styled.main`
   max-height: 100%;
   position: relative;
+  /* padding-top: ${theme.space[7]}; */
   width: ${theme.siteWidth};
 `
 

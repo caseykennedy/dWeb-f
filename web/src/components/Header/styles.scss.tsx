@@ -13,6 +13,10 @@ import { Box, Flex } from '../ui'
 // ___________________________________________________________________
 
 export const Header = styled(Box)`
+  display: sticky;
+  top: 0;
+  position: fixed;
+  z-index: 999;
   /* border-bottom: ${theme.border}; */
   width: 100%;
 

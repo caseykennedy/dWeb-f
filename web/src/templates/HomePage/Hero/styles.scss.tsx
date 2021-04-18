@@ -15,8 +15,15 @@ export const Hero = styled(Flex)`
   display: flex;
   align-items: flex-end;
 
-  max-height: 500px;
+  background: ${theme.colors.primary};
+  background: radial-gradient(
+    circle,
+    ${theme.colors.primary} 0%,
+    ${theme.colors.secondary} 100%
+  );
+
+  max-height: 600px;
   min-height: 250px;
-  height: 44vh;
+  height: 54vh;
   width: 100%;
 `
