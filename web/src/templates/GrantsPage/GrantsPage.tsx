@@ -21,9 +21,7 @@ const GrantsPage: React.FC = () => {
   // const data = useHomePage()
   return (
     <S.GrantsPage>
-      <Section pt={6}>
-        <Heading as="h3">Grants</Heading>
-
+      <Section pt={7}>
         <Box width={[1, 2 / 3]}>
           <Text as="p">
             Our grant program's aim is to steward the Handshake network and

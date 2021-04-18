@@ -261,6 +261,10 @@ Symbol.defaultProps = defaultProps
 const polyVariant = {
   visible: {
     opacity: 1,
+    transition: {
+      duration: '0.333s',
+      ease: 'easeOut',
+    },
   },
   hidden: {
     opacity: 0,

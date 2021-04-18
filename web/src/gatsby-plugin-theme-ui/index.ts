@@ -86,7 +86,7 @@ const theme: ThemeShape = {
     background: '#ffffff',
 
     primary: '#5700ff',
-    secondary: '#1d2bf8',
+    secondary: '#a2f6ff',
     tertiary: '#f2f2f2',
 
     black: '#000000',

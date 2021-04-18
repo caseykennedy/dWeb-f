@@ -49,11 +49,7 @@ export const Logo = styled(Flex)`
 
   .symbol {
     svg {
-      width: ${theme.space[5]};
-
-      @media ${theme.mq.tablet} {
-        width: calc(${theme.space[5]} / 1.05);
-      }
+      width: calc(${theme.space[5]} / 1.05);
     }
   }
 

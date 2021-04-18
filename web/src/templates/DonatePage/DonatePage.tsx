@@ -22,9 +22,7 @@ const DonatePage: React.FC = () => {
   // const data = useHomePage()
   return (
     <S.DonatePage>
-      <Section pt={6}>
-        <Heading as="h3">Donate</Heading>
-
+      <Section pt={7}>
         <Box width={[1, 2 / 3]}>
           <Text as="p">
             Every donation helps us build a better, more decentralized internet
