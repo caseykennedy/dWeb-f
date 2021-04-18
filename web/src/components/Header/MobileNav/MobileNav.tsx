@@ -9,7 +9,6 @@ import { motion } from 'framer-motion'
 
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import { Box, Text } from '../../ui'
 
 // ___________________________________________________________________
 
@@ -56,6 +55,10 @@ export default MobileNav
 // ___________________________________________________________________
 
 const data = [
+  {
+    name: 'home',
+    link: '/',
+  },
   {
     name: 'about',
     link: '/about',

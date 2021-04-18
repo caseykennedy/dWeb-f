@@ -4,6 +4,7 @@
 // ___________________________________________________________________
 
 import React, { useState } from 'react'
+import Typist from 'react-typist'
 import { Link } from 'gatsby'
 import HamburgerMenu from 'react-hamburger-menu'
 
@@ -47,9 +48,11 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
                 <Symbol color={theme.colors.white} />
               </Box>
               <Box className="wordmark" aria-label="The Handshake Foundation">
-                dWeb
-                <br />
-                Foundation
+                <Typist cursor={cursorProps}>
+                  dWeb
+                  <br />
+                  Foundation
+                </Typist>
               </Box>
             </S.Logo>
           </Link>
@@ -78,3 +81,11 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 }
 
 export default Header
+
+const cursorProps = {
+  show: false,
+  blink: true,
+  element: '|',
+  hideWhenDone: true,
+  hideWhenDoneDelay: 1000,
+}
