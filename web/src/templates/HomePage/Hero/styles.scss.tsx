@@ -22,8 +22,13 @@ export const Hero = styled(Flex)`
     ${theme.colors.secondary} 100%
   );
 
-  max-height: 600px;
+  margin-top: -${theme.headerHeight};
+  margin-right: auto;
+  margin-left: auto;
+
+  height: 575px;
   min-height: 250px;
-  height: 54vh;
+
+  max-width: 1680px;
   width: 100%;
 `

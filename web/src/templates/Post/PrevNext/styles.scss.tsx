@@ -47,7 +47,7 @@ export const Button = styled(Link)`
   }
 
   &:hover {
-    background: ${theme.colors.tertiary};
+    background: ${theme.colors.muted};
     color: ${theme.colors.text};
   }
 `

@@ -94,8 +94,8 @@ const Button = styled(Flex)<ButtonProps>`
   }
 
   &:disabled {
-    background: ${theme.colors.tertiary};
-    border-color: ${theme.colors.tertiary};
+    background: ${theme.colors.muted};
+    border-color: ${theme.colors.muted};
     color: ${theme.colors.white};
   }
 

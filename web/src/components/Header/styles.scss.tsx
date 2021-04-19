@@ -13,12 +13,10 @@ import { Box, Flex } from '../ui'
 // ___________________________________________________________________
 
 export const Header = styled(Box)`
-  display: sticky;
-  top: 0;
-  position: fixed;
-  z-index: 999;
-  /* border-bottom: ${theme.border}; */
+  overflow: visible;
+  max-height: 0;
   width: 100%;
+  z-index: 999;
 
   a {
     color: ${theme.colors.black};
@@ -28,8 +26,10 @@ export const Header = styled(Box)`
     display: flex;
     justify-content: space-between;
 
+    overflow: visible;
     margin: 0 auto;
-    /* max-width: ${theme.maxWidth}; */
+    max-width: ${theme.maxWidth};
+    height: ${theme.headerHeight};
     width: 100%;
   }
 
@@ -50,6 +50,7 @@ export const Menu = styled(Flex)`
 export const Logo = styled(Flex)`
   display: flex;
   flex-direction: column;
+  mix-blend-mode: difference;
 
   .symbol {
     svg {
@@ -65,8 +66,7 @@ export const Logo = styled(Flex)`
     text-decoration: none;
 
     @media ${theme.mq.tablet} {
-      
-    /* font-size: ${theme.fontSizes[2]}; */
+      /* font-size: ${theme.fontSizes[2]}; */
     }
   }
 `
@@ -84,7 +84,7 @@ export const Toggle = styled(Box)`
   cursor: pointer;
 
   position: relative;
-  z-index: 9999;
+  z-index: 99999;
 
   @media ${theme.mq.tablet} {
     display: none;

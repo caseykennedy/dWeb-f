@@ -4,7 +4,6 @@
 
 import { css } from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui'
-import { darken, lighten } from 'polished'
 
 // Aeonik Regular
 import AeonikRegularEot from './fonts/AeonikRegular.eot'
@@ -205,7 +204,7 @@ const Typography = css`
   }
 
   ::selection {
-    color: ${theme.colors.white};
+    color: ${theme.colors.background};
     background-color: ${theme.colors.primary};
   }
 

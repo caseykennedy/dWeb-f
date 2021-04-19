@@ -8,8 +8,23 @@ type ThemeShape = {
   mq: {
     [key: string]: string
   }
+  useColorSchemeMediaQuery: boolean
   colors: {
-    [key: string]: string
+    text: string
+    background: string
+
+    primary: string
+    secondary: string
+    accent: string
+    highlight: string
+    muted: string
+    black: string
+    white: string
+    modes: {
+      dark: {
+        [key: string]: string
+      }
+    }
   }
   space: string[]
   gutter: {
@@ -75,11 +90,13 @@ const theme: ThemeShape = {
   breakpoints,
   mq: {
     tablet: `(min-width: ${breakpoints[0]})`,
-    desktop: `(min-width: ${breakpoints[1]})`
+    desktop: `(min-width: ${breakpoints[1]})`,
   },
 
   // Color palette
   // ___________________________________________________________________
+
+  useColorSchemeMediaQuery: false,
 
   colors: {
     text: '#000000',
@@ -87,35 +104,41 @@ const theme: ThemeShape = {
 
     primary: '#5700ff',
     secondary: '#a2f6ff',
-    tertiary: '#f2f2f2',
+    accent: '#a2f6ff',
+    highlight: '#fdffd4',
+    muted: '#f2f2f2',
 
     black: '#000000',
     white: '#ffffff',
-    yellow: '#fdffd4',
 
-    lightgray: '#ededf1',
-    gray: '#d2d2d9',
-    darkgray: '#b2b2bc',
+    modes: {
+      dark: {
+        text: '#f2f2f2',
+        background: '#242424',
+        black: '#ffffff',
+        white: '#000000',
+      },
+    },
   },
 
   // Space
   // ___________________________________________________________________
 
   space: [
-    '0',                     // 0
-    'var(--space-xxs)',      // 1
-    'var(--space-xs)',       // 2
-    'var(--space-sm)',       // 3
-    'var(--space-md)',       // 4
-    'var(--space-lg)',       // 5
-    'var(--space-xl)',       // 6
-    'var(--space-xxl)',      // 7
-    '7rem',                  // 8
-    '10rem',                 // 9
-    '12rem',                 // 10
-    '14rem',                 // 11
-    '16rem',                 // 12
-    '18rem'                  // 13
+    '0', // 0
+    'var(--space-xxs)', // 1
+    'var(--space-xs)', // 2
+    'var(--space-sm)', // 3
+    'var(--space-md)', // 4
+    'var(--space-lg)', // 5
+    'var(--space-xl)', // 6
+    'var(--space-xxl)', // 7
+    '7rem', // 8
+    '10rem', // 9
+    '12rem', // 10
+    '14rem', // 11
+    '16rem', // 12
+    '18rem', // 13
   ],
 
   // Left/Right gutter
@@ -124,9 +147,8 @@ const theme: ThemeShape = {
     tablet: 5,
     desktop: 5,
     vertical: [4, 5],
-    axis: [4, 5]
+    axis: [4, 5],
   },
-
 
   // Typography
   // ___________________________________________________________________
@@ -147,7 +169,7 @@ const theme: ThemeShape = {
     'var(--text-lg)', // 4
     'var(--text-xl)', // 5
     'var(--text-xxl)', // 6
-    'var(--text-xxxl)' // 7
+    'var(--text-xxxl)', // 7
   ],
 
   Heading: {},
@@ -157,7 +179,7 @@ const theme: ThemeShape = {
     regular: 400,
     medium: 500,
     bold: 600,
-    black: 700
+    black: 700,
   },
 
   strokeWidth: '2px',
@@ -165,7 +187,7 @@ const theme: ThemeShape = {
   maxWidth: '1440px',
   siteWidth: '100%',
   logoWidth: '',
-  headerHeight: '74px',
+  headerHeight: '150px',
   tickerHeight: '56px',
   iconWidth: '18px',
 
@@ -173,19 +195,19 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   grid: {
-    gap: '0.5rem'
+    gap: '0.5rem',
   },
 
   transition: {
     all: 'all 0.111s ease-in-out 0s',
-    global: '0.111s ease-in-out 0s'
+    global: '0.111s ease-in-out 0s',
   },
 
   transform: {
     matrix: {
       from: 'matrix(1, 0, 0, 1, 24, 0)',
-      to: 'matrix(1, 0, 0, 1, 0, 0)'
-    }
+      to: 'matrix(1, 0, 0, 1, 0, 0)',
+    },
   },
 
   border: '1px solid #d2d2d9',
@@ -224,9 +246,9 @@ const theme: ThemeShape = {
       md: 'var(--space-md)',
       lg: 'var(--space-lg)',
       xl: 'var(--space-xl)',
-      xxl: 'var(--space-xxl)'
-    }
-  }
+      xxl: 'var(--space-xxl)',
+    },
+  },
 }
 
 export default theme

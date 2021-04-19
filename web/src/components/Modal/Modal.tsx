@@ -44,7 +44,7 @@ const modalStyles = {
     background: theme.colors.background
   },
   modal: {
-    background: theme.colors.background,
+    background: theme.colors.primary,
     boxShadow: 'none',
     boxSizing: 'border-box',
     margin: '0',

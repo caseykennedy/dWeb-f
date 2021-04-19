@@ -32,6 +32,17 @@ const HomePage: React.FC = () => {
       <Hero />
 
       <Section>
+        <Flex>
+          <Box flex={[1, 0.5]}>
+            <Heading as="h1" className="text--md">
+              dWeb Foundation is a community-organized effort, charting the
+              decentralized internet frontier with handshake at the root.
+            </Heading>
+          </Box>
+        </Flex>
+      </Section>
+
+      <Section>
         <Flex className="wayfinder" width={1}>
           <Link to={`/donate`} className="wayfinder__btn">
             <Box as="span" fontSize={3}>

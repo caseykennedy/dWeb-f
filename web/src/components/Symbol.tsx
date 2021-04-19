@@ -8,245 +8,252 @@ import theme from '../gatsby-plugin-theme-ui'
 type Props = {} & typeof defaultProps
 
 const defaultProps = {
-  color: theme.colors.black,
+  fill: theme.colors.black,
 }
 
-const Symbol: React.FC<Props> = () => (
+const Symbol: React.FC<Props> = ({ fill }) => (
   <SVG
     width="32"
     viewBox="0 0 32 35.49"
     variants={svgVariant}
     initial="hidden"
     animate="visible"
+    fill={fill}
   >
-    <motion.polygon
-      variants={polyVariant}
-      points="0 23.36 2.87 21.7 5.73 23.36 2.87 24.86 0 23.36"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="2.87 28.32 0 26.67 0 23.36 2.87 24.86 2.87 28.32"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="2.87 24.86 5.73 23.36 5.73 26.67 2.87 28.32 2.87 24.86"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="6.55 27.09 9.41 25.43 12.28 27.09 9.41 28.59 6.55 27.09"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="9.41 32.05 6.55 30.39 6.55 27.09 9.41 28.59 9.41 32.05"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="9.41 28.59 12.28 27.09 12.28 30.39 9.41 32.05 9.41 28.59"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="0 16.22 2.87 14.57 5.73 16.22 2.87 17.73 0 16.22"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="2.87 21.19 0 19.53 0 16.22 2.87 17.73 2.87 21.19"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="2.87 17.73 5.73 16.22 5.73 19.53 2.87 21.19 2.87 17.73"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="6.55 19.73 9.41 18.07 12.28 19.73 9.41 21.23 6.55 19.73"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="9.41 24.69 6.55 23.03 6.55 19.73 9.41 21.23 9.41 24.69"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="9.41 21.23 12.28 19.73 12.28 23.03 9.41 24.69 9.41 21.23"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="18.85 1.66 15.99 0 13.12 1.66 15.99 3.16 18.85 1.66"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="15.99 6.62 18.85 4.96 18.85 1.66 15.99 3.16 15.99 6.62"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="15.99 3.16 13.12 1.66 13.12 4.96 15.99 6.62 15.99 3.16"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="12.28 5.35 9.41 3.7 6.55 5.35 9.41 6.86 12.28 5.35"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="9.41 10.32 12.28 8.66 12.28 5.35 9.41 6.86 9.41 10.32"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="9.41 6.86 6.55 5.35 6.55 8.66 9.41 10.32 9.41 6.86"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="31.99 23.36 29.12 21.7 26.26 23.36 29.12 24.86 31.99 23.36"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="29.12 28.32 31.99 26.67 31.99 23.36 29.12 24.86 29.12 28.32"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="29.12 24.86 26.26 23.36 26.26 26.67 29.12 28.32 29.12 24.86"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="25.43 27.09 22.56 25.43 19.69 27.09 22.56 28.59 25.43 27.09"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="22.56 32.05 25.43 30.39 25.43 27.09 22.56 28.59 22.56 32.05"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="22.56 28.59 19.69 27.09 19.69 30.39 22.56 32.05 22.56 28.59"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="18.85 30.52 15.99 28.87 13.12 30.52 15.99 32.03 18.85 30.52"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="15.99 35.48 18.85 33.83 18.85 30.52 15.99 32.03 15.99 35.48"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="15.99 32.03 13.12 30.52 13.12 33.83 15.99 35.48 15.99 32.03"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="25.43 5.35 22.56 3.7 19.69 5.35 22.56 6.86 25.43 5.35"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="22.56 10.32 25.43 8.66 25.43 5.35 22.56 6.86 22.56 10.32"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="22.56 6.86 19.69 5.35 19.69 8.66 22.56 10.32 22.56 6.86"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="18.85 9.05 15.99 7.4 13.12 9.05 15.99 10.56 18.85 9.05"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="15.99 14.02 18.85 12.36 18.85 9.05 15.99 10.56 15.99 14.02"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="15.99 10.56 13.12 9.05 13.12 12.36 15.99 14.02 15.99 10.56"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="25.41 19.73 22.56 18.09 19.71 19.73 22.56 21.23 25.41 19.73"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="22.56 24.67 25.41 23.03 25.41 19.73 22.56 21.23 22.56 24.67"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="22.56 21.23 19.71 19.73 19.71 23.03 22.56 24.67 22.56 21.23"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="18.85 23.36 15.99 21.7 13.12 23.36 15.99 24.86 18.85 23.36"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="15.99 28.32 18.85 26.67 18.85 23.36 15.99 24.86 15.99 28.32"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="15.99 24.86 13.12 23.36 13.12 26.67 15.99 28.32 15.99 24.86"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="31.99 9.05 29.12 7.4 26.26 9.05 29.12 10.56 31.99 9.05"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="29.12 14.02 31.99 12.36 31.99 9.05 29.12 10.56 29.12 14.02"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="29.12 10.56 26.26 9.05 26.26 12.36 29.12 14.02 29.12 11.57 29.12 10.56"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="25.43 12.54 22.56 10.89 19.69 12.54 22.56 14.05 25.43 12.54"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="22.56 17.51 25.43 15.85 25.43 12.54 22.56 14.05 22.56 17.51"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="22.56 14.05 19.69 12.54 19.69 15.85 22.56 17.51 22.56 14.05"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="18.85 16.22 15.99 14.57 13.12 16.22 15.99 17.73 18.85 16.22"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="15.99 21.19 18.85 19.53 18.85 16.22 15.99 17.73 15.99 21.19"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="15.99 17.73 13.12 16.22 13.12 19.53 15.99 21.19 15.99 17.73"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="12.28 12.54 9.41 10.89 6.55 12.54 9.41 14.05 12.28 12.54"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="9.41 14.05 6.55 12.54 6.55 15.85 9.41 17.51 9.41 14.05"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="9.41 17.51 12.28 15.85 12.28 12.54 9.41 14.05 9.41 17.51"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="5.73 9.05 2.87 7.4 0 9.05 2.87 10.56 5.73 9.05"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="2.87 14.02 5.73 12.36 5.73 9.05 2.87 10.56 2.87 14.02"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="2.87 10.56 0 9.05 0 12.36 2.87 14.02 2.87 10.56"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="26.27 16.22 29.13 14.57 32 16.22 29.13 17.73 26.27 16.22"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="29.13 21.19 26.27 19.53 26.27 16.22 29.13 17.73 29.13 21.19"
-    />
-    <motion.polygon
-      variants={polyVariant}
-      points="29.13 17.73 32 16.22 32 19.53 29.13 21.19 29.13 17.73"
-    />
+    <g id="inner">
+      <motion.polygon
+        variants={polyVariant}
+        points="18.9,16.2 16,14.6 13.1,16.2 16,17.7 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="16,21.2 18.9,19.5 18.9,16.2 16,17.7 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="16,17.7 13.1,16.2 13.1,19.5 16,21.2 	"
+      />
+    </g>
+    <g id="middle">
+      <motion.polygon
+        variants={polyVariant}
+        points="6.6,19.7 9.4,18.1 12.3,19.7 9.4,21.2 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="9.4,24.7 6.6,23 6.6,19.7 9.4,21.2 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="9.4,21.2 12.3,19.7 12.3,23 9.4,24.7 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="18.9,9.1 16,7.4 13.1,9.1 16,10.6 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="16,14 18.9,12.4 18.9,9.1 16,10.6 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="16,10.6 13.1,9.1 13.1,12.4 16,14 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="25.4,19.7 22.6,18.1 19.7,19.7 22.6,21.2 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="22.6,24.7 25.4,23 25.4,19.7 22.6,21.2 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="22.6,21.2 19.7,19.7 19.7,23 22.6,24.7 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="18.9,23.4 16,21.7 13.1,23.4 16,24.9 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="16,28.3 18.9,26.7 18.9,23.4 16,24.9 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="16,24.9 13.1,23.4 13.1,26.7 16,28.3 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="25.4,12.5 22.6,10.9 19.7,12.5 22.6,14.1 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="22.6,17.5 25.4,15.9 25.4,12.5 22.6,14.1 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="22.6,14.1 19.7,12.5 19.7,15.9 22.6,17.5 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="12.3,12.5 9.4,10.9 6.6,12.5 9.4,14.1 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="9.4,14.1 6.6,12.5 6.6,15.9 9.4,17.5 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="9.4,17.5 12.3,15.9 12.3,12.5 9.4,14.1 	"
+      />
+    </g>
+    <g id="outer">
+      <motion.polygon
+        variants={polyVariant}
+        points="0,23.4 2.9,21.7 5.7,23.4 2.9,24.9 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="2.9,28.3 0,26.7 0,23.4 2.9,24.9 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="2.9,24.9 5.7,23.4 5.7,26.7 2.9,28.3 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="6.6,27.1 9.4,25.4 12.3,27.1 9.4,28.6 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="9.4,32 6.6,30.4 6.6,27.1 9.4,28.6 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="9.4,28.6 12.3,27.1 12.3,30.4 9.4,32 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="0,16.2 2.9,14.6 5.7,16.2 2.9,17.7 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="2.9,21.2 0,19.5 0,16.2 2.9,17.7 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="2.9,17.7 5.7,16.2 5.7,19.5 2.9,21.2 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="18.9,1.7 16,0 13.1,1.7 16,3.2 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="16,6.6 18.9,5 18.9,1.7 16,3.2 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="16,3.2 13.1,1.7 13.1,5 16,6.6 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="12.3,5.3 9.4,3.7 6.6,5.3 9.4,6.9 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="9.4,10.3 12.3,8.7 12.3,5.3 9.4,6.9 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="9.4,6.9 6.6,5.3 6.6,8.7 9.4,10.3 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="32,23.4 29.1,21.7 26.3,23.4 29.1,24.9 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="29.1,28.3 32,26.7 32,23.4 29.1,24.9 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="29.1,24.9 26.3,23.4 26.3,26.7 29.1,28.3 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="25.4,27.1 22.6,25.4 19.7,27.1 22.6,28.6 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="22.6,32 25.4,30.4 25.4,27.1 22.6,28.6 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="22.6,28.6 19.7,27.1 19.7,30.4 22.6,32 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="18.9,30.5 16,28.9 13.1,30.5 16,32 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="16,35.5 18.9,33.8 18.9,30.5 16,32 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="16,32 13.1,30.5 13.1,33.8 16,35.5 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="25.4,5.3 22.6,3.7 19.7,5.3 22.6,6.9 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="22.6,10.3 25.4,8.7 25.4,5.3 22.6,6.9 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="22.6,6.9 19.7,5.3 19.7,8.7 22.6,10.3 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="32,9.1 29.1,7.4 26.3,9.1 29.1,10.6 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="29.1,14 32,12.4 32,9.1 29.1,10.6 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="29.1,10.6 26.3,9.1 26.3,12.4 29.1,14 29.1,11.6 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="5.7,9.1 2.9,7.4 0,9.1 2.9,10.6 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="2.9,14 5.7,12.4 5.7,9.1 2.9,10.6 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="2.9,10.6 0,9.1 0,12.4 2.9,14 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="26.3,16.2 29.1,14.6 32,16.2 29.1,17.7 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="29.1,21.2 26.3,19.5 26.3,16.2 29.1,17.7 	"
+      />
+      <motion.polygon
+        variants={polyVariant}
+        points="29.1,17.7 32,16.2 32,19.5 29.1,21.2 	"
+      />
+    </g>
   </SVG>
 )
 
@@ -254,7 +261,11 @@ export default Symbol
 
 // ___________________________________________________________________
 
-const SVG = styled(motion.svg)``
+const SVG = styled(motion.svg)<{ fill: string }>`
+  polygon {
+    fill: ${(p) => p.fill};
+  }
+`
 
 Symbol.defaultProps = defaultProps
 
@@ -273,6 +284,6 @@ const polyVariant = {
 
 const svgVariant = {
   visible: {
-    transition: { staggerChildren: 0.04, delayChildren: 0.05 },
+    transition: { staggerChildren: 0.015, delayChildren: 0.02 },
   },
 }

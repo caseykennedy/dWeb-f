@@ -16,8 +16,10 @@ export const MobileNav = styled(motion.ul)`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
   margin: 0;
   padding: 0;
+  height: 100%;
   width: 100%;
 `
 

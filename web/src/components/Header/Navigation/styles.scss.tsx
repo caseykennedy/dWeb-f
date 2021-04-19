@@ -19,7 +19,7 @@ export const Nav = styled.nav`
   width: 100%;
 
   a {
-    color: ${theme.colors.black};
+    color: ${theme.colors.text};
     font-size: ${theme.fontSizes[1]};
     text-decoration: none;
 
