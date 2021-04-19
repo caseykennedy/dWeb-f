@@ -8,13 +8,8 @@ import { Link } from 'gatsby'
 // Theme + Styles
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-
-// UI
 import { Box, Flex, Heading } from '../../components/ui'
 import { Grid } from 'theme-ui'
-
-// Sections
-import Hero from './Hero'
 
 // Components
 import Section from '../../components/Section'
@@ -22,6 +17,9 @@ import CardPost from '../../components/CardPost'
 
 // Data
 import usePost from '../../hooks/usePost'
+
+// Sections
+import Hero from './Hero'
 
 // ___________________________________________________________________
 
