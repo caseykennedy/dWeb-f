@@ -8,7 +8,6 @@ type ThemeShape = {
   mq: {
     [key: string]: string
   }
-  useColorSchemeMediaQuery: boolean
   colors: {
     text: string
     background: string
@@ -76,7 +75,7 @@ type ThemeShape = {
 // Begin theme
 // ___________________________________________________________________
 
-const breakpoints: string[] = ['800px', '1024px']
+const breakpoints: string[] = ['768px', '1024px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -96,15 +95,13 @@ const theme: ThemeShape = {
   // Color palette
   // ___________________________________________________________________
 
-  useColorSchemeMediaQuery: false,
-
   colors: {
-    text: '#000000',
+    text: '#242424',
     background: '#ffffff',
 
     primary: '#5700ff',
     secondary: '#a2f6ff',
-    accent: '#a2f6ff',
+    accent: '#b5a0ff',
     highlight: '#fdffd4',
     muted: '#f2f2f2',
 
@@ -115,6 +112,11 @@ const theme: ThemeShape = {
       dark: {
         text: '#f2f2f2',
         background: '#242424',
+        
+        primary: '#b5a0ff',
+        highlight: '#2d00ff',
+        muted: '#202020',
+
         black: '#ffffff',
         white: '#000000',
       },
@@ -210,7 +212,7 @@ const theme: ThemeShape = {
     },
   },
 
-  border: '1px solid #d2d2d9',
+  border: '1px solid #b5a0ff',
   borderRadius: '4px',
   shadow: '2rem 1.5rem 1rem #9D9FA2',
 

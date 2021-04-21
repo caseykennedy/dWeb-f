@@ -3,15 +3,11 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { Link } from 'gatsby'
-
-import { Box, Flex, Text } from '../../ui'
-
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-export const Nav = styled.nav`
+export const Nav = styled.nav<{ isDark: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,19 +15,24 @@ export const Nav = styled.nav`
   width: 100%;
 
   a {
-    color: ${theme.colors.text};
+    color: ${(p) =>
+      p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
     font-size: ${theme.fontSizes[1]};
     text-decoration: none;
-
-    margin-left: ${theme.space[3]};
+    margin-left: ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
-      margin-left: ${theme.space[4]};
+      margin-left: ${theme.space[5]};
     }
+
+    /* @media (prefers-color-scheme: dark) {
+      color: ${theme.colors.white};
+    } */
 
     &.active,
     &:hover {
-      color: ${theme.colors.primary};;
+      color: ${(p) =>
+      p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
     }
   }
 `

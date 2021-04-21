@@ -25,5 +25,7 @@ export const Footer = styled(Flex)`
     margin: 0 auto;
     max-width: ${theme.maxWidth};
     width: 100%;
+
+    font-size: ${theme.fontSizes[1]};
   }
 `

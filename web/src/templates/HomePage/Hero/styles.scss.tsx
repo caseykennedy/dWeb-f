@@ -5,30 +5,44 @@
 import styled from 'styled-components'
 
 import theme from '../../../gatsby-plugin-theme-ui'
-import { Box, Flex } from '../../../components/ui'
-
-import Section from '../../../components/Section'
+import { Flex } from 'theme-ui'
 
 // ___________________________________________________________________
 
-export const Hero = styled(Flex)`
+export const Hero = styled(Flex)<{ isDark: boolean }>`
   display: flex;
   align-items: flex-end;
 
   background: ${theme.colors.primary};
   background: radial-gradient(
     circle,
-    ${theme.colors.primary} 0%,
-    ${theme.colors.secondary} 100%
+    ${theme.colors.primary} -20%,
+    ${(p) => (p.isDark ? `transparent` : theme.colors.secondary)} 100%
   );
 
-  margin-top: -${theme.headerHeight};
-  margin-right: auto;
-  margin-left: auto;
+  margin: calc(${theme.headerHeight} * -1) auto 0 !important;
+  position: relative;
 
-  height: 575px;
-  min-height: 250px;
+  height: 600px;
 
   max-width: 1680px;
   width: 100%;
+
+  .decorator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    svg {
+      transform: scale(0.85);
+
+      @media ${theme.mq.tablet} {
+        transform: scale(1);
+      }
+    }
+  }
 `

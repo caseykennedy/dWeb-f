@@ -220,7 +220,7 @@ const Typography = css`
 
     font-size: ${theme.root.font.baseSize};
     font-family: ${theme.fonts.body};
-    font-weight: ${theme.fontWeights.medium};
+    font-weight: ${theme.fontWeights.regular};
     line-height: ${theme.root.font.bodyLineHeight};
     letter-spacing: ${theme.root.font.baseLetterSpacing};
 
@@ -236,7 +236,7 @@ const Typography = css`
   }
 
   mark {
-    background-color: ${theme.colors.quinary};
+    background-color: ${theme.colors.accent};
   }
 
   h1,
@@ -295,7 +295,7 @@ const Typography = css`
 
   h4,
   .text--md {
-    font-size: calc(${theme.fontSizes[3]} / 1.25);
+    font-size: calc(${theme.fontSizes[3]});
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[3]});
@@ -309,6 +309,13 @@ const Typography = css`
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[2]});
     }
+  }
+
+  h6,
+  .text--xs {
+    font-size: calc(${theme.fontSizes[2]} / 1.25);
+    font-weight: 400;
+    line-height: ${theme.root.font.bodyLineHeight};
   }
 
   .text--xs {
@@ -351,6 +358,11 @@ const Typography = css`
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[1]});
     }
+  }
+
+  .text--mono {
+    font-family: ${theme.fonts.mono};
+    letter-spacing: -0.75px;
   }
 
   .t-underline {

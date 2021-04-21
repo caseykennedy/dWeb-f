@@ -24,12 +24,10 @@ import { ThemeContext } from 'styled-components'
 
 // ___________________________________________________________________
 
-type HeaderShape = { mainRef: React.RefObject<HTMLDivElement> }
-
-const Header: React.FC<HeaderShape> = ({ mainRef }) => {
+const Header = () => {
   const [colorMode, setColorMode] = useColorMode()
   const [isNavOpen, setNavOpen] = useState(false)
-  const [isDarkMode, setDarkMode] = React.useState(false)
+  const [isDarkMode, setDarkMode] = useState(true)
 
   const toggleMenu = () => setNavOpen(!isNavOpen)
 
@@ -55,9 +53,15 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           <Link to="/" className="logo" aria-label="HNSF, back to home">
             <S.Logo>
               <Box className="symbol">
-                <Symbol fill={theme.colors.black} />
+                <Symbol
+                  fill={isDarkMode ? theme.colors.white : theme.colors.black}
+                />
               </Box>
-              <Box className="wordmark" aria-label="The Handshake Foundation">
+              <Box
+                color={isDarkMode ? theme.colors.white : theme.colors.black}
+                className="wordmark"
+                aria-label="The Handshake Foundation"
+              >
                 <Typist cursor={cursorProps}>
                   dWeb
                   <br />
@@ -71,7 +75,9 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
             <Navigation />
 
             <DarkModeSwitch
-              style={{ marginLeft: theme.space[5] }}
+              moonColor={theme.colors.white}
+              sunColor={theme.colors.black}
+              style={{ marginLeft: theme.space[5], marginTop: -4 }}
               checked={isDarkMode}
               onChange={toggleDarkMode}
               size={32}

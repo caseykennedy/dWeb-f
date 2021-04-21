@@ -1,3 +1,14 @@
+// exports.onCreateWebpackConfig = ({ actions, stage, plugins }) => {
+//   actions.setWebpackConfig({
+//     resolve: {
+//       fallback: {
+//         https: require.resolve('https-browserify'),
+//         http: require.resolve('stream-http'),
+//       },
+//     },
+//   })
+// }
+
 // Template pages
 
 exports.createPages = ({ graphql, actions }) => {

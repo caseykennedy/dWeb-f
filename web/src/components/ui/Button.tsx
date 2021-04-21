@@ -2,42 +2,39 @@
 
 // ___________________________________________________________________
 
+import React from 'react'
 import styled from 'styled-components'
-import { darken } from 'polished'
-
-import { Box, Flex, Heading, AnimatedBox } from '.'
-
+import { Flex, useColorMode } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-type ButtonProps = {
-  bg?: string
-  color?: string
-  fill?: string
+const Button: React.FC<{children: React.ReactNode}> = ({ children }) => {
+  const [colorMode, setColorMode] = useColorMode()
+  const isDark = colorMode === 'dark'
+  return <StyledButton isDark={isDark}>{children}</StyledButton>
 }
 
-const Button = styled(Flex)<ButtonProps>`
-  box-sizing: border-box;
+export default Button
+
+const StyledButton = styled(Flex)<{ isDark: boolean }>`
   transition: ${theme.transition.all};
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: ${theme.space[2]} ${theme.space[4]};
+  padding: ${theme.space[4]};
   position: relative;
   width: 100%;
 
-  color: ${p => (!p.color ? theme.colors.primary : p.color)};
-  font-size: calc(${theme.fontSizes[2]});
-  line-height: 2;
-  text-transform: uppercase;
+  color: ${(p) =>
+    p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
+  font-size: ${theme.fontSizes[3]};
 
-  background: ${p => p.bg};
+  background: transparent;
   border: ${theme.border};
-  border-color: ${p => (!p.color ? theme.colors.primary : p.color)};
-  border-radius: ${theme.borderRadius};
+  border-color: ${(p) => (!p.color ? 'inherit' : p.color)};
 
   cursor: pointer;
   outline: none;
@@ -45,32 +42,19 @@ const Button = styled(Flex)<ButtonProps>`
   white-space: nowrap;
 
   @media ${theme.mq.tablet} {
-    width: initial;
+    padding: ${theme.space[4]} ${theme.space[5]};
   }
 
   span {
-    background: ${p => (!p.color ? theme.colors.primary : p.color)};
     border-radius: ${theme.borderRadius};
     font-size: calc(${theme.fontSizes[1]});
-
-    margin-right: ${theme.space[4]};
-    margin-left: -7px;
-    padding: calc(${theme.space[1]} * 1.25);
-
+    margin-left: ${theme.space[4]};
     position: relative;
-    transform: scale(1.15);
-    transition: ${theme.transition.all};
-
-    @media ${theme.mq.tablet} {
-      display: block;
-    }
-
-    @media ${theme.mq.desktop} {
-    }
 
     svg {
       width: ${theme.space[4]};
-      fill: ${p => (!p.fill ? theme.colors.black : p.fill)};
+      fill: ${(p) =>
+        p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
 
       @media ${theme.mq.desktop} {
         width: ${theme.space[4]};
@@ -79,17 +63,14 @@ const Button = styled(Flex)<ButtonProps>`
   }
 
   &:hover {
-    background: ${theme.colors.primary};
-    border-color: ${theme.colors.primary};
-    color: ${theme.colors.black};
+    border-color: ${(p) =>
+      p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+    color: ${(p) =>
+      p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
 
-    span {
-      background: ${p => (!p.fill ? theme.colors.black : p.fill)};
-      right: 0;
-
-      svg {
-        fill: ${p => (!p.fill ? theme.colors.primary : p.fill)};
-      }
+    svg {
+      fill: ${(p) =>
+        p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
     }
   }
 
@@ -100,18 +81,12 @@ const Button = styled(Flex)<ButtonProps>`
   }
 
   &:active {
-    background: ${darken(0.1, theme.colors.primary)};
-    color: ${theme.colors.black};
-    border-color: ${darken(0.1, theme.colors.primary)};
-  }
+    background: ${(p) =>
+      p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+    color: ${theme.colors.white};
 
-  .inner {
-  }
-
-  .smiley {
-    display: block;
-    margin-left: ${theme.space[3]};
+    svg {
+      fill: ${theme.colors.white};
+    }
   }
 `
-
-export default Button

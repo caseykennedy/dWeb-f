@@ -10,6 +10,7 @@ declare module 'react-anchor-link-smooth-scroll'
 declare module '@sanity/block-content-to-react'
 declare module 'react-id-swiper'
 declare module 'gatsby-source-sanity'
+declare module 'coingecko-api'
 
 function createRef<T>(): RefObject<T>
 interface RefObject<T> {

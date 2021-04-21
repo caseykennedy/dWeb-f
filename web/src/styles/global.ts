@@ -39,7 +39,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   html,
-  body {  
+  body {
     background: ${theme.colors.background};  
     border: 0;
     margin: 0;
