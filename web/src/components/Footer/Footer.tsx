@@ -20,14 +20,7 @@ const Footer: React.FC = () => {
       <Box className="footer-inner">
         <Flex>
           <Box mr={4}>
-            &copy;{getYear()} —{' '}
-            <Link
-              to="/"
-              className="logo-symbol"
-              aria-label="HNSF, back to home"
-            >
-              dWeb
-            </Link>
+            &copy;{getYear()}
           </Box>
         </Flex>
 

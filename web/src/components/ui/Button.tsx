@@ -30,11 +30,14 @@ const StyledButton = styled(Flex)<{ isDark: boolean }>`
 
   color: ${(p) =>
     p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
-  font-size: ${theme.fontSizes[3]};
+  letter-spacing: 0;
+  font-family: ${theme.fonts.mono};
+  font-size: calc(${theme.fontSizes[2]} / 1.15);
+  text-transform: uppercase;
 
   background: transparent;
   border: ${theme.border};
-  border-color: ${(p) => (!p.color ? 'inherit' : p.color)};
+  border-color: ${(p) => (p.isDark ? theme.colors.modes.dark.text : theme.colors.text)};
 
   cursor: pointer;
   outline: none;
@@ -42,6 +45,11 @@ const StyledButton = styled(Flex)<{ isDark: boolean }>`
   white-space: nowrap;
 
   @media ${theme.mq.tablet} {
+    font-size: ${theme.fontSizes[2]};
+  }
+
+  @media ${theme.mq.desktop} {
+    font-size: ${theme.fontSizes[3]};
     padding: ${theme.space[4]} ${theme.space[5]};
   }
 

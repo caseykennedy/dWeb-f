@@ -48,7 +48,7 @@ const RootVariables = css`
 
     /* type scale */
     --text-xs: calc(
-      1.25em / (var(--text-scale-ratio) * var(--text-scale-ratio))
+      1em / (var(--text-scale-ratio) * var(--text-scale-ratio))
     );
     --text-sm: calc(1em / var(--text-scale-ratio));
     --text-md: calc(1em * var(--text-scale-ratio));

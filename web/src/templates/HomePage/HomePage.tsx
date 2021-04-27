@@ -24,6 +24,10 @@ import CubeB from '../../components/CubeB'
 
 // Sections
 import Hero from './Hero'
+import Handshake from './Handshake'
+import Features from './Features'
+import Donate from './Donate'
+import Newsletter from './Newsletter'
 
 // Data
 import usePost from '../../hooks/usePost'
@@ -33,7 +37,7 @@ import usePost from '../../hooks/usePost'
 const AboutUs = () => {
   return (
     <S.AboutUs>
-      <Section pt={7}>
+      <Section>
         <Heading as="h6" mb={7}>
           The internet is open
         </Heading>
@@ -158,7 +162,7 @@ const Introduction = () => {
                       ':hover': { color: 'primary', textDecoration: 'none' },
                     }}
                   >
-                    Support Us
+                    support us
                   </Text>
                 </Link>
               </Box>
@@ -213,12 +217,14 @@ const HomePage: React.FC = () => {
   return (
     <S.HomePage>
       <Hero />
-
       <Introduction />
-
       <AboutUs />
+      <Handshake />
+      <Features />
+      <Newsletter />
+      <Donate />
 
-      <Section pt={11}>
+      {/* <Section pt={11}>
         <Flex sx={{ flexDirection: 'column' }}>
           <Grid columns={[1]} gap={theme.gutter.axis}>
             {posts.map(({ node: post }, idx) => (
@@ -231,7 +237,7 @@ const HomePage: React.FC = () => {
             ))}
           </Grid>
         </Flex>
-      </Section>
+      </Section> */}
     </S.HomePage>
   )
 }

@@ -138,7 +138,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   )
   return (
     <S.Wrapper>
-      <Header mainRef={mainRef} />
+      <Header />
       <S.Main ref={mainRef}>{children}</S.Main>
       <Footer />
     </S.Wrapper>

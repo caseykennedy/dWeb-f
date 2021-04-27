@@ -1,5 +1,5 @@
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
+  path: `.env.${process.env.NODE_ENV}`,
 })
 
 const config = require('./config')
@@ -7,7 +7,7 @@ const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
 // Get Sanity config
 const {
-  api: { projectId, dataset }
+  api: { projectId, dataset },
 } = requireConfig('../studio/sanity.json')
 
 module.exports = {
@@ -39,8 +39,8 @@ module.exports = {
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser
         // Defaults to null
-        defaultDataLayer: { platform: 'gatsby' }
-      }
+        defaultDataLayer: { platform: 'gatsby' },
+      },
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
@@ -59,11 +59,11 @@ module.exports = {
         // and add a token with read permissions
         token: process.env.GATSBY_SANITY_TOKEN,
         watchMode: true,
-        overlayDrafts: true
-      }
+        overlayDrafts: true,
+      },
     },
     {
-      resolve: "gatsby-plugin-sanity-image",
+      resolve: 'gatsby-plugin-sanity-image',
       options: {
         // Sanity project info (required)
         projectId: projectId,
@@ -74,22 +74,30 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'config',
-        path: `${__dirname}/config`
-      }
+        path: `${__dirname}/config`,
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /static/, // See below to configure properly
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         color: `#00ff9b`,
-        showSpinner: false
-      }
+        showSpinner: false,
+      },
     },
     {
       resolve: 'gatsby-plugin-manifest',
@@ -101,10 +109,10 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'standalone',
-        icon: 'src/favicon.png'
-      }
-    }
-  ]
+        icon: 'src/favicon.png',
+      },
+    },
+  ],
 }
 
 /**
@@ -124,8 +132,8 @@ function requireConfig(path) {
     return {
       api: {
         projectId: process.env.GATSBY_SANITY_PROJECT_ID || '',
-        dataset: process.env.GATSBY_SANITY_DATASET || ''
-      }
+        dataset: process.env.GATSBY_SANITY_DATASET || '',
+      },
     }
   }
 }

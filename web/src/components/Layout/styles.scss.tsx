@@ -16,10 +16,12 @@ export const Wrapper = styled(Flex)`
 `
 
 export const Main = styled.main`
-  max-height: 100%;
+  margin: 0 auto;
   position: relative;
   padding-top: ${theme.headerHeight};
-  width: ${theme.siteWidth};
+  max-height: 100%;
+  max-width: ${theme.siteWidth};
+  width: 100%;
 `
 
 // ___________________________________________________________________

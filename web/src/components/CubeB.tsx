@@ -17,7 +17,7 @@ const CubeB: React.FC<Props> = () => (
     <defs>
       <clipPath id="clip-path" transform="translate(-5.83 -8.03)">
         <polygon
-          className="cls-1"
+          className="cubeb-1"
           points="86.35 78.49 84.78 67.88 128.63 87.23 120.13 95.73 86.35 78.49"
         />
       </clipPath>
@@ -36,7 +36,7 @@ const CubeB: React.FC<Props> = () => (
       </linearGradient>
       <clipPath id="clip-path-2" transform="translate(-5.83 -8.03)">
         <polygon
-          className="cls-1"
+          className="cubeb-1"
           points="74 66.15 84.81 67.85 65.42 24.02 56.92 32.52 74 66.15"
         />
       </clipPath>
@@ -51,7 +51,7 @@ const CubeB: React.FC<Props> = () => (
       />
       <clipPath id="clip-path-3" transform="translate(-5.83 -8.03)">
         <polygon
-          className="cls-1"
+          className="cubeb-1"
           points="152.88 64.73 88.15 0 64.29 23.86 72.07 39.82 113.73 81 129.02 88.59 152.88 64.73"
         />
       </clipPath>
@@ -66,7 +66,7 @@ const CubeB: React.FC<Props> = () => (
       />
       <clipPath id="clip-path-4" transform="translate(-5.83 -8.03)">
         <polygon
-          className="cls-1"
+          className="cubeb-1"
           points="0 86.83 66.05 152.88 90.39 128.53 82.45 112.25 39.95 70.22 24.35 62.49 0 86.83"
         />
       </clipPath>
@@ -94,42 +94,42 @@ const CubeB: React.FC<Props> = () => (
       />
     </defs>
     <polyline points="70.71 80.92 85.56 66.07 72.73 53.24 57.88 68.09" />
-    <g className="cls-2">
+    <g className="cubeb-2">
       <polyline
-        className="cls-3"
+        className="cubeb-3"
         points="126.4 79.2 78.1 57.59 73.08 68.82 121.38 90.43"
       />
     </g>
-    <g className="cls-4">
+    <g className="cubeb-4">
       <polyline
-        className="cls-5"
+        className="cubeb-5"
         points="48.35 17.41 69.98 65.72 81.2 60.69 59.58 12.38"
       />
     </g>
     <polygon
-      className="cls-6"
+      className="cubeb-6"
       points="57.38 11.07 78.94 59.85 127.72 81.41 131.58 72.67 86.19 52.61 66.11 7.21 57.38 11.07 57.38 11.07"
     />
     <polyline points="31.66 59.62 68.02 23.26 59.49 14.74 23.13 51.1" />
     <polyline points="87.73 115.7 124.09 79.34 115.57 70.81 79.21 107.17" />
-    <g className="cls-7">
+    <g className="cubeb-7">
       <polygon
-        className="cls-8"
+        className="cubeb-8"
         points="123.42 81.01 109.52 29.27 57.78 15.37 54.59 27.25 99.48 39.31 111.54 84.2 123.42 81.01 123.42 81.01"
       />
     </g>
-    <g className="cls-9">
+    <g className="cubeb-9">
       <polygon
-        className="cls-10"
+        className="cubeb-10"
         points="12.81 57.34 32.1 106.71 81.45 125.97 86.37 113.37 42.54 96.26 25.42 52.42 12.82 57.34 12.81 57.34"
       />
     </g>
     <polygon
-      className="cls-11"
+      className="cubeb-11"
       points="84.72 138.71 138.79 84.64 121.1 17.7 54.15 0 0.21 53.94 61.5 77.3 80.9 128.22 94.32 123.11 72.62 66.17 26.03 48.42 58.46 15.98 109.35 29.44 122.8 80.33 74.57 128.56 84.72 138.71 84.72 138.71"
     />
     <polygon
-      className="cls-12"
+      className="cubeb-12"
       points="75.32 128.93 80.69 126.9 61.79 77.01 0 53.63 23.35 115.45 85.2 138.8 80.69 126.9 75.32 128.93 77.35 123.56 32.26 106.54 19.73 73.37 52.88 85.92 69.96 130.97 75.32 128.93 77.35 123.56 75.32 128.93"
     />
   </SVG>
@@ -140,51 +140,51 @@ export default CubeB
 // ___________________________________________________________________
 
 const SVG = styled(motion.svg)<{ fill?: string }>`
-  .cls-1 {
+  .cubeb-1 {
     fill: none;
   }
 
-  .cls-2 {
+  .cubeb-2 {
     clip-path: url(#clip-path);
   }
 
-  .cls-3 {
+  .cubeb-3 {
     fill: url(#linear-gradient);
   }
 
-  .cls-4 {
+  .cubeb-4 {
     clip-path: url(#clip-path-2);
   }
 
-  .cls-5 {
+  .cubeb-5 {
     fill: url(#linear-gradient-2);
   }
 
-  .cls-6 {
+  .cubeb-6 {
     fill: #2d00ff;
   }
 
-  .cls-7 {
+  .cubeb-7 {
     clip-path: url(#clip-path-3);
   }
 
-  .cls-8 {
+  .cubeb-8 {
     fill: url(#linear-gradient-3);
   }
 
-  .cls-9 {
+  .cubeb-9 {
     clip-path: url(#clip-path-4);
   }
 
-  .cls-10 {
+  .cubeb-10 {
     fill: url(#linear-gradient-4);
   }
 
-  .cls-11 {
+  .cubeb-11 {
     fill: url(#linear-gradient-5);
   }
 
-  .cls-12 {
+  .cubeb-12 {
     fill: #683bff;
   }
 `

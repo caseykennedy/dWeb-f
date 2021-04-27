@@ -37,7 +37,7 @@ export const Form = styled.form`
       border-bottom: ${theme.border};
       border-radius: 0;
 
-      font-size: ${theme.fontSizes[2]};
+      font-size: ${theme.fontSizes[1]};
       margin: 0;
       padding: ${theme.space[4]} 0 ${theme.space[2]};
       width: 100%;

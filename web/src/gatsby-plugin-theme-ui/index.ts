@@ -19,6 +19,7 @@ type ThemeShape = {
     muted: string
     black: string
     white: string
+    gray: string
     modes: {
       dark: {
         [key: string]: string
@@ -107,6 +108,7 @@ const theme: ThemeShape = {
 
     black: '#000000',
     white: '#ffffff',
+    gray: '#8a8892',
 
     modes: {
       dark: {
@@ -114,7 +116,7 @@ const theme: ThemeShape = {
         background: '#242424',
         
         primary: '#b5a0ff',
-        highlight: '#2d00ff',
+        highlight: '#403d4e',
         muted: '#202020',
 
         black: '#ffffff',
@@ -187,7 +189,7 @@ const theme: ThemeShape = {
   strokeWidth: '2px',
 
   maxWidth: '1440px',
-  siteWidth: '100%',
+  siteWidth: '1680px',
   logoWidth: '',
   headerHeight: '150px',
   tickerHeight: '56px',
@@ -201,8 +203,8 @@ const theme: ThemeShape = {
   },
 
   transition: {
-    all: 'all 0.111s ease-in-out 0s',
-    global: '0.111s ease-in-out 0s',
+    all: 'all 0.05s ease-in-out 0s',
+    global: '0.05s ease-in-out 0s',
   },
 
   transform: {
@@ -212,7 +214,7 @@ const theme: ThemeShape = {
     },
   },
 
-  border: '1px solid #b5a0ff',
+  border: '1px solid #8a8892',
   borderRadius: '4px',
   shadow: '2rem 1.5rem 1rem #9D9FA2',
 

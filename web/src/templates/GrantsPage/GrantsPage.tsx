@@ -13,7 +13,7 @@ import { Box, Flex, Heading, Text } from '../../components/ui'
 
 // Components
 import Section from '../../components/Section'
-import GrantForm from '../HomePage/ContactForm'
+import GrantForm from './ContactForm'
 
 // ___________________________________________________________________
 
