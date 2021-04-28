@@ -21,7 +21,7 @@ const Newsletter = () => {
   const isDark = colorMode === 'dark'
   return (
     <S.Newsletter isDark={isDark}>
-      <Section border={true} pt={[6, 7]} pb={[6, 7]}>
+      <Section border={true} pt={[6, 7]} pb={[4, 6, 7]}>
         <Box>
           <Heading as="h3" mb={3}>
             Coming to a browser near you.
@@ -64,22 +64,29 @@ const Newsletter = () => {
                 className="form-control"
               />
 
-              {/* <button
-                type="submit"
-                value="Submit form"
-                // onClick={() => {
-                //   gtag.event({
-                //     category: 'Submit form',
-                //     action: 'Click',
-                //     label: 'Footer newsletter sign up'
-                //   })
-                // }}
-              >
-                subscribe
-              </button> */}
+              <Flex className="submit">
+                <button
+                  type="submit"
+                  value="Submit form"
+                  // onClick={() => {
+                  //   gtag.event({
+                  //     category: 'Submit form',
+                  //     action: 'Click',
+                  //     label: 'Footer newsletter sign up'
+                  //   })
+                  // }}
+                >
+                  <Icon name="arrow" />
+                </button>
+              </Flex>
             </form>
           </Box>
-          <Box sx={{ flex: 1 }}/>
+
+          <Flex sx={{ flex: 1 }} className="social">
+            <a href="/" target="_blank">
+              <Icon name="twitter" />
+            </a>
+          </Flex>
         </Flex>
       </Section>
     </S.Newsletter>

@@ -41,7 +41,7 @@ const GrantsPage: React.FC = () => {
         </Flex>
       </Section>
 
-      <Box py={7} px={theme.gutter.axis} className="highlight">
+      {/* <Box py={7} px={theme.gutter.axis} className="highlight">
         <Flex
           flexDirection="column"
           width={1}
@@ -52,7 +52,7 @@ const GrantsPage: React.FC = () => {
             We look forward to reviewing your application 😄
           </Text>
         </Flex>
-      </Box>
+      </Box> */}
     </S.GrantsPage>
   )
 }

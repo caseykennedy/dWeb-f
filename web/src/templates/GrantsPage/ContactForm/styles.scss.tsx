@@ -10,7 +10,7 @@ import { Box, Flex } from '../../../components/ui'
 
 // ___________________________________________________________________
 
-export const Form = styled.form`
+export const Form = styled.form<{ isDark?: boolean }>`
   margin: 0 auto;
   width: 100%;
 
@@ -37,7 +37,7 @@ export const Form = styled.form`
       border-bottom: ${theme.border};
       border-radius: 0;
 
-      font-size: ${theme.fontSizes[1]};
+      font-size: calc(${theme.fontSizes[2]} / 1.25);
       margin: 0;
       padding: ${theme.space[4]} 0 ${theme.space[2]};
       width: 100%;
@@ -50,7 +50,7 @@ export const Form = styled.form`
       }
 
       &::placeholder {
-        color: ${theme.colors.darkgray};
+        color: ${theme.colors.gray};
       }
     }
 
@@ -58,8 +58,10 @@ export const Form = styled.form`
       display: flex;
       align-items: flex-start;
       flex-wrap: wrap;
+      flex-direction: column;
 
       @media ${theme.mq.tablet} {
+        flex-direction: row;
         padding-bottom: ${theme.space[3]};
       }
 
@@ -85,18 +87,80 @@ export const Form = styled.form`
   }
 
   button {
-    background: transparent;
-    border: ${theme.border};
-    font-size: ${theme.fontSizes[2]};
-    text-transform: uppercase;
-
-    margin: 0;
-    padding: ${theme.space[4]};
-    cursor: pointer;
     transition: ${theme.transition.all};
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: ${theme.space[4]};
+    position: relative;
+    width: 100%;
+
+    color: ${(p) =>
+      p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
+    letter-spacing: 0;
+    font-family: ${theme.fonts.mono};
+    font-size: calc(${theme.fontSizes[2]} / 1.15);
+    text-transform: uppercase;
+
+    background: transparent;
+    border: ${theme.border};
+
+
+    cursor: pointer;
+    outline: none;
+    transition: ${theme.transition.all};
+    white-space: nowrap;
+
+    @media ${theme.mq.tablet} {
+      padding: ${theme.space[3]} ${theme.space[4]};
+    }
+
+    span {
+      border-radius: ${theme.borderRadius};
+      font-size: calc(${theme.fontSizes[1]});
+      margin-left: ${theme.space[4]};
+      position: relative;
+
+      svg {
+        width: ${theme.space[4]};
+        fill: ${(p) =>
+          p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
+
+        @media ${theme.mq.desktop} {
+          width: ${theme.space[4]};
+        }
+      }
+    }
+
     &:hover {
-      border-color: ${theme.colors.primary};
+      border-color: ${(p) =>
+        p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+
+      color: ${(p) =>
+        p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+
+      svg {
+        fill: ${(p) =>
+          p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+      }
+    }
+
+    &:disabled {
+      background: ${theme.colors.muted};
+      border-color: ${theme.colors.muted};
+      color: ${theme.colors.white};
+    }
+
+    &:active {
+      background: ${(p) =>
+        p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+      color: ${theme.colors.white};
+
+      svg {
+        fill: ${theme.colors.white};
+      }
     }
   }
 

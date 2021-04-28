@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
+import { darken } from 'polished'
 
 import theme from '../../../gatsby-plugin-theme-ui'
 import { Box } from 'theme-ui'
@@ -10,7 +11,30 @@ import { Box } from 'theme-ui'
 // ___________________________________________________________________
 
 export const Newsletter = styled(Box)<{ isDark: boolean }>`
+  .social {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: ${theme.space[4]};
+
+    svg {
+      fill: ${(p) =>
+        darken(
+          0.05,
+          p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary
+        )};
+      width: ${theme.space[7]};
+
+      &:hover {
+        fill: ${(p) =>
+          p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+      }
+    }
+  }
+
   form {
+    position: relative;
+
     input {
       color: ${(p) =>
         p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
@@ -31,7 +55,37 @@ export const Newsletter = styled(Box)<{ isDark: boolean }>`
 
       @media ${theme.mq.desktop} {
         font-size: ${theme.fontSizes[3]};
-        padding: ${theme.space[4]} ${theme.space[5]};
+        padding: ${theme.space[4]};
+      }
+    }
+
+    .submit {
+      display: flex;
+      align-items: center;
+
+      position: absolute;
+      top: 0;
+      right: ${theme.space[4]};
+      height: 100%;
+      z-index: 9;
+
+      button {
+        background: ${darken(0.05, theme.colors.primary)};
+        border: 0;
+        border-radius: ${theme.borderRadius};
+        outline: 0;
+        cursor: pointer;
+        padding: ${theme.space[1]} ${theme.space[3]};
+        transition: background-color ${theme.transition.global};
+
+        &:hover {
+          background: ${theme.colors.primary};
+        }
+
+        svg {
+          fill: ${theme.colors.white};
+          width: 20px;
+        }
       }
     }
   }

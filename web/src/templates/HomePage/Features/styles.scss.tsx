@@ -19,11 +19,11 @@ export const Features = styled(Box)<{ isDark: boolean }>`
       border-bottom: ${theme.border};
 
       svg {
-        margin: ${theme.space[4]} auto;
-        max-height: 200px;
+        margin: ${theme.space[4]} auto ${theme.space[4]};
+        max-height: 125px;
 
         @media ${theme.mq.tablet} {
-          margin: ${theme.space[6]} auto;
+          margin: ${theme.space[6]} auto ${theme.space[6]};
         }
       }
     }

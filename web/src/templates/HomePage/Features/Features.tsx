@@ -19,7 +19,7 @@ import Everybodys from '../../../../static/everybodys.svg'
 import LockedOpen from '../../../../static/lockedopen.svg'
 import Monetizeable from '../../../../static/monetizeable.svg'
 import Robust from '../../../../static/robust.svg'
-import Secure from '../../../../static/Secure.svg'
+import Secure from '../../../../static/secure.svg'
 import Trustless from '../../../../static/trustless.svg'
 import Unlimited from '../../../../static/unlimited.svg'
 import Yours from '../../../../static/yours.svg'
@@ -44,7 +44,7 @@ const Features = () => {
               }}
               key={key}
             >
-              <Heading as="h5" mb={3}>
+              <Heading as="h6" mb={3}>
                 {feature.feature}
               </Heading>
               {feature.figure}

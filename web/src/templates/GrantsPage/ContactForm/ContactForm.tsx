@@ -7,26 +7,33 @@ import React, { useState } from 'react'
 // Theme + ui
 import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
-import { Box, Flex } from '../../../components/ui'
-import { Input, Select } from 'theme-ui'
+import { Box, Flex, Input, Select, useColorMode } from 'theme-ui'
+import Button from '../../../components/ui/Button'
+
+import Icon from '../../../components/Icons'
 
 // ___________________________________________________________________
 
 const ContactForm: React.FC = () => {
-  const [startDate, setStartDate] = useState(null)
+  const [colorMode, setColorMode] = useColorMode()
+  const isDark = colorMode === 'dark'
   return (
     <S.Form
       name="Apply for a grant — dWeb"
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      isDark={isDark}
     >
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="Apply for a grant — dWeb" />
 
       <fieldset>
-        <Box width={1} className="form-group">
-          <Box width={[1, 1, 1 / 2]} className="form-group__box">
+        <Flex className="form-group">
+          <Box
+            sx={{ flex: [1, 1, 0.5], width: '100%' }}
+            className="form-group__box"
+          >
             <label htmlFor="name">
               Name:{' '}
               <abbr title="required" aria-label="required">
@@ -42,7 +49,10 @@ const ContactForm: React.FC = () => {
               required={true}
             />
           </Box>
-          <Box width={[1, 1, 1 / 2]} className="form-group__box">
+          <Box
+            sx={{ flex: [1, 1, 0.5], width: '100%' }}
+            className="form-group__box"
+          >
             <label htmlFor="email">
               Email:
               <abbr title="required" aria-label="required">
@@ -57,9 +67,9 @@ const ContactForm: React.FC = () => {
               required={true}
             />
           </Box>
-        </Box>
+        </Flex>
 
-        <Box width={1} className="form-group">
+        <Flex className="form-group">
           <label htmlFor="comments">
             Project mission statement. Tell us how you're supporting Handshake
             with what you're building:{' '}
@@ -70,10 +80,13 @@ const ContactForm: React.FC = () => {
             rows={6}
             placeholder="Tell us about your project"
           />
-        </Box>
+        </Flex>
 
-        <Box width={1} className="form-group">
-          <Box width={[1, 1, 1 / 2]} className="form-group__box">
+        <Flex className="form-group">
+          <Box
+            sx={{ flex: [1, 1, 0.5], width: '100%' }}
+            className="form-group__box"
+          >
             <label htmlFor="project-repo">
               Project repo link:{' '}
               <abbr title="required" aria-label="required">
@@ -89,7 +102,10 @@ const ContactForm: React.FC = () => {
               required={true}
             />
           </Box>
-          <Box width={[1, 1, 1 / 2]} className="form-group__box">
+          <Box
+            sx={{ flex: [1, 1, 0.5], width: '100%' }}
+            className="form-group__box"
+          >
             <label htmlFor="grant-amount">Grant amount:</label>
             <Select id="grant-amount">
               <option value="" disabled={true} selected={true}>
@@ -101,12 +117,13 @@ const ContactForm: React.FC = () => {
               <option value="25000+">25,000+</option>
             </Select>
           </Box>
-        </Box>
+        </Flex>
 
-        <Flex mt={4} width={1}>
-          <Box as="button" flex={[1]} type="submit" value="submit">
+        <Flex mt={4}>
+          <button type="submit" value="submit">
             Submit
-          </Box>
+            <Icon name="arrow" />
+          </button>
         </Flex>
       </fieldset>
     </S.Form>

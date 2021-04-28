@@ -203,8 +203,8 @@ const theme: ThemeShape = {
   },
 
   transition: {
-    all: 'all 0.05s ease-in-out 0s',
-    global: '0.05s ease-in-out 0s',
+    all: 'all 0.11s ease-in-out 0s',
+    global: '0.11s ease-in-out 0s',
   },
 
   transform: {
