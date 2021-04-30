@@ -352,6 +352,11 @@ const Typography = css`
     font-weight: 600;
   }
 
+  sup {
+    font-size: 60%;
+    font-weight: 500;
+  }
+
   .text--small {
     font-size: calc(${theme.fontSizes[0]});
 

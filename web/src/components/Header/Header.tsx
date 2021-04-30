@@ -20,14 +20,13 @@ import Symbol from '../Symbol'
 import Navigation from './Navigation'
 import MobileNav from './MobileNav'
 import Modal from '../Modal'
-import { ThemeContext } from 'styled-components'
 
-// ___________________________________________________________________
+// ___________________________________________________________________ss
 
 const Header = () => {
   const [colorMode, setColorMode] = useColorMode()
-  const [isNavOpen, setNavOpen] = useState(false)
   const [isDarkMode, setDarkMode] = useState(true)
+  const [isNavOpen, setNavOpen] = useState(false)
 
   const toggleMenu = () => setNavOpen(!isNavOpen)
 
@@ -38,10 +37,6 @@ const Header = () => {
 
   return (
     <>
-      <Modal open={isNavOpen} close={toggleMenu}>
-        <MobileNav isOpen={isNavOpen} handleExitOnClick={toggleMenu} />
-      </Modal>
-
       {/* <S.Utilities px={theme.gutter.axis} py={2}>
         <Flex className="date">
           <GetDate />
@@ -90,15 +85,19 @@ const Header = () => {
               menuClicked={toggleMenu}
               width={32}
               height={12}
-              strokeWidth={1.5}
+              strokeWidth={2}
               rotate={0}
-              color="black"
+              color={isDarkMode ? theme.colors.white : theme.colors.black}
               borderRadius={0}
               animationDuration={0.333}
             />
           </S.Toggle>
         </Flex>
       </S.Header>
+
+      <Modal open={isNavOpen} close={toggleMenu}>
+        <MobileNav isOpen={isNavOpen} handleExitOnClick={toggleMenu} />
+      </Modal>
     </>
   )
 }

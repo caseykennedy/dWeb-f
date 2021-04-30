@@ -18,25 +18,29 @@ export const MobileNav = styled(motion.ul)`
   flex-wrap: wrap;
 
   margin: 0;
-  padding: 0;
+  padding: ${theme.headerHeight} 0 0 0;
   height: 100%;
   width: 100%;
 `
 
-export const NavLink = styled(motion.li)`
+export const NavLink = styled(motion.li)<{ isDark?: boolean }>`
   display: flex;
   flex-direction: column;
   margin: 0;
   width: 100%;
-  /* padding: ${theme.space[2]} 0; */
+  padding: ${theme.space[1]} ${theme.space[4]};
 
   a {
-    border-bottom: ${theme.border};
-    color: ${theme.colors.text};
-    font-size: ${theme.fontSizes[2]};
+    color: ${(p) =>
+        p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
+    font-size: ${theme.fontSizes[4]};
     text-decoration: none;
-    padding: ${theme.space[4]};
     width: 100%;
+
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
   }
 `
 

@@ -8,6 +8,7 @@ import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
 
 import theme from '../../../gatsby-plugin-theme-ui'
+import { useColorMode } from 'theme-ui'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
@@ -23,11 +24,14 @@ type NavLinksProps = {
 }
 
 const NavLink = ({ item, handleExitOnClick }: NavLinkProps) => {
+  const [colorMode, setColorMode] = useColorMode()
+  const isDark = colorMode === 'dark'
   return (
     <S.NavLink
       variants={itemVariants}
       whileTap={{ scale: 0.95 }}
       onClick={handleExitOnClick}
+      isDark={isDark}
     >
       <Link to={item.link}>{item.name}</Link>
     </S.NavLink>
@@ -56,23 +60,23 @@ export default MobileNav
 
 const data = [
   {
-    name: 'home',
+    name: 'Home',
     link: '/',
   },
   {
-    name: 'about',
+    name: 'About',
     link: '/about',
   },
   {
-    name: 'donate',
+    name: 'Donate',
     link: '/donate',
   },
   {
-    name: 'grants',
+    name: 'Grants',
     link: '/grants',
   },
   {
-    name: 'blog',
+    name: 'Blog',
     link: '/blog',
   },
 ]

@@ -13,6 +13,7 @@ export const Wrapper = styled(Flex)`
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;
+  min-height: 100vh;
 `
 
 export const Main = styled.main`

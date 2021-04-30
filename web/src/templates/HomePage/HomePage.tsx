@@ -62,9 +62,9 @@ const AboutUs = () => {
             <Heading className="text--lg">
               We are supporters of the early decentralized internet,{' '}
               <Text as="span" color="primary">
-                aiming to 1build (dWeb) integrations 2create secondary and
-                tertiary layer infrastructure 3enable a new generation of
-                pioneers.
+                aiming to <sup>1</sup>build (dWeb) integrations <sup>2</sup>
+                create secondary and tertiary layer infrastructure <sup>3</sup>
+                enable a new generation of pioneers.
               </Text>
             </Heading>
           </Flex>

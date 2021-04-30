@@ -7,6 +7,7 @@ import { default as ReactModal } from 'react-responsive-modal'
 import { transparentize } from 'polished'
 
 import theme from '../../gatsby-plugin-theme-ui'
+import { useColorMode } from 'theme-ui'
 
 // ___________________________________________________________________
 
@@ -19,11 +20,13 @@ type ModalProps = {
 const defaultProps = {}
 
 const Modal: React.FC<ModalProps> = ({ children, open, close }) => {
+  const [colorMode, setColorMode] = useColorMode()
+  const isDark = colorMode === 'dark'
   return (
     <ReactModal
       open={open}
       onClose={close}
-      styles={modalStyles}
+      styles={!isDark ? modalStylesLight : modalStylesDark }
       focusTrapped={false}
       center={true}
       showCloseIcon={false}
@@ -39,17 +42,32 @@ export default Modal
 
 Modal.defaultProps = defaultProps
 
-const modalStyles = {
+const modalStylesLight = {
   overlay: {
-    background: theme.colors.background
+    background: theme.colors.muted
   },
   modal: {
-    background: theme.colors.primary,
+    background: 'transparent',
     boxShadow: 'none',
-    boxSizing: 'border-box',
     margin: '0',
-    padding: `${theme.space[4]} 0 0`,
+    padding: `0`,
     height: '100%',
+    maxWidth: '100%',
+    width: '100%'
+  }
+}
+
+const modalStylesDark = {
+  overlay: {
+    background: theme.colors.modes.dark.muted
+  },
+  modal: {
+    background: 'transparent',
+    boxShadow: 'none',
+    margin: '0',
+    padding: `0`,
+    height: '100%',
+    maxWidth: '100%',
     width: '100%'
   }
 }

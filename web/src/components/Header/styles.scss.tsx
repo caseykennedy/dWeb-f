@@ -16,7 +16,8 @@ export const Header = styled(Box)`
   overflow: visible;
   max-height: 0;
   width: 100%;
-  z-index: 999;
+  position: relative;
+  z-index: 99999;
 
   a {
     color: ${theme.colors.black};
@@ -84,7 +85,7 @@ export const Toggle = styled(Box)`
   cursor: pointer;
 
   position: relative;
-  z-index: 99999;
+  z-index: 9999999999;
 
   @media ${theme.mq.tablet} {
     display: none;
