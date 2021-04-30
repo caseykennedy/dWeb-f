@@ -7,13 +7,12 @@ import React, { useState } from 'react'
 import Typist from 'react-typist'
 import { Link } from 'gatsby'
 import HamburgerMenu from 'react-hamburger-menu'
-import { useColorMode } from 'theme-ui'
 import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
 // Theme + ui
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import { Box, Flex, Text } from '../ui'
+import { Box, Flex, Text, useColorMode } from 'theme-ui'
 
 // Components
 import Symbol from '../Symbol'
@@ -54,17 +53,13 @@ const Header = () => {
                   fill={isDark ? theme.colors.white : theme.colors.black}
                 />
               </Box>
-              <Box
-                color={isDark ? theme.colors.white : theme.colors.black}
-                className="wordmark"
-                aria-label="The Handshake Foundation"
-              >
+              <Text as="p" color="text" className="wordmark" aria-label="The Handshake Foundation">
                 <Typist cursor={cursorProps}>
                   dWeb
                   <br />
                   Foundation
                 </Typist>
-              </Box>
+              </Text>
             </S.Logo>
           </Link>
 

@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import { createGlobalStyle } from 'styled-components'
-import { darken } from 'polished'
 
 import theme from '../gatsby-plugin-theme-ui'
 
@@ -40,7 +39,6 @@ const GlobalStyles = createGlobalStyle`
   
   html,
   body {
-    background: ${theme.colors.background};  
     border: 0;
     margin: 0;
     padding: 0;

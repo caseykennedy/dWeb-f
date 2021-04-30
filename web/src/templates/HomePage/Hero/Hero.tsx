@@ -23,7 +23,7 @@ import usePost from '../../../hooks/usePost'
 type Props = {}
 
 const Hero: React.FC<Props> = () => {
-  const [colorMode, setColorMode] = useColorMode()
+  const [colorMode] = useColorMode()
   const isDark = colorMode === 'dark'
   return (
     <S.Hero isDark={isDark}>

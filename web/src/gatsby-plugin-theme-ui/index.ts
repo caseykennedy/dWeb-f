@@ -9,6 +9,9 @@ type ThemeShape = {
     [key: string]: string
   }
   initialColorModeName?: string
+  useBodyStyles?: boolean
+  useRootStyles?: boolean
+  useLocalStorage?: boolean
   colors: {
     text: string
     background: string
@@ -98,6 +101,9 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   initialColorModeName: 'default',
+  // useBodyStyles: false,
+  // useRootStyles: true,
+  useLocalStorage: false,
   colors: {
     text: '#242424',
     background: '#ffffff',
