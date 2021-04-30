@@ -1,6 +1,6 @@
 import BaseBlockContent from '@sanity/block-content-to-react'
 import React from 'react'
-import { Heading, Text } from '../ui'
+import { Heading, Text } from 'theme-ui'
 
 import Figure from './Figure'
 

@@ -29,7 +29,7 @@ const RootVariables = css`
     -------------------------------- */
 
     /* set base values */
-    --text-base-size: 1.1em;
+    --text-base-size: 1.15em;
     --text-scale-ratio: 1.250;
 
     /* line-height */

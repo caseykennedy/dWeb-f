@@ -17,7 +17,7 @@ import Icon from '../../../components/Icons'
 
 const Newsletter = () => {
   const [colorMode] = useColorMode()
-  const isDark = colorMode === 'light'
+  const isDark = colorMode === 'dark'
   return (
     <S.Newsletter isDark={isDark}>
       <Section border={true}>

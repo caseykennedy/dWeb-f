@@ -25,7 +25,7 @@ type ThemeShape = {
     white: string
     gray: string
     modes: {
-      light: {
+      dark: {
         [key: string]: string
       }
     }
@@ -103,7 +103,7 @@ const theme: ThemeShape = {
   initialColorModeName: 'default',
   // useBodyStyles: false,
   // useRootStyles: true,
-  useLocalStorage: true,
+  // useLocalStorage: true,
   colors: {
     text: '#242424',
     background: '#ffffff',
@@ -119,7 +119,7 @@ const theme: ThemeShape = {
     gray: '#8a8892',
 
     modes: {
-      light: {
+      dark: {
         text: '#f2f2f2',
         background: '#242424',
 

@@ -4,7 +4,7 @@
 
 import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
-import { Flex } from '../ui'
+import { Flex } from 'theme-ui'
 
 // ___________________________________________________________________
 
@@ -64,6 +64,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   }
 
   .title {
+
     line-height: ${theme.root.font.headingLineHeight};
 
     overflow: hidden;

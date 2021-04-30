@@ -25,7 +25,7 @@ export const Newsletter = styled(Box)<{ isDark: boolean }>`
       fill: ${(p) =>
         darken(
           0.1,
-          p.isDark ? theme.colors.modes.light.primary : theme.colors.primary
+          p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary
         )};
       width: ${theme.space[6]};
 
@@ -35,7 +35,7 @@ export const Newsletter = styled(Box)<{ isDark: boolean }>`
 
       &:hover {
         fill: ${(p) =>
-          p.isDark ? theme.colors.modes.light.primary : theme.colors.primary};
+          p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
       }
     }
   }
@@ -45,7 +45,7 @@ export const Newsletter = styled(Box)<{ isDark: boolean }>`
 
     input {
       color: ${(p) =>
-        p.isDark ? theme.colors.modes.light.text : theme.colors.text};
+        p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
       letter-spacing: 0;
       font-family: ${theme.fonts.mono};
       font-size: calc(${theme.fontSizes[2]} / 1.15);
@@ -54,7 +54,7 @@ export const Newsletter = styled(Box)<{ isDark: boolean }>`
       background: transparent;
       border: ${theme.border};
       border-color: ${(p) =>
-        p.isDark ? theme.colors.modes.light.text : theme.colors.text};
+        p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
       padding: ${theme.space[4]};
 
       @media ${theme.mq.tablet} {

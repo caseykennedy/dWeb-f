@@ -27,13 +27,13 @@ const Header = () => {
   const [isDarkMode, setDarkMode] = useState(false)
   const [isNavOpen, setNavOpen] = useState(false)
 
-  const isDark = colorMode === 'light'
+  const isDark = colorMode === 'dark'
 
   const toggleMenu = () => setNavOpen(!isNavOpen)
 
   const toggleDarkMode = (checked: boolean) => {
     setDarkMode(checked)
-    setColorMode(colorMode === 'default' ? 'light' : 'default')
+    setColorMode(colorMode === 'default' ? 'dark' : 'default')
   }
 
   return (
@@ -44,7 +44,7 @@ const Header = () => {
         </Flex>
       </S.Utilities> */}
 
-      <S.Header as="header" px={theme.gutter.axis}>
+      <S.Header px={theme.gutter.axis}>
         <Flex className="header-inner" py={4}>
           <Link to="/" className="logo" aria-label="HNSF, back to home">
             <S.Logo>
@@ -53,7 +53,12 @@ const Header = () => {
                   fill={isDark ? theme.colors.white : theme.colors.black}
                 />
               </Box>
-              <Text as="p" color="text" className="wordmark" aria-label="The Handshake Foundation">
+              <Text
+                as="p"
+                color="text"
+                className="wordmark"
+                aria-label="The Handshake Foundation"
+              >
                 <Typist cursor={cursorProps}>
                   dWeb
                   <br />

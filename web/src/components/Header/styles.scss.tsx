@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
 
 // Elements
-import { Box, Flex } from '../ui'
+import { Box, Flex } from 'theme-ui'
 
 // ___________________________________________________________________
 

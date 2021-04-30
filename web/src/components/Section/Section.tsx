@@ -5,12 +5,8 @@
 
 // Core
 import * as React from 'react'
-
-// Components
-import { Box, Flex } from '../ui'
-
-// Theme
-import * as S from './styles.scss'
+import styled from 'styled-components'
+import { Box } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
@@ -42,30 +38,35 @@ const Section: React.FC<Props> = ({
   pr,
   pl,
   id,
-  overflow
+  overflow,
 }) => (
-  <S.Section
+  <Box
     as="section"
-    border={border}
     bg={bg}
     color={color}
     pt={pt}
     pb={pb}
     id={id}
-    overflow={overflow}
-    width={1}
     className={className}
+    sx={{
+      borderTop: border ? theme.border : `none`,
+      overflow: overflow ? overflow : `visible`,
+      position: `relative`,
+      width: `100%`,
+    }}
   >
     <Box
       pr={pr}
       pl={pl}
       mx="auto"
-      maxWidth={maxWidth ? maxWidth : theme.maxWidth}
-      style={{ boxSizing: 'content-box' }}
+      sx={{
+        maxWidth: maxWidth ? maxWidth : theme.maxWidth,
+        boxSizing: 'content-box',
+      }}
     >
       {children}
     </Box>
-  </S.Section>
+  </Box>
 )
 
 export default Section
@@ -76,7 +77,7 @@ const defaultProps = {
   pt: theme.gutter.vertical,
   pb: theme.gutter.vertical,
   pr: theme.gutter.axis,
-  pl: theme.gutter.axis
+  pl: theme.gutter.axis,
 }
 
 Section.defaultProps = defaultProps

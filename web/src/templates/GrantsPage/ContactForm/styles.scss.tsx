@@ -98,7 +98,7 @@ export const Form = styled.form<{ isDark?: boolean }>`
     width: 100%;
 
     color: ${(p) =>
-      p.isDark ? theme.colors.modes.light.text : theme.colors.text};
+      p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
     letter-spacing: 0;
     font-family: ${theme.fonts.mono};
     font-size: calc(${theme.fontSizes[2]} / 1.15);
@@ -126,7 +126,7 @@ export const Form = styled.form<{ isDark?: boolean }>`
       svg {
         width: ${theme.space[4]};
         fill: ${(p) =>
-          p.isDark ? theme.colors.modes.light.text : theme.colors.text};
+          p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
 
         @media ${theme.mq.desktop} {
           width: ${theme.space[4]};
@@ -136,14 +136,14 @@ export const Form = styled.form<{ isDark?: boolean }>`
 
     &:hover {
       border-color: ${(p) =>
-        p.isDark ? theme.colors.modes.light.primary : theme.colors.primary};
+        p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
 
       color: ${(p) =>
-        p.isDark ? theme.colors.modes.light.primary : theme.colors.primary};
+        p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
 
       svg {
         fill: ${(p) =>
-          p.isDark ? theme.colors.modes.light.primary : theme.colors.primary};
+          p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
       }
     }
 
@@ -155,7 +155,7 @@ export const Form = styled.form<{ isDark?: boolean }>`
 
     &:active {
       background: ${(p) =>
-        p.isDark ? theme.colors.modes.light.primary : theme.colors.primary};
+        p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
       color: ${theme.colors.white};
 
       svg {
