@@ -5,20 +5,19 @@
 // Libraries
 import React from 'react'
 
-// Elements
-
 // Components
 import SEO from '../components/SEO'
+import Layout from '../components/Layout'
 import HomePage from '../templates/HomePage'
 
 // ___________________________________________________________________
 
 const Index = () => {
   return (
-    <>
+    <Layout>
       <SEO />
       <HomePage />
-    </>
+    </Layout>
   )
 }
 

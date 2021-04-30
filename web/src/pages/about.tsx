@@ -9,16 +9,17 @@ import React from 'react'
 
 // Components
 import SEO from '../components/SEO'
+import Layout from '../components/Layout'
 import AboutPage from '../templates/AboutPage'
 
 // ___________________________________________________________________
 
 const Blog = () => {
   return (
-    <>
+    <Layout>
       <SEO />
       <AboutPage />
-    </>
+    </Layout>
   )
 }
 

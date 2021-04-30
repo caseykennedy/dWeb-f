@@ -11,6 +11,7 @@ import Footer from '../Footer'
 // Styles + Theme
 import * as S from './styles.scss'
 import 'react-responsive-modal/styles.css'
+import GlobalStyles from '../../styles/global'
 
 // ___________________________________________________________________
 
@@ -34,11 +35,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     `background: #5700ff; color: #ffffff`
   )
   return (
-    <S.Wrapper>
-      <Header />
-      <S.Main ref={mainRef}>{children}</S.Main>
-      <Footer />
-    </S.Wrapper>
+    <>
+      <GlobalStyles />
+      <S.Wrapper>
+        <Header />
+        <S.Main ref={mainRef}>{children}</S.Main>
+        <Footer />
+      </S.Wrapper>
+    </>
   )
 }
 
