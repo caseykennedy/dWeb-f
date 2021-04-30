@@ -21,12 +21,14 @@ import Navigation from './Navigation'
 import MobileNav from './MobileNav'
 import Modal from '../Modal'
 
-// ___________________________________________________________________ss
+// ___________________________________________________________________
 
 const Header = () => {
   const [colorMode, setColorMode] = useColorMode()
-  const [isDarkMode, setDarkMode] = useState(true)
+  const [isDarkMode, setDarkMode] = useState(false)
   const [isNavOpen, setNavOpen] = useState(false)
+
+  const isDark = colorMode === 'dark'
 
   const toggleMenu = () => setNavOpen(!isNavOpen)
 
@@ -49,11 +51,11 @@ const Header = () => {
             <S.Logo>
               <Box className="symbol">
                 <Symbol
-                  fill={isDarkMode ? theme.colors.white : theme.colors.black}
+                  fill={isDark ? theme.colors.white : theme.colors.black}
                 />
               </Box>
               <Box
-                color={isDarkMode ? theme.colors.white : theme.colors.black}
+                color={isDark ? theme.colors.white : theme.colors.black}
                 className="wordmark"
                 aria-label="The Handshake Foundation"
               >
@@ -73,7 +75,7 @@ const Header = () => {
               moonColor={theme.colors.white}
               sunColor={theme.colors.black}
               style={{ marginLeft: theme.space[5], marginTop: -4 }}
-              checked={isDarkMode}
+              checked={isDark}
               onChange={toggleDarkMode}
               size={32}
             />
@@ -87,7 +89,7 @@ const Header = () => {
               height={12}
               strokeWidth={2}
               rotate={0}
-              color={isDarkMode ? theme.colors.white : theme.colors.black}
+              color={isDark ? theme.colors.white : theme.colors.black}
               borderRadius={0}
               animationDuration={0.333}
             />

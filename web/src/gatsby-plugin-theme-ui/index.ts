@@ -95,7 +95,7 @@ const theme: ThemeShape = {
 
   // Color palette
   // ___________________________________________________________________
-
+  
   colors: {
     text: '#242424',
     background: '#ffffff',
