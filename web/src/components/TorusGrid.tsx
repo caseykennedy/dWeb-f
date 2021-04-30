@@ -10,7 +10,7 @@ type Props = { strokeWidth?: string }
 
 const Grid: React.FC<Props> = ({ strokeWidth }) => {
   const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === 'dark'
+  const isDark = colorMode === 'light'
   return (
     <SVG
       width="100%"

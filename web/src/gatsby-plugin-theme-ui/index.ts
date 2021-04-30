@@ -25,7 +25,7 @@ type ThemeShape = {
     white: string
     gray: string
     modes: {
-      dark: {
+      light: {
         [key: string]: string
       }
     }
@@ -119,7 +119,7 @@ const theme: ThemeShape = {
     gray: '#8a8892',
 
     modes: {
-      dark: {
+      light: {
         text: '#f2f2f2',
         background: '#242424',
 

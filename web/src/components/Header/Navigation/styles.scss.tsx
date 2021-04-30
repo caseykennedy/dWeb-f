@@ -20,7 +20,7 @@ export const Nav = styled.nav<{ isDark: boolean }>`
 
   a {
     color: ${(p) =>
-      p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
+      p.isDark ? theme.colors.modes.light.text : theme.colors.text};
     font-size: ${theme.fontSizes[1]};
     text-decoration: none;
     margin-left: ${theme.space[4]};
@@ -32,7 +32,7 @@ export const Nav = styled.nav<{ isDark: boolean }>`
     &.active,
     &:hover {
       color: ${(p) =>
-        p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+        p.isDark ? theme.colors.modes.light.primary : theme.colors.primary};
     }
   }
 `

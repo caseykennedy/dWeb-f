@@ -24,7 +24,7 @@ type Props = {}
 
 const Hero: React.FC<Props> = () => {
   const [colorMode] = useColorMode()
-  const isDark = colorMode === 'dark'
+  const isDark = colorMode === 'light'
   return (
     <S.Hero isDark={isDark}>
       <Section>

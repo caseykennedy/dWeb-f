@@ -25,7 +25,7 @@ import usePost from '../../../hooks/usePost'
 
 const Handshake = () => {
   const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === 'dark'
+  const isDark = colorMode === 'light'
   return (
     <S.Handshake isDark={isDark}>
       <Section>

@@ -11,7 +11,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 const Button: React.FC<{children: React.ReactNode}> = ({ children }) => {
   const [colorMode] = useColorMode()
-  const isDark = colorMode === 'dark'
+  const isDark = colorMode === 'light'
   return <StyledButton isDark={isDark}>{children}</StyledButton>
 }
 
@@ -29,7 +29,7 @@ const StyledButton = styled(Flex)<{ isDark: boolean }>`
   width: 100%;
 
   color: ${(p) =>
-    p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
+    p.isDark ? theme.colors.modes.light.text : theme.colors.text};
   letter-spacing: 0;
   font-family: ${theme.fonts.mono};
   font-size: calc(${theme.fontSizes[2]} / 1.15);
@@ -37,7 +37,7 @@ const StyledButton = styled(Flex)<{ isDark: boolean }>`
 
   background: transparent;
   border: ${theme.border};
-  border-color: ${(p) => (p.isDark ? theme.colors.modes.dark.text : theme.colors.text)};
+  border-color: ${(p) => (p.isDark ? theme.colors.modes.light.text : theme.colors.text)};
 
   cursor: pointer;
   outline: none;
@@ -62,7 +62,7 @@ const StyledButton = styled(Flex)<{ isDark: boolean }>`
     svg {
       width: ${theme.space[4]};
       fill: ${(p) =>
-        p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
+        p.isDark ? theme.colors.modes.light.text : theme.colors.text};
 
       @media ${theme.mq.desktop} {
         width: ${theme.space[4]};
@@ -72,13 +72,13 @@ const StyledButton = styled(Flex)<{ isDark: boolean }>`
 
   &:hover {
     border-color: ${(p) =>
-      p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+      p.isDark ? theme.colors.modes.light.primary : theme.colors.primary};
     color: ${(p) =>
-      p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+      p.isDark ? theme.colors.modes.light.primary : theme.colors.primary};
 
     svg {
       fill: ${(p) =>
-        p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+        p.isDark ? theme.colors.modes.light.primary : theme.colors.primary};
     }
   }
 
@@ -90,7 +90,7 @@ const StyledButton = styled(Flex)<{ isDark: boolean }>`
 
   &:active {
     background: ${(p) =>
-      p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+      p.isDark ? theme.colors.modes.light.primary : theme.colors.primary};
     color: ${theme.colors.white};
 
     svg {

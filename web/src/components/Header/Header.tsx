@@ -27,13 +27,13 @@ const Header = () => {
   const [isDarkMode, setDarkMode] = useState(false)
   const [isNavOpen, setNavOpen] = useState(false)
 
-  const isDark = colorMode === `dark`
+  const isDark = colorMode === 'light'
 
   const toggleMenu = () => setNavOpen(!isNavOpen)
 
   const toggleDarkMode = (checked: boolean) => {
     setDarkMode(checked)
-    setColorMode(colorMode === 'default' ? 'dark' : 'default')
+    setColorMode(colorMode === 'default' ? 'light' : 'default')
   }
 
   return (

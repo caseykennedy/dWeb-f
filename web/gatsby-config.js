@@ -28,6 +28,7 @@ module.exports = {
     facebook: config.ogSiteName,
   },
   plugins: [
+    'gatsby-plugin-theme-ui',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-google-tagmanager',
@@ -45,7 +46,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-theme-ui',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-typescript',
     'gatsby-plugin-offline',

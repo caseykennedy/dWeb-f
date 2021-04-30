@@ -26,7 +26,7 @@ import BarGraph from '../../../../static/bargraph.svg'
 
 const Features = () => {
   const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === 'dark'
+  const isDark = colorMode === 'light'
   return (
     <S.Donate isDark={isDark}>
       <Section border={true}>

@@ -16,7 +16,7 @@ import Icon from '../../../components/Icons'
 
 const ContactForm: React.FC = () => {
   const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === 'dark'
+  const isDark = colorMode === 'light'
   return (
     <S.Form
       name="Apply for a grant — dWeb"

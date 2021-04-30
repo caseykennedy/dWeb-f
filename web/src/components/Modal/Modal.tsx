@@ -21,7 +21,7 @@ const defaultProps = {}
 
 const Modal: React.FC<ModalProps> = ({ children, open, close }) => {
   const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === 'dark'
+  const isDark = colorMode === 'light'
   return (
     <ReactModal
       open={open}
@@ -59,7 +59,7 @@ const modalStylesLight = {
 
 const modalStylesDark = {
   overlay: {
-    background: theme.colors.modes.dark.muted
+    background: theme.colors.modes.light.muted
   },
   modal: {
     background: 'transparent',

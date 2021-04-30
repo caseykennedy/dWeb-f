@@ -28,7 +28,7 @@ import Yours from '../../../../static/yours.svg'
 
 const Features = () => {
   const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === 'dark'
+  const isDark = colorMode === 'light'
   return (
     <S.Features isDark={isDark}>
       <Section>

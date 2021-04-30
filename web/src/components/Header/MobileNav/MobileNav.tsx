@@ -25,7 +25,7 @@ type NavLinksProps = {
 
 const NavLink = ({ item, handleExitOnClick }: NavLinkProps) => {
   const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === 'dark'
+  const isDark = colorMode === 'light'
   return (
     <S.NavLink
       variants={itemVariants}

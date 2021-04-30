@@ -12,7 +12,7 @@ import * as S from './styles.scss'
 
 const Navigation = () => {
   const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === 'dark'
+  const isDark = colorMode === 'light'
   return (
     <S.Nav isDark={isDark}>
       {data.map((item, idx) => (
