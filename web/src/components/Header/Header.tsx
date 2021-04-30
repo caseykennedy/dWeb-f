@@ -28,13 +28,13 @@ const Header = () => {
   const [isDarkMode, setDarkMode] = useState(false)
   const [isNavOpen, setNavOpen] = useState(false)
 
-  const isDark = colorMode === 'dark'
+  const isDark = colorMode === `dark`
 
   const toggleMenu = () => setNavOpen(!isNavOpen)
 
   const toggleDarkMode = (checked: boolean) => {
     setDarkMode(checked)
-    setColorMode(colorMode === 'default' ? 'dark' : 'default')
+    setColorMode(isDark ? `light` : `dark`)
   }
 
   return (
@@ -79,6 +79,7 @@ const Header = () => {
               onChange={toggleDarkMode}
               size={32}
             />
+            {colorMode}
           </S.Menu>
 
           <S.Toggle onClick={toggleMenu} aria-label="toggle menu">

@@ -10,7 +10,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 // ___________________________________________________________________
 
 const Button: React.FC<{children: React.ReactNode}> = ({ children }) => {
-  const [colorMode, setColorMode] = useColorMode()
+  const [colorMode] = useColorMode()
   const isDark = colorMode === 'dark'
   return <StyledButton isDark={isDark}>{children}</StyledButton>
 }

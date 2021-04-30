@@ -8,6 +8,7 @@ type ThemeShape = {
   mq: {
     [key: string]: string
   }
+  initialColorModeName?: string
   colors: {
     text: string
     background: string
@@ -95,7 +96,8 @@ const theme: ThemeShape = {
 
   // Color palette
   // ___________________________________________________________________
-  
+
+  // initialColorModeName: 'light',
   colors: {
     text: '#242424',
     background: '#ffffff',
@@ -114,7 +116,7 @@ const theme: ThemeShape = {
       dark: {
         text: '#f2f2f2',
         background: '#242424',
-        
+
         primary: '#b5a0ff',
         highlight: '#403d4e',
         muted: '#202020',

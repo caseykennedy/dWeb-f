@@ -25,10 +25,6 @@ export const Nav = styled.nav<{ isDark: boolean }>`
       margin-left: ${theme.space[5]};
     }
 
-    /* @media (prefers-color-scheme: dark) {
-      color: ${theme.colors.white};
-    } */
-
     &.active,
     &:hover {
       color: ${(p) =>
