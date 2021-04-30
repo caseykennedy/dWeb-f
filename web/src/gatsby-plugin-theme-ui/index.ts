@@ -103,7 +103,7 @@ const theme: ThemeShape = {
   initialColorModeName: 'default',
   // useBodyStyles: false,
   // useRootStyles: true,
-  useLocalStorage: false,
+  useLocalStorage: true,
   colors: {
     text: '#242424',
     background: '#ffffff',
