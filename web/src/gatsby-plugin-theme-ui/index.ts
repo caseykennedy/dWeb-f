@@ -97,7 +97,7 @@ const theme: ThemeShape = {
   // Color palette
   // ___________________________________________________________________
 
-  initialColorModeName: 'light',
+  initialColorModeName: 'default',
   colors: {
     text: '#242424',
     background: '#ffffff',
