@@ -9,7 +9,7 @@ import GlobalStyles from './src/styles/global'
 
 // Providers
 import ContextProvider from './src/provider/ContextProvider'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'theme-ui'
 
 // ___________________________________________________________________
 
@@ -27,7 +27,7 @@ export const wrapPageElement = ({ element, props }) => {
 export const wrapRootElement = ({ element }) => {
   return (
       <ContextProvider>
-        <ThemeProvider theme={theme}>{element}</ThemeProvider>
+        {element}
       </ContextProvider>
   )
 }
