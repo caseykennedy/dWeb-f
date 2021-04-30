@@ -8,11 +8,15 @@ import theme from '../../../gatsby-plugin-theme-ui'
 // ___________________________________________________________________
 
 export const Nav = styled.nav<{ isDark: boolean }>`
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
 
   width: 100%;
+
+  @media ${theme.mq.tablet} {
+    display: flex;
+  }
 
   a {
     color: ${(p) =>
@@ -28,7 +32,7 @@ export const Nav = styled.nav<{ isDark: boolean }>`
     &.active,
     &:hover {
       color: ${(p) =>
-      p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+        p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
     }
   }
 `

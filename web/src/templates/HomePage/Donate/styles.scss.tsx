@@ -12,6 +12,11 @@ import { Box } from 'theme-ui'
 export const Donate = styled(Box)<{ isDark: boolean }>`
   .decorator {
     position: relative;
+    width: 100%;
+
+    svg {
+      width: 100%;
+    }
 
     &__graph {
       margin: 0 auto;

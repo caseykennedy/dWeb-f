@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
 
 // Theme + ui
 import * as S from './styles.scss'
@@ -17,11 +16,11 @@ import Icon from '../../../components/Icons'
 // ___________________________________________________________________
 
 const Newsletter = () => {
-  const [colorMode, setColorMode] = useColorMode()
+  const [colorMode] = useColorMode()
   const isDark = colorMode === 'dark'
   return (
     <S.Newsletter isDark={isDark}>
-      <Section border={true} pt={[6, 7]} pb={[4, 6, 7]}>
+      <Section border={true}>
         <Box>
           <Heading as="h3" mb={3}>
             Coming to a browser near you.

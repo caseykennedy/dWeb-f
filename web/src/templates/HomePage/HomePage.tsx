@@ -198,7 +198,7 @@ const Introduction = () => {
               p={2}
               sx={{
                 flex: 1,
-                bg: 'highlight',
+                bg: `highlight`,
               }}
             >
               <Text as="p" className="text--mono  text--xs">

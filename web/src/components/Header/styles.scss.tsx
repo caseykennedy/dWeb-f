@@ -41,11 +41,6 @@ export const Header = styled(Box)`
 
 export const Menu = styled(Flex)`
   align-items: flex-start;
-  display: none;
-
-  @media ${theme.mq.tablet} {
-    display: flex;
-  }
 `
 
 export const Logo = styled(Flex)`

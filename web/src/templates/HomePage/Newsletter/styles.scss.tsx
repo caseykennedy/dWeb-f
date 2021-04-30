@@ -14,16 +14,24 @@ export const Newsletter = styled(Box)<{ isDark: boolean }>`
   .social {
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
-    margin-top: ${theme.space[4]};
+    justify-content: center;
+    margin-top: ${theme.space[5]};
+
+    @media ${theme.mq.tablet} {
+      justify-content: flex-end;
+    }
 
     svg {
       fill: ${(p) =>
         darken(
-          0.05,
+          0.1,
           p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary
         )};
-      width: ${theme.space[7]};
+      width: ${theme.space[6]};
+
+      @media ${theme.mq.tablet} {
+        width: calc(${theme.space[7]} / 1.15);
+      }
 
       &:hover {
         fill: ${(p) =>
@@ -70,7 +78,7 @@ export const Newsletter = styled(Box)<{ isDark: boolean }>`
       z-index: 9;
 
       button {
-        background: ${darken(0.05, theme.colors.primary)};
+        background: ${darken(0.1, theme.colors.primary)};
         border: 0;
         border-radius: ${theme.borderRadius};
         outline: 0;
