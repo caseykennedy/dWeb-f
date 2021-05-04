@@ -17,7 +17,7 @@ export const Hero = styled(Flex)<{ isDark: boolean }>`
   background: radial-gradient(
     circle,
     ${theme.colors.primary} -20%,
-    ${(p) => (p.isDark ? `transparent` : theme.colors.secondary)} 100%
+    ${(p) => (p.isDark ? theme.colors.secondary : theme.colors.secondary)} 100%
   );
 
   margin: calc(${theme.headerHeight} * -1) auto 0 !important;

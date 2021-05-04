@@ -15,7 +15,6 @@ import Button from '../../../components/ui/Button'
 import Section from '../../../components/Section'
 import Symbol from '../../../components/Symbol'
 import Icon from '../../../components/Icons'
-import ParallaxWrapper from '../../../components/ParallaxWrapper'
 
 // Vectors
 import CubeDots from '../../../../static/cubedots.svg'
@@ -25,7 +24,7 @@ import BarGraph from '../../../../static/bargraph.svg'
 // ___________________________________________________________________
 
 const Features = () => {
-  const [colorMode, setColorMode] = useColorMode()
+  const [colorMode] = useColorMode()
   const isDark = colorMode === 'dark'
   return (
     <S.Donate isDark={isDark}>

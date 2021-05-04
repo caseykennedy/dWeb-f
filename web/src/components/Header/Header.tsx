@@ -50,7 +50,7 @@ const Header = () => {
             <S.Logo>
               <Box className="symbol">
                 <Symbol
-                  fill={isDark ? theme.colors.white : theme.colors.black}
+                  fill={isDark ? theme.colors.black : theme.colors.black}
                 />
               </Box>
               <Typist cursor={cursorProps}>
@@ -72,14 +72,14 @@ const Header = () => {
             <S.Menu>
               <Navigation />
 
-              <DarkModeSwitch
+              {/* <DarkModeSwitch
                 moonColor={theme.colors.white}
                 sunColor={theme.colors.black}
                 style={{ marginLeft: theme.space[5], marginTop: -4 }}
                 checked={isDark}
                 onChange={toggleDarkMode}
                 size={32}
-              />
+              /> */}
             </S.Menu>
 
             <S.Toggle onClick={toggleMenu} aria-label="toggle menu">

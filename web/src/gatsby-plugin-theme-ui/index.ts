@@ -120,15 +120,28 @@ const theme: ThemeShape = {
 
     modes: {
       dark: {
-        text: '#f2f2f2',
-        background: '#242424',
+        text: '#242424',
+        background: '#ffffff',
 
-        primary: '#b5a0ff',
-        highlight: '#403d4e',
-        muted: '#202020',
+        primary: '#5700ff',
+        secondary: '#a2f6ff',
+        accent: '#b5a0ff',
+        highlight: '#fdffd4',
+        muted: '#f2f2f2',
 
-        black: '#ffffff',
-        white: '#000000',
+        black: '#000000',
+        white: '#ffffff',
+        gray: '#8a8892',
+
+        // text: '#f2f2f2',
+        // background: '#242424',
+
+        // primary: '#b5a0ff',
+        // highlight: '#403d4e',
+        // muted: '#202020',
+
+        // black: '#ffffff',
+        // white: '#000000',
       },
     },
   },
