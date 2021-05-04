@@ -13,6 +13,7 @@ import { Box, Flex, Heading, Text, Grid } from 'theme-ui'
 import Button from '../../components/ui/Button'
 
 // Components
+import HnsChart from '../../components/HNSChart'
 import Section from '../../components/Section'
 import CardPost from '../../components/CardPost'
 import HandshakeLogo from '../../components/Handshake'
@@ -162,14 +163,14 @@ const Introduction = () => {
                       ':hover': { color: 'primary', textDecoration: 'none' },
                     }}
                   >
-                    support us
+                    Support us
                   </Text>
                 </Link>
               </Box>
             </Flex>
           </Flex>
 
-          <Flex
+          {/* <Flex
             mt={[6, 0, 0]}
             ml={[0, 4, 6]}
             sx={{
@@ -202,10 +203,10 @@ const Introduction = () => {
               }}
             >
               <Text as="p" className="text--mono  text--xs">
-                hns
+                <HnsChart />
               </Text>
             </Box>
-          </Flex>
+          </Flex> */}
         </Flex>
       </Section>
     </S.Introduction>
@@ -213,7 +214,6 @@ const Introduction = () => {
 }
 
 const HomePage: React.FC = () => {
-  const posts = usePost()
   return (
     <S.HomePage>
       <Hero />

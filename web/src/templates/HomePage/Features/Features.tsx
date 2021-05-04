@@ -3,16 +3,14 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
 
 // Theme + ui
 import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
-import { Box, Flex, Heading, Text, Grid, useColorMode } from 'theme-ui'
+import { Flex, Heading, Text, Grid, useColorMode } from 'theme-ui'
 
 // Components
 import Section from '../../../components/Section'
-import Icon from '../../../components/Icons'
 
 // Vectors
 import Everybodys from '../../../../static/everybodys.svg'
@@ -48,7 +46,9 @@ const Features = () => {
                 {feature.feature}
               </Heading>
               {feature.figure}
-              <Text sx={{ color: theme.colors.gray }}>{feature.caption}</Text>
+              <Text as="p" sx={{ color: theme.colors.gray }}>
+                {feature.caption}
+              </Text>
             </Flex>
           ))}
         </Grid>

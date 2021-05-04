@@ -40,15 +40,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   }
 
   .figure {
-    transition: ${theme.transition.all};
-
     width: 100%;
-
-    img {
-      position: relative;
-      transform: scale(1);
-      transition: ${theme.transition.all};
-    }
   }
 
   &:hover {

@@ -53,18 +53,18 @@ const Header = () => {
                   fill={isDark ? theme.colors.white : theme.colors.black}
                 />
               </Box>
-              <Text
-                as="p"
-                color="text"
-                className="wordmark"
-                aria-label="The Handshake Foundation"
-              >
-                <Typist cursor={cursorProps}>
+              <Typist cursor={cursorProps}>
+                <Text
+                  as="p"
+                  color="text"
+                  className="wordmark"
+                  aria-label="The Handshake Foundation"
+                >
                   dWeb
                   <br />
                   Foundation
-                </Typist>
-              </Text>
+                </Text>
+              </Typist>
             </S.Logo>
           </Link>
 

@@ -15,9 +15,6 @@ import Symbol from '../../../components/SymbolColored'
 import SymbolDots from '../../../components/SymbolDots'
 import ParallaxWrapper from '../../../components/ParallaxWrapper'
 
-// Data
-import usePost from '../../../hooks/usePost'
-
 // ___________________________________________________________________
 
 type Props = {}
@@ -33,14 +30,14 @@ const Hero: React.FC<Props> = () => {
         </Text>
       </Section>
       <Box className="decorator  decorator__blockchain">
-        {/* <ParallaxWrapper speed={1.25}> */}
+        <ParallaxWrapper speed={1.25}>
           <Symbol />
-        {/* </ParallaxWrapper> */}
+        </ParallaxWrapper>
       </Box>
       <Box className="decorator  decorator__blockchain">
-        {/* <ParallaxWrapper speed={2.15}> */}
+        <ParallaxWrapper speed={2.15}>
           <SymbolDots />
-        {/* </ParallaxWrapper> */}
+        </ParallaxWrapper>
       </Box>
     </S.Hero>
   )

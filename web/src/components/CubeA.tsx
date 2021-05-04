@@ -20,9 +20,9 @@ const CubeA: React.FC<Props> = () => (
     </clipPath>
     <linearGradient id="linear-gradient" x1="2811.67" y1="-2733.89" x2="2812.67" y2="-2733.89"
       gradientTransform="matrix(-47.29, 0, 0, 47.29, 133085.34, 129434.09)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#030303" />
-      <stop offset="0.5" stop-color="#e9b4ff" />
-      <stop offset="1" stop-color="#2d00ff" />
+      <stop offset="0" stopColor="#030303" />
+      <stop offset="0.5" stopColor="#e9b4ff" />
+      <stop offset="1" stopColor="#2d00ff" />
     </linearGradient>
     <clipPath id="clip-path-2" transform="translate(-8.72 -8.4)">
       <polygon className="cubea-1" points="124.9 106.57 122.45 122.13 185.56 94.21 173.31 81.97 124.9 106.57" />
@@ -40,9 +40,9 @@ const CubeA: React.FC<Props> = () => (
     </clipPath>
     <linearGradient id="linear-gradient-4" x1="2811.67" y1="-2733.89" x2="2812.67" y2="-2733.89"
       gradientTransform="matrix(-105.92, 0, 0, 105.92, 297931, 289640.61)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#683bff" />
-      <stop offset="0.5" stop-color="#b5a0ff" />
-      <stop offset="1" stop-color="#b5a0ff" />
+      <stop offset="0" stopColor="#683bff" />
+      <stop offset="0.5" stopColor="#b5a0ff" />
+      <stop offset="1" stopColor="#b5a0ff" />
     </linearGradient>
     <linearGradient id="linear-gradient-5" x1="2811.67" y1="-2733.89" x2="2812.67" y2="-2733.89"
       gradientTransform="matrix(-199.75, 0, 0, 199.75, 561822.86, 546188.42)" xlinkHref="#linear-gradient-4" />

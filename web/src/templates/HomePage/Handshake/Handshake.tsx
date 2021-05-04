@@ -90,12 +90,12 @@ const Handshake = () => {
             }}
           >
             <Box mb={2} sx={{ flex: 1 }}>
-              <Link to={`/about`}>
+              <a href="https://handshake.org/" target="_blank">
                 <Button>
                   Handshake.org
                   <Icon name="arrow" />
                 </Button>
-              </Link>
+              </a>
             </Box>
           </Flex>
 

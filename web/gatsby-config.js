@@ -1,3 +1,11 @@
+// exports.onCreateWebpackConfig = ({ actions }) => {
+//   actions.setWebpackConfig({
+//     resolve: {
+//       fallback: { https: require.resolve('https-browserify') },
+//     },
+//   })
+// }
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -43,6 +51,7 @@ module.exports = {
         defaultDataLayer: { platform: 'gatsby' },
       },
     },
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
