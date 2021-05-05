@@ -30,12 +30,12 @@ const Hero: React.FC<Props> = () => {
         </Text>
       </Section>
       <Box className="decorator  decorator__blockchain">
-        <ParallaxWrapper speed={1.25}>
+        <ParallaxWrapper speed={0.75}>
           <Symbol />
         </ParallaxWrapper>
       </Box>
       <Box className="decorator  decorator__blockchain">
-        <ParallaxWrapper speed={2.15}>
+        <ParallaxWrapper speed={1.15}>
           <SymbolDots />
         </ParallaxWrapper>
       </Box>

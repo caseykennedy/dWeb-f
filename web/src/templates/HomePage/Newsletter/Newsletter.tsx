@@ -21,8 +21,8 @@ const Newsletter = () => {
   return (
     <S.Newsletter isDark={isDark}>
       <Section border={true}>
-        <Box>
-          <Heading as="h3" mb={3}>
+        <Box mb={6}>
+          <Heading as="h3">
             Coming to a browser near you.
           </Heading>
         </Box>

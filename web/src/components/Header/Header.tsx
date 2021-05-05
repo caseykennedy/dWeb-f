@@ -38,19 +38,13 @@ const Header = () => {
 
   return (
     <>
-      {/* <S.Utilities px={theme.gutter.axis} py={2}>
-        <Flex className="date">
-          <GetDate />
-        </Flex>
-      </S.Utilities> */}
-
       <S.Header px={theme.gutter.axis}>
         <Flex className="header-inner" py={4}>
           <Link to="/" className="logo" aria-label="HNSF, back to home">
             <S.Logo>
               <Box className="symbol">
                 <Symbol
-                  fill={isDark ? theme.colors.black : theme.colors.black}
+                  fill={isDark ? theme.colors.white : theme.colors.black}
                 />
               </Box>
               <Typist cursor={cursorProps}>
@@ -72,14 +66,14 @@ const Header = () => {
             <S.Menu>
               <Navigation />
 
-              {/* <DarkModeSwitch
+              <DarkModeSwitch
                 moonColor={theme.colors.white}
                 sunColor={theme.colors.black}
                 style={{ marginLeft: theme.space[5], marginTop: -4 }}
                 checked={isDark}
                 onChange={toggleDarkMode}
                 size={32}
-              /> */}
+              />
             </S.Menu>
 
             <S.Toggle onClick={toggleMenu} aria-label="toggle menu">

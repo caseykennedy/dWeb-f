@@ -120,28 +120,15 @@ const theme: ThemeShape = {
 
     modes: {
       dark: {
-        text: '#242424',
-        background: '#ffffff',
+        text: '#f2f2f2',
+        background: '#242424',
 
-        primary: '#5700ff',
-        secondary: '#a2f6ff',
-        accent: '#b5a0ff',
-        highlight: '#fdffd4',
-        muted: '#f2f2f2',
+        primary: '#b5a0ff',
+        highlight: '#403d4e',
+        muted: '#202020',
 
-        black: '#000000',
-        white: '#ffffff',
-        gray: '#8a8892',
-
-        // text: '#f2f2f2',
-        // background: '#242424',
-
-        // primary: '#b5a0ff',
-        // highlight: '#403d4e',
-        // muted: '#202020',
-
-        // black: '#ffffff',
-        // white: '#000000',
+        black: '#ffffff',
+        white: '#000000',
       },
     },
   },
@@ -179,11 +166,10 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   fonts: {
-    body: `"Aeonik", Consolas, Liberation Mono, Menlo, Courier, monospace`,
-    heading: `"Aeonik", Consolas, Liberation Mono, Menlo, Courier, monospace`,
-    sans: `"Aeonik", Consolas, Liberation Mono, Menlo, Courier, monospace`,
-    display: `"SuisseWorks", Georgia, Times`,
-    mono: `"SuisseMono", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    body: `"ManRope", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    heading: `"ManRope", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    sans: `"ManRope", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    mono: `"DMMono", Consolas, Liberation Mono, Menlo, Courier, monospace`,
   },
 
   fontSizes: [

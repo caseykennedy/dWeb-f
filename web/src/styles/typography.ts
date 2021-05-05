@@ -5,194 +5,156 @@
 import { css } from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui'
 
-// Aeonik Regular
-import AeonikRegularEot from './fonts/AeonikRegular.eot'
-import AeonikRegularWoff2 from './fonts/AeonikRegular.woff2'
-import AeonikRegularWoff from './fonts/AeonikRegular.woff'
-import AeonikRegularOtf from './fonts/AeonikRegular.otf'
+// ManRope Regular
+import ManropeRegularEot from './fonts/Manrope-Regular.eot'
+import ManropeRegularWoff2 from './fonts/Manrope-Regular.woff2'
+import ManropeRegularWoff from './fonts/Manrope-Regular.woff'
+import ManropeRegularOtf from './fonts/Manrope-Regular.otf'
 
-// Aeonik Light
-import AeonikLightEot from './fonts/AeonikLight.eot'
-import AeonikLightWoff2 from './fonts/AeonikLight.woff2'
-import AeonikLightWoff from './fonts/AeonikLight.woff'
-import AeonikLightOtf from './fonts/AeonikLight.otf'
+// ManRope Light
+import ManropeLightEot from './fonts/Manrope-Light.eot'
+import ManropeLightWoff2 from './fonts/Manrope-Light.woff2'
+import ManropeLightWoff from './fonts/Manrope-Light.woff'
+import ManropeLightOtf from './fonts/Manrope-Light.otf'
 
-// Aeonik Medium
-import AeonikMediumEot from './fonts/Aeonik-Medium.eot'
-import AeonikMediumWoff2 from './fonts/Aeonik-Medium.woff2'
-import AeonikMediumWoff from './fonts/Aeonik-Medium.woff'
-import AeonikMediumTtf from './fonts/Aeonik-Medium.ttf'
+// ManRope Medium
+import ManropeMediumEot from './fonts/Manrope-Medium.eot'
+import ManropeMediumWoff2 from './fonts/Manrope-Medium.woff2'
+import ManropeMediumWoff from './fonts/Manrope-Medium.woff'
+import ManropeMediumOtf from './fonts/Manrope-Medium.otf'
 
-// Aeonik Bold
-import AeonikBoldEot from './fonts/AeonikBold.eot'
-import AeonikBoldWoff2 from './fonts/AeonikBold.woff2'
-import AeonikBoldWoff from './fonts/AeonikBold.woff'
-import AeonikBoldOtf from './fonts/AeonikBold.otf'
+// ManRope Bold
+import ManropeBoldEot from './fonts/Manrope-Bold.eot'
+import ManropeBoldWoff2 from './fonts/Manrope-Bold.woff2'
+import ManropeBoldWoff from './fonts/Manrope-Bold.woff'
+import ManropeBoldOtf from './fonts/Manrope-Bold.otf'
 
-// Aeonik Black
-import AeonikBlackEot from './fonts/AeonikBlack.eot'
-import AeonikBlackWoff2 from './fonts/AeonikBlack.woff2'
-import AeonikBlackWoff from './fonts/AeonikBlack.woff'
-import AeonikBlackOtf from './fonts/AeonikBlack.otf'
+// ManRope Extra Bold
+import ManropeBlackEot from './fonts/Manrope-ExtraBold.eot'
+import ManropeBlackWoff2 from './fonts/Manrope-ExtraBold.woff2'
+import ManropeBlackWoff from './fonts/Manrope-ExtraBold.woff'
+import ManropeBlackOtf from './fonts/Manrope-ExtraBold.otf'
 
-// Suisse Works Book
-import SuisseWorksBookEot from './fonts/SuisseWorks-Book.eot'
-import SuisseWorksBookWoff2 from './fonts/SuisseWorks-Book.woff2'
-import SuisseWorksBookWoff from './fonts/SuisseWorks-Book.woff'
-import SuisseWorksBookTtf from './fonts/SuisseWorks-Book.ttf'
+// DM Mono Regular
+import DMMonoRegularEot from './fonts/DMMono-Regular.eot'
+import DMMonoRegularWoff2 from './fonts/DMMono-Regular.woff2'
+import DMMonoRegularWoff from './fonts/DMMono-Regular.woff'
+import DMMonoRegularOtf from './fonts/DMMono-Regular.otf'
 
-// Suisse Works Bold
-import SuisseWorksBoldEot from './fonts/SuisseWorks-Bold.eot'
-import SuisseWorksBoldWoff2 from './fonts/SuisseWorks-Bold.woff2'
-import SuisseWorksBoldWoff from './fonts/SuisseWorks-Bold.woff'
-import SuisseWorksBoldTtf from './fonts/SuisseWorks-Bold.ttf'
+// DM Mono Light
+import DMMonoLightEot from './fonts/DMMono-Light.eot'
+import DMMonoLightWoff2 from './fonts/DMMono-Light.woff2'
+import DMMonoLightWoff from './fonts/DMMono-Light.woff'
+import DMMonoLightOtf from './fonts/DMMono-Light.otf'
 
-// Suisse Mono Regular
-import SuisseIntlMonoRegularEot from './fonts/SuisseIntlMono-Regular.eot'
-import SuisseIntlMonoRegularWoff2 from './fonts/SuisseIntlMono-Regular.woff2'
-import SuisseIntlMonoRegularWoff from './fonts/SuisseIntlMono-Regular.woff'
-import SuisseIntlMonoRegularOtf from './fonts/SuisseIntlMono-Regular.otf'
-
-// Suisse Mono Thin
-import SuisseIntlMonoThinEot from './fonts/SuisseIntlMono-Thin.eot'
-import SuisseIntlMonoThinWoff2 from './fonts/SuisseIntlMono-Thin.woff2'
-import SuisseIntlMonoThinWoff from './fonts/SuisseIntlMono-Thin.woff'
-import SuisseIntlMonoThinOtf from './fonts/SuisseIntlMono-Thin.otf'
-
-// Suisse Mono Bold
-import SuisseIntlMonoBoldEot from './fonts/SuisseIntlMono-Bold.eot'
-import SuisseIntlMonoBoldWoff2 from './fonts/SuisseIntlMono-Bold.woff2'
-import SuisseIntlMonoBoldWoff from './fonts/SuisseIntlMono-Bold.woff'
-import SuisseIntlMonoBoldOtf from './fonts/SuisseIntlMono-Bold.otf'
+// DM Mono Medium
+import DMMonoMediumEot from './fonts/DMMono-Medium.eot'
+import DMMonoMediumWoff2 from './fonts/DMMono-Medium.woff2'
+import DMMonoMediumWoff from './fonts/DMMono-Medium.woff'
+import DMMonoMediumOtf from './fonts/DMMono-Medium.otf'
 
 // ___________________________________________________________________
 
 const Typography = css`
-  /* Aeonik Regular */
+  /* ManRope Regular */
   @font-face {
-    font-family: 'Aeonik';
-    src: url(${AeonikRegularEot});
-    src: url(${AeonikRegularWoff2}) format('woff2'),
-      url(${AeonikRegularWoff}) format('woff'),
-      url(${AeonikRegularOtf}) format('opentype'),
-      url(${AeonikRegularEot}?#iefix) format('embedded-opentype');
+    font-family: 'ManRope';
+    src: url(${ManropeRegularEot});
+    src: url(${ManropeRegularWoff2}) format('woff2'),
+      url(${ManropeRegularWoff}) format('woff'),
+      url(${ManropeRegularOtf}) format('opentype'),
+      url(${ManropeRegularEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Aeonik Light */
+  /* ManRope Light */
   @font-face {
-    font-family: 'Aeonik';
-    src: url(${AeonikLightEot});
-    src: url(${AeonikLightWoff2}) format('woff2'),
-      url(${AeonikLightWoff}) format('woff'),
-      url(${AeonikLightOtf}) format('opentype'),
-      url(${AeonikLightEot}?#iefix) format('embedded-opentype');
+    font-family: 'ManRope';
+    src: url(${ManropeLightEot});
+    src: url(${ManropeLightWoff2}) format('woff2'),
+      url(${ManropeLightWoff}) format('woff'),
+      url(${ManropeLightOtf}) format('opentype'),
+      url(${ManropeLightEot}?#iefix) format('embedded-opentype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Aeonik Medium */
+  /* ManRope Medium */
   @font-face {
-    font-family: 'Aeonik';
-    src: url(${AeonikMediumEot});
-    src: url(${AeonikMediumWoff2}) format('woff2'),
-      url(${AeonikMediumWoff}) format('woff'),
-      url(${AeonikMediumTtf}) format('truetype'),
-      url(${AeonikMediumEot}?#iefix) format('embedded-opentype');
+    font-family: 'ManRope';
+    src: url(${ManropeMediumEot});
+    src: url(${ManropeMediumWoff2}) format('woff2'),
+      url(${ManropeMediumWoff}) format('woff'),
+      url(${ManropeMediumOtf}) format('opentype'),
+      url(${ManropeMediumEot}?#iefix) format('embedded-opentype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Aeonik Bold */
+  /* ManRope Bold */
   @font-face {
-    font-family: 'Aeonik';
-    src: url(${AeonikBoldEot});
-    src: url(${AeonikBoldWoff2}) format('woff2'),
-      url(${AeonikBoldWoff}) format('woff'),
-      url(${AeonikBoldOtf}) format('opentype'),
-      url(${AeonikBoldEot}?#iefix) format('embedded-opentype');
+    font-family: 'ManRope';
+    src: url(${ManropeBoldEot});
+    src: url(${ManropeBoldWoff2}) format('woff2'),
+      url(${ManropeBoldWoff}) format('woff'),
+      url(${ManropeBoldOtf}) format('opentype'),
+      url(${ManropeBoldEot}?#iefix) format('embedded-opentype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Aeonik Black */
+  /* ManRope Extra Bold */
   @font-face {
-    font-family: 'Aeonik';
-    src: url(${AeonikBlackEot});
-    src: url(${AeonikBlackWoff2}) format('woff2'),
-      url(${AeonikBlackWoff}) format('woff'),
-      url(${AeonikBlackOtf}) format('opentype'),
-      url(${AeonikBlackEot}?#iefix) format('embedded-opentype');
+    font-family: 'ManRope';
+    src: url(${ManropeBlackEot});
+    src: url(${ManropeBlackWoff2}) format('woff2'),
+      url(${ManropeBlackWoff}) format('woff'),
+      url(${ManropeBlackOtf}) format('opentype'),
+      url(${ManropeBlackEot}?#iefix) format('embedded-opentype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Suisse Works Book */
+  /* DM Mono Regular */
   @font-face {
-    font-family: 'SuisseWorks';
-    src: url(${SuisseWorksBookEot});
-    src: url(${SuisseWorksBookWoff2}) format('woff2'),
-      url(${SuisseWorksBookWoff}) format('woff'),
-      url(${SuisseWorksBookTtf}) format('truetype'),
-      url(${SuisseWorksBookEot}?#iefix) format('embedded-opentype');
+    font-family: 'DMMono';
+    src: url(${DMMonoRegularEot});
+    src: url(${DMMonoRegularWoff2}) format('woff2'),
+      url(${DMMonoRegularWoff}) format('woff'),
+      url(${DMMonoRegularOtf}) format('opentype'),
+      url(${DMMonoRegularEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Suisse Works Bold */
+  /* DM Mono Light */
   @font-face {
-    font-family: 'SuisseWorks';
-    src: url(${SuisseWorksBoldEot});
-    src: url(${SuisseWorksBoldWoff2}) format('woff2'),
-      url(${SuisseWorksBoldWoff}) format('woff'),
-      url(${SuisseWorksBoldTtf}) format('truetype'),
-      url(${SuisseWorksBoldEot}?#iefix) format('embedded-opentype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  /* Suisse Mono Thin */
-  @font-face {
-    font-family: 'SuisseMono';
-    src: url(${SuisseIntlMonoThinEot});
-    src: url(${SuisseIntlMonoThinWoff2}) format('woff2'),
-      url(${SuisseIntlMonoThinWoff}) format('woff'),
-      url(${SuisseIntlMonoThinOtf}) format('opentype'),
-      url(${SuisseIntlMonoThinEot}?#iefix) format('embedded-opentype');
+    font-family: 'DMMono';
+    src: url(${DMMonoLightEot});
+    src: url(${DMMonoLightWoff2}) format('woff2'),
+      url(${DMMonoLightWoff}) format('woff'),
+      url(${DMMonoLightOtf}) format('opentype'),
+      url(${DMMonoLightEot}?#iefix) format('embedded-opentype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Suisse Mono Regular */
+  /* DM Mono Medium */
   @font-face {
-    font-family: 'SuisseMono';
-    src: url(${SuisseIntlMonoRegularEot});
-    src: url(${SuisseIntlMonoRegularWoff2}) format('woff2'),
-      url(${SuisseIntlMonoRegularWoff}) format('woff'),
-      url(${SuisseIntlMonoRegularOtf}) format('opentype'),
-      url(${SuisseIntlMonoRegularEot}?#iefix) format('embedded-opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  /* Suisse Mono Bold */
-  @font-face {
-    font-family: 'SuisseMono';
-    src: url(${SuisseIntlMonoBoldEot});
-    src: url(${SuisseIntlMonoBoldWoff2}) format('woff2'),
-      url(${SuisseIntlMonoBoldWoff}) format('woff'),
-      url(${SuisseIntlMonoBoldOtf}) format('opentype'),
-      url(${SuisseIntlMonoBoldEot}?#iefix) format('embedded-opentype');
+    font-family: 'DMMono';
+    src: url(${DMMonoMediumEot});
+    src: url(${DMMonoMediumWoff2}) format('woff2'),
+      url(${DMMonoMediumWoff}) format('woff'),
+      url(${DMMonoMediumOtf}) format('opentype'),
+      url(${DMMonoMediumEot}?#iefix) format('embedded-opentype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -314,7 +276,7 @@ const Typography = css`
   h6,
   .text--xs {
     font-size: calc(${theme.fontSizes[2]} / 1.25);
-    font-weight: 400;
+    font-weight: 500;
     line-height: ${theme.root.font.bodyLineHeight};
   }
 
@@ -325,7 +287,7 @@ const Typography = css`
   p,
   .text--base {
     font-size: calc(${theme.fontSizes[2]} / 1.25);
-    font-weight: 400;
+    font-weight: 500;
     line-height: ${theme.root.font.bodyLineHeight};
     margin: 0 0 ${theme.space[3]};
 

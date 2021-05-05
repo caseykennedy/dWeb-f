@@ -17,7 +17,7 @@ export const Hero = styled(Flex)<{ isDark: boolean }>`
   background: radial-gradient(
     circle,
     ${theme.colors.primary} -20%,
-    ${(p) => (p.isDark ? theme.colors.secondary : theme.colors.secondary)} 100%
+    ${(p) => (p.isDark ? `transparent` : theme.colors.secondary)} 100%
   );
 
   margin: calc(${theme.headerHeight} * -1) auto 0 !important;
@@ -38,10 +38,10 @@ export const Hero = styled(Flex)<{ isDark: boolean }>`
     width: 100%;
 
     svg {
-      transform: scale(0.85);
+      transform: scale(0.8);
 
       @media ${theme.mq.tablet} {
-        transform: scale(1);
+        transform: scale(0.9);
       }
     }
   }

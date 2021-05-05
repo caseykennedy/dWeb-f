@@ -33,7 +33,6 @@ const StyledButton = styled(Flex)<{ isDark: boolean }>`
   letter-spacing: 0;
   font-family: ${theme.fonts.mono};
   font-size: calc(${theme.fontSizes[2]} / 1.15);
-  text-transform: uppercase;
 
   background: transparent;
   border: ${theme.border};

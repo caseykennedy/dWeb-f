@@ -36,6 +36,7 @@ module.exports = {
     facebook: config.ogSiteName,
   },
   plugins: [
+    'gatsby-plugin-styled-components',
     'gatsby-plugin-theme-ui',
     'gatsby-plugin-react-helmet',
     {
@@ -54,7 +55,6 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-styled-components',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-typescript',
     'gatsby-plugin-offline',

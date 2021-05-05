@@ -25,7 +25,7 @@ import Yours from '../../../../static/yours.svg'
 // ___________________________________________________________________
 
 const Features = () => {
-  const [colorMode, setColorMode] = useColorMode()
+  const [colorMode] = useColorMode()
   const isDark = colorMode === 'dark'
   return (
     <S.Features isDark={isDark}>
@@ -58,6 +58,8 @@ const Features = () => {
 }
 
 export default Features
+
+// ___________________________________________________________________
 
 const data = [
   {
