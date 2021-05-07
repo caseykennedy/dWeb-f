@@ -65,7 +65,7 @@ const AboutUs = () => {
               <Text as="span" color="primary">
                 aiming to <sup>1</sup>build (dWeb) integrations <sup>2</sup>
                 create secondary and tertiary layer infrastructure <sup>3</sup>
-                enable a new generation of pioneers.
+                incubate a new generation of pioneers.
               </Text>
             </Heading>
           </Flex>
@@ -131,7 +131,7 @@ const Introduction = () => {
               dWeb Foundation is a community-organized effort charting the
               frontier toward a decentralized internet, with{' '}
               <Box as="span" className="hns">
-                <HandshakeLogo /> Handshake
+                <HandshakeLogo /> handshake
               </Box>{' '}
               at the root.
             </Heading>
@@ -170,7 +170,7 @@ const Introduction = () => {
             </Flex>
           </Flex>
 
-          {/* <Flex
+          <Flex
             mt={[6, 0, 0]}
             ml={[0, 4, 6]}
             sx={{
@@ -203,10 +203,10 @@ const Introduction = () => {
               }}
             >
               <Text as="p" className="text--mono  text--xs">
-                <HnsChart />
+                {/* <HnsChart /> */}
               </Text>
             </Box>
-          </Flex> */}
+          </Flex>
         </Flex>
       </Section>
     </S.Introduction>

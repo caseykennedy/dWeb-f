@@ -18,10 +18,10 @@ import ManropeLightWoff from './fonts/Manrope-Light.woff'
 import ManropeLightOtf from './fonts/Manrope-Light.otf'
 
 // ManRope Medium
-import ManropeMediumEot from './fonts/Manrope-Medium.eot'
-import ManropeMediumWoff2 from './fonts/Manrope-Medium.woff2'
-import ManropeMediumWoff from './fonts/Manrope-Medium.woff'
-import ManropeMediumOtf from './fonts/Manrope-Medium.otf'
+import ManropeMediumEot from './fonts/Manrope-SemiBold.eot'
+import ManropeMediumWoff2 from './fonts/Manrope-SemiBold.woff2'
+import ManropeMediumWoff from './fonts/Manrope-SemiBold.woff'
+import ManropeMediumOtf from './fonts/Manrope-SemiBold.otf'
 
 // ManRope Bold
 import ManropeBoldEot from './fonts/Manrope-Bold.eot'
@@ -121,19 +121,6 @@ const Typography = css`
     font-display: swap;
   }
 
-  /* DM Mono Regular */
-  @font-face {
-    font-family: 'DMMono';
-    src: url(${DMMonoRegularEot});
-    src: url(${DMMonoRegularWoff2}) format('woff2'),
-      url(${DMMonoRegularWoff}) format('woff'),
-      url(${DMMonoRegularOtf}) format('opentype'),
-      url(${DMMonoRegularEot}?#iefix) format('embedded-opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
   /* DM Mono Light */
   @font-face {
     font-family: 'DMMono';
@@ -143,6 +130,19 @@ const Typography = css`
       url(${DMMonoLightOtf}) format('opentype'),
       url(${DMMonoLightEot}?#iefix) format('embedded-opentype');
     font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* DM Mono Regular */
+  @font-face {
+    font-family: 'DMMono';
+    src: url(${DMMonoRegularEot});
+    src: url(${DMMonoRegularWoff2}) format('woff2'),
+      url(${DMMonoRegularWoff}) format('woff'),
+      url(${DMMonoRegularOtf}) format('opentype'),
+      url(${DMMonoRegularEot}?#iefix) format('embedded-opentype');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
   }

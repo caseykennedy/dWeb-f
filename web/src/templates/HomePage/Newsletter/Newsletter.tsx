@@ -34,7 +34,7 @@ const Newsletter = () => {
           }}
         >
           <Box sx={{ flex: 1 }}>
-            <Text as="p" mb={3} sx={{ fontWeight: 500 }}>
+            <Text as="p" mb={3}>
               Stay in the loop.
             </Text>
 

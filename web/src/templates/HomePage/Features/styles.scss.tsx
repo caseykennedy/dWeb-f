@@ -19,13 +19,6 @@ export const Features = styled(Box)<{ isDark: boolean }>`
       border-bottom: ${theme.border};
       transition: background-color ${theme.transition.global};
 
-      &:hover {
-        background: ${(p) =>
-          p.isDark
-            ? theme.colors.modes.dark.highlight
-            : theme.colors.highlight};
-      }
-
       svg {
         margin: ${theme.space[4]} auto ${theme.space[4]};
         max-height: 80px;

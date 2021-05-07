@@ -74,8 +74,8 @@ const Handshake = () => {
             }}
           >
             <Heading className="text--lg">
-              A private, secure, person-to-person web, “locked open”, made
-              possible by incoercible trust protocols and foundational dApps.
+              A private, secure, person-to-person web, "locked open", made
+              possible by incoercible trust protocols and decentralized apps.
             </Heading>
           </Flex>
         </Flex>
@@ -92,8 +92,8 @@ const Handshake = () => {
             <Box mb={2} sx={{ flex: 1 }}>
               <a href="https://handshake.org/" target="_blank">
                 <Button>
-                  Handshake.org
-                  <Icon name="arrow" />
+                  Visit Handshake.org
+                  <Icon name="external-link" />
                 </Button>
               </a>
             </Box>
@@ -107,8 +107,8 @@ const Handshake = () => {
           >
             <Box ml={[0, 5, 7]} sx={{ flex: 1 }}>
               <Text as="p" sx={{ fontWeight: 500, textAlign: 'right' }}>
-                For an uncensorable, purpose-built, robust and democratized,
-                internet of people.{' '}
+                For an uncensorable, robust and democratized, internet of
+                people.
               </Text>
             </Box>
           </Flex>

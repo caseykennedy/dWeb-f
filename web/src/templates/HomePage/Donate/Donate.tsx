@@ -45,7 +45,7 @@ const Features = () => {
           }}
         >
           <Box sx={{ flex: 1, width: '100%' }}>
-            <Flex px={theme.gutter.axis} className="decorator">
+            {/* <Flex px={theme.gutter.axis} className="decorator">
               <CubeDots />
 
               <Box className="decorator__cubes">
@@ -53,11 +53,9 @@ const Features = () => {
               </Box>
 
               <Box className="decorator__graph">
-                {/* <ParallaxWrapper speed={1}> */}
                 <BarGraph />
-                {/* </ParallaxWrapper> */}
               </Box>
-            </Flex>
+            </Flex> */}
           </Box>
 
           <Box sx={{ flex: 1 }}>

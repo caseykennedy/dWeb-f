@@ -1,7 +1,9 @@
 // exports.onCreateWebpackConfig = ({ actions }) => {
 //   actions.setWebpackConfig({
 //     resolve: {
-//       fallback: { https: require.resolve('https-browserify') },
+//       fallback: {
+//         https: require.resolve('https-browserify'),
+//       },
 //     },
 //   })
 // }
@@ -19,6 +21,7 @@ const {
 } = requireConfig('../studio/sanity.json')
 
 module.exports = {
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     siteUrl: config.siteUrl + pathPrefix,

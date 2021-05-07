@@ -13,14 +13,14 @@ import { Flex, Heading, Text, Grid, useColorMode } from 'theme-ui'
 import Section from '../../../components/Section'
 
 // Vectors
-import Everybodys from '../../../../static/everybodys.svg'
-import LockedOpen from '../../../../static/lockedopen.svg'
-import Monetizeable from '../../../../static/monetizeable.svg'
-import Robust from '../../../../static/robust.svg'
+import Monetizable from '../../../../static/monetizable.svg'
+import Private from '../../../../static/private.svg'
+import Resilient from '../../../../static/resilient.svg'
+import Scalable from '../../../../static/scalable.svg'
 import Secure from '../../../../static/secure.svg'
+import Open from '../../../../static/open.svg'
 import Trustless from '../../../../static/trustless.svg'
-import Unlimited from '../../../../static/unlimited.svg'
-import Yours from '../../../../static/yours.svg'
+import Limitless from '../../../../static/limitless.svg'
 
 // ___________________________________________________________________
 
@@ -63,43 +63,43 @@ export default Features
 
 const data = [
   {
-    feature: `Yours`,
-    figure: <Yours />,
-    caption: `Own your data. Own your identity.`,
+    feature: `Open`,
+    figure: <Open />,
+    caption: `Own your own TLD extensions, be your own registrar.`,
   },
   {
-    feature: `Everybody's`,
-    figure: <Everybodys />,
-    caption: `Own your data. Own your identity.`,
+    feature: `Private`,
+    figure: <Private />,
+    caption: `Anonymous, peer-to-peer, distribution on the blockchain.`,
   },
   {
     feature: `Secure`,
     figure: <Secure />,
-    caption: `Own your data. Own your identity.`,
+    caption: `Cryptographically authenticated identity and resources.`,
   },
   {
     feature: `Trustless`,
     figure: <Trustless />,
-    caption: `Own your data. Own your identity.`,
+    caption: `Permissionless protocols, secured by the network.`,
   },
   {
-    feature: `Unlimited`,
-    figure: <Unlimited />,
-    caption: `Own your data. Own your identity.`,
+    feature: `Monetizable`,
+    figure: <Monetizable />,
+    caption: `Tokenized, proof-of-work ownership & certification.`,
   },
   {
-    feature: `Robust`,
-    figure: <Robust />,
-    caption: `Own your data. Own your identity.`,
+    feature: `Scalable`,
+    figure: <Scalable />,
+    caption: `Equal access, public commons anyone can particpate.`,
   },
   {
-    feature: `Locked open`,
-    figure: <LockedOpen />,
-    caption: `Own your data. Own your identity.`,
+    feature: `Resilient`,
+    figure: <Resilient />,
+    caption: `Durably decentralized, attack and censorship resistant.`,
   },
   {
-    feature: `Monetizeable`,
-    figure: <Monetizeable />,
-    caption: `Own your data. Own your identity.`,
+    feature: `Limitless`,
+    figure: <Limitless />,
+    caption: `Unlimited naming, app and service possibilities.`,
   },
 ]
