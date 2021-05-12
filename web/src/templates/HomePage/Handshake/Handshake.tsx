@@ -3,17 +3,14 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
 
 // Theme + ui
 import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
 import { Box, Flex, Heading, Text, useColorMode } from 'theme-ui'
-import Button from '../../../components/ui/Button'
 
 // Components
 import Section from '../../../components/Section'
-import Icon from '../../../components/Icons'
 import TorusGrid from '../../../components/TorusGrid'
 import CubeSpark from '../../../components/CubeSpark'
 import HandshakeLogo from '../../../components/Handshake'
@@ -24,12 +21,12 @@ import usePost from '../../../hooks/usePost'
 // ___________________________________________________________________
 
 const Handshake = () => {
-  const [colorMode, setColorMode] = useColorMode()
+  const [colorMode] = useColorMode()
   const isDark = colorMode === 'dark'
   return (
     <S.Handshake isDark={isDark}>
-      <Section>
-        <Heading as="h6" mb={3}>
+      <Section overflow="hidden">
+        <Heading as="h5" mb={3}>
           dWeb for the Universe
         </Heading>
 
@@ -61,7 +58,7 @@ const Handshake = () => {
             <Flex className="built-on">
               <Text as="p">Built on</Text>
               <span>
-                <HandshakeLogo />
+                <HandshakeLogo fill="black" />
               </span>
             </Flex>
           </Flex>
@@ -77,40 +74,6 @@ const Handshake = () => {
               A private, secure, person-to-person web, "locked open", made
               possible by incoercible trust protocols and decentralized apps.
             </Heading>
-          </Flex>
-        </Flex>
-      </Section>
-
-      <Section>
-        <Flex sx={{ flexDirection: ['column', 'row'], flexWrap: 'wrap' }}>
-          <Flex
-            sx={{
-              flex: 1,
-              alignItems: 'center',
-            }}
-          >
-            <Box mb={2} sx={{ flex: 1 }}>
-              <a href="https://handshake.org/" target="_blank">
-                <Button>
-                  Visit Handshake.org
-                  <Icon name="external-link" />
-                </Button>
-              </a>
-            </Box>
-          </Flex>
-
-          <Flex
-            sx={{
-              flex: 1,
-              alignItems: 'center',
-            }}
-          >
-            <Box ml={[0, 5, 7]} sx={{ flex: 1 }}>
-              <Text as="p" sx={{ fontWeight: 500, textAlign: 'right' }}>
-                For an uncensorable, robust and democratized, internet of
-                people.
-              </Text>
-            </Box>
           </Flex>
         </Flex>
       </Section>

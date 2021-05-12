@@ -39,7 +39,7 @@ const AboutUs = () => {
   return (
     <S.AboutUs>
       <Section>
-        <Heading as="h6" mb={7}>
+        <Heading as="h5" mb={7}>
           The internet is open
         </Heading>
 
@@ -57,7 +57,7 @@ const AboutUs = () => {
           <Flex
             mb={3}
             sx={{
-              flex: [0.75, 0.85, 0.6],
+              flex: [0.9, 0.85, 0.6],
             }}
           >
             <Heading className="text--lg">
@@ -158,6 +158,7 @@ const Introduction = () => {
                 <Link to={`/donate`}>
                   <Text
                     sx={{
+                      fontWeight: 600,
                       textDecoration: 'underline',
                       transition: theme.transition.all,
                       ':hover': { color: 'primary', textDecoration: 'none' },
@@ -170,7 +171,7 @@ const Introduction = () => {
             </Flex>
           </Flex>
 
-          <Flex
+          {/* <Flex
             mt={[6, 0, 0]}
             ml={[0, 4, 6]}
             sx={{
@@ -186,7 +187,7 @@ const Introduction = () => {
                 bg: 'muted',
               }}
             >
-              <Text as="p" className="text--mono  text--xs">
+              <Text as="p" sx={{ fontWeight: 500 }} className="text--mono  text--xs">
                 SINGAPORE Time
                 <br />
                 <Text as="span" color="primary">
@@ -203,10 +204,9 @@ const Introduction = () => {
               }}
             >
               <Text as="p" className="text--mono  text--xs">
-                {/* <HnsChart /> */}
               </Text>
             </Box>
-          </Flex>
+          </Flex> */}
         </Flex>
       </Section>
     </S.Introduction>

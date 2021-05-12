@@ -59,7 +59,7 @@ const Features = () => {
           </Box>
 
           <Box sx={{ flex: 1 }}>
-            <Text as="p" mt={[4, 0, 0]} px={[0, 5, 6]} color="gray">
+            <Text as="p" my={[7]} px={[0, 6, 7]} color="gray">
               "Whatever we build, it must be about all of us and none of us at
               the same time."
               <br />

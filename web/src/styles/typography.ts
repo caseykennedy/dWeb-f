@@ -5,23 +5,29 @@
 import { css } from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui'
 
-// ManRope Regular
-import ManropeRegularEot from './fonts/Manrope-Regular.eot'
-import ManropeRegularWoff2 from './fonts/Manrope-Regular.woff2'
-import ManropeRegularWoff from './fonts/Manrope-Regular.woff'
-import ManropeRegularOtf from './fonts/Manrope-Regular.otf'
-
 // ManRope Light
 import ManropeLightEot from './fonts/Manrope-Light.eot'
 import ManropeLightWoff2 from './fonts/Manrope-Light.woff2'
 import ManropeLightWoff from './fonts/Manrope-Light.woff'
 import ManropeLightOtf from './fonts/Manrope-Light.otf'
 
+// ManRope Regular
+import ManropeRegularEot from './fonts/Manrope-Regular.eot'
+import ManropeRegularWoff2 from './fonts/Manrope-Regular.woff2'
+import ManropeRegularWoff from './fonts/Manrope-Regular.woff'
+import ManropeRegularOtf from './fonts/Manrope-Regular.otf'
+
 // ManRope Medium
-import ManropeMediumEot from './fonts/Manrope-SemiBold.eot'
-import ManropeMediumWoff2 from './fonts/Manrope-SemiBold.woff2'
-import ManropeMediumWoff from './fonts/Manrope-SemiBold.woff'
-import ManropeMediumOtf from './fonts/Manrope-SemiBold.otf'
+import ManropeMediumEot from './fonts/Manrope-Medium.eot'
+import ManropeMediumWoff2 from './fonts/Manrope-Medium.woff2'
+import ManropeMediumWoff from './fonts/Manrope-Medium.woff'
+import ManropeMediumOtf from './fonts/Manrope-Medium.otf'
+
+// ManRope Semi Bold
+import ManropeSemiBoldEot from './fonts/Manrope-SemiBold.eot'
+import ManropeSemiBoldWoff2 from './fonts/Manrope-SemiBold.woff2'
+import ManropeSemiBoldWoff from './fonts/Manrope-SemiBold.woff'
+import ManropeSemiBoldOtf from './fonts/Manrope-SemiBold.otf'
 
 // ManRope Bold
 import ManropeBoldEot from './fonts/Manrope-Bold.eot'
@@ -56,19 +62,6 @@ import DMMonoMediumOtf from './fonts/DMMono-Medium.otf'
 // ___________________________________________________________________
 
 const Typography = css`
-  /* ManRope Regular */
-  @font-face {
-    font-family: 'ManRope';
-    src: url(${ManropeRegularEot});
-    src: url(${ManropeRegularWoff2}) format('woff2'),
-      url(${ManropeRegularWoff}) format('woff'),
-      url(${ManropeRegularOtf}) format('opentype'),
-      url(${ManropeRegularEot}?#iefix) format('embedded-opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
   /* ManRope Light */
   @font-face {
     font-family: 'ManRope';
@@ -78,6 +71,19 @@ const Typography = css`
       url(${ManropeLightOtf}) format('opentype'),
       url(${ManropeLightEot}?#iefix) format('embedded-opentype');
     font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* ManRope Regular */
+  @font-face {
+    font-family: 'ManRope';
+    src: url(${ManropeRegularEot});
+    src: url(${ManropeRegularWoff2}) format('woff2'),
+      url(${ManropeRegularWoff}) format('woff'),
+      url(${ManropeRegularOtf}) format('opentype'),
+      url(${ManropeRegularEot}?#iefix) format('embedded-opentype');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
@@ -95,6 +101,19 @@ const Typography = css`
     font-display: swap;
   }
 
+  /* ManRope Semi Bold */
+  @font-face {
+    font-family: 'ManRope';
+    src: url(${ManropeSemiBoldEot});
+    src: url(${ManropeSemiBoldWoff2}) format('woff2'),
+      url(${ManropeSemiBoldWoff}) format('woff'),
+      url(${ManropeSemiBoldOtf}) format('opentype'),
+      url(${ManropeSemiBoldEot}?#iefix) format('embedded-opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
   /* ManRope Bold */
   @font-face {
     font-family: 'ManRope';
@@ -103,7 +122,7 @@ const Typography = css`
       url(${ManropeBoldWoff}) format('woff'),
       url(${ManropeBoldOtf}) format('opentype'),
       url(${ManropeBoldEot}?#iefix) format('embedded-opentype');
-    font-weight: 600;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
   }
@@ -116,7 +135,7 @@ const Typography = css`
       url(${ManropeBlackWoff}) format('woff'),
       url(${ManropeBlackOtf}) format('opentype'),
       url(${ManropeBlackEot}?#iefix) format('embedded-opentype');
-    font-weight: 700;
+    font-weight: 800;
     font-style: normal;
     font-display: swap;
   }
@@ -208,7 +227,7 @@ const Typography = css`
   h5,
   h6 {
     font-family: ${theme.fonts.heading};
-    font-weight: 400;
+    font-weight: 500;
     line-height: ${theme.root.font.headingLineHeight};
     letter-spacing: ${theme.root.font.headingLetterSpacing};
     margin: 0 0 ${theme.space[3]};
@@ -267,27 +286,21 @@ const Typography = css`
   h5,
   .text--sm {
     font-size: calc(${theme.fontSizes[2]} / 1.25);
-
-    @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[2]});
-    }
+    font-weight: 600;
+    line-height: ${theme.root.font.bodyLineHeight};
   }
 
   h6,
   .text--xs {
-    font-size: calc(${theme.fontSizes[2]} / 1.25);
-    font-weight: 500;
+    font-size: calc(${theme.fontSizes[2]} / 1.5);
+    font-weight: 600;
     line-height: ${theme.root.font.bodyLineHeight};
-  }
-
-  .text--xs {
-    font-size: ${theme.root.font.xs};
   }
 
   p,
   .text--base {
     font-size: calc(${theme.fontSizes[2]} / 1.25);
-    font-weight: 500;
+    font-weight: 600;
     line-height: ${theme.root.font.bodyLineHeight};
     margin: 0 0 ${theme.space[3]};
 
@@ -311,7 +324,7 @@ const Typography = css`
   }
 
   strong {
-    font-weight: 600;
+    font-weight: 700;
   }
 
   sup {

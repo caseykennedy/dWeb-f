@@ -19,6 +19,7 @@ type ThemeShape = {
 
     primary: string
     secondary: string
+    tertiary: string
     accent: string
     highlight: string
     muted: string
@@ -112,6 +113,7 @@ const theme: ThemeShape = {
 
     primary: '#5700ff',
     secondary: '#a2f6ff',
+    tertiary: '#2d00ff',
     accent: '#b5a0ff',
     highlight: '#fdffd4',
     muted: '#f2f2f2',

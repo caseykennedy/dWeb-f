@@ -7,10 +7,12 @@ import React from 'react'
 // Theme + ui
 import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
-import { Flex, Heading, Text, Grid, useColorMode } from 'theme-ui'
+import { Box, Flex, Heading, Text, Grid, useColorMode } from 'theme-ui'
+import Button from '../../../components/ui/Button'
 
 // Components
 import Section from '../../../components/Section'
+import Icon from '../../../components/Icons'
 
 // Vectors
 import Monetizable from '../../../../static/monetizable.svg'
@@ -42,16 +44,50 @@ const Features = () => {
               }}
               key={key}
             >
-              <Heading as="h6" mb={3}>
+              <Heading as="h5" mb={3}>
                 {feature.feature}
               </Heading>
               {feature.figure}
-              <Text as="p" sx={{ color: theme.colors.gray }}>
+              <Text as="p" color="gray" className="text--xs">
                 {feature.caption}
               </Text>
             </Flex>
           ))}
         </Grid>
+      </Section>
+
+      <Section>
+        <Flex sx={{ flexDirection: ['column', 'row'], flexWrap: 'wrap' }}>
+          <Flex
+            sx={{
+              flex: 1,
+              alignItems: 'center',
+            }}
+          >
+            <Box mb={2} sx={{ flex: 1 }}>
+              <a href="https://handshake.org/" target="_blank">
+                <Button>
+                  Visit Handshake.org
+                  <Icon name="external-link" />
+                </Button>
+              </a>
+            </Box>
+          </Flex>
+
+          <Flex
+            sx={{
+              flex: 1,
+              alignItems: 'center',
+            }}
+          >
+            <Box ml={[0, 5, 7]} sx={{ flex: 1 }}>
+              <Text as="p" sx={{ fontWeight: 500, textAlign: 'right' }}>
+                For an uncensorable, robust and democratized, internet of
+                people.
+              </Text>
+            </Box>
+          </Flex>
+        </Flex>
       </Section>
     </S.Features>
   )

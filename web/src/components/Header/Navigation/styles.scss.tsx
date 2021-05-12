@@ -22,7 +22,7 @@ export const Nav = styled.nav<{ isDark: boolean }>`
     color: ${(p) =>
       p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
     font-size: ${theme.fontSizes[1]};
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     margin-left: ${theme.space[4]};
 

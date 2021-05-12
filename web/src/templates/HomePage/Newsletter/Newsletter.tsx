@@ -20,8 +20,8 @@ const Newsletter = () => {
   const isDark = colorMode === 'dark'
   return (
     <S.Newsletter isDark={isDark}>
-      <Section border={true}>
-        <Box mb={6}>
+      <Section bg="muted" border={true}>
+        <Box mb={9}>
           <Heading as="h3">
             Coming to a browser near you.
           </Heading>

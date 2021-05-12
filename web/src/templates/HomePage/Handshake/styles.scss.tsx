@@ -55,10 +55,10 @@ export const Handshake = styled(Box)<{ isDark: boolean }>`
       margin-left: ${theme.space[5]};
 
       svg {
-        width: 80px;
+        width: 70px;
 
         @media ${theme.mq.tablet} {
-          width: 100px;
+          width: 80px;
         }
       }
     }
