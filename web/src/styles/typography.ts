@@ -324,7 +324,7 @@ const Typography = css`
   }
 
   strong {
-    font-weight: 700;
+    font-weight: 800;
   }
 
   sup {

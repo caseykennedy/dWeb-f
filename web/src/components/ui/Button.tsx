@@ -9,35 +9,47 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-const Button: React.FC<{children: React.ReactNode}> = ({ children }) => {
+const Button: React.FC<{ children: React.ReactNode; solid?: boolean }> = ({
+  children,
+  solid,
+}) => {
   const [colorMode] = useColorMode()
-  const isDark = colorMode === 'dark'
-  return <StyledButton isDark={isDark}>{children}</StyledButton>
+  const isDark = colorMode === `dark`
+  return (
+    <StyledButton isDark={isDark} solid={solid}>
+      {children}
+    </StyledButton>
+  )
 }
 
 export default Button
 
-const StyledButton = styled(Flex)<{ isDark: boolean }>`
+const StyledButton = styled(Flex)<{ isDark: boolean; solid?: boolean }>`
   transition: ${theme.transition.all};
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   padding: ${theme.space[4]};
   position: relative;
   width: 100%;
 
   color: ${(p) =>
-    p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
+    p.isDark
+      ? theme.colors.modes.dark.text
+      : p.solid
+      ? theme.colors.white
+      : theme.colors.text};
   letter-spacing: 0;
   font-family: ${theme.fonts.mono};
   font-size: calc(${theme.fontSizes[2]} / 1.15);
   font-weight: 500;
 
-  background: transparent;
+  background: ${(p) => (p.solid ? theme.colors.black : `transparent`)};
   border: ${theme.border};
-  border-color: ${(p) => (p.isDark ? theme.colors.modes.dark.text : theme.colors.text)};
+  border-color: ${(p) =>
+    p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
 
   cursor: pointer;
   outline: none;
@@ -62,7 +74,11 @@ const StyledButton = styled(Flex)<{ isDark: boolean }>`
     svg {
       width: ${theme.space[4]};
       fill: ${(p) =>
-        p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
+        p.isDark
+          ? theme.colors.modes.dark.text
+          : p.solid
+          ? theme.colors.white
+          : theme.colors.text};
 
       @media ${theme.mq.desktop} {
         width: ${theme.space[4]};
@@ -71,6 +87,7 @@ const StyledButton = styled(Flex)<{ isDark: boolean }>`
   }
 
   &:hover {
+    background: transparent;
     border-color: ${(p) =>
       p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
     color: ${(p) =>
