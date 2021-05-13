@@ -18,8 +18,12 @@ import Icon from '../../components/Icons'
 import CubeSpark from '../../components/CubeSpark'
 import TriCube from '../../components/TriCube'
 import Floaters from '../../components/Floaters'
+import RubikGlobe from '../../components/RubikGlobe'
+import RubikBlock from '../../components/RubikBlock'
+import ParallaxWrapper from '../../components/ParallaxWrapper'
 
 import CubeStrokes from '../../../static/cube-strokes.svg'
+import Orb from '../../../static/orb.svg'
 
 // ___________________________________________________________________
 
@@ -27,7 +31,7 @@ const PageTitle = () => {
   return (
     <Section>
       <Flex>
-        <Box sx={{ flex: [1, 0.45], width: '100%' }}>
+        <Box sx={{ flex: [1, 0.75, 0.45], width: '100%' }}>
           <Heading as="h1" className="text--lg">
             Be one of 50 teams to accelerate their Web3{' '}
             <Box as="span" className="hns">
@@ -97,7 +101,7 @@ const ProjectDweb = () => {
   return (
     <Section>
       <Flex>
-        <Box sx={{ flex: [1, 0.5] }}>
+        <Box sx={{ flex: [1, 0.75, 0.5] }}>
           <Flex mb={5} sx={{ alignItems: `center` }}>
             <TriCube />
             <Text
@@ -147,7 +151,7 @@ const Build = () => {
           flexDirection: [`column`, `row`],
         }}
       >
-        <Box mb={[5, 0]} sx={{ flex: [1, 0.5], width: `100%` }}>
+        <Box mb={[5, 0]} sx={{ flex: [1, 0.75, 0.5], width: `100%` }}>
           <Text as="p" color="primary" mb={4}>
             App the dWeb
           </Text>
@@ -161,17 +165,25 @@ const Build = () => {
           </Text>
         </Box>
 
-        <Box sx={{ flex: [1, 0.5], width: `100%` }} />
+        <Box sx={{ flex: [1, 0.25, 0.5], width: `100%` }} />
       </Flex>
 
       <Box py={7}>
         <Flex className="decorator">
-          <Box className="decorator__cube">
+          <Box className="decorator__cube-strokes">
+            <ParallaxWrapper speed={1}>
             <CubeStrokes />
+            </ParallaxWrapper>
+          </Box>
+          <Box className="decorator__orb">
+            <ParallaxWrapper speed={3.5}>
+            <Orb />
+            </ParallaxWrapper>
+          </Box>
+          <Box sx={{ position: `relative`, zIndex: 2, width: `100%` }}>
+            <Floaters />
           </Box>
         </Flex>
-
-        <Floaters />
       </Box>
     </Section>
   )
@@ -186,7 +198,7 @@ const Potential = () => {
           flexDirection: [`column`, `row`],
         }}
       >
-        <Box mb={[5, 0]} sx={{ flex: [1, 0.5], width: `100%` }}>
+        <Box mb={[5, 0]} sx={{ flex: [1, 0.75, 0.5], width: `100%` }}>
           <Text as="p" color="primary" mb={4}>
             Materialize the potential
           </Text>
@@ -205,7 +217,11 @@ const Potential = () => {
           </Text>
         </Box>
 
-        <Box sx={{ flex: [1, 0.5], width: `100%` }} />
+        <Flex
+          sx={{ flex: [1, 0.25, 0.5], justifyContent: `center`, width: `100%` }}
+        >
+          <RubikBlock />
+        </Flex>
       </Flex>
     </Section>
   )
@@ -259,9 +275,11 @@ const Trust = () => {
           flexDirection: [`column`, `row`],
         }}
       >
-        <Box sx={{ flex: [1, 0.5], width: `100%` }} />
+        <Box sx={{ flex: [1, 0.25, 0.5], width: `100%` }}>
+          <RubikGlobe />
+        </Box>
 
-        <Box mb={[5, 0]} sx={{ flex: [1, 0.5], width: `100%` }}>
+        <Box mb={[5, 0]} sx={{ flex: [1, 0.75, 0.5], width: `100%` }}>
           <Text as="p" color="primary" mb={4}>
             In web3 we trust
           </Text>

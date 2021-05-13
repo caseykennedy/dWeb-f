@@ -75,12 +75,12 @@ export const IncubatorPage = styled(Box)<{ isDark?: boolean }>`
 
   .decorator {
     display: flex;
+    align-items: center;
     justify-content: center;
     position: relative;
-    height: 0;
-    overflow: visible;
 
     &__cube {
+      align-self: flex-start;
       position: absolute;
       margin: 0 auto;
 
@@ -89,6 +89,34 @@ export const IncubatorPage = styled(Box)<{ isDark?: boolean }>`
 
         @media ${theme.mq.tablet} {
           max-width: 40vw;
+        }
+      }
+    }
+
+    &__cube-strokes {
+      position: absolute;
+
+      svg {
+        max-width: 60vw;
+
+        @media ${theme.mq.tablet} {
+          max-width: 40vw;
+        }
+      }
+    }
+
+    &__orb {
+      display: flex;
+      justify-content: center;
+
+      margin: auto;
+      position: absolute;
+
+      svg {
+        width: 120px;
+
+        @media ${theme.mq.tablet} {
+          width: 180px;
         }
       }
     }
