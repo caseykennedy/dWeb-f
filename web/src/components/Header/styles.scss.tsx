@@ -41,6 +41,32 @@ export const Header = styled(Box)`
 
 export const Menu = styled(Flex)`
   align-items: flex-start;
+
+  .toggle {
+    &__menu {
+      display: initial;
+      align-items: flex-start;
+      box-sizing: content-box;
+
+      color: ${theme.colors.text};
+      font-size: calc(${theme.fontSizes[2]});
+      font-weight: 400;
+      cursor: pointer;
+
+      position: relative;
+      z-index: 9999;
+
+      @media ${theme.mq.tablet} {
+        display: none;
+      }
+
+      span {
+        svg {
+          width: ${theme.space[5]};
+        }
+      }
+    }
+  }
 `
 
 export const Logo = styled(Flex)`

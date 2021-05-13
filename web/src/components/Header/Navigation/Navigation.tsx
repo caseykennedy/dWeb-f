@@ -35,6 +35,10 @@ export default Navigation
 
 const data = [
   {
+    name: 'incubator',
+    link: '/incubator'
+  },
+  {
     name: 'donate',
     link: '/donate'
   },

@@ -37,8 +37,11 @@ const PageTitle = () => {
             <Box as="span" className="hns">
               <HandshakeLogo /> handshake
             </Box>{' '}
-            project through the dWeb Foundation OR one of four to receive full
-            incubation.
+            project through the dWeb Foundation{' '}
+            <Box as="span" className="text--underline">
+              OR
+            </Box>{' '}
+            one of 4 to receive full incubation.
           </Heading>
         </Box>
       </Flex>
@@ -172,12 +175,12 @@ const Build = () => {
         <Flex className="decorator">
           <Box className="decorator__cube-strokes">
             <ParallaxWrapper speed={1}>
-            <CubeStrokes />
+              <CubeStrokes />
             </ParallaxWrapper>
           </Box>
           <Box className="decorator__orb">
             <ParallaxWrapper speed={3.5}>
-            <Orb />
+              <Orb />
             </ParallaxWrapper>
           </Box>
           <Box sx={{ position: `relative`, zIndex: 2, width: `100%` }}>
@@ -218,7 +221,12 @@ const Potential = () => {
         </Box>
 
         <Flex
-          sx={{ flex: [1, 0.25, 0.5], justifyContent: `center`, width: `100%` }}
+          sx={{
+            flex: [1, 0.25, 0.5],
+            justifyContent: `flex-end`,
+            width: `100%`,
+          }}
+          className="decorator__rubik"
         >
           <RubikBlock />
         </Flex>
@@ -254,28 +262,37 @@ const Timeline = () => {
         ))}
       </Grid>
 
-      <Box mt={5}>
-        <a href="#" className="btn">
-          <Icon name="plus" /> Add to calendar
-        </a>
-        <a href="#" className="btn">
-          <Icon name="external-link" /> Share
-        </a>
-      </Box>
+      <Flex mt={4} sx={{ flex: [1, 0.5], width: `100%` }}>
+        <Grid columns={[1, 2]} gap={4}>
+          <Flex bg="muted">
+            <a href="#" className="btn">
+              <Icon name="plus" /> Add to calendar
+            </a>
+          </Flex>
+          <Flex bg="muted">
+            <a href="#" className="btn">
+              <Icon name="external-link" /> Share
+            </a>
+          </Flex>
+        </Grid>
+      </Flex>
     </Section>
   )
 }
 
 const Trust = () => {
   return (
-    <Section>
+    <Section pt={7} pb={7}>
       <Flex
         sx={{
           alignItems: [`flex-start`, `center`],
           flexDirection: [`column`, `row`],
         }}
       >
-        <Box sx={{ flex: [1, 0.25, 0.5], width: `100%` }}>
+        <Box
+          sx={{ flex: [1, 0.25, 0.5], justifyContent: `center`, width: `100%` }}
+          className="decorator__rubik"
+        >
           <RubikGlobe />
         </Box>
 
@@ -284,13 +301,16 @@ const Trust = () => {
             In web3 we trust
           </Text>
           <Text as="p" mb={3} sx={{ fontWeight: 500 }} className="text--lg">
-            Program begins July 1st with teams intro to Handshake alliances,
-            HandyCon influencers, dWeb mentors and interested VC’s—followed by
-            2x/week sprints with incubator teams.
+            <Box as="span" className="text--underline">
+              Program begins July 1st
+            </Box>{' '}
+            with teams intro to Handshake alliances, HandyCon influencers, dWeb
+            mentors and interested VC’s—followed by 2x/week sprints with
+            incubator teams.
           </Text>
           <Text as="p" sx={{ fontWeight: 500 }} className="text--lg">
             <Box as="span" className="text--underline">
-              On August 1st "Demo Day"
+              On August 1st, "Demo Day",
             </Box>{' '}
             four full ride teams will present online to the public for 30
             minutes each to share, build and network within the community at

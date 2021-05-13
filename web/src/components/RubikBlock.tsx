@@ -12,7 +12,7 @@ const RubikBlock: React.FC<Props> = () => {
   const [colorMode] = useColorMode()
   const isDark = colorMode === 'dark'
   return (
-    <SVG width="360" viewBox="0 0 369.02 408.06" isDark={isDark}>
+    <SVG width="100%" viewBox="0 0 369.02 408.06" isDark={isDark}>
       <polygon
         className="rubikblock-1"
         points="2.21 253.83 47.5 227.68 92.8 253.83 47.5 277.62 2.21 253.83"

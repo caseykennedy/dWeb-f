@@ -23,18 +23,18 @@ export const IncubatorPage = styled(Box)<{ isDark?: boolean }>`
   .btn {
     /* display: flex; */
     /* align-items: center; */
-
     border: ${theme.border};
-    margin-right: ${theme.space[4]};
-    padding: ${theme.space[4]};
+    font-size: calc(${theme.fontSizes[1]});
+    padding: ${theme.space[3]} ${theme.space[5]};
+    width: 100%;
 
-    &:last-child {
-      margin-right: 0;
+    @media ${theme.mq.tablet} {
+      /* padding: ${theme.space[4]}; */
     }
 
     span {
       font-size: calc(${theme.fontSizes[1]});
-      margin-right: ${theme.space[3]};
+      margin-right: ${theme.space[2]};
       position: relative;
 
       svg {
@@ -78,6 +78,12 @@ export const IncubatorPage = styled(Box)<{ isDark?: boolean }>`
     align-items: center;
     justify-content: center;
     position: relative;
+
+    &__rubik {
+      svg {
+        max-width: 400px;
+      }
+    }
 
     &__cube {
       align-self: flex-start;

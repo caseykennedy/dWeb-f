@@ -64,6 +64,10 @@ const data = [
     link: '/',
   },
   {
+    name: 'Incubator',
+    link: '/incubator'
+  },
+  {
     name: 'About',
     link: '/about',
   },

@@ -62,34 +62,33 @@ const Header = () => {
             </S.Logo>
           </Link>
 
-          <Box>
-            <S.Menu>
-              <Navigation />
+          <S.Menu>
+            <Navigation />
 
+            <Box mt="-5px" ml={[0, 5]} mr={[5, 0]} sx={{ display: [`none`, `initial`] }}>
               <DarkModeSwitch
                 moonColor={theme.colors.white}
                 sunColor={theme.colors.black}
-                style={{ marginLeft: theme.space[5], marginTop: -4 }}
                 checked={isDark}
                 onChange={toggleDarkMode}
                 size={32}
               />
-            </S.Menu>
+            </Box>
+          </S.Menu>
 
-            <S.Toggle onClick={toggleMenu} aria-label="toggle menu">
-              <HamburgerMenu
-                isOpen={!isNavOpen ? false : true}
-                menuClicked={toggleMenu}
-                width={32}
-                height={12}
-                strokeWidth={2}
-                rotate={0}
-                color={isDark ? theme.colors.white : theme.colors.black}
-                borderRadius={0}
-                animationDuration={0.333}
-              />
-            </S.Toggle>
-          </Box>
+          <S.Toggle onClick={toggleMenu} aria-label="toggle menu">
+            <HamburgerMenu
+              isOpen={!isNavOpen ? false : true}
+              menuClicked={toggleMenu}
+              width={32}
+              height={12}
+              strokeWidth={2}
+              rotate={0}
+              color={isDark ? theme.colors.white : theme.colors.black}
+              borderRadius={0}
+              animationDuration={0.333}
+            />
+          </S.Toggle>
         </Flex>
       </S.Header>
 
