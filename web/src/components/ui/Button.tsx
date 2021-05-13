@@ -9,14 +9,15 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-const Button: React.FC<{ children: React.ReactNode; solid?: boolean }> = ({
-  children,
-  solid,
-}) => {
+const Button: React.FC<{
+  children: React.ReactNode
+  small?: boolean
+  solid?: boolean
+}> = ({ children, small, solid }) => {
   const [colorMode] = useColorMode()
   const isDark = colorMode === `dark`
   return (
-    <StyledButton isDark={isDark} solid={solid}>
+    <StyledButton isDark={isDark} small={small} solid={solid}>
       {children}
     </StyledButton>
   )
@@ -24,7 +25,11 @@ const Button: React.FC<{ children: React.ReactNode; solid?: boolean }> = ({
 
 export default Button
 
-const StyledButton = styled(Flex)<{ isDark: boolean; solid?: boolean }>`
+const StyledButton = styled(Flex)<{
+  isDark: boolean
+  small?: boolean
+  solid?: boolean
+}>`
   transition: ${theme.transition.all};
 
   display: flex;

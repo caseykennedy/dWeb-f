@@ -8,7 +8,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 // Theme + ui
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import { Box, Flex, Heading, Text, Grid } from 'theme-ui'
+import { Box, Flex, Heading, Text, Grid, useColorMode } from 'theme-ui'
 import Button from '../../components/ui/Button'
 
 // Components
@@ -18,6 +18,8 @@ import Icon from '../../components/Icons'
 import CubeSpark from '../../components/CubeSpark'
 import TriCube from '../../components/TriCube'
 import Floaters from '../../components/Floaters'
+
+import CubeStrokes from '../../../static/cube-strokes.svg'
 
 // ___________________________________________________________________
 
@@ -159,13 +161,13 @@ const Build = () => {
           </Text>
         </Box>
 
-        <Box sx={{ flex: [1, 0.5], width: `100%` }}/>
+        <Box sx={{ flex: [1, 0.5], width: `100%` }} />
       </Flex>
 
       <Box py={7}>
         <Flex className="decorator">
           <Box className="decorator__cube">
-            <CubeSpark />
+            <CubeStrokes />
           </Box>
         </Flex>
 
@@ -203,7 +205,7 @@ const Potential = () => {
           </Text>
         </Box>
 
-        <Box sx={{ flex: [1, 0.5], width: `100%` }}/>
+        <Box sx={{ flex: [1, 0.5], width: `100%` }} />
       </Flex>
     </Section>
   )
@@ -221,7 +223,7 @@ const Timeline = () => {
             p={4}
             sx={{
               border: theme.border,
-              borderColor: `primary`,
+              // borderColor: `primary`,
               fontWeight: 500,
             }}
             className="text--lg"
@@ -235,10 +237,14 @@ const Timeline = () => {
           </Box>
         ))}
       </Grid>
+
       <Box mt={5}>
-        <a href="#">Add to calendar</a>
-        <br />
-        <a href="#">Share</a>
+        <a href="#" className="btn">
+          <Icon name="plus" /> Add to calendar
+        </a>
+        <a href="#" className="btn">
+          <Icon name="external-link" /> Share
+        </a>
       </Box>
     </Section>
   )
@@ -253,7 +259,7 @@ const Trust = () => {
           flexDirection: [`column`, `row`],
         }}
       >
-        <Box sx={{ flex: [1, 0.5], width: `100%` }}/>
+        <Box sx={{ flex: [1, 0.5], width: `100%` }} />
 
         <Box mb={[5, 0]} sx={{ flex: [1, 0.5], width: `100%` }}>
           <Text as="p" color="primary" mb={4}>
@@ -279,8 +285,10 @@ const Trust = () => {
 }
 
 const AboutPage: React.FC = () => {
+  const [colorMode] = useColorMode()
+  const isDark = colorMode === 'dark'
   return (
-    <S.IncubatorPage>
+    <S.IncubatorPage isDark={isDark}>
       <PageTitle />
       <ApplyNow />
       <ProjectDweb />
@@ -314,11 +322,11 @@ const milestones = [
   },
   {
     date: `June 15th, 2021`,
-    milestone: `Announcement of Project Incubatees `,
+    milestone: `Incubatees Announced`,
   },
   {
     date: `July 1st, 2021`,
-    milestone: `Teams Introduction / Group Ideation / Vision`,
+    milestone: `Introductions + Group Ideation`,
   },
   {
     date: `August 1st, 2021`,
