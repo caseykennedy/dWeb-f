@@ -54,7 +54,9 @@ const ApplyNow = () => {
     <Section>
       <Flex className="decorator">
         <Box className="decorator__cube">
-          <CubeSpark />
+          <ParallaxWrapper speed={2.5}>
+            <CubeSpark />
+          </ParallaxWrapper>
         </Box>
       </Flex>
 
@@ -223,7 +225,7 @@ const Potential = () => {
         <Flex
           sx={{
             flex: [1, 0.25, 0.5],
-            justifyContent: `flex-end`,
+            justifyContent: [`center`, `flex-end`],
             width: `100%`,
           }}
           className="decorator__rubik"
@@ -289,12 +291,16 @@ const Trust = () => {
           flexDirection: [`column`, `row`],
         }}
       >
-        <Box
-          sx={{ flex: [1, 0.25, 0.5], justifyContent: `center`, width: `100%` }}
+        <Flex
+          sx={{
+            flex: [1, 0.25, 0.5],
+            justifyContent: [`center`, `flex-start`],
+            width: `100%`,
+          }}
           className="decorator__rubik"
         >
           <RubikGlobe />
-        </Box>
+        </Flex>
 
         <Box mb={[5, 0]} sx={{ flex: [1, 0.75, 0.5], width: `100%` }}>
           <Text as="p" color="primary" mb={4}>
