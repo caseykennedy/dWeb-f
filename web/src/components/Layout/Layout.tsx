@@ -36,6 +36,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   )
   return (
     <>
+      <FormHidden />
       <GlobalStyles />
       <S.Wrapper>
         <Header />
@@ -48,107 +49,213 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 export default Layout
 
-// const FormHidden = () => {
-//   return (
-//     <form
-//       name="Apply for a grant — dWeb"
-//       method="POST"
-//       data-netlify="true"
-//       data-netlify-honeypot="bot-field"
-//       style={{ display: 'none' }}
-//     >
-//       <input type="hidden" name="bot-field" />
-//       <input
-//         type="hidden"
-//         name="grant-application-form"
-//         value="Apply for a grant — dWeb"
-//       />
+const FormHidden = () => {
+  return (
+    <form
+      name="dWeb Incubator Application"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      style={{ display: `none` }}
+    >
+      <input type="hidden" name="bot-field" />
+      <input
+        type="hidden"
+        name="form-incubator-application"
+        value="dWeb Incubator Application"
+      />
 
-//       <fieldset>
-//         <div>
-//           <div>
-//             <label htmlFor="name">
-//               Name:{' '}
-//               <abbr title="required" aria-label="required">
-//                 *
-//               </abbr>
-//             </label>
+      <fieldset>
+        <div className="form-group">
+          <div className="form-group__div">
+            <label htmlFor="name">
+              Name:{' '}
+              <abbr title="required" aria-label="required">
+                *
+              </abbr>
+            </label>
 
-//             <input
-//               type="text"
-//               name="name"
-//               id="name"
-//               placeholder="Name"
-//               required={true}
-//             />
-//           </div>
-//           <div>
-//             <label htmlFor="email">
-//               Email:
-//               <abbr title="required" aria-label="required">
-//                 *
-//               </abbr>
-//             </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required={true}
+            />
+          </div>
+          <div className="form-group__div">
+            <label htmlFor="email">
+              Email:
+              <abbr title="required" aria-label="required">
+                *
+              </abbr>
+            </label>
 
-//             <input
-//               name="email"
-//               placeholder="Email"
-//               type="email"
-//               required={true}
-//             />
-//           </div>
-//         </div>
+            <input
+              name="email"
+              placeholder="Email"
+              type="email"
+              required={true}
+            />
+          </div>
+        </div>
 
-//         <div>
-//           <label htmlFor="comments">
-//             Project mission statement. Tell us how you're supporting Handshake
-//             with what you're building:{' '}
-//           </label>
-//           <textarea
-//             name="details"
-//             id="details"
-//             rows={6}
-//             placeholder="Tell us about your project"
-//           />
-//         </div>
+        <div className="form-group">
+          <div className="form-group__div">
+            <label htmlFor="projectName">
+              Project Name:{' '}
+              <abbr title="required" aria-label="required">
+                *
+              </abbr>
+            </label>
 
-//         <div>
-//           <div>
-//             <label htmlFor="project-repo">
-//               Project repo link:{' '}
-//               <abbr title="required" aria-label="required">
-//                 *
-//               </abbr>
-//             </label>
+            <input
+              type="text"
+              name="projectName"
+              id="projectName"
+              placeholder="Project Name"
+              required={true}
+            />
+          </div>
 
-//             <input
-//               type="text"
-//               name="project-repo"
-//               id="project-repo"
-//               placeholder="Project repo"
-//               required={true}
-//             />
-//           </div>
-//           <div>
-//             <label htmlFor="grant-amount">Grant amount:</label>
-//             <select id="grant-amount">
-//               <option value="" disabled={true} selected={true}>
-//                 Grant amount
-//               </option>
-//               <option value="500-2500">500 - 2,500</option>
-//               <option value="2500-10000">2,500 - 10,000</option>
-//               <option value="10000-25000">10,000 - 25,000</option>
-//               <option value="25000+">25,000+</option>
-//             </select>
-//           </div>
-//         </div>
+          <div className="form-group__div">
+            <label htmlFor="projectEmail">
+              Project Website:
+              <abbr title="required" aria-label="required">
+                *
+              </abbr>
+            </label>
 
-//         <div>
-//           <button type="submit" value="submit">
-//             Submit
-//           </button>
-//         </div>
-//       </fieldset>
-//     </form>
-//   )
-// }
+            <input
+              name="projectEmail"
+              placeholder="Project Website"
+              type="url"
+              required={true}
+            />
+          </div>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="pitch">
+            Project pitch. Tell us how you're supporting Handshake with what
+            you're building:
+          </label>
+          <textarea
+            name="pitch"
+            id="pitch"
+            rows={6}
+            placeholder="Tell us about your project (Pitch)"
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="teamSkills">
+            Describe your team's ability (roles, skills, education, etc.)
+          </label>
+          <textarea
+            name="teamSkills"
+            id="teamSkills"
+            rows={6}
+            placeholder="Describe your team's ability (roles, skills, education, etc.)"
+          />
+        </div>
+
+        <div className="form-group">
+          <div className="form-group__div">
+            <label htmlFor="currentStage">Current stage:</label>
+            <select id="currentStage">
+              <option value="" disabled={true} selected={true}>
+                Current stage
+              </option>
+              <option value="idea">idea</option>
+              <option value="prototype">prototype</option>
+              <option value="working product">working product</option>
+              <option value="generating revenue">generating revenue</option>
+            </select>
+          </div>
+
+          <div className="form-group__div">
+            <label htmlFor="teamMembers">Current stage:</label>
+            <select id="teamMembers">
+              <option value="" disabled={true} selected={true}>
+                How many team members
+              </option>
+              <option value="1">1</option>
+              <option value="2-6">2-6</option>
+              <option value="7+">7+</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="howIsHandshakeUsed">
+            How do you intend to use Handshake in your project?
+          </label>
+          <textarea
+            name="howIsHandshakeUsed"
+            id="howIsHandshakeUsed"
+            rows={6}
+            placeholder="How do you intend to use Handshake in your project?"
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="outsideInvestment">
+            Have you taken any outside investment and if so, where did it come
+            from?
+          </label>
+          <textarea
+            name="outsideInvestment"
+            id="outsideInvestment"
+            rows={6}
+            placeholder="Have you taken any outside investment and if so, where did it come from?"
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="availability">
+            What is the availability of the founders from July to September?
+            Please elaborate on any potential conflicts...
+          </label>
+          <textarea
+            name="availability"
+            id="availability"
+            rows={6}
+            placeholder="What is the availability of the founders from July to September? Please elaborate on any potential conflicts..."
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="whyChooseUs">
+            Why should we choose your company?
+          </label>
+          <textarea
+            name="whyChooseUs"
+            id="whyChooseUs"
+            rows={6}
+            placeholder="Why should we choose your company?"
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="links">
+            Please provide links to any other sample work from founders, videos,
+            etc. that may be useful.
+          </label>
+          <textarea
+            name="links"
+            id="links"
+            rows={6}
+            placeholder="Please provide links to any other sample work from founders, videos, etc. that may be useful."
+          />
+        </div>
+
+        <div>
+          <button type="submit" value="submit">
+            Submit
+          </button>
+        </div>
+      </fieldset>
+    </form>
+  )
+}
