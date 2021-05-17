@@ -107,7 +107,7 @@ const ContactForm: React.FC = () => {
             className="form-group__box"
           >
             <label htmlFor="grant-amount">Grant amount:</label>
-            <Select id="grant-amount">
+            <Select id="grant-amount" name="grant-amount">
               <option value="" disabled={true} selected={true}>
                 Grant amount (in HNS)
               </option>

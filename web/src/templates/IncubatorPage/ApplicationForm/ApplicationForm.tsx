@@ -191,7 +191,7 @@ const ApplicationForm: React.FC<Props> = ({ handleExit, isOpen }) => {
               className="form-group__box"
             >
               <label htmlFor="currentStage">Current stage:</label>
-              <Select id="currentStage">
+              <Select id="currentStage" name="currentStage">
                 <option value="" disabled={true} selected={true}>
                   Current stage
                 </option>
@@ -207,7 +207,7 @@ const ApplicationForm: React.FC<Props> = ({ handleExit, isOpen }) => {
               className="form-group__box"
             >
               <label htmlFor="teamMembers">Current stage:</label>
-              <Select id="teamMembers">
+              <Select id="teamMembers" name="teamMembers">
                 <option value="" disabled={true} selected={true}>
                   How many team members
                 </option>
