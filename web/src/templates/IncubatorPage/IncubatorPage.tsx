@@ -2,8 +2,7 @@
 
 // ___________________________________________________________________
 
-import React from 'react'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import React, { useState } from 'react'
 
 // Theme + ui
 import theme from '../../gatsby-plugin-theme-ui'
@@ -21,6 +20,8 @@ import Floaters from '../../components/Floaters'
 import RubikGlobe from '../../components/RubikGlobe'
 import RubikBlock from '../../components/RubikBlock'
 import ParallaxWrapper from '../../components/ParallaxWrapper'
+import Modal from '../../components/Modal'
+import ApplicationForm from './ApplicationForm'
 
 import CubeStrokes from '../../../static/cube-strokes.svg'
 import Orb from '../../../static/orb.svg'
@@ -49,12 +50,12 @@ const PageTitle = () => {
   )
 }
 
-const ApplyNow = () => {
+const ApplyNow: React.FC<{ toggleMenu: () => any }> = ({ toggleMenu }) => {
   return (
     <Section>
       <Flex className="decorator">
         <Box className="decorator__cube">
-          <ParallaxWrapper speed={2.5}>
+          <ParallaxWrapper speed={1.5}>
             <CubeSpark />
           </ParallaxWrapper>
         </Box>
@@ -91,10 +92,12 @@ const ApplyNow = () => {
           </Box>
 
           <Box sx={{ flex: [1, 0.5], width: `100%` }}>
-            <Button solid={true}>
-              Apply now
-              <Icon name="arrow" />
-            </Button>
+            <Box onClick={toggleMenu}>
+              <Button solid={true}>
+                Apply now
+                <Icon name="arrow" />
+              </Button>
+            </Box>
           </Box>
         </Flex>
       </Box>
@@ -117,7 +120,14 @@ const ProjectDweb = () => {
             </Text>
           </Flex>
 
-          <Heading as="h2" sx={{ fontSize: [`3rem`, `6rem`], fontWeight: 800 }}>
+          <Heading
+            as="h2"
+            sx={{
+              fontSize: [`3rem`, `6rem`],
+              fontWeight: 800,
+              lineHeight: 1.25,
+            }}
+          >
             Join in. The third internet era is here.
           </Heading>
         </Box>
@@ -264,8 +274,8 @@ const Timeline = () => {
         ))}
       </Grid>
 
-      <Flex mt={4} sx={{ flex: [1, 0.5], width: `100%` }}>
-        <Grid columns={[1, 2]} gap={4}>
+      {/* <Flex mt={4} sx={{ width: `100%` }}>
+        <Grid columns={[1, 2]} gap={4} mr={[0, 4]} sx={{ flex: [1, 0.5] }}>
           <Flex bg="muted">
             <a href="#" className="btn">
               <Icon name="plus" /> Add to calendar
@@ -277,7 +287,7 @@ const Timeline = () => {
             </a>
           </Flex>
         </Grid>
-      </Flex>
+      </Flex> */}
     </Section>
   )
 }
@@ -292,6 +302,7 @@ const Trust = () => {
         }}
       >
         <Flex
+          mb={[6, 0]}
           sx={{
             flex: [1, 0.25, 0.5],
             justifyContent: [`center`, `flex-start`],
@@ -307,7 +318,7 @@ const Trust = () => {
             In web3 we trust
           </Text>
           <Text as="p" mb={3} sx={{ fontWeight: 500 }} className="text--lg">
-            <Box as="span" className="text--underline">
+            <Box as="span" sx={{ fontWeight: 800 }}>
               Program begins July 1st
             </Box>{' '}
             with teams intro to Handshake alliances, HandyCon influencers, dWeb
@@ -315,7 +326,7 @@ const Trust = () => {
             incubator teams.
           </Text>
           <Text as="p" sx={{ fontWeight: 500 }} className="text--lg">
-            <Box as="span" className="text--underline">
+            <Box as="span" sx={{ fontWeight: 800 }}>
               On August 1st, "Demo Day",
             </Box>{' '}
             four full ride teams will present online to the public for 30
@@ -329,31 +340,41 @@ const Trust = () => {
 }
 
 const AboutPage: React.FC = () => {
+  const [isNavOpen, setNavOpen] = useState(false)
+  const toggleMenu = () => setNavOpen(!isNavOpen)
   const [colorMode] = useColorMode()
   const isDark = colorMode === 'dark'
   return (
-    <S.IncubatorPage isDark={isDark}>
-      <PageTitle />
-      <ApplyNow />
-      <ProjectDweb />
-      <Build />
-      <Potential />
-      <Timeline />
-      <Trust />
+    <>
+      <S.IncubatorPage isDark={isDark}>
+        <PageTitle />
+        <ApplyNow toggleMenu={toggleMenu} />
+        <ProjectDweb />
+        <Build />
+        <Potential />
+        <Timeline />
+        <Trust />
 
-      <Section>
-        <Button solid={true}>
-          Apply now
-          <Icon name="arrow" />
-        </Button>
+        <Section>
+          <Box onClick={toggleMenu}>
+            <Button solid={true}>
+              Apply now
+              <Icon name="arrow" />
+            </Button>
+          </Box>
 
-        <Flex mt={theme.gutter.axis} sx={{ justifyContent: `center` }}>
-          <a href="mailto:info@decentralizedinter.net?subject=Contact from dWeb incubator">
-            Questions?
-          </a>
-        </Flex>
-      </Section>
-    </S.IncubatorPage>
+          <Flex mt={theme.gutter.axis} sx={{ justifyContent: `center` }}>
+            <a href="mailto:info@decentralizedinter.net?subject=Contact from dWeb incubator">
+              Questions?
+            </a>
+          </Flex>
+        </Section>
+      </S.IncubatorPage>
+
+      <Modal open={isNavOpen} close={toggleMenu}>
+        <ApplicationForm isOpen={isNavOpen} handleExit={toggleMenu} />
+      </Modal>
+    </>
   )
 }
 
@@ -361,7 +382,7 @@ export default AboutPage
 
 const milestones = [
   {
-    date: `June 1st, 2021`,
+    date: `June 10th, 2021`,
     milestone: `Application Deadline`,
   },
   {

@@ -17,7 +17,7 @@ export const Header = styled(Box)`
   max-height: 0;
   width: 100%;
   position: relative;
-  z-index: 99999;
+  z-index: 999;
 
   a {
     color: ${theme.colors.black};

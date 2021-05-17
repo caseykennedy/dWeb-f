@@ -13,17 +13,17 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-type NavLinkProps = {
+type LinkProps = {
   item: any
   handleExitOnClick: () => any
 }
 
-type NavLinksProps = {
+type NavProps = {
   handleExitOnClick: () => any
   isOpen: boolean
 }
 
-const NavLink = ({ item, handleExitOnClick }: NavLinkProps) => {
+const NavLink: React.FC<LinkProps> = ({ item, handleExitOnClick }) => {
   const [colorMode, setColorMode] = useColorMode()
   const isDark = colorMode === 'dark'
   return (
@@ -38,7 +38,7 @@ const NavLink = ({ item, handleExitOnClick }: NavLinkProps) => {
   )
 }
 
-const MobileNav: React.FC<NavLinksProps> = ({ handleExitOnClick, isOpen }) => {
+const MobileNav: React.FC<NavProps> = ({ handleExitOnClick, isOpen }) => {
   return (
     <motion.div initial="closed" animate={isOpen ? 'open' : 'closed'}>
       <S.MobileNav variants={listVariants}>
@@ -65,7 +65,7 @@ const data = [
   },
   {
     name: 'Incubator',
-    link: '/incubator'
+    link: '/incubator',
   },
   {
     name: 'About',

@@ -22,7 +22,7 @@ const BlogPage: React.FC = () => {
   const posts = usePost()
   return (
     <S.BlogPage>
-      <Section pt={7}>
+      <Section>
         <Flex>
           <Box sx={{ flex: [1, 0.5], width: '100%' }}>
             <Heading as="h1" className="text--lg">

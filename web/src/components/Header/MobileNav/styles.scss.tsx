@@ -32,7 +32,7 @@ export const NavLink = styled(motion.li)<{ isDark?: boolean }>`
   a {
     color: ${(p) =>
         p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
-    font-size: ${theme.fontSizes[4]};
+    font-size: ${theme.fontSizes[3]};
     text-decoration: none;
     width: 100%;
 

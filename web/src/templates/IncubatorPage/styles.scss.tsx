@@ -25,7 +25,7 @@ export const IncubatorPage = styled(Box)<{ isDark?: boolean }>`
     /* align-items: center; */
     border: ${theme.border};
     font-size: calc(${theme.fontSizes[1]});
-    padding: ${theme.space[3]} ${theme.space[5]};
+    padding: ${theme.space[3]} ${theme.space[4]};
     width: 100%;
 
     @media ${theme.mq.tablet} {
@@ -81,7 +81,8 @@ export const IncubatorPage = styled(Box)<{ isDark?: boolean }>`
 
     &__rubik {
       svg {
-        max-width: 400px;
+        max-height: 400px;
+        height: 100%;
       }
     }
 

@@ -33,8 +33,8 @@ const RootVariables = css`
     --text-scale-ratio: 1.250;
 
     /* line-height */
-    --heading-line-height: 1.4;
-    --body-line-height: 1.75;
+    --heading-line-height: 1.65;
+    --body-line-height: 1.6;
 
     /* letter-spacing */
     --heading-letter-spacing: 0.5px;
@@ -42,7 +42,7 @@ const RootVariables = css`
 
     @media ${theme.mq.tablet} {
       --text-base-size: 1.25em;
-      --heading-line-height: 1.4;
+      --heading-line-height: 1.5;
       --body-line-height: 1.5;
     }
 

@@ -47,7 +47,7 @@ const modalStylesLight = {
     background: theme.colors.muted
   },
   modal: {
-    background: 'transparent',
+    background: theme.colors.muted,
     boxShadow: 'none',
     margin: '0',
     padding: `0`,
@@ -62,7 +62,7 @@ const modalStylesDark = {
     background: theme.colors.modes.dark.muted
   },
   modal: {
-    background: 'transparent',
+    background: theme.colors.modes.dark.muted,
     boxShadow: 'none',
     margin: '0',
     padding: `0`,

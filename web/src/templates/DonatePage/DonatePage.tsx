@@ -19,7 +19,7 @@ const DonatePage: React.FC = () => {
   // const data = useHomePage()
   return (
     <S.DonatePage>
-      <Section pt={7}>
+      <Section>
         <Flex>
           <Box sx={{ flex: [1, 0.5], width: '100%' }}>
             <Heading as="h1" className="text--lg">
