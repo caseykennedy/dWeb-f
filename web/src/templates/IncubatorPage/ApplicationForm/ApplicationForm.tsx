@@ -74,7 +74,7 @@ const ApplicationForm: React.FC<Props> = ({ handleExit, isOpen }) => {
         <input type="hidden" name="bot-field" />
         <input
           type="hidden"
-          name="form-incubator-application"
+          name="form-name"
           value="dWeb Incubator Application"
         />
 

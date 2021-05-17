@@ -36,13 +36,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   )
   return (
     <>
-      <FormHidden />
       <GlobalStyles />
       <S.Wrapper>
         <Header />
         <S.Main ref={mainRef}>{children}</S.Main>
         <Footer />
       </S.Wrapper>
+      <FormHidden />
     </>
   )
 }
