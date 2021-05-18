@@ -8,8 +8,29 @@ type ThemeShape = {
   mq: {
     [key: string]: string
   }
+  initialColorModeName?: string
+  useColorSchemeMediaQuery?: boolean
+  useBodyStyles?: boolean
+  useRootStyles?: boolean
+  useLocalStorage?: boolean
   colors: {
-    [key: string]: string
+    text: string
+    background: string
+
+    primary: string
+    secondary: string
+    tertiary: string
+    accent: string
+    highlight: string
+    muted: string
+    black: string
+    white: string
+    gray: string
+    modes: {
+      dark: {
+        [key: string]: string
+      }
+    }
   }
   space: string[]
   gutter: {
@@ -61,7 +82,7 @@ type ThemeShape = {
 // Begin theme
 // ___________________________________________________________________
 
-const breakpoints: string[] = ['800px', '1024px']
+const breakpoints: string[] = ['768px', '1024px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -75,47 +96,65 @@ const theme: ThemeShape = {
   breakpoints,
   mq: {
     tablet: `(min-width: ${breakpoints[0]})`,
-    desktop: `(min-width: ${breakpoints[1]})`
+    desktop: `(min-width: ${breakpoints[1]})`,
   },
 
   // Color palette
   // ___________________________________________________________________
 
+  initialColorModeName: 'default',
+  useColorSchemeMediaQuery: false,
+  // useBodyStyles: false,
+  // useRootStyles: true,
+  // useLocalStorage: true,
   colors: {
-    text: '#000000',
+    text: '#242424',
     background: '#ffffff',
 
     primary: '#5700ff',
     secondary: '#a2f6ff',
-    tertiary: '#f2f2f2',
+    tertiary: '#2d00ff',
+    accent: '#b5a0ff',
+    highlight: '#fdffd4',
+    muted: '#f2f2f2',
 
     black: '#000000',
     white: '#ffffff',
-    yellow: '#fdffd4',
+    gray: '#8a8892',
 
-    lightgray: '#ededf1',
-    gray: '#d2d2d9',
-    darkgray: '#b2b2bc',
+    modes: {
+      dark: {
+        text: '#f2f2f2',
+        background: '#242424',
+
+        primary: '#b5a0ff',
+        highlight: '#403d4e',
+        muted: '#202020',
+
+        black: '#ffffff',
+        white: '#000000',
+      },
+    },
   },
 
   // Space
   // ___________________________________________________________________
 
   space: [
-    '0',                     // 0
-    'var(--space-xxs)',      // 1
-    'var(--space-xs)',       // 2
-    'var(--space-sm)',       // 3
-    'var(--space-md)',       // 4
-    'var(--space-lg)',       // 5
-    'var(--space-xl)',       // 6
-    'var(--space-xxl)',      // 7
-    '7rem',                  // 8
-    '10rem',                 // 9
-    '12rem',                 // 10
-    '14rem',                 // 11
-    '16rem',                 // 12
-    '18rem'                  // 13
+    '0', // 0
+    'var(--space-xxs)', // 1
+    'var(--space-xs)', // 2
+    'var(--space-sm)', // 3
+    'var(--space-md)', // 4
+    'var(--space-lg)', // 5
+    'var(--space-xl)', // 6
+    'var(--space-xxl)', // 7
+    '7rem', // 8
+    '10rem', // 9
+    '12rem', // 10
+    '14rem', // 11
+    '16rem', // 12
+    '18rem', // 13
   ],
 
   // Left/Right gutter
@@ -124,19 +163,17 @@ const theme: ThemeShape = {
     tablet: 5,
     desktop: 5,
     vertical: [4, 5],
-    axis: [4, 5]
+    axis: [4, 5],
   },
-
 
   // Typography
   // ___________________________________________________________________
 
   fonts: {
-    body: `"Aeonik", Consolas, Liberation Mono, Menlo, Courier, monospace`,
-    heading: `"Aeonik", Consolas, Liberation Mono, Menlo, Courier, monospace`,
-    sans: `"Aeonik", Consolas, Liberation Mono, Menlo, Courier, monospace`,
-    display: `"SuisseWorks", Georgia, Times`,
-    mono: `"SuisseMono", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    body: `"ManRope", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    heading: `"ManRope", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    sans: `"ManRope", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    mono: `"DMMono", Consolas, Liberation Mono, Menlo, Courier, monospace`,
   },
 
   fontSizes: [
@@ -147,7 +184,7 @@ const theme: ThemeShape = {
     'var(--text-lg)', // 4
     'var(--text-xl)', // 5
     'var(--text-xxl)', // 6
-    'var(--text-xxxl)' // 7
+    'var(--text-xxxl)', // 7
   ],
 
   Heading: {},
@@ -157,15 +194,15 @@ const theme: ThemeShape = {
     regular: 400,
     medium: 500,
     bold: 600,
-    black: 700
+    black: 700,
   },
 
   strokeWidth: '2px',
 
   maxWidth: '1440px',
-  siteWidth: '100%',
+  siteWidth: '1680px',
   logoWidth: '',
-  headerHeight: '74px',
+  headerHeight: '150px',
   tickerHeight: '56px',
   iconWidth: '18px',
 
@@ -173,22 +210,22 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   grid: {
-    gap: '0.5rem'
+    gap: '0.5rem',
   },
 
   transition: {
-    all: 'all 0.111s ease-in-out 0s',
-    global: '0.111s ease-in-out 0s'
+    all: 'all 0.11s ease-in-out 0s',
+    global: '0.11s ease-in-out 0s',
   },
 
   transform: {
     matrix: {
       from: 'matrix(1, 0, 0, 1, 24, 0)',
-      to: 'matrix(1, 0, 0, 1, 0, 0)'
-    }
+      to: 'matrix(1, 0, 0, 1, 0, 0)',
+    },
   },
 
-  border: '1px solid #d2d2d9',
+  border: '1px solid #8a8892',
   borderRadius: '4px',
   shadow: '2rem 1.5rem 1rem #9D9FA2',
 
@@ -224,9 +261,9 @@ const theme: ThemeShape = {
       md: 'var(--space-md)',
       lg: 'var(--space-lg)',
       xl: 'var(--space-xl)',
-      xxl: 'var(--space-xxl)'
-    }
-  }
+      xxl: 'var(--space-xxl)',
+    },
+  },
 }
 
 export default theme

@@ -4,7 +4,7 @@
 
 import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
-import { Flex } from '../ui'
+import { Flex } from 'theme-ui'
 
 // ___________________________________________________________________
 
@@ -40,15 +40,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   }
 
   .figure {
-    transition: ${theme.transition.all};
-
     width: 100%;
-
-    img {
-      position: relative;
-      transform: scale(1);
-      transition: ${theme.transition.all};
-    }
   }
 
   &:hover {
@@ -64,6 +56,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
   }
 
   .title {
+
     line-height: ${theme.root.font.headingLineHeight};
 
     overflow: hidden;

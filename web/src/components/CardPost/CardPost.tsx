@@ -8,7 +8,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
-import { Box, Flex, Heading, Text } from '../ui'
+import { Box, Flex, Heading, Text } from 'theme-ui'
 
 // ___________________________________________________________________
 
@@ -33,15 +33,24 @@ const CardPost: React.FC<Props> = ({
   return (
     <Link to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}>
       <S.CardPost inline={inline}>
-        <Flex flex={[0.6, 0.8]} width={1} className="content">
-          <Heading className={`title`}>
-            {post.title && post.title}
-          </Heading>
+        <Flex
+          sx={{
+            flex: [0.6, 0.8],
+            width: `100%`,
+          }}
+          className="content"
+        >
+          <Text as="p" className={`title`}>{post.title && post.title}</Text>
 
-          <Text fontSize={[1, 0]}>{post.publishedAt}</Text>
+          <Text sx={{ fontSize: [1, 0] }}>{post.publishedAt}</Text>
         </Flex>
 
-        <Box width={[0.4, 0.2]} p={2}>
+        <Box
+          p={2}
+          sx={{
+            flex: [0.4, 0.2],
+          }}
+        >
           <Box className="figure">
             {post.figure.asset && (
               <GatsbyImage
@@ -64,6 +73,6 @@ export default CardPost
 
 CardPost.defaultProps = {
   aspectRatio: 1 / 1,
-  bg: theme.colors.gray,
+  bg: theme.colors.muted,
   small: false,
 }

@@ -3,35 +3,37 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { Link } from 'gatsby'
-
-import { Box, Flex, Text } from '../../ui'
-
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-export const Nav = styled.nav`
-  display: flex;
+export const Nav = styled.nav<{ isDark: boolean }>`
+  display: none;
   justify-content: space-between;
   align-items: center;
 
   width: 100%;
 
-  a {
-    color: ${theme.colors.black};
-    font-size: ${theme.fontSizes[1]};
-    text-decoration: none;
+  @media ${theme.mq.tablet} {
+    display: flex;
+  }
 
-    margin-left: ${theme.space[3]};
+  a {
+    color: ${(p) =>
+      p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
+    font-size: ${theme.fontSizes[1]};
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
-      margin-left: ${theme.space[4]};
+      margin-left: ${theme.space[5]};
     }
 
     &.active,
     &:hover {
-      color: ${theme.colors.primary};;
+      color: ${(p) =>
+        p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
     }
   }
 `

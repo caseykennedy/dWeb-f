@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { Box, Flex, Heading } from '../ui'
+import { Flex } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 
 import Section from '../Section'
@@ -16,7 +16,6 @@ export const Footer = styled(Flex)`
   flex-wrap: wrap;
   justify-content: space-between;
 
-  background: ${theme.colors.background};
   border-top: ${theme.border};
   position: relative;
 
@@ -27,5 +26,7 @@ export const Footer = styled(Flex)`
     margin: 0 auto;
     max-width: ${theme.maxWidth};
     width: 100%;
+
+    font-size: ${theme.fontSizes[1]};
   }
 `

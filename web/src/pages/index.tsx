@@ -5,8 +5,6 @@
 // Libraries
 import React from 'react'
 
-// Elements
-
 // Components
 import SEO from '../components/SEO'
 import HomePage from '../templates/HomePage'

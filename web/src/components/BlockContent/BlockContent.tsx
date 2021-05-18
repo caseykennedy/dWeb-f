@@ -1,6 +1,6 @@
 import BaseBlockContent from '@sanity/block-content-to-react'
 import React from 'react'
-import { Heading, Text } from '../ui'
+import { Heading, Text } from 'theme-ui'
 
 import Figure from './Figure'
 
@@ -17,21 +17,21 @@ const serializers = {
 
         case 'h2':
           return (
-            <Heading as="h2" mt={4}>
+            <Heading as="h2" mt={4} mb={3}>
               {props.children}
             </Heading>
           )
 
         case 'h3':
           return (
-            <Heading as="h3" mt={4}>
+            <Heading as="h3" mt={4} mb={3}>
               {props.children}
             </Heading>
           )
 
         case 'h4':
           return (
-            <Heading as="h4" mt={4}>
+            <Heading as="h4" mt={4} mb={3}>
               {props.children}
             </Heading>
           )
@@ -53,7 +53,7 @@ const serializers = {
           return <li>{props.children}</li>
 
         default:
-          return <Text as="p">{props.children}</Text>
+          return <Text as="p" mb={4}>{props.children}</Text>
       }
     },
     figure(props: any) {

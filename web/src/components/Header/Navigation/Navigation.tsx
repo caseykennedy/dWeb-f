@@ -4,18 +4,17 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
-
-import Icon from '../../Icons'
-import { Box } from '../../ui'
-
+import { useColorMode } from 'theme-ui'
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
 const Navigation = () => {
+  const [colorMode, setColorMode] = useColorMode()
+  const isDark = colorMode === 'dark'
   return (
-    <S.Nav>
+    <S.Nav isDark={isDark}>
       {data.map((item, idx) => (
         <Link
           to={item.link}
@@ -35,6 +34,10 @@ export default Navigation
 // ___________________________________________________________________
 
 const data = [
+  {
+    name: 'incubator',
+    link: '/incubator'
+  },
   {
     name: 'donate',
     link: '/donate'

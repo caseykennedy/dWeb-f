@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import { createGlobalStyle } from 'styled-components'
-import { darken } from 'polished'
 
 import theme from '../gatsby-plugin-theme-ui'
 
@@ -39,9 +38,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   html,
-  body {  
-    background: ${theme.colors.background};  
-    
+  body {
     border: 0;
     margin: 0;
     padding: 0;
@@ -55,55 +52,6 @@ const GlobalStyles = createGlobalStyle`
   .img {
     width: 100%;
     height: 100%;
-  }
-
-  .headroom[style] {
-    z-index: 999999 !important;
-  }
-
-  .swiper-container {
-    overflow: visible;
-
-    .swiper-wrapper {
-      .swiper-slide {
-        transition: ${theme.transition.all};
-      }
-    }
-
-    .swiper-pagination {
-      bottom: -${theme.space[7]};
-      left: 0;
-      text-align: left;
-
-      @media ${theme.mq.tablet} {
-        display: inherit;
-      }
-
-      &.swiper-pagination-bullets {
-        .swiper-pagination-bullet {
-          background: transparent;
-          cursor: pointer;
-          opacity: 0.75;
-
-          color: ${theme.colors.primary};
-          font-size: ${theme.fontSizes[2]};
-
-          margin-right: ${theme.space[3]};
-          padding: 0;
-          height: auto;
-
-          transition: opacity 0.111 ease-in-out 0s;
-
-          &:hover {
-            opacity: 1;
-          }
-
-          &-active {
-            color: ${theme.colors.white};
-          }
-        }
-      }
-    }
   }
 `
 

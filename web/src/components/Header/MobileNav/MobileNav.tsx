@@ -8,33 +8,37 @@ import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
 
 import theme from '../../../gatsby-plugin-theme-ui'
+import { useColorMode } from 'theme-ui'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-type NavLinkProps = {
+type LinkProps = {
   item: any
   handleExitOnClick: () => any
 }
 
-type NavLinksProps = {
+type NavProps = {
   handleExitOnClick: () => any
   isOpen: boolean
 }
 
-const NavLink = ({ item, handleExitOnClick }: NavLinkProps) => {
+const NavLink: React.FC<LinkProps> = ({ item, handleExitOnClick }) => {
+  const [colorMode, setColorMode] = useColorMode()
+  const isDark = colorMode === 'dark'
   return (
     <S.NavLink
       variants={itemVariants}
       whileTap={{ scale: 0.95 }}
       onClick={handleExitOnClick}
+      isDark={isDark}
     >
       <Link to={item.link}>{item.name}</Link>
     </S.NavLink>
   )
 }
 
-const MobileNav: React.FC<NavLinksProps> = ({ handleExitOnClick, isOpen }) => {
+const MobileNav: React.FC<NavProps> = ({ handleExitOnClick, isOpen }) => {
   return (
     <motion.div initial="closed" animate={isOpen ? 'open' : 'closed'}>
       <S.MobileNav variants={listVariants}>
@@ -56,23 +60,27 @@ export default MobileNav
 
 const data = [
   {
-    name: 'home',
+    name: 'Home',
     link: '/',
   },
   {
-    name: 'about',
+    name: 'Incubator',
+    link: '/incubator',
+  },
+  {
+    name: 'About',
     link: '/about',
   },
   {
-    name: 'donate',
+    name: 'Donate',
     link: '/donate',
   },
   {
-    name: 'grants',
+    name: 'Grants',
     link: '/grants',
   },
   {
-    name: 'blog',
+    name: 'Blog',
     link: '/blog',
   },
 ]

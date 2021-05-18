@@ -10,7 +10,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 // UI
-import { Box, Flex, Heading, Text } from '../../components/ui'
+import { Box, Flex, Heading, Text } from 'theme-ui'
 
 // Components
 import Section from '../../components/Section'
@@ -24,20 +24,22 @@ const AboutPage: React.FC = () => {
   const people = usePerson()
   return (
     <S.AboutPage>
-      <Section pt={7}>
-        <Box width={[1, 2 / 3]}>
-          <Text as="p" mb={0}>
-            Operating out of Singapore, we are supporters of the early
-            decentralized internet, aiming to enable integrations, secondary and
-            tertiary layer infrastructure on top of Handshake, and the new
-            generation of internet pioneers to join us in charting the frontier
-            of the third era of the internet.
-          </Text>
-        </Box>
+      <Section>
+        <Flex>
+          <Box sx={{ flex: [1, 0.75], width: '100%' }}>
+            <Heading as="h1" className="text--lg">
+              Operating out of Singapore, we are supporters of the early
+              decentralized internet, aiming to enable integrations, secondary
+              and tertiary layer infrastructure on top of Handshake, and the new
+              generation of internet pioneers to join us in charting the
+              frontier of the third era of the internet.
+            </Heading>
+          </Box>
+        </Flex>
       </Section>
 
       <Section>
-        <Flex flexDirection="column">
+        <Flex sx={{ flexDirection: `column`}}>
           {people.map(({ node: person }, idx) => (
             <Flex className="biobox" key={idx}>
               <Box className="avatar">

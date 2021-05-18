@@ -3,22 +3,25 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-
-import { Box, Flex } from '../ui'
 import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-export const Wrapper = styled(Flex)`
+export const Wrapper = styled.div`
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;
+  min-height: 100vh;
 `
 
 export const Main = styled.main`
-  max-height: 100%;
+  margin: 0 auto;
   position: relative;
-  width: ${theme.siteWidth};
+  padding-top: ${theme.headerHeight};
+  max-height: 100%;
+  max-width: ${theme.siteWidth};
+  width: 100%;
 `
 
 // ___________________________________________________________________

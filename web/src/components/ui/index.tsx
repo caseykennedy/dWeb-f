@@ -102,6 +102,7 @@ export const Flex = styled.div<ElementProps>`
   ${space}
   ${width}
   ${color}
+  ${flex}
   ${flexWrap}
   ${flexDirection}
   ${alignItems}

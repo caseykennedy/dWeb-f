@@ -48,11 +48,9 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
 
             <Flex flexDirection={[`column`, `row`]}>
               <Box flex={[1, 2]}>
-                <Text fontFamily="sans">
-                  {post._rawExcerpt && (
-                    <BlockContent blocks={post._rawExcerpt || []} />
-                  )}
-                </Text>
+                {post._rawExcerpt && (
+                  <BlockContent blocks={post._rawExcerpt || []} />
+                )}
               </Box>
             </Flex>
           </Box>

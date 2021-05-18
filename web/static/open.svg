@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 147.04 139.26">
+  <defs>
+    <style>
+      .open-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: square;
+        stroke-linejoin: round;
+        stroke-width: 0.75px;
+      }
+
+      .open-2 {
+        fill: #b5a0ff;
+      }
+
+      .open-3 {
+        fill: url(#Indigo_222);
+      }
+    </style>
+    <linearGradient id="Indigo_222" x1="69.46" y1="68.15" x2="134.7" y2="68.15" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9cf5ff" />
+      <stop offset="0.5" stop-color="#663bff" />
+      <stop offset="1" stop-color="#cefaff" />
+    </linearGradient>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <polyline class="open-1" points="108.92 117.01 146.4 117.01 146.4 10.14 39.53 10.14 39.53 31.93" />
+      <line class="open-1" x1="109.53" y1="137.55" x2="144.38" y2="118.13" />
+      <line class="open-1" x1="0.51" y1="31.88" x2="39.67" y2="10.06" />
+      <line class="open-1" x1="0.51" y1="138.75" x2="39.67" y2="116.93" />
+      <polyline class="open-1" points="39.53 31.93 39.53 117.01 108.92 117.01" />
+      <circle class="open-2" cx="71.75" cy="73.48" r="50.22" />
+      <path class="open-3" d="M69.46,136.3,121.73,0h13L82.06,136.3Z" />
+      <line class="open-1" x1="107.38" y1="31.88" x2="146.53" y2="10.06" />
+      <path d="M106.76,32.56V137.93H1.4V32.56H106.76m.75-.75H.65V138.68H107.51V31.81Z" />
+    </g>
+  </g>
+</svg>

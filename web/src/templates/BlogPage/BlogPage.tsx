@@ -7,10 +7,7 @@ import React from 'react'
 // Theme + Styles
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import { Grid } from 'theme-ui'
-
-// UI
-import { Box, Flex, Heading, Text } from '../../components/ui'
+import { Box, Flex, Heading, Text, Grid } from 'theme-ui'
 
 // Components
 import Section from '../../components/Section'
@@ -25,14 +22,20 @@ const BlogPage: React.FC = () => {
   const posts = usePost()
   return (
     <S.BlogPage>
-      <Section pt={7}>
-        <Box width={[1, 1 / 2]}>
-          <Text as="p">Venture into a truly unstoppable web.</Text>
-        </Box>
+      <Section>
+        <Flex>
+          <Box sx={{ flex: [1, 0.5], width: '100%' }}>
+            <Heading as="h1" className="text--lg">
+              Venture into a truly
+              <br />
+              unstoppable web.
+            </Heading>
+          </Box>
+        </Flex>
       </Section>
 
       <Section>
-        <Flex flexDirection="column" width={1}>
+        <Flex sx={{ flexDirection: `column`, width: `100%` }}>
           <Grid columns={[1]} gap={theme.gutter.axis}>
             {posts.map(({ node: post }, idx) => (
               <CardPost

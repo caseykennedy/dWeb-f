@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { Box } from '../../components/ui'
+import { Box } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
@@ -14,25 +14,24 @@ export const HomePage = styled(Box)`
   @media ${theme.mq.tablet} {
   }
 
-  .wayfinder {
+  .support {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    position: relative;
-    z-index: 99;
 
     @media ${theme.mq.tablet} {
       flex-direction: row;
     }
 
-    &__btn {
+    .btn {
       flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
 
       border: ${theme.border};
+      font-family: ${theme.fonts.mono};
       padding: ${theme.space[4]};
       width: 100%;
 
@@ -41,7 +40,6 @@ export const HomePage = styled(Box)`
 
         @media ${theme.mq.tablet} {
           margin-top: 0;
-          margin-left: ${theme.space[5]};
         }
       }
 
@@ -119,6 +117,80 @@ export const HomePage = styled(Box)`
       z-index: 0;
       mix-blend-mode: hard-light;
       opacity: 0.6;
+    }
+  }
+`
+
+export const Introduction = styled(Box)`
+  .heading {
+    .hns {
+      font-weight: 500;
+
+      svg {
+        width: 20px;
+
+        @media ${theme.mq.tablet} {
+          width: 28px;
+        }
+      }
+    }
+  }
+`
+
+export const AboutUs = styled(Box)`
+  .decorator__a {
+    position: absolute;
+    top: calc(${theme.space[4]} * -2);
+    right: 0;
+
+    @media ${theme.mq.tablet} {
+      top: calc(${theme.space[4]} * -4);
+      right: calc(${theme.space[4]} * 2);
+    }
+
+    @media ${theme.mq.desktop} {
+      top: calc(${theme.space[4]} * -4);
+      right: calc(${theme.space[4]} * 4);
+    }
+
+    svg {
+      width: 75px;
+
+      @media ${theme.mq.tablet} {
+        width: 150px;
+      }
+
+      @media ${theme.mq.desktop} {
+        width: 225px;
+      }
+    }
+  }
+
+  .decorator__b {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: calc(${theme.space[4]} * 1);
+    left: 47%;
+
+    @media ${theme.mq.tablet} {
+      bottom: calc(${theme.space[4]} * 1);
+    }
+
+    @media ${theme.mq.desktop} {
+      bottom: calc(${theme.space[4]} * 1);
+    }
+
+    svg {
+      width: 50px;
+
+      @media ${theme.mq.tablet} {
+        width: 85px;
+      }
+
+      @media ${theme.mq.desktop} {
+        width: 140px;
+      }
     }
   }
 `
