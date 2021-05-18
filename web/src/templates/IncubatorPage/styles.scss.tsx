@@ -4,19 +4,29 @@
 
 import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
-import { Box } from 'theme-ui'
+import { Box, Flex } from 'theme-ui'
 
 // ___________________________________________________________________
 
 export const IncubatorPage = styled(Box)<{ isDark?: boolean }>`
   width: 100%;
 
-  a {
-    font-weight: 600;
-    transform: text-decoration ${theme.transition.global};
+  .built-on {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
 
-    &:hover {
-      text-decoration: underline;
+    span {
+      margin-left: ${theme.space[5]};
+
+      svg {
+        width: 80px;
+
+        @media ${theme.mq.tablet} {
+          width: 100px;
+        }
+      }
     }
   }
 
@@ -126,6 +136,89 @@ export const IncubatorPage = styled(Box)<{ isDark?: boolean }>`
           width: 180px;
         }
       }
+    }
+  }
+`
+
+export const Button = styled(Flex)<{
+  isDark: boolean
+}>`
+  transition: ${theme.transition.all};
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: ${theme.space[4]};
+  position: relative;
+  width: 100%;
+
+  color: ${theme.colors.modes.dark.text};
+  letter-spacing: 0;
+  font-family: ${theme.fonts.mono};
+  font-size: calc(${theme.fontSizes[2]} / 1.15);
+  font-weight: 500;
+
+  background: ${theme.colors.black};
+  border: ${theme.border};
+  border-color: ${(p) =>
+    p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
+
+  cursor: pointer;
+  outline: none;
+  transition: ${theme.transition.all};
+  white-space: nowrap;
+
+  @media ${theme.mq.tablet} {
+    font-size: ${theme.fontSizes[2]};
+  }
+
+  @media ${theme.mq.desktop} {
+    font-size: ${theme.fontSizes[3]};
+    padding: ${theme.space[4]} ${theme.space[5]};
+  }
+
+  span {
+    border-radius: ${theme.borderRadius};
+    font-size: calc(${theme.fontSizes[1]});
+    margin-left: ${theme.space[4]};
+    position: relative;
+
+    svg {
+      width: ${theme.space[4]};
+      fill: ${theme.colors.modes.dark.text};
+
+      @media ${theme.mq.desktop} {
+        width: ${theme.space[4]};
+      }
+    }
+  }
+
+  &:hover {
+    border-color: ${(p) =>
+      p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+    color: ${(p) =>
+      p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+
+    svg {
+      fill: ${(p) =>
+        p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+    }
+  }
+
+  &:disabled {
+    background: ${theme.colors.muted};
+    border-color: ${theme.colors.muted};
+    color: ${theme.colors.white};
+  }
+
+  &:active {
+    background: ${(p) =>
+      p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+    color: ${theme.colors.white};
+
+    svg {
+      fill: ${theme.colors.white};
     }
   }
 `

@@ -385,6 +385,15 @@ const Typography = css`
       color: ${theme.colors.primary};
       text-decoration: none;
     } */
+
+    &.text--link {
+      font-weight: 600;
+      transform: text-decoration ${theme.transition.global};
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   mark {

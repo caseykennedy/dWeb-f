@@ -5,14 +5,17 @@ import theme from '../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-type Props = {}
+type Props = {
+  fill?: string
+}
 
-const CubeSpark: React.FC<Props> = () => (
+const CubeSpark: React.FC<Props> = ({ fill }) => (
   <SVG
     width="550"
     viewBox="0 0 560.47 588.02"
     initial="hidden"
     animate="visible"
+    fill={fill}
   >
     <path
       className="cubespark-1"

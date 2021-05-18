@@ -1,4 +1,4 @@
-// Grants page
+// Incubator page
 
 // ___________________________________________________________________
 
@@ -31,7 +31,7 @@ type ImageQueryShape = {
   }
 }
 
-const Donate = () => {
+const Incubator = () => {
   const data: ImageQueryShape = useStaticQuery(graphql`
     query ResourcesQuery {
       banner: allImageSharp {
@@ -60,4 +60,4 @@ const Donate = () => {
   )
 }
 
-export default Donate
+export default Incubator

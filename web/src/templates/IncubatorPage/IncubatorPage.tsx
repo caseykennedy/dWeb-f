@@ -2,7 +2,8 @@
 
 // ___________________________________________________________________
 
-import React, { useState } from 'react'
+import React from 'react'
+import { Link } from 'gatsby'
 
 // Theme + ui
 import theme from '../../gatsby-plugin-theme-ui'
@@ -20,8 +21,6 @@ import Floaters from '../../components/Floaters'
 import RubikGlobe from '../../components/RubikGlobe'
 import RubikBlock from '../../components/RubikBlock'
 import ParallaxWrapper from '../../components/ParallaxWrapper'
-import Modal from '../../components/Modal'
-import ApplicationForm from './ApplicationForm'
 
 import CubeStrokes from '../../../static/cube-strokes.svg'
 import Orb from '../../../static/orb.svg'
@@ -34,7 +33,7 @@ const PageTitle = () => {
       <Flex>
         <Box sx={{ flex: [1, 0.75, 0.45], width: '100%' }}>
           <Heading as="h1" className="text--lg">
-            Be one of 50 teams to accelerate their Web3{' '}
+            Be one of 15 teams to accelerate their Web3{' '}
             <Box as="span" className="hns">
               <HandshakeLogo /> handshake
             </Box>{' '}
@@ -42,7 +41,7 @@ const PageTitle = () => {
             <Box as="span" className="text--underline">
               OR
             </Box>{' '}
-            one of 4 to receive full incubation.
+            one of 5 selected to join phase two.
           </Heading>
         </Box>
       </Flex>
@@ -50,13 +49,13 @@ const PageTitle = () => {
   )
 }
 
-const ApplyNow: React.FC<{ toggleMenu: () => any }> = ({ toggleMenu }) => {
+const ApplyNow: React.FC<{ isDark: boolean }> = ({ isDark }) => {
   return (
     <Section>
       <Flex className="decorator">
         <Box className="decorator__cube">
           <ParallaxWrapper speed={1.5}>
-            <CubeSpark />
+            <CubeSpark fill={isDark ? `#a2f6ff` : theme.colors.tertiary} />
           </ParallaxWrapper>
         </Box>
       </Flex>
@@ -92,12 +91,12 @@ const ApplyNow: React.FC<{ toggleMenu: () => any }> = ({ toggleMenu }) => {
           </Box>
 
           <Box sx={{ flex: [1, 0.5], width: `100%` }}>
-            <Box onClick={toggleMenu}>
+            <Link to={`/incubator-application`}>
               <Button solid={true}>
                 Apply now
                 <Icon name="arrow" />
               </Button>
-            </Box>
+            </Link>
           </Box>
         </Flex>
       </Box>
@@ -171,16 +170,27 @@ const Build = () => {
             App the dWeb
           </Text>
           <Text as="p" mb={3} sx={{ fontWeight: 500 }} className="text--lg">
-            Get the investment, strategy, programming, tech and design support
-            needed from key figures and partners within the dWeb community.
+            Teams will contribute a % of equity to the dWeb
+            foundation/incubation team for key mentorship, strategy and support.
           </Text>
           <Text as="p" sx={{ fontWeight: 500 }} className="text--lg">
-            Get buy-in, fund costs, engage and collaborate with experts. Build
-            and scale on bedrock foundation.
+            Get insight from industry leaders and design experts, and assistance
+            with preparing your pitch for VC's.
           </Text>
         </Box>
 
-        <Box sx={{ flex: [1, 0.25, 0.5], width: `100%` }} />
+        <Box sx={{ flex: [1, 0.25, 0.5], width: `100%` }}>
+          <Flex className="built-on">
+            <Text as="p">
+              Proudly building with
+              <br />
+              handshake technology
+            </Text>
+            <span>
+              <HandshakeLogo fill="black" />
+            </span>
+          </Flex>
+        </Box>
       </Flex>
 
       <Box py={7}>
@@ -340,15 +350,13 @@ const Trust = () => {
 }
 
 const AboutPage: React.FC = () => {
-  const [isNavOpen, setNavOpen] = useState(false)
-  const toggleMenu = () => setNavOpen(!isNavOpen)
   const [colorMode] = useColorMode()
   const isDark = colorMode === 'dark'
   return (
     <>
       <S.IncubatorPage isDark={isDark}>
         <PageTitle />
-        <ApplyNow toggleMenu={toggleMenu} />
+        <ApplyNow isDark={isDark} />
         <ProjectDweb />
         <Build />
         <Potential />
@@ -356,24 +364,23 @@ const AboutPage: React.FC = () => {
         <Trust />
 
         <Section>
-          <Box onClick={toggleMenu}>
+          <Link to={`/incubator-application`}>
             <Button solid={true}>
               Apply now
               <Icon name="arrow" />
             </Button>
-          </Box>
+          </Link>
 
           <Flex mt={theme.gutter.axis} sx={{ justifyContent: `center` }}>
-            <a href="mailto:info@decentralizedinter.net?subject=Contact from dWeb incubator">
+            <a
+              href="mailto:info@decentralizedinter.net?subject=Contact from dWeb incubator"
+              className="text--link"
+            >
               Questions?
             </a>
           </Flex>
         </Section>
       </S.IncubatorPage>
-
-      <Modal open={isNavOpen} close={toggleMenu}>
-        <ApplicationForm isOpen={isNavOpen} handleExit={toggleMenu} />
-      </Modal>
     </>
   )
 }
@@ -382,7 +389,7 @@ export default AboutPage
 
 const milestones = [
   {
-    date: `June 10th, 2021`,
+    date: `June 11th, 2021`,
     milestone: `Application Deadline`,
   },
   {

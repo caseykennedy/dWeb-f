@@ -1,14 +1,15 @@
-// Form Styles:
+// AboutPage Styles:
 
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { lighten, darken } from 'polished'
-
-import theme from '../../../gatsby-plugin-theme-ui'
-import { Box, Flex } from '../../../components/ui'
+import { lighten } from 'polished'
+import theme from '../../gatsby-plugin-theme-ui'
+import { Box, Flex } from 'theme-ui'
 
 // ___________________________________________________________________
+
+export const IncubatorApplicationPage = styled(Box)``
 
 export const Form = styled.form<{ isDark?: boolean }>`
   margin: 0 auto;
