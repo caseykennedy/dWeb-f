@@ -2,13 +2,12 @@
 
 // ___________________________________________________________________
 
-import React, { useState } from 'react'
+import React from 'react'
 
 // Theme + ui
 import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
 import { Box, Flex, Input, Select, useColorMode } from 'theme-ui'
-import Button from '../../../components/ui/Button'
 
 import Icon from '../../../components/Icons'
 
@@ -131,6 +130,3 @@ const ContactForm: React.FC = () => {
 }
 
 export default ContactForm
-
-// ___________________________________________________________________
-// End
