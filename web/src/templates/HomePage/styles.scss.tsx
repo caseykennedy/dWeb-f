@@ -140,11 +140,11 @@ export const Introduction = styled(Box)`
 export const AboutUs = styled(Box)`
   .decorator__a {
     position: absolute;
-    top: calc(${theme.space[4]} * -2);
+    top: calc(${theme.space[4]} * -6);
     right: 0;
 
     @media ${theme.mq.tablet} {
-      top: calc(${theme.space[4]} * -4);
+      top: calc(${theme.space[4]} * -7);
       right: calc(${theme.space[4]} * 2);
     }
 
@@ -154,7 +154,7 @@ export const AboutUs = styled(Box)`
     }
 
     svg {
-      width: 75px;
+      width: 100px;
 
       @media ${theme.mq.tablet} {
         width: 150px;
@@ -170,26 +170,52 @@ export const AboutUs = styled(Box)`
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: calc(${theme.space[4]} * 1);
-    left: 47%;
+    bottom: calc(${theme.space[4]} * 4);
+    left: 30%;
 
     @media ${theme.mq.tablet} {
-      bottom: calc(${theme.space[4]} * 1);
+      bottom: calc(${theme.space[4]} * 4);
+      left: 50%;
     }
 
     @media ${theme.mq.desktop} {
       bottom: calc(${theme.space[4]} * 1);
+      left: 47%;
     }
 
     svg {
       width: 50px;
 
       @media ${theme.mq.tablet} {
-        width: 85px;
+        width: 100px;
       }
 
       @media ${theme.mq.desktop} {
         width: 140px;
+      }
+    }
+  }
+
+  .decorator__c {
+    position: absolute;
+    top: calc(${theme.space[4]} * -4);
+    right: ${theme.space[4]};
+
+    @media ${theme.mq.tablet} {
+      top: calc(${theme.space[4]} * -7);
+      right: calc(${theme.space[4]} * 2);
+    }
+
+    @media ${theme.mq.desktop} {
+      top: calc(${theme.space[4]} * -4);
+      right: calc(${theme.space[4]} * 4);
+    }
+
+    svg {
+      width: 25px;
+
+      @media ${theme.mq.tablet} {
+        width: 58px;
       }
     }
   }

@@ -328,8 +328,8 @@ const Typography = css`
   }
 
   sup {
-    font-size: 60%;
-    font-weight: 500;
+    font-size: 70%;
+    font-weight: 800;
   }
 
   .text--small {

@@ -35,7 +35,7 @@ const Handshake = () => {
         </Box>
 
         <Flex
-          mt={[7, 4, 5]}
+          mt={[2, 4, 5]}
           sx={{
             alignItems: 'flex-end',
             flexDirection: ['column', 'row'],

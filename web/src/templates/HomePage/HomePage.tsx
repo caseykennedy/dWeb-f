@@ -22,6 +22,7 @@ import GridFigure from '../../components/Grid'
 import Floaters from '../../components/Floaters'
 import CubeA from '../../components/CubeA'
 import CubeB from '../../components/CubeB'
+import CubeC from '../../components/CubeC'
 
 // Sections
 import Hero from './Hero'
@@ -44,11 +45,17 @@ const AboutUs = () => {
         </Heading>
 
         <Box px={[4, 6, 7]} sx={{ width: '100%', position: 'relative' }}>
+          <Box className="decorator decorator__c">
+            <CubeC />
+          </Box>
+
           <Box className="decorator decorator__b">
             <CubeB />
           </Box>
+
           <Floaters />
         </Box>
+
         <Box mb={theme.gutter.axis} sx={{ width: '100%' }}>
           <GridFigure strokeWidth="1px" />
         </Box>
@@ -57,16 +64,23 @@ const AboutUs = () => {
           <Flex
             mb={3}
             sx={{
-              flex: [0.9, 0.85, 0.6],
+              flex: [1, 0.85, 0.6],
             }}
           >
             <Heading className="text--lg">
-              We are supporters of the early decentralized internet,{' '}
-              <Text as="span" color="primary">
-                aiming to <sup>1</sup>build (dWeb) integrations <sup>2</sup>
-                create secondary and tertiary layer infrastructure <sup>3</sup>
-                incubate a new generation of pioneers.
+              We are supporters of the early decentralized internet, aiming to{' '}
+              <Text as="sup" color="primary">
+                1
               </Text>
+              build (dWeb) integrations,{' '}
+              <Text as="sup" color="primary">
+                2
+              </Text>
+              create secondary and tertiary layer infrastructure,{' '}
+              <Text as="sup" color="primary">
+                3
+              </Text>
+              incubate a new generation of pioneers.
             </Heading>
           </Flex>
 
@@ -154,7 +168,7 @@ const Introduction = () => {
                 </Link>
               </Box>
 
-              <Box ml={[0, 4, 5]} sx={{ flex: 1, width: '100%' }}>
+              <Box mt={[2, 0]} ml={[0, 4, 5]} sx={{ flex: 1, textAlign: [`center`, `left`], width: '100%' }}>
                 <Link to={`/donate`}>
                   <Text
                     sx={{
