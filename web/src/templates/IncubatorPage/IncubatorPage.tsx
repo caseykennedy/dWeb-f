@@ -77,7 +77,7 @@ const ApplyNow: React.FC<{ isDark: boolean }> = ({ isDark }) => {
             >
               Application deadline:
               <br />
-              June 1st, 2021
+              June 11th, 2021
             </Text>
 
             <Text
