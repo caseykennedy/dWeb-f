@@ -47,7 +47,7 @@ const Newsletter = () => {
               <input type="hidden" name="bot-field" />
               <input
                 type="hidden"
-                name="form-newsletter"
+                name="form-name"
                 value="dWeb Email Collector"
               />
 
