@@ -24,6 +24,10 @@ export const IncubatorPage = styled(Box)<{ isDark?: boolean }>`
         width: 80px;
 
         @media ${theme.mq.tablet} {
+          width: 50px;
+        }
+
+        @media ${theme.mq.tablet} {
           width: 100px;
         }
       }

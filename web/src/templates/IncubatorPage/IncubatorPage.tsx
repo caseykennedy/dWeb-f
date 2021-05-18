@@ -20,9 +20,9 @@ import TriCube from '../../components/TriCube'
 import Floaters from '../../components/Floaters'
 import RubikGlobe from '../../components/RubikGlobe'
 import RubikBlock from '../../components/RubikBlock'
+import RubikFlat from '../../components/RubikFlat'
 import ParallaxWrapper from '../../components/ParallaxWrapper'
 
-import CubeStrokes from '../../../static/cube-strokes.svg'
 import Orb from '../../../static/orb.svg'
 
 // ___________________________________________________________________
@@ -34,7 +34,7 @@ const PageTitle = () => {
         <Box sx={{ flex: [1, 0.75, 0.45], width: '100%' }}>
           <Heading as="h1" className="text--lg">
             Be one of 15 teams to accelerate their Web3{' '}
-            <Box as="span" className="hns">
+            <Box as="span" ml={1} className="hns">
               <HandshakeLogo /> handshake
             </Box>{' '}
             project through the dWeb Foundation{' '}
@@ -55,7 +55,9 @@ const ApplyNow: React.FC<{ isDark: boolean }> = ({ isDark }) => {
       <Flex className="decorator">
         <Box className="decorator__cube">
           <ParallaxWrapper speed={1.5}>
-            <CubeSpark fill={isDark ? `#a2f6ff` : theme.colors.tertiary} />
+            <CubeSpark
+              fill={isDark ? theme.colors.secondary : theme.colors.tertiary}
+            />
           </ParallaxWrapper>
         </Box>
       </Flex>
@@ -77,7 +79,9 @@ const ApplyNow: React.FC<{ isDark: boolean }> = ({ isDark }) => {
             >
               Application deadline:
               <br />
-              June 11th, 2021
+              <Text as="span" className="text--uppercase">
+                June 11th, 2021
+              </Text>
             </Text>
 
             <Text
@@ -86,7 +90,9 @@ const ApplyNow: React.FC<{ isDark: boolean }> = ({ isDark }) => {
             >
               Public Demo Day:
               <br />
-              August 1st, 2021
+              <Text as="span" className="text--uppercase">
+                August 1st, 2021
+              </Text>
             </Text>
           </Box>
 
@@ -108,7 +114,7 @@ const ProjectDweb = () => {
   return (
     <Section>
       <Flex>
-        <Box sx={{ flex: [1, 0.75, 0.5] }}>
+        <Box sx={{ flex: [1, 0.75, 0.75] }}>
           <Flex mb={5} sx={{ alignItems: `center` }}>
             <TriCube />
             <Text
@@ -127,7 +133,7 @@ const ProjectDweb = () => {
               lineHeight: 1.25,
             }}
           >
-            Join in. The third internet era is here.
+            The third internet era is here. Join in.
           </Heading>
         </Box>
       </Flex>
@@ -137,7 +143,7 @@ const ProjectDweb = () => {
           <Text
             sx={{
               fontFamily: `mono`,
-              fontSize: 2,
+              fontSize: `calc(${theme.fontSizes[2]} / 1.25)`,
               fontWeight: 500,
               lineHeight: 2.25,
             }}
@@ -166,7 +172,7 @@ const Build = () => {
         }}
       >
         <Box mb={[5, 0]} sx={{ flex: [1, 0.75, 0.5], width: `100%` }}>
-          <Text as="p" color="primary" mb={4}>
+          <Text as="p" mb={4}>
             App the dWeb
           </Text>
           <Text as="p" mb={3} sx={{ fontWeight: 500 }} className="text--lg">
@@ -179,9 +185,9 @@ const Build = () => {
           </Text>
         </Box>
 
-        <Box sx={{ flex: [1, 0.25, 0.5], width: `100%` }}>
+        <Box pl={5} sx={{ flex: [1, 0.25, 0.5], width: `100%` }}>
           <Flex className="built-on">
-            <Text as="p">
+            <Text as="p" sx={{ fontSize: 1 }}>
               Proudly building with
               <br />
               handshake technology
@@ -197,7 +203,7 @@ const Build = () => {
         <Flex className="decorator">
           <Box className="decorator__cube-strokes">
             <ParallaxWrapper speed={1}>
-              <CubeStrokes />
+              <RubikFlat />
             </ParallaxWrapper>
           </Box>
           <Box className="decorator__orb">
@@ -224,7 +230,7 @@ const Potential = () => {
         }}
       >
         <Box mb={[5, 0]} sx={{ flex: [1, 0.75, 0.5], width: `100%` }}>
-          <Text as="p" color="primary" mb={4}>
+          <Text as="p" mb={4}>
             Materialize the potential
           </Text>
           <Text as="p" mb={3} sx={{ fontWeight: 500 }} className="text--lg">
@@ -233,12 +239,13 @@ const Potential = () => {
           </Text>
           <Text as="p" mb={3} sx={{ fontWeight: 500 }} className="text--lg">
             <strong>2. Incubate</strong> and expand: from education to business,
-            infrastructure to media: help bring the decentralized internet to
-            life.
+            infrastructure to media: let’s bring the decentralized internet to
+            life. life.
           </Text>
           <Text as="p" sx={{ fontWeight: 500 }} className="text--lg">
-            <strong>3. Become</strong> a contributing force to the public
-            Handshake ecosystem, spur the success of equal access data commons.
+            <strong>3. Launch</strong> a contributing force within the public
+            Handshake ecosystem—help spur the success of equal access data
+            commons.
           </Text>
         </Box>
 
@@ -324,7 +331,7 @@ const Trust = () => {
         </Flex>
 
         <Box mb={[5, 0]} sx={{ flex: [1, 0.75, 0.5], width: `100%` }}>
-          <Text as="p" color="primary" mb={4}>
+          <Text as="p" mb={4}>
             In web3 we trust
           </Text>
           <Text as="p" mb={3} sx={{ fontWeight: 500 }} className="text--lg">

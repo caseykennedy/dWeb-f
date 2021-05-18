@@ -65,13 +65,13 @@ const Header = () => {
           <S.Menu>
             <Navigation />
 
-            <Box mt="-5px" ml={[0, 5]} mr={[5, 0]} sx={{ display: [`none`, `initial`] }}>
+            <Box ml={[0, 5]} mr={[5, 0]} sx={{ display: [`none`, `initial`] }}>
               <DarkModeSwitch
                 moonColor={theme.colors.white}
                 sunColor={theme.colors.black}
                 checked={isDark}
                 onChange={toggleDarkMode}
-                size={32}
+                size={24}
               />
             </Box>
           </S.Menu>
