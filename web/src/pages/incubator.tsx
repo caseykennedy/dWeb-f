@@ -54,7 +54,9 @@ const Incubator = () => {
   `)
   return (
     <>
-      <SEO banner={data.banner.edges[0].node.fluid.src} />
+      <SEO
+        banner={`http://www.decentralizedinter.net/${data.banner.edges[0].node.fluid.src}`}
+      />
       <IncubatorPage />
     </>
   )
