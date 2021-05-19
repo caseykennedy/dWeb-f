@@ -41,7 +41,7 @@ const Header = () => {
       <S.Header px={theme.gutter.axis}>
         <Flex className="header-inner" py={4}>
           <Link to="/" className="logo" aria-label="HNSF, back to home">
-            <S.Logo>
+            <S.Logo onClick={() => setNavOpen(false)}>
               <Box className="symbol">
                 <Symbol
                   fill={isDark ? theme.colors.white : theme.colors.black}
@@ -65,7 +65,7 @@ const Header = () => {
           <S.Menu>
             <Navigation />
 
-            <Box ml={[0, 5]} mr={[5, 0]} sx={{ display: [`none`, `initial`] }}>
+            <Flex ml={[0, 5]} sx={{ alignItems: `center` }}>
               <DarkModeSwitch
                 moonColor={theme.colors.white}
                 sunColor={theme.colors.black}
@@ -73,22 +73,25 @@ const Header = () => {
                 onChange={toggleDarkMode}
                 size={24}
               />
-            </Box>
+              <S.Toggle
+                ml={[3, 0]}
+                onClick={toggleMenu}
+                aria-label="toggle menu"
+              >
+                <HamburgerMenu
+                  isOpen={!isNavOpen ? false : true}
+                  menuClicked={toggleMenu}
+                  width={32}
+                  height={14}
+                  strokeWidth={2}
+                  rotate={0}
+                  color={isDark ? theme.colors.white : theme.colors.black}
+                  borderRadius={0}
+                  animationDuration={0.333}
+                />
+              </S.Toggle>
+            </Flex>
           </S.Menu>
-
-          <S.Toggle onClick={toggleMenu} aria-label="toggle menu">
-            <HamburgerMenu
-              isOpen={!isNavOpen ? false : true}
-              menuClicked={toggleMenu}
-              width={32}
-              height={12}
-              strokeWidth={2}
-              rotate={0}
-              color={isDark ? theme.colors.white : theme.colors.black}
-              borderRadius={0}
-              animationDuration={0.333}
-            />
-          </S.Toggle>
         </Flex>
       </S.Header>
 

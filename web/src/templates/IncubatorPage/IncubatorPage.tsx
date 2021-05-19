@@ -180,8 +180,8 @@ const Build = () => {
             foundation/incubation team for key mentorship, strategy and support.
           </Text>
           <Text as="p" sx={{ fontWeight: 500 }} className="text--lg">
-            Get insight from industry leaders and design experts, and assistance
-            with preparing your pitch for VC's.
+            Get insight from industry leaders and design experts, plus
+            assistance with preparing your pitch for VC's
           </Text>
         </Box>
 
@@ -240,7 +240,7 @@ const Potential = () => {
           <Text as="p" mb={3} sx={{ fontWeight: 500 }} className="text--lg">
             <strong>2. Incubate</strong> and expand: from education to business,
             infrastructure to media: let’s bring the decentralized internet to
-            life. life.
+            life.
           </Text>
           <Text as="p" sx={{ fontWeight: 500 }} className="text--lg">
             <strong>3. Launch</strong> a contributing force within the public

@@ -22,9 +22,7 @@ const Newsletter = () => {
     <S.Newsletter isDark={isDark}>
       <Section bg="muted" border={true}>
         <Box mb={9}>
-          <Heading as="h3">
-            Coming to a browser near you.
-          </Heading>
+          <Heading as="h3">Coming to a browser near you.</Heading>
         </Box>
 
         <Flex
@@ -82,7 +80,7 @@ const Newsletter = () => {
           </Box>
 
           <Flex sx={{ flex: 1 }} className="social">
-            <a href="/" target="_blank">
+            <a href="https://twitter.com/dwebfoundation" target="_blank">
               <Icon name="twitter" />
             </a>
           </Flex>

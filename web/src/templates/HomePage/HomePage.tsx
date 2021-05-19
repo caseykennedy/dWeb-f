@@ -137,7 +137,7 @@ const Introduction = () => {
         >
           <Flex
             sx={{
-              flex: [0.85, 0.65],
+              flex: [1, 1, 0.65],
               flexDirection: 'column',
             }}
           >
@@ -168,7 +168,7 @@ const Introduction = () => {
                 </Link>
               </Box>
 
-              <Box mt={[2, 0]} ml={[0, 4, 5]} sx={{ flex: 1, textAlign: [`center`, `left`], width: '100%' }}>
+              <Box mt={[2, 0]} ml={[0, 4, 5]} sx={{ flex: 1, width: '100%' }}>
                 <Link to={`/donate`}>
                   <Text
                     sx={{
