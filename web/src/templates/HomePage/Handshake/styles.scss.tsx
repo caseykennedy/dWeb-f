@@ -26,10 +26,15 @@ export const Handshake = styled(Box)<{ isDark: boolean }>`
     width: 100%;
 
     svg {
+      transform: scale(1.75);
+      transform-origin: 50% 0;
+
       @media ${theme.mq.tablet} {
+        transform: scale(1.25);
       }
 
       @media ${theme.mq.desktop} {
+        transform: scale(1);
       }
     }
   }

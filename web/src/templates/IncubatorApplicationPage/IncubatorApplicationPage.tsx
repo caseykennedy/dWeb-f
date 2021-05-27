@@ -171,7 +171,7 @@ const ApplicationForm = () => {
             sx={{ flex: [1, 1, 0.5], width: '100%' }}
             className="form-group__box"
           >
-            <label htmlFor="teamMembers">Current stage:</label>
+            <label htmlFor="teamMembers">How many team members?</label>
             <Select id="teamMembers" name="teamMembers">
               <option value="" disabled={true} selected={true}>
                 How many team members

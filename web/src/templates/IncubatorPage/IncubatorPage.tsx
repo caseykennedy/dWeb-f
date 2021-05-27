@@ -229,7 +229,11 @@ const Potential = () => {
           flexDirection: [`column`, `row`],
         }}
       >
-        <Box mb={[5, 0]} sx={{ flex: [1, 0.75, 0.5], width: `100%` }}>
+        <Box
+          mr={[0, 5, 0]}
+          mb={[5, 0]}
+          sx={{ flex: [1, 0.75, 0.5], width: `100%` }}
+        >
           <Text as="p" mb={4}>
             Materialize the potential
           </Text>
@@ -330,7 +334,11 @@ const Trust = () => {
           <RubikGlobe />
         </Flex>
 
-        <Box mb={[5, 0]} sx={{ flex: [1, 0.75, 0.5], width: `100%` }}>
+        <Box
+          ml={[0, 5, 0]}
+          mb={[5, 0]}
+          sx={{ flex: [1, 0.75, 0.5], width: `100%` }}
+        >
           <Text as="p" mb={4}>
             In web3 we trust
           </Text>
