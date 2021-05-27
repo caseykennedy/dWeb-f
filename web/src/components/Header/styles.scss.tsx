@@ -74,7 +74,6 @@ export const Menu = styled(Flex)`
 export const Logo = styled(Flex)`
   display: flex;
   flex-direction: column;
-  mix-blend-mode: difference;
 
   .symbol {
     svg {

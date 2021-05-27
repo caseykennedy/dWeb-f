@@ -95,8 +95,12 @@ export const IncubatorPage = styled(Box)<{ isDark?: boolean }>`
 
     &__rubik {
       svg {
-        max-height: 400px;
+        max-height: 300px;
         height: 100%;
+
+        @media ${theme.mq.tablet} {
+          max-height: 400px;
+        }
       }
     }
 

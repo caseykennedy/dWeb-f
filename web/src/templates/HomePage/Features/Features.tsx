@@ -83,7 +83,11 @@ const Features = () => {
             <Box ml={[0, 5, 7]} px={[5, 0]} sx={{ flex: 1 }}>
               <Text
                 as="p"
-                sx={{ fontSize: [1, 'inherit'], fontWeight: 500, textAlign: ['center', 'right'] }}
+                sx={{
+                  fontSize: [1, 'inherit'],
+                  fontWeight: 500,
+                  textAlign: ['center', 'right'],
+                }}
               >
                 For an uncensorable, robust and democratized, internet of
                 people.

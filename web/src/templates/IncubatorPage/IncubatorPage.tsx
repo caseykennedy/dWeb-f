@@ -254,6 +254,7 @@ const Potential = () => {
         </Box>
 
         <Flex
+          mt={[6, 0]}
           sx={{
             flex: [1, 0.25, 0.5],
             justifyContent: [`center`, `flex-end`],
@@ -270,7 +271,7 @@ const Potential = () => {
 
 const Timeline = () => {
   return (
-    <Section pt={7}>
+    <Section>
       <Box mb={5}>
         <Text as="p">Timeline</Text>
       </Box>
@@ -315,7 +316,7 @@ const Timeline = () => {
 
 const Trust = () => {
   return (
-    <Section pt={7} pb={7}>
+    <Section pt={[5, 7]} pb={[5, 7]}>
       <Flex
         sx={{
           alignItems: [`flex-start`, `center`],
