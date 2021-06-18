@@ -73,7 +73,7 @@ const ApplyNow: React.FC<{ isDark: boolean }> = ({ isDark }) => {
           <Box mb={[5, 0]} sx={{ flex: [1, 0.5], width: `100%` }}>
             <Text
               as="p"
-              color="primary"
+              color="red"
               mb={3}
               sx={{ fontFamily: 'mono', fontSize: 1, fontWeight: 500 }}
             >
@@ -97,12 +97,9 @@ const ApplyNow: React.FC<{ isDark: boolean }> = ({ isDark }) => {
           </Box>
 
           <Box sx={{ flex: [1, 0.5], width: `100%` }}>
-            <Link to={`/incubator-application`}>
-              <Button solid={true}>
-                Apply now
-                <Icon name="arrow" />
-              </Button>
-            </Link>
+            <Button solid={true}>
+              Applications closed
+            </Button>
           </Box>
         </Flex>
       </Box>
@@ -380,12 +377,9 @@ const AboutPage: React.FC = () => {
         <Trust />
 
         <Section>
-          <Link to={`/incubator-application`}>
             <Button solid={true}>
-              Apply now
-              <Icon name="arrow" />
+              Applications closed
             </Button>
-          </Link>
 
           <Flex mt={theme.gutter.axis} sx={{ justifyContent: `center` }}>
             <a

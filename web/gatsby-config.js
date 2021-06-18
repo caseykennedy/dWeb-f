@@ -125,6 +125,61 @@ module.exports = {
         include_favicon: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allSanityPost } }) => {
+              return allSanityPost.edges.map((edge) => {
+                post = edge.node
+                return Object.assign({}, post, {
+                  description: post.excerpt[0].children[0].text,
+                  date: post.publishedAt,
+                  url: `${site.siteMetadata.siteUrl}/${post.slug.current}`,
+                  guid: `${site.siteMetadata.siteUrl}/${post.slug.current}`,
+                  // custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allSanityPost(sort: { order: DESC, fields: publishedAt }) {
+                  edges {
+                    node {
+                      title
+                      excerpt {
+                        children {
+                          text
+                        }
+                      }
+                      publishedAt(formatString: "MMM. DD, YYYY")
+                      slug {
+                        current
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: "Your Site's RSS Feed",
+          },
+        ],
+      },
+    },
   ],
 }
 
