@@ -16,14 +16,22 @@ const Navigation = () => {
   return (
     <S.Nav isDark={isDark}>
       {data.map((item, idx) => (
-        <Link
-          to={item.link}
-          activeClassName="active"
-          partiallyActive={true}
-          key={idx}
-        >
-          {item.name}
-        </Link>
+        <>
+          {item.path ? (
+            <Link
+              to={item.path}
+              activeClassName="active"
+              partiallyActive={true}
+              key={idx}
+            >
+              {item.name}
+            </Link>
+          ) : (
+            <a href={item.link} rel="noreferrer" target="_blank">
+              {item.name}
+            </a>
+          )}
+        </>
       ))}
     </S.Nav>
   )
@@ -36,22 +44,22 @@ export default Navigation
 const data = [
   {
     name: 'incubator',
-    link: '/incubator'
+    path: '/incubator',
   },
   {
     name: 'donate',
-    link: '/donate'
+    path: '/donate',
   },
   {
     name: 'grants',
-    link: '/grants'
+    link: 'https://github.com/dwebfoundation/grants',
   },
   {
     name: 'about',
-    link: '/about'
+    path: '/about',
   },
   {
     name: 'blog',
-    link: '/blog'
-  }
+    path: '/blog',
+  },
 ]
