@@ -41,7 +41,7 @@ const serializers = {
 
         case 'a':
           return (
-            <a rel="noopener" target="_blank">
+            <a rel="nofollow" target="_blank">
               {props.children}
             </a>
           )
@@ -53,7 +53,7 @@ const serializers = {
           return <li>{props.children}</li>
 
         default:
-          return <Text as="p" mb={4}>{props.children}</Text>
+          return <Text as="p" mb={5}>{props.children}</Text>
       }
     },
     figure(props: any) {

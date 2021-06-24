@@ -35,7 +35,7 @@ const CardPost: React.FC<Props> = ({
       <S.CardPost inline={inline}>
         <Flex
           sx={{
-            flex: [0.6, 0.8],
+            flex: 0.6,
             width: `100%`,
           }}
           className="content"
@@ -48,7 +48,7 @@ const CardPost: React.FC<Props> = ({
         <Box
           p={2}
           sx={{
-            flex: [0.4, 0.2],
+            flex: 0.4,
           }}
         >
           <Box className="figure">

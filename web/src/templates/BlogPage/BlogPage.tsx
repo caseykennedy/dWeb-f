@@ -36,7 +36,7 @@ const BlogPage: React.FC = () => {
 
       <Section>
         <Flex sx={{ flexDirection: `column`, width: `100%` }}>
-          <Grid columns={[1]} gap={theme.gutter.axis}>
+          <Grid columns={[1, 1, 2]} gap={theme.gutter.axis}>
             {posts.map(({ node: post }, idx) => (
               <CardPost
                 aspectRatio={4 / 3}

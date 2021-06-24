@@ -27,7 +27,7 @@ const Navigation = () => {
               {item.name}
             </Link>
           ) : (
-            <a href={item.link} rel="noreferrer" target="_blank">
+            <a href={item.link} rel="nofollow" target="_blank">
               {item.name}
             </a>
           )}
