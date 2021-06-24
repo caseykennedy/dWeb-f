@@ -17,6 +17,7 @@ import SEO from '../../../components/SEO'
 import Section from '../../../components/Section'
 import BlockContent from '../../../components/BlockContent'
 import PrevNext from '../PrevNext'
+import SocialShare from '../SocialShare'
 
 // Data
 import useSiteSettings from '../../../hooks/useSiteSettings'
@@ -89,7 +90,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
 
                 <Box mt={6}>
                   {post.tags && (
-                    <Flex flexWrap="wrap" mb={4} width={1}>
+                    <Flex flexWrap="wrap" mb={2} width={1}>
                       {post.tags.map((item, idx) => (
                         <Pill mb={2} key={idx}>
                           <span>#{item.tag}</span>
@@ -100,11 +101,19 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
                 </Box>
               </Box>
             </Flex>
+
+            <Flex className="social-share">
+              <Text as="p" color="gray" fontSize={1} mr={3}>
+                Share:
+              </Text>
+              <SocialShare name="facebook" slug={post.slug.current} />
+              <SocialShare name="twitter" slug={post.slug.current} />
+            </Flex>
           </Flex>
         </Section>
-
-        <PrevNext pageContext={pageContext} />
       </S.Article>
+
+      <PrevNext pageContext={pageContext} />
     </>
   )
 }

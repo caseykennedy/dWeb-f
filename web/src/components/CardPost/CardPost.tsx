@@ -40,7 +40,9 @@ const CardPost: React.FC<Props> = ({
           }}
           className="content"
         >
-          <Text as="p" className={`title`}>{post.title && post.title}</Text>
+          <Text as="p" className={`title`}>
+            {post.title && post.title}
+          </Text>
 
           <Text sx={{ fontSize: [1, 0] }}>{post.publishedAt}</Text>
         </Flex>

@@ -38,4 +38,16 @@ export const Article = styled.div`
       top: ${theme.space[5]};
     }
   }
+
+  .social-share {
+    align-items: center;
+
+    span {
+      margin-left: ${theme.space[2]};
+      
+      svg {
+        height: 24px;
+      }
+    }
+  }
 `

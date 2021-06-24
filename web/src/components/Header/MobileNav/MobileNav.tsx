@@ -33,7 +33,15 @@ const NavLink: React.FC<LinkProps> = ({ item, handleExitOnClick }) => {
       onClick={handleExitOnClick}
       isDark={isDark}
     >
-      <Link to={item.link}>{item.name}</Link>
+      <>
+        {item.path ? (
+          <Link to={item.path}>{item.name}</Link>
+        ) : (
+          <a href={item.link} rel="nofollow" target="_blank">
+            {item.name}
+          </a>
+        )}
+      </>
     </S.NavLink>
   )
 }
@@ -60,28 +68,24 @@ export default MobileNav
 
 const data = [
   {
-    name: 'Home',
-    link: '/',
+    name: 'incubator',
+    path: '/incubator',
   },
   {
-    name: 'Incubator',
-    link: '/incubator',
+    name: 'donate',
+    path: '/donate',
   },
   {
-    name: 'About',
-    link: '/about',
+    name: 'grants',
+    link: 'https://github.com/dwebfoundation/grants',
   },
   {
-    name: 'Donate',
-    link: '/donate',
+    name: 'about',
+    path: '/about',
   },
   {
-    name: 'Grants',
-    link: '/grants',
-  },
-  {
-    name: 'Blog',
-    link: '/blog',
+    name: 'blog',
+    path: '/blog',
   },
 ]
 

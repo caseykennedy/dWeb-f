@@ -9,7 +9,7 @@ import React from 'react'
 import Icon from '../../../components/Icons'
 
 // Theme
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
@@ -17,7 +17,7 @@ const SocialShare: React.FC<{ name: string; slug: string }> = ({
   name,
   slug
 }) => {
-  const shareSlug = `https://www.cahuillaconsortium.org/blog/${slug}`
+  const shareSlug = `https://www.decentralizedinter.net/blog/${slug}`
 
   switch (name) {
     case 'facebook':

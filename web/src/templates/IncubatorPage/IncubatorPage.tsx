@@ -97,9 +97,7 @@ const ApplyNow: React.FC<{ isDark: boolean }> = ({ isDark }) => {
           </Box>
 
           <Box sx={{ flex: [1, 0.5], width: `100%` }}>
-            <Button solid={true}>
-              Applications closed
-            </Button>
+            <Button solid={true}>Applications closed</Button>
           </Box>
         </Flex>
       </Box>
@@ -377,9 +375,7 @@ const AboutPage: React.FC = () => {
         <Trust />
 
         <Section>
-            <Button solid={true}>
-              Applications closed
-            </Button>
+          <Button solid={true}>Applications closed</Button>
 
           <Flex mt={theme.gutter.axis} sx={{ justifyContent: `center` }}>
             <a
