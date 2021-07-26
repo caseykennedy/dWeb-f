@@ -10,13 +10,17 @@ import Icon from '../../../components/Icons'
 
 // Theme
 import theme from '../../../gatsby-plugin-theme-ui'
+import { useColorMode } from 'theme-ui'
 
 // ___________________________________________________________________
 
 const SocialShare: React.FC<{ name: string; slug: string }> = ({
   name,
-  slug
+  slug,
 }) => {
+  const [colorMode] = useColorMode()
+  const isDark = colorMode === 'dark'
+  const fillColor = isDark ? 'white' : 'black'
   const shareSlug = `https://www.decentralizedinter.net/blog/${slug}`
 
   switch (name) {
@@ -26,16 +30,13 @@ const SocialShare: React.FC<{ name: string; slug: string }> = ({
           href={`//www.facebook.com/sharer.php?u=${shareSlug}`}
           target="_blank"
         >
-          <Icon name={name} />
+          <Icon name={name} color={fillColor} />
         </a>
       )
     case 'twitter':
       return (
-        <a
-          href={`//twitter.com/share?url=${shareSlug}`}
-          target="_blank"
-        >
-          <Icon name={name} />
+        <a href={`//twitter.com/share?url=${shareSlug}`} target="_blank">
+          <Icon name={name} color={fillColor} />
         </a>
       )
     case 'linkedIn':
@@ -44,7 +45,7 @@ const SocialShare: React.FC<{ name: string; slug: string }> = ({
           href={`//www.linkedin.com/shareArticle?mini=true&url=${shareSlug}`}
           target="_blank"
         >
-          <Icon name={name} />
+          <Icon name={name} color={fillColor} />
         </a>
       )
     default:

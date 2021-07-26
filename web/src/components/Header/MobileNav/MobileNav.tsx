@@ -29,7 +29,7 @@ const NavLink: React.FC<LinkProps> = ({ item, handleExitOnClick }) => {
   return (
     <S.NavLink
       variants={itemVariants}
-      whileTap={{ scale: 0.95 }}
+      whileTap={{ scale: 0.98 }}
       onClick={handleExitOnClick}
       isDark={isDark}
     >

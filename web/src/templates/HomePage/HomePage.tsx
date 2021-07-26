@@ -160,12 +160,12 @@ const Introduction = () => {
               }}
             >
               <Box sx={{ flex: 3, width: '100%' }}>
-                <Link to={`/grants`}>
+                <a href={`https://github.com/dwebfoundation/grants`} target="_blank">
                   <Button>
                     Apply for a grant
                     <Icon name="arrow" />
                   </Button>
-                </Link>
+                </a>
               </Box>
 
               <Box mt={[2, 0]} ml={[0, 4, 5]} sx={{ flex: 1, width: '100%' }}>
