@@ -15,6 +15,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
 
   /* background: ${theme.colors.gray}; */
   border: ${theme.border};
+  width: 100%;
   transition: ${theme.transition.all};
 
   @media ${theme.mq.tablet} {
@@ -25,12 +26,7 @@ export const CardPost = styled(Flex)<{ inline?: boolean }>`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     padding: ${theme.space[3]};
-
-    @media ${theme.mq.tablet} {
-      padding: ${theme.space[4]};
-    }
   }
 
   a {

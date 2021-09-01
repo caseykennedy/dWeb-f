@@ -31,7 +31,10 @@ const CardPost: React.FC<Props> = ({
 }) => {
   const pagePrefix = `blog`
   return (
-    <Link to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}>
+    <Link
+      to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}
+      style={{ display: 'flex', height: '100%' }}
+    >
       <S.CardPost bg="white" inline={inline}>
         <Flex
           sx={{
@@ -48,7 +51,7 @@ const CardPost: React.FC<Props> = ({
         </Flex>
 
         <Box
-          p={2}
+          p={3}
           sx={{
             flex: 0.4,
           }}

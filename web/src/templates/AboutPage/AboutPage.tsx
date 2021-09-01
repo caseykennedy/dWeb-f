@@ -58,7 +58,10 @@ const AboutPage: React.FC = () => {
                 />
               </Box>
               <Flex className="bio">
-                <Text as="p" sx={{ fontSize: 2, fontWeight: 500, lineHeight: 1 }}>
+                <Text
+                  as="p"
+                  sx={{ fontSize: 2, fontWeight: 500, lineHeight: 1 }}
+                >
                   {person.name}
                 </Text>
                 <Flex>
