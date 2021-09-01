@@ -37,7 +37,6 @@ export const Form = styled.form`
       border-bottom: ${theme.border};
       border-radius: 0;
 
-      font-size: ${theme.fontSizes[2]};
       font-weight: 600;
       letter-spacing: ${theme.root.font.baseLetterSpacing};
       margin: 0;

@@ -42,10 +42,10 @@ export default Navigation
 // ___________________________________________________________________
 
 const data = [
-  {
-    name: 'incubator',
-    path: '/incubator',
-  },
+  // {
+  //   name: 'incubator',
+  //   path: '/incubator',
+  // },
   {
     name: 'donate',
     path: '/donate',
@@ -61,5 +61,9 @@ const data = [
   {
     name: 'blog',
     path: '/blog',
+  },
+  {
+    name: 'contact',
+    path: '/contact',
   },
 ]

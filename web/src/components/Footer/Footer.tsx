@@ -22,11 +22,11 @@ const Footer: React.FC = () => {
     <S.Footer pt={[4]} pb={[6]} px={theme.gutter.axis}>
       <Flex className="footer-inner">
         <Flex sx={{ alignItems: 'center' }}>
-          <Box mr={4}>&copy;{getYear()}</Box>
+          <Box>&copy;{getYear()}</Box>
+          <Link to="/contact">Contact</Link>
         </Flex>
 
         <Flex as="nav">
-          <Link to="/contact">contact</Link>
           <a
             href="https://twitter.com/dwebfoundation"
             rel="noopener noreferer"
