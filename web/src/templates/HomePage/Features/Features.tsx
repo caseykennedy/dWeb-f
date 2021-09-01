@@ -36,7 +36,7 @@ const Features = () => {
           {data.map((feature, key) => (
             <Flex
               className="feature-grid__item"
-              p={[4, 5]}
+              p={[3, 4]}
               sx={{
                 flexDirection: 'column',
                 justifyContent: 'space-between',

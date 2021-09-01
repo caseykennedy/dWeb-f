@@ -67,7 +67,7 @@ const AboutUs = () => {
               flex: [1, 0.85, 0.6],
             }}
           >
-            <Heading className="text--lg">
+            <Heading as="h2" className="text--lg">
               We are supporters of the early decentralized internet, aiming to{' '}
               <Text as="sup" color="primary">
                 1
@@ -141,7 +141,7 @@ const Introduction = () => {
               flexDirection: 'column',
             }}
           >
-            <Heading as="h3" className="heading">
+            <Heading as="h1" className="heading  text--lg">
               dWeb Foundation is a community-organized effort charting the
               frontier toward a decentralized internet, with{' '}
               <Box as="span" className="hns">

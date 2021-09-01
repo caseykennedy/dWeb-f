@@ -40,7 +40,7 @@ const CardPost: React.FC<Props> = ({
           }}
           className="content"
         >
-          <Text as="p" className={`title`}>
+          <Text as="p" pb={3} className="title">
             {post.title && post.title}
           </Text>
 

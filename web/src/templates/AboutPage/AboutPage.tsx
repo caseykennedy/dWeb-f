@@ -43,10 +43,10 @@ const AboutPage: React.FC = () => {
       </Section>
 
       <Section>
-        <Text as="p" sx={{ mb: 4 }}>
+        <Text as="p" mb={4} className="text--sm">
           Board of Advisors
         </Text>
-        <Grid columns={[1, 2]} gap={3}>
+        <Grid columns={[1, 2]} gap={4}>
           {people.map(({ node: person }, idx) => (
             <Flex className="biobox" key={idx}>
               <Box className="avatar">
@@ -58,7 +58,7 @@ const AboutPage: React.FC = () => {
                 />
               </Box>
               <Flex className="bio">
-                <Text as="p" sx={{ fontSize: 3, fontWeight: 500, lineHeight: 1 }}>
+                <Text as="p" sx={{ fontSize: 2, fontWeight: 500, lineHeight: 1 }}>
                   {person.name}
                 </Text>
                 <Flex>

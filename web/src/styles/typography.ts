@@ -299,10 +299,14 @@ const Typography = css`
 
   p,
   .text--base {
-    font-size: calc(${theme.fontSizes[2]} / 1.25);
+    font-size: calc(${theme.fontSizes[2]} / 1);
     font-weight: 500;
     line-height: ${theme.root.font.bodyLineHeight};
     margin: 0 0 ${theme.space[3]};
+
+    @media ${theme.mq.tablet} {
+      font-size: calc(${theme.fontSizes[2]} / 1);
+    }
 
     &:last-child {
       margin-bottom: 0;

@@ -45,6 +45,10 @@ export const AboutPage = styled(Box)<{ isDark: boolean }>`
         align-items: center;
         margin-right: ${theme.space[2]};
 
+        &:last-child {
+          margin-right: 0;
+        }
+
         svg {
           fill: ${theme.colors.gray};
           width: 24px;
@@ -63,7 +67,7 @@ export const AboutPage = styled(Box)<{ isDark: boolean }>`
 
     .avatar {
       flex: 1;
-      padding: ${theme.space[2]};
+      padding: ${theme.space[3]};
       /* width: 100%; */
 
       @media ${theme.mq.tablet} {
