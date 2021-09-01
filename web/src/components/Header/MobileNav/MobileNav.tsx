@@ -68,10 +68,6 @@ export default MobileNav
 
 const data = [
   {
-    name: 'incubator',
-    path: '/incubator',
-  },
-  {
     name: 'donate',
     path: '/donate',
   },
@@ -86,6 +82,10 @@ const data = [
   {
     name: 'blog',
     path: '/blog',
+  },
+  {
+    name: 'contact',
+    path: '/contact',
   },
 ]
 
@@ -108,7 +108,7 @@ const itemVariants = {
 
 const listVariants = {
   open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.25 },
+    transition: { staggerChildren: 0.035, delayChildren: 0.03 },
   },
   closed: {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
