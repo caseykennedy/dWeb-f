@@ -34,9 +34,13 @@ const Footer: React.FC = () => {
           >
             <Icon name="twitter" />
           </a>
-          {/* <a href="" rel="noopener noreferer" target="_blank">
+          <a
+            href="https://discord.gg/QDaSTd6r"
+            rel="noopener noreferer"
+            target="_blank"
+          >
             <Icon name="discord" />
-          </a> */}
+          </a>
         </Flex>
       </Flex>
     </S.Footer>
