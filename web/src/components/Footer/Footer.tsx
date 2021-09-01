@@ -10,6 +10,9 @@ import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
 import { Box, Flex } from 'theme-ui'
 
+// Components
+import Icon from '../Icons'
+
 // ___________________________________________________________________
 
 const getYear = () => new Date().getFullYear()
@@ -17,17 +20,25 @@ const getYear = () => new Date().getFullYear()
 const Footer: React.FC = () => {
   return (
     <S.Footer pt={[4]} pb={[6]} px={theme.gutter.axis}>
-      <Box className="footer-inner">
-        <Flex>
+      <Flex className="footer-inner">
+        <Flex sx={{ alignItems: 'center' }}>
           <Box mr={4}>&copy;{getYear()}</Box>
         </Flex>
 
-        <Box as="nav">
-          <a href="mailto:info@decentralizedinter.net?subject=Contact from dWeb—F">
-            contact
+        <Flex as="nav">
+          <Link to="/contact">contact</Link>
+          <a
+            href="https://twitter.com/dwebfoundation"
+            rel="noopener noreferer"
+            target="_blank"
+          >
+            <Icon name="twitter" />
           </a>
-        </Box>
-      </Box>
+          {/* <a href="" rel="noopener noreferer" target="_blank">
+            <Icon name="discord" />
+          </a> */}
+        </Flex>
+      </Flex>
     </S.Footer>
   )
 }

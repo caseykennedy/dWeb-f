@@ -11,9 +11,9 @@ import { Box, Flex, Heading, Text, useColorMode } from 'theme-ui'
 
 // Components
 import Section from '../../../components/Section'
-import TorusGrid from '../../../components/TorusGrid'
-import CubeSpark from '../../../components/CubeSpark'
-import HandshakeLogo from '../../../components/Handshake'
+import TorusGrid from '../../../components/SVG/TorusGrid'
+import CubeSpark from '../../../components/SVG/CubeSpark'
+import HandshakeLogo from '../../../components/SVG/Handshake'
 
 // Data
 import usePost from '../../../hooks/usePost'

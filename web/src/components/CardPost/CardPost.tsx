@@ -32,7 +32,7 @@ const CardPost: React.FC<Props> = ({
   const pagePrefix = `blog`
   return (
     <Link to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}>
-      <S.CardPost inline={inline}>
+      <S.CardPost bg="white" inline={inline}>
         <Flex
           sx={{
             flex: 0.6,

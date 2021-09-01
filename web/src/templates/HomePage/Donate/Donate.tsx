@@ -13,7 +13,7 @@ import Button from '../../../components/ui/Button'
 
 // Components
 import Section from '../../../components/Section'
-import Symbol from '../../../components/Symbol'
+import Symbol from '../../../components/SVG/Symbol'
 import Icon from '../../../components/Icons'
 
 // Vectors

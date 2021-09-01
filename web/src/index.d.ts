@@ -122,4 +122,6 @@ type PersonQuery = {
   slug: {
     current: string
   }
+  linkedIn: string
+  twitter: string
 }

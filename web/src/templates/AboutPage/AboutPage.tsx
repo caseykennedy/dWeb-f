@@ -8,12 +8,11 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 // Theme + Styles
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-
-// UI
-import { Box, Flex, Heading, Text } from 'theme-ui'
+import { Box, Flex, Grid, Heading, Text, useColorMode } from 'theme-ui'
 
 // Components
 import Section from '../../components/Section'
+import Icon from '../../components/Icons'
 
 // Data
 import usePerson from '../../hooks/usePerson'
@@ -22,24 +21,32 @@ import usePerson from '../../hooks/usePerson'
 
 const AboutPage: React.FC = () => {
   const people = usePerson()
+  const [colorMode] = useColorMode()
+  const isDark = colorMode === 'dark'
   return (
-    <S.AboutPage>
+    <S.AboutPage isDark={isDark}>
       <Section>
         <Flex>
-          <Box sx={{ flex: [1, 0.75], width: '100%' }}>
-            <Heading as="h1" className="text--lg">
+          <Box sx={{ flex: [1, 0.5], width: '100%' }}>
+            <Heading as="h1" className="text--lg" sx={{ mb: 3 }}>
               Operating out of Singapore, we are supporters of the early
-              decentralized internet, aiming to enable integrations, secondary
-              and tertiary layer infrastructure on top of Handshake, and the new
-              generation of internet pioneers to join us in charting the
-              frontier of the third era of the internet.
+              decentralized internet.
             </Heading>
+            <Text as="p">
+              Aiming to enable integrations, secondary and tertiary layer
+              infrastructure on top of Handshake, and the new generation of
+              internet pioneers to join us in charting the frontier of the third
+              era of the internet.
+            </Text>
           </Box>
         </Flex>
       </Section>
 
       <Section>
-        <Flex sx={{ flexDirection: `column`}}>
+        <Text as="p" sx={{ mb: 4 }}>
+          Board of Advisors
+        </Text>
+        <Grid columns={[1, 2]} gap={3}>
           {people.map(({ node: person }, idx) => (
             <Flex className="biobox" key={idx}>
               <Box className="avatar">
@@ -50,15 +57,30 @@ const AboutPage: React.FC = () => {
                   alt={person.name}
                 />
               </Box>
-              <Text as="p">{person.name}</Text>
-              {/* <Box fontSize={0}>
-                  {person._rawBio && (
-                    <BlockContent blocks={person._rawBio || []} />
-                  )}
-                </Box> */}
+              <Flex className="bio">
+                <Text as="p" sx={{ fontSize: 3, fontWeight: 500, lineHeight: 1 }}>
+                  {person.name}
+                </Text>
+                <Flex>
+                  <a
+                    href={person.linkedIn}
+                    rel="nofollow noopener"
+                    target="_blank"
+                  >
+                    <Icon name="linkedIn" />
+                  </a>
+                  <a
+                    href={person.twitter}
+                    rel="nofollow noopener"
+                    target="_blank"
+                  >
+                    <Icon name="twitter" />
+                  </a>
+                </Flex>
+              </Flex>
             </Flex>
           ))}
-        </Flex>
+        </Grid>
       </Section>
     </S.AboutPage>
   )

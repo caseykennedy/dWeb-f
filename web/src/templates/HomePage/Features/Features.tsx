@@ -80,7 +80,7 @@ const Features = () => {
               alignItems: 'center',
             }}
           >
-            <Box ml={[0, 5, 7]} px={[5, 0]} sx={{ flex: 1 }}>
+            <Box ml={[0, 5, 7]} pr={[4, 0]} pl={[4, 0, 8]} sx={{ flex: 1 }}>
               <Text
                 as="p"
                 sx={{

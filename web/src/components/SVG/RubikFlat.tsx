@@ -2,7 +2,7 @@ import * as React from 'react'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import { useColorMode } from 'theme-ui'
-import theme from '../gatsby-plugin-theme-ui'
+import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 

@@ -33,7 +33,7 @@ const DonatePage: React.FC = () => {
       <Section>
         <Grid columns={[1]} gap={theme.gutter.axis}>
           {wallets.map((wallet, idx) => (
-            <S.DonateCard key={idx}>
+            <S.DonateCard bg="white" key={idx}>
               <Heading as="h4" mb={5}>
                 {wallet.coin}:
               </Heading>

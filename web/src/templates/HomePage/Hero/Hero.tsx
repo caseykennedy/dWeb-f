@@ -11,8 +11,8 @@ import { Box, Text, useColorMode } from 'theme-ui'
 
 // Components
 import Section from '../../../components/Section'
-import Symbol from '../../../components/SymbolColored'
-import SymbolDots from '../../../components/SymbolDots'
+import Symbol from '../../../components/SVG/SymbolColored'
+import SymbolDots from '../../../components/SVG/SymbolDots'
 import ParallaxWrapper from '../../../components/ParallaxWrapper'
 
 // ___________________________________________________________________

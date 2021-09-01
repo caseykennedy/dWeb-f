@@ -15,7 +15,7 @@ import * as S from './styles.scss'
 import { Box, Flex, Text, useColorMode } from 'theme-ui'
 
 // Components
-import Symbol from '../Symbol'
+import Symbol from '../SVG/Symbol'
 import Navigation from './Navigation'
 import MobileNav from './MobileNav'
 import Modal from '../Modal'

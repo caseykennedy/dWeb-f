@@ -11,37 +11,64 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-export const AboutPage = styled(Box)`
+export const AboutPage = styled(Box)<{ isDark: boolean }>`
   width: 100%;
 
   .biobox {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
     justify-content: space-between;
-    border: ${theme.border};
-    margin-top: ${theme.space[4]};
 
-    &:first-child {
-      margin-bottom: 0;
-    }
+    background: ${(p) =>
+      p.isDark ? theme.colors.black : theme.colors.white};
+    border: ${theme.border};
 
     @media ${theme.mq.tablet} {
-      margin-top: ${theme.space[5]};
+      flex-direction: row-reverse;
     }
 
-    p {
+    .bio {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
       flex: 3;
-      padding: ${theme.space[2]};
+      padding: ${theme.space[3]};
 
       @media ${theme.mq.tablet} {
-        padding: ${theme.space[4]};
-    }
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        margin-right: ${theme.space[2]};
+
+        svg {
+          fill: ${theme.colors.gray};
+          width: 24px;
+        }
+
+        &:hover {
+          svg {
+            fill: ${(p) =>
+              p.isDark
+                ? theme.colors.modes.dark.primary
+                : theme.colors.primary};
+          }
+        }
+      }
     }
 
     .avatar {
       flex: 1;
       padding: ${theme.space[2]};
-      width: 100%;
+      /* width: 100%; */
+
+      @media ${theme.mq.tablet} {
+        flex: 1;
+      }
     }
   }
 `

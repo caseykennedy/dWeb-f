@@ -45,7 +45,7 @@ const StyledButton = styled(Flex)<{
   font-weight: 500;
 
   background: ${(p) =>
-    p.isDark ? theme.colors.modes.dark.muted : theme.colors.muted};
+    p.isDark ? theme.colors.modes.dark.white : theme.colors.white};
   border: ${theme.border};
   border-color: ${(p) =>
     p.isDark ? theme.colors.modes.dark.text : theme.colors.text};

@@ -36,6 +36,8 @@ const usePerson = () => {
             slug {
               current
             }
+            linkedIn
+            twitter
           }
         }
       }

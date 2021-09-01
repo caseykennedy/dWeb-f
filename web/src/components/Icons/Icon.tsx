@@ -13,11 +13,12 @@ import IconStyle from './styles.scss'
 import Hamburger from './SVG/Hamburger'
 import Facebook from './SVG/Facebook'
 import Instagram from './SVG/Instagram'
+import LinkedIn from './SVG/LinkedIn'
 import Twitter from './SVG/Twitter'
 import NextArrow from './SVG/NextArrow'
 import Bag from './SVG/Bag'
 import Carat from './SVG/Carat'
-
+import Discord from './SVG/Discord'
 
 import Document from './SVG/Document'
 import Download from './SVG/Download'
@@ -49,10 +50,22 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
           <NextArrow />
         </IconStyle>
       )
+    case 'bag':
+      return (
+        <IconStyle color={color} className={className}>
+          <Bag />
+        </IconStyle>
+      )
     case 'carat':
       return (
         <IconStyle color={color} className={className}>
           <Carat />
+        </IconStyle>
+      )
+    case 'discord':
+      return (
+        <IconStyle color={color} className={className}>
+          <Discord />
         </IconStyle>
       )
     case 'document':
@@ -97,10 +110,10 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
           <Instagram />
         </IconStyle>
       )
-    case 'bag':
+    case 'linkedIn':
       return (
         <IconStyle color={color} className={className}>
-          <Bag />
+          <LinkedIn />
         </IconStyle>
       )
     case 'listView':

@@ -40,9 +40,9 @@ export const Header = styled(Box)`
 `
 
 export const Menu = styled(Flex)`
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-end;
-
+  height: fit-content;
 
   .toggle {
     &__menu {

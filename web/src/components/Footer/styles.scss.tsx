@@ -28,5 +28,31 @@ export const Footer = styled(Flex)`
     width: 100%;
 
     font-size: ${theme.fontSizes[1]};
+
+    nav {
+      display: flex;
+      align-items: center;
+
+      a {
+        display: flex;
+        align-items: center;
+        margin-left: ${theme.space[4]};
+        font-weight: 500;
+
+        &:hover {
+          color: ${theme.colors.primary};
+        }
+
+        svg {
+          fill: ${theme.colors.gray};
+          height: auto;
+          width: 20px;
+
+          &:hover {
+            fill: ${theme.colors.primary};
+          }
+        }
+      }
+    }
   }
 `

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import theme from '../gatsby-plugin-theme-ui'
+import theme from '../../gatsby-plugin-theme-ui'
 
 const SymbolDots = () => (
   <svg width="330" viewBox="0 0 329.94 375.27">
