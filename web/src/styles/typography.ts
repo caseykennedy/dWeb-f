@@ -250,6 +250,7 @@ const Typography = css`
   .text--xxl {
     /* font-family: ${theme.fonts.display}; */
     font-size: calc(${theme.fontSizes[5]});
+    line-height: calc(${theme.root.font.headingLineHeight} / 1.1);
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.fontSizes[6]};
@@ -267,7 +268,7 @@ const Typography = css`
 
   h3,
   .text--lg {
-    font-size: calc(${theme.fontSizes[3]} * 1.15);
+    font-size: calc(${theme.fontSizes[3]});
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[4]});
@@ -295,7 +296,7 @@ const Typography = css`
 
   p,
   .text--base {
-    font-size: calc(${theme.fontSizes[2]} / 1);
+    font-size: calc(${theme.fontSizes[2]} / 1.15);
     font-weight: 500;
     line-height: ${theme.root.font.bodyLineHeight};
     margin: 0 0 ${theme.space[3]};

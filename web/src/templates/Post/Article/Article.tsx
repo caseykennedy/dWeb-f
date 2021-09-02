@@ -43,7 +43,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
               {post.publishedAt}
             </Text>
 
-            <Heading as="h1" mb={4} className="text--xxl">
+            <Heading as="h1" mb={4} className="text--xl">
               {post.title}
             </Heading>
 

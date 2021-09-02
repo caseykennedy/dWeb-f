@@ -25,8 +25,8 @@ const Hero: React.FC<Props> = () => {
   return (
     <S.Hero isDark={isDark}>
       <Section>
-        <Text as="p" mb={0}>
-          A Foundation for the Third Internet Era
+        <Text mb={0} className="text--sm">
+          A Foundation for the<br />Third Internet Era
         </Text>
       </Section>
       <Box className="decorator  decorator__blockchain">
