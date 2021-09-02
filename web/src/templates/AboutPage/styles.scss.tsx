@@ -67,11 +67,12 @@ export const AboutPage = styled(Box)<{ isDark: boolean }>`
 
     .avatar {
       flex: 1;
-      padding: ${theme.space[3]};
+      padding: ${theme.space[1]} ${theme.space[3]} ${theme.space[3]};
       /* width: 100%; */
 
       @media ${theme.mq.tablet} {
         flex: 1;
+        padding: ${theme.space[3]};
       }
     }
   }

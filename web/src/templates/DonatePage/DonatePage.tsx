@@ -21,7 +21,7 @@ const DonatePage: React.FC = () => {
     <S.DonatePage>
       <Section>
         <Flex>
-          <Box sx={{ flex: [1, 0.5], width: '100%' }}>
+          <Box sx={{ flex: [1, 0.75, 0.5], width: '100%' }}>
             <Heading as="h1" className="text--lg">
               Every donation helps us build a better, more decentralized
               internet for all.
