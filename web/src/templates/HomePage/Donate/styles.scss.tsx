@@ -28,8 +28,8 @@ export const Donate = styled(Box)<{ isDark: boolean }>`
       right: 70%;
       bottom: 0;
       /* left: 0; */
-      height: 100%;
-      width: 100%;
+      height: 80%;
+      width: 80%;
       z-index: -1;
       /* transform: rotate(-25deg); */
     }

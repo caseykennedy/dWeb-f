@@ -1902,7 +1902,7 @@
     </style>
     <linearGradient id="Indigo_187" x1="253.01" y1="63.34" x2="287.28" y2="63.34" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#5700ff" />
-      <stop offset="0.5" stop-color="#683bff" />
+      <stop offset="0.5" stop-color="#a2f6ff" />
       <stop offset="1" stop-color="#2d00ff" />
     </linearGradient>
     <linearGradient id="Indigo_187-2" x1="253.01" y1="71.41" x2="287.28" y2="71.41" xlink:href="#Indigo_187" />

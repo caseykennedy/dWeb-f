@@ -20,7 +20,7 @@ const Newsletter = () => {
   const isDark = colorMode === 'dark'
   return (
     <S.Newsletter isDark={isDark}>
-      <Section bg="muted" border={true}>
+      <Section bg="white" border={true}>
         <Box mb={9}>
           <Heading as="h3">Coming to a browser near you.</Heading>
         </Box>
@@ -80,7 +80,25 @@ const Newsletter = () => {
           </Box>
 
           <Flex sx={{ flex: 1 }} className="social">
-            <a href="https://twitter.com/dwebfoundation" target="_blank">
+            <a
+              href="https://github.com/dwebfoundation"
+              rel="noopener noreferer"
+              target="_blank"
+            >
+              <Icon name="github" />
+            </a>
+            <a
+              href="https://discord.gg/QDaSTd6r"
+              rel="noopener noreferer"
+              target="_blank"
+            >
+              <Icon name="discord" />
+            </a>
+            <a
+              href="https://twitter.com/dwebfoundation"
+              rel="noopener noreferer"
+              target="_blank"
+            >
               <Icon name="twitter" />
             </a>
           </Flex>

@@ -41,7 +41,7 @@ export const Hero = styled(Flex)<{ isDark: boolean }>`
       transform: scale(0.8);
 
       @media ${theme.mq.tablet} {
-        transform: scale(0.9);
+        transform: scale(1);
       }
     }
   }

@@ -21,21 +21,34 @@ export const Newsletter = styled(Box)<{ isDark: boolean }>`
       justify-content: flex-end;
     }
 
-    svg {
-      fill: ${(p) =>
-        darken(
-          0.1,
-          p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary
-        )};
-      width: ${theme.space[6]};
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      @media ${theme.mq.tablet} {
-        width: calc(${theme.space[7]} / 1.15);
+      margin-left: ${theme.space[5]};
+      height: 100%;
+
+      &:first-child {
+        margin-left: 0;
       }
 
-      &:hover {
+      svg {
         fill: ${(p) =>
-          p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+          darken(
+            0.1,
+            p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary
+          )};
+        width: ${theme.space[6]};
+
+        @media ${theme.mq.tablet} {
+          width: calc(${theme.space[7]} / 1.15);
+        }
+
+        &:hover {
+          fill: ${(p) =>
+            p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+        }
       }
     }
   }
