@@ -116,7 +116,7 @@ const theme: ThemeShape = {
     tertiary: '#2d00ff',
     accent: '#b5a0ff',
     highlight: '#fdffd4',
-    muted: '#f2f2f2',
+    muted: '#ededed',
 
     black: '#000000',
     white: '#ffffff',

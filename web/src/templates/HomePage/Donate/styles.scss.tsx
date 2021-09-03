@@ -12,27 +12,26 @@ import { Box } from 'theme-ui'
 export const Donate = styled(Box)<{ isDark: boolean }>`
   .decorator {
     position: relative;
-    width: 100%;
+    z-index: 1;
 
     svg {
       width: 100%;
     }
 
-    &__graph {
-      margin: 0 auto;
+    &:after {
+      background: ${(p) =>
+        p.isDark ? theme.colors.modes.dark.muted : theme.colors.muted};
+      /* border-radius: 25px; */
+      content: '';
       position: absolute;
-      top: 30%;
-      right: 25%;
+      top: 0;
+      right: 70%;
       bottom: 0;
-      left: 0;
-      width: 20%;
-    }
-
-    &__cubes {
-      position: absolute;
-      bottom: ${theme.space[5]};
-      left: 0;
-      width: 80%;
+      /* left: 0; */
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      /* transform: rotate(-25deg); */
     }
   }
 

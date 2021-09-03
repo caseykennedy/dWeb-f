@@ -30,7 +30,7 @@ const Features = () => {
     <S.Donate isDark={isDark}>
       <Section border={true}>
         <Box>
-          <Heading as="h3" mb={3}>
+          <Heading as="h3">
             Assist us in decentralizing
             <br />
             the world wide web.
@@ -44,22 +44,22 @@ const Features = () => {
             flexWrap: 'wrap',
           }}
         >
-          <Box sx={{ flex: 1, width: '100%' }}>
-            {/* <Flex px={theme.gutter.axis} className="decorator">
+          <Flex
+            sx={{
+              flex: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+              py: [6],
+              width: '100%',
+            }}
+          >
+            <Flex className="decorator">
               <CubeDots />
-
-              <Box className="decorator__cubes">
-                <Cubes />
-              </Box>
-
-              <Box className="decorator__graph">
-                <BarGraph />
-              </Box>
-            </Flex> */}
-          </Box>
+            </Flex>
+          </Flex>
 
           <Box sx={{ flex: 1 }}>
-            <Text as="p" my={[7]} px={[0, 6, 7]} color="gray">
+            <Text as="p" px={[0, 6, 7]} color="gray">
               "Whatever we build, it must be about all of us and none of us at
               the same time."
               <br />
@@ -76,7 +76,7 @@ const Features = () => {
           }}
         >
           <Box sx={{ flex: 1 }}>
-            <Text as="p" mt={6} mb={3} sx={{ fontWeight: 500 }}>
+            <Text as="p" mb={3} sx={{ fontWeight: 500 }}>
               Support the dWeb Foundation in the quest for a rich, equal,
               interconnected internet.
             </Text>

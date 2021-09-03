@@ -9,28 +9,20 @@ import React from 'react'
 import IconStyle from './styles.scss'
 
 // Icons
-// TODO: alphabetize
-import Hamburger from './SVG/Hamburger'
-import Facebook from './SVG/Facebook'
-import Instagram from './SVG/Instagram'
-import LinkedIn from './SVG/LinkedIn'
-import Twitter from './SVG/Twitter'
-import NextArrow from './SVG/NextArrow'
-import Bag from './SVG/Bag'
 import Carat from './SVG/Carat'
 import Discord from './SVG/Discord'
-
 import Document from './SVG/Document'
 import Download from './SVG/Download'
 import ExternalLink from './SVG/ExternalLink'
-
-import GridView from './SVG/GridView'
-import ListView from './SVG/ListView'
-
+import Facebook from './SVG/Facebook'
+import GitHub from './SVG/GitHub'
+import Instagram from './SVG/Instagram'
+import LinkedIn from './SVG/LinkedIn'
+import NextArrow from './SVG/NextArrow'
 import Pdf from './SVG/Pdf'
 import Plus from './SVG/Plus'
 import Pin from './SVG/Pin'
-
+import Twitter from './SVG/Twitter'
 import Youtube from './SVG/Youtube'
 
 // ___________________________________________________________________
@@ -48,12 +40,6 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
       return (
         <IconStyle color={color} className={className}>
           <NextArrow />
-        </IconStyle>
-      )
-    case 'bag':
-      return (
-        <IconStyle color={color} className={className}>
-          <Bag />
         </IconStyle>
       )
     case 'carat':
@@ -92,16 +78,10 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
           <Facebook />
         </IconStyle>
       )
-    case 'gridView':
+    case 'github':
       return (
         <IconStyle color={color} className={className}>
-          <GridView />
-        </IconStyle>
-      )
-    case 'hamburger':
-      return (
-        <IconStyle color={color} className={className}>
-          <Hamburger />
+          <GitHub />
         </IconStyle>
       )
     case 'instagram':
@@ -114,12 +94,6 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
       return (
         <IconStyle color={color} className={className}>
           <LinkedIn />
-        </IconStyle>
-      )
-    case 'listView':
-      return (
-        <IconStyle color={color} className={className}>
-          <ListView />
         </IconStyle>
       )
     case 'pdf':

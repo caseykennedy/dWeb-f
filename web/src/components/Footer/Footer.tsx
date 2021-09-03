@@ -28,11 +28,11 @@ const Footer: React.FC = () => {
 
         <Flex as="nav">
           <a
-            href="https://twitter.com/dwebfoundation"
+            href="https://github.com/dwebfoundation"
             rel="noopener noreferer"
             target="_blank"
           >
-            <Icon name="twitter" />
+            <Icon name="github" />
           </a>
           <a
             href="https://discord.gg/QDaSTd6r"
@@ -40,6 +40,13 @@ const Footer: React.FC = () => {
             target="_blank"
           >
             <Icon name="discord" />
+          </a>
+          <a
+            href="https://twitter.com/dwebfoundation"
+            rel="noopener noreferer"
+            target="_blank"
+          >
+            <Icon name="twitter" />
           </a>
         </Flex>
       </Flex>
