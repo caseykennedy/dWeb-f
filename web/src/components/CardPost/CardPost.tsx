@@ -33,7 +33,7 @@ const CardPost: React.FC<Props> = ({
   return (
     <Link
       to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}
-      style={{ display: 'flex', height: '100%' }}
+      style={{ display: 'flex', height: '' }}
     >
       <S.CardPost bg="white" inline={inline}>
         <Flex
@@ -47,7 +47,7 @@ const CardPost: React.FC<Props> = ({
             {post.title && post.title}
           </Text>
 
-          <Text sx={{ fontSize: [1, 0] }}>{post.publishedAt}</Text>
+          <Text sx={{ fontSize: [1] }}>{post.publishedAt}</Text>
         </Flex>
 
         <Box
