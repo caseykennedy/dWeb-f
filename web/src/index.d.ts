@@ -119,6 +119,7 @@ type PersonQuery = {
   }
   name: string
   role: string
+  executiveDirector: boolean
   slug: {
     current: string
   }

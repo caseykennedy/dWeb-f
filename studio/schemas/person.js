@@ -19,10 +19,16 @@ export default {
       of: [{ type: 'string' }],
       options: {
         list: [
-          { title: 'Admin', value: 'admin' },
-          { title: 'Author', value: 'author' }
+          { title: 'Advisor', value: 'advisor' },
+          { title: 'Director', value: 'director' },
+          { title: 'Team', value: 'team' }
         ]
       }
+    },
+    {
+      name: 'executiveDirector',
+      title: 'Executive Director?',
+      type: 'boolean'
     },
     {
       name: 'slug',

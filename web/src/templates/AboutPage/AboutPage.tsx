@@ -23,11 +23,13 @@ const AboutPage: React.FC = () => {
   const people = usePerson()
   const [colorMode] = useColorMode()
   const isDark = colorMode === 'dark'
+
+  console.log(people)
   return (
     <S.AboutPage isDark={isDark}>
       <Section>
         <Flex>
-          <Box sx={{ flex: [1, 0.75, 0.5], width: '100%' }}>
+          <Box sx={{ flex: [1, 0.75, 0.55], width: '100%' }}>
             <Heading as="h1" className="text--lg" sx={{ mb: 3 }}>
               Operating out of Singapore, we are supporters of the early
               decentralized internet.
@@ -43,9 +45,9 @@ const AboutPage: React.FC = () => {
       </Section>
 
       <Section>
-        <Text as="p" mb={4} className="text--sm">
+        {/* <Text as="p" mb={4} className="text--sm">
           Our Board of Advisors:
-        </Text>
+        </Text> */}
         <Grid columns={[1, 2]} gap={4}>
           {people.map(({ node: person }, idx) => (
             <Flex className="biobox" key={idx}>
