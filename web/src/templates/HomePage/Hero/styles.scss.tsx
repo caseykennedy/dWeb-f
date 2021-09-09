@@ -53,6 +53,8 @@ export const Hero = styled(Flex)<{ isDark: boolean }>`
 
     &__bg {
       svg {
+        height: intrinsic;
+        width: 100%;
         transform: scale(4);
 
         @media ${theme.mq.tablet} {

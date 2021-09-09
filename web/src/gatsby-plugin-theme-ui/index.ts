@@ -23,7 +23,7 @@ const theme: ThemeShape = {
   // Color palette
   // ___________________________________________________________________
 
-  initialColorModeName: 'default',
+  initialColorModeName: 'dark',
   useColorSchemeMediaQuery: false,
   // useBodyStyles: false,
   // useRootStyles: true,
