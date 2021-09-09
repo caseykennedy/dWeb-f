@@ -27,7 +27,7 @@ const theme: ThemeShape = {
   useColorSchemeMediaQuery: false,
   // useBodyStyles: false,
   // useRootStyles: true,
-  // useLocalStorage: true,
+  useLocalStorage: false,
   colors: {
     text: '#242424',
     background: '#f2f2f2',
