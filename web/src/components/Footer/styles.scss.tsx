@@ -29,11 +29,6 @@ export const Footer = styled(Flex)`
 
     font-size: ${theme.fontSizes[1]};
 
-    nav {
-      display: flex;
-      align-items: center;
-    }
-
     a {
       display: flex;
       align-items: center;

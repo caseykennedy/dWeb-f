@@ -184,6 +184,7 @@ export const AboutUs = styled(Box)`
     }
 
     svg {
+      height: intrinsic;
       width: 50px;
 
       @media ${theme.mq.tablet} {

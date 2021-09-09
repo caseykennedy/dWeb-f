@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
+import { darken } from 'polished'
 import styled from 'styled-components'
 import { useColorMode } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
@@ -9,7 +10,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 type Props = { strokeWidth?: string }
 
 const Grid: React.FC<Props> = ({ strokeWidth }) => {
-  const [colorMode, setColorMode] = useColorMode()
+  const [colorMode] = useColorMode()
   const isDark = colorMode === 'dark'
   return (
     <SVG
@@ -375,7 +376,10 @@ const Grid: React.FC<Props> = ({ strokeWidth }) => {
         className="torus-1"
         d="M456.77,0h-1.7c5.49,4.11,10.27,8.34,11.85,12.9A154.66,154.66,0,0,1,449.21,0h-1.65c6.57,5.48,13.25,10.79,20.88,14.82C468.2,9.9,462.93,4.79,456.77,0Z"
       />
-      <path className="torus-1" d="M498.73,0h-5.55A11.57,11.57,0,0,0,498.73,0Z" />
+      <path
+        className="torus-1"
+        d="M498.73,0h-5.55A11.57,11.57,0,0,0,498.73,0Z"
+      />
       <path
         className="torus-1"
         d="M193.07,1.9c4.72,1,10.32,1.39,14.76,2.91,9.13,2.57,18.25,3.33,27.51,5.06,4.12.36,11.24-5.1,16.47-9.87H250.2c-4.53,4-10,8.26-14.08,8.86-15.46-1.11-30.68-7.43-46-7.71h0a1.82,1.82,0,0,1-.28-.14,5.28,5.28,0,0,1,.6-1h-1.25a3.86,3.86,0,0,0-.61,1.56l.42.18C190.17,2.61,191.75,1.76,193.07,1.9Z"
@@ -743,6 +747,9 @@ export default Grid
 
 const SVG = styled(motion.svg)<{ isDark: boolean; strokeWidth?: string }>`
   .torus-1 {
-    fill: ${(p) => (p.isDark ? theme.colors.black : '#e3e0ff')};
+    fill: ${(p) =>
+      p.isDark
+        ? darken(0.1, theme.colors.modes.dark.highlight)
+        : darken(0.07, theme.colors.muted)};
   }
 `

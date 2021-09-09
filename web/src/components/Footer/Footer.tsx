@@ -26,28 +26,17 @@ const Footer: React.FC = () => {
           <Link to="/contact">Contact</Link>
         </Flex>
 
-        <Flex as="nav">
-          <a
-            href="https://github.com/dwebfoundation"
-            rel="noopener noreferer"
-            target="_blank"
-          >
-            <Icon name="github" />
-          </a>
-          <a
-            href="https://discord.gg/QDaSTd6r"
-            rel="noopener noreferer"
-            target="_blank"
-          >
-            <Icon name="discord" />
-          </a>
-          <a
-            href="https://twitter.com/dwebfoundation"
-            rel="noopener noreferer"
-            target="_blank"
-          >
-            <Icon name="twitter" />
-          </a>
+        <Flex sx={{ alignItems: 'center' }}>
+          {data.map((item, key) => (
+            <a
+              href={item.link}
+              rel="noopener noreferer"
+              target="_blank"
+              key={key}
+            >
+              <Icon name={item.name} />
+            </a>
+          ))}
         </Flex>
       </Flex>
     </S.Footer>
@@ -55,3 +44,18 @@ const Footer: React.FC = () => {
 }
 
 export default Footer
+
+const data = [
+  {
+    name: 'github',
+    link: 'https://github.com/dwebfoundation',
+  },
+  {
+    name: 'discord',
+    link: 'https://discord.gg/QDaSTd6r',
+  },
+  {
+    name: 'twitter',
+    link: 'https://twitter.com/dwebfoundation',
+  },
+]

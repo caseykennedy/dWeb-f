@@ -128,7 +128,7 @@ const Introduction = () => {
 
   return (
     <S.Introduction>
-      <Section>
+      <Section border={true}>
         <Flex
           sx={{
             flexDirection: ['column', 'row'],

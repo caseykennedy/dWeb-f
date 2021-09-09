@@ -1538,6 +1538,6 @@ export default CubeSpark
 
 const SVG = styled(motion.svg)<{ fill?: string }>`
   .cubespark-1 {
-    fill: ${(p) => (p.fill ? p.fill : theme.colors.tertiary)};
+    fill: ${(p) => (p.fill ? p.fill : theme.colors.primary)};
   }
 `

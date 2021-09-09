@@ -1,84 +1,5 @@
 // Theme / Design system:
 
-// Types
-// ___________________________________________________________________
-
-type ThemeShape = {
-  breakpoints: string[]
-  mq: {
-    [key: string]: string
-  }
-  initialColorModeName?: string
-  useColorSchemeMediaQuery?: boolean
-  useBodyStyles?: boolean
-  useRootStyles?: boolean
-  useLocalStorage?: boolean
-  colors: {
-    text: string
-    background: string
-
-    primary: string
-    secondary: string
-    tertiary: string
-    accent: string
-    highlight: string
-    muted: string
-    black: string
-    white: string
-    gray: string
-    modes: {
-      dark: {
-        [key: string]: string
-      }
-    }
-  }
-  space: string[]
-  gutter: {
-    [key: string]: string | number | number[]
-  }
-  fonts: {
-    [key: string]: string
-  }
-  fontSizes: string[]
-  Heading: {
-    [key: string]: string
-  }
-  fontWeights: {
-    [key: string]: number
-  }
-  strokeWidth: string
-  maxWidth: string
-  siteWidth: string
-  logoWidth: string
-  headerHeight: string
-  tickerHeight: string
-  iconWidth: string
-  grid: {
-    [key: string]: string
-  }
-  transition: {
-    [key: string]: string
-  }
-  transform: {
-    matrix: {
-      [key: string]: string
-    }
-  }
-  border: string
-  borderRadius: string
-  shadow: string
-  root: {
-    mouseX: string
-    mouseY: string
-    font: {
-      [key: string]: string
-    }
-    space: {
-      [key: string]: string
-    }
-  }
-}
-
 // Begin theme
 // ___________________________________________________________________
 
@@ -125,7 +46,7 @@ const theme: ThemeShape = {
     modes: {
       dark: {
         text: '#f2f2f2',
-        background: '#191919',
+        background: '#151515',
 
         primary: '#b5a0ff',
         highlight: '#403d4e',

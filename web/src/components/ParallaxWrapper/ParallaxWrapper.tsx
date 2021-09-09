@@ -22,7 +22,7 @@ const PostMeta: React.FC<Props> = ({ children, speed }) => {
   return (
     <motion.div
       animate={{ x: position.x, y: position.y }}
-      transition={{ type: 'spring', stiffness: 50 }}
+      transition={{ type: 'spring', stiffness: 33 }}
     >
       {children}
     </motion.div>

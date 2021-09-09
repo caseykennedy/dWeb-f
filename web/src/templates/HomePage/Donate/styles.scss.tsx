@@ -15,6 +15,7 @@ export const Donate = styled(Box)<{ isDark: boolean }>`
     z-index: 1;
 
     svg {
+      height: intrinsic;
       width: 100%;
     }
 
