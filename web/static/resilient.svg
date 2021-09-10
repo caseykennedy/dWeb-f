@@ -4,7 +4,7 @@
       .resilient-1,
       .resilient-2 {
         fill: none;
-        stroke: #000;
+        stroke: #6a6c72;
       }
 
       .resilient-1 {

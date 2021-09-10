@@ -55,7 +55,7 @@ const Handshake = () => {
               <CubeSpark />
             </Box>
 
-            <Flex className="built-on">
+            <Flex pl={[0, 5]} className="built-on">
               <Text as="p">Built on</Text>
               <span>
                 <HandshakeLogo fill="black" />

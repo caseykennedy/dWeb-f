@@ -15,7 +15,7 @@
 
       .private-4 {
         fill: none;
-        stroke: #000;
+        stroke: #6a6c72;
         stroke-linejoin: round;
         stroke-width: 0.73px;
       }

@@ -3,7 +3,7 @@
     <style>
       .scalable-1 {
         fill: none;
-        stroke: #000;
+        stroke: #6a6c72;
         stroke-miterlimit: 10;
         stroke-width: 0.74px;
       }

@@ -22,7 +22,7 @@
       }
 
       .trustless-1 {
-        stroke: #000;
+        stroke: #6a6c72;
         stroke-linejoin: bevel;
         stroke-width: 0.82px;
       }
@@ -141,6 +141,7 @@
 
       .trustless-19 {
         fill-rule: evenodd;
+        fill: #6a6c72;
       }
     </style>
   </defs>

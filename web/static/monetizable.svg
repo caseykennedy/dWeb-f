@@ -3,7 +3,7 @@
     <style>
       .monetizable-1 {
         fill: none;
-        stroke: #000;
+        stroke: #6a6c72;
         stroke-linecap: square;
         stroke-linejoin: bevel;
         stroke-width: 0.82px;
