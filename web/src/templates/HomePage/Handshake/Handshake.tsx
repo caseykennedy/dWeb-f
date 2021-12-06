@@ -15,9 +15,6 @@ import TorusGrid from '../../../components/SVG/TorusGrid'
 import CubeSpark from '../../../components/SVG/CubeSpark'
 import HandshakeLogo from '../../../components/SVG/Handshake'
 
-// Data
-import usePost from '../../../hooks/usePost'
-
 // ___________________________________________________________________
 
 const Handshake = () => {

@@ -52,7 +52,7 @@ const data = [
   },
   {
     name: 'discord',
-    link: 'https://discord.gg/QDaSTd6r',
+    link: 'https://discord.gg/8NvBRsacsk',
   },
   {
     name: 'twitter',
