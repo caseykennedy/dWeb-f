@@ -13,6 +13,9 @@ import { Box, Flex } from 'theme-ui'
 // Components
 import Icon from '../Icons'
 
+// Content
+import social from '../../../content/social.json'
+
 // ___________________________________________________________________
 
 const getYear = () => new Date().getFullYear()
@@ -27,14 +30,9 @@ const Footer: React.FC = () => {
         </Flex>
 
         <Flex sx={{ alignItems: 'center' }}>
-          {data.map((item, key) => (
-            <a
-              href={item.link}
-              rel="noopener noreferer"
-              target="_blank"
-              key={key}
-            >
-              <Icon name={item.name} />
+          {social.map(({ name, link }, idx) => (
+            <a href={link} rel="noopener noreferer" target="_blank" key={idx}>
+              <Icon name={name} />
             </a>
           ))}
         </Flex>
@@ -44,18 +42,3 @@ const Footer: React.FC = () => {
 }
 
 export default Footer
-
-const data = [
-  {
-    name: 'github',
-    link: 'https://github.com/dwebfoundation',
-  },
-  {
-    name: 'discord',
-    link: 'https://discord.gg/8NvBRsacsk',
-  },
-  {
-    name: 'twitter',
-    link: 'https://twitter.com/dwebfoundation',
-  },
-]

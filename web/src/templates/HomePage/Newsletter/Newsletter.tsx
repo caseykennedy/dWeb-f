@@ -13,6 +13,9 @@ import { Box, Flex, Heading, Text, Input, useColorMode } from 'theme-ui'
 import Section from '../../../components/Section'
 import Icon from '../../../components/Icons'
 
+// Content
+import social from '../../../../content/social.json'
+
 // ___________________________________________________________________
 
 const Newsletter = () => {
@@ -80,27 +83,11 @@ const Newsletter = () => {
           </Box>
 
           <Flex sx={{ flex: 1 }} className="social">
-            <a
-              href="https://github.com/dwebfoundation"
-              rel="noopener noreferer"
-              target="_blank"
-            >
-              <Icon name="github" />
-            </a>
-            <a
-              href="https://discord.gg/8NvBRsacsk"
-              rel="noopener noreferer"
-              target="_blank"
-            >
-              <Icon name="discord" />
-            </a>
-            <a
-              href="https://twitter.com/dwebfoundation"
-              rel="noopener noreferer"
-              target="_blank"
-            >
-              <Icon name="twitter" />
-            </a>
+            {social.map(({ name, link }, idx) => (
+              <a href={link} rel="noopener noreferer" target="_blank" key={idx}>
+                <Icon name={name} />
+              </a>
+            ))}
           </Flex>
         </Flex>
       </Section>
