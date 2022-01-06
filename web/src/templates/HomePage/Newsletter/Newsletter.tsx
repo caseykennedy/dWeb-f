@@ -88,7 +88,7 @@ const Newsletter = () => {
               <Icon name="github" />
             </a>
             <a
-              href="https://discord.gg/QDaSTd6r"
+              href="https://discord.gg/8NvBRsacsk"
               rel="noopener noreferer"
               target="_blank"
             >
