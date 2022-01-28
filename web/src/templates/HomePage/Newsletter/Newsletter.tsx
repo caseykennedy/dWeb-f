@@ -14,11 +14,12 @@ import Section from '../../../components/Section'
 import Icon from '../../../components/Icons'
 
 // Content
-import social from '../../../../content/social.json'
+import useSocial from '../../../hooks/useSocial'
 
 // ___________________________________________________________________
 
 const Newsletter = () => {
+  const social = useSocial()
   const [colorMode] = useColorMode()
   const isDark = colorMode === 'dark'
   return (
@@ -83,9 +84,9 @@ const Newsletter = () => {
           </Box>
 
           <Flex sx={{ flex: 1 }} className="social">
-            {social.map(({ name, link }, idx) => (
-              <a href={link} rel="noopener noreferer" target="_blank" key={idx}>
-                <Icon name={name} />
+            {social.map(({ node: item }, idx) => (
+              <a href={item.url} rel="noopener noreferer" target="_blank" key={idx}>
+                <Icon name={item.platform} />
               </a>
             ))}
           </Flex>

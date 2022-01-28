@@ -14,13 +14,14 @@ import { Box, Flex } from 'theme-ui'
 import Icon from '../Icons'
 
 // Content
-import social from '../../../content/social.json'
+import useSocial from '../../hooks/useSocial'
 
 // ___________________________________________________________________
 
 const getYear = () => new Date().getFullYear()
 
 const Footer: React.FC = () => {
+  const social = useSocial()
   return (
     <S.Footer pt={[4]} pb={[6]} px={theme.gutter.axis}>
       <Flex className="footer-inner">
@@ -30,9 +31,14 @@ const Footer: React.FC = () => {
         </Flex>
 
         <Flex sx={{ alignItems: 'center' }}>
-          {social.map(({ name, link }, idx) => (
-            <a href={link} rel="noopener noreferer" target="_blank" key={idx}>
-              <Icon name={name} />
+          {social.map(({ node: item }, idx) => (
+            <a
+              href={item.url}
+              rel="noopener noreferer"
+              target="_blank"
+              key={idx}
+            >
+              <Icon name={item.platform} />
             </a>
           ))}
         </Flex>

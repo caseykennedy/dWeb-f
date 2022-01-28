@@ -1,48 +1,55 @@
-import S from "@sanity/desk-tool/structure-builder";
-import { MdAssignment, MdStop, MdSettings, MdViewDay, MdFolder } from "react-icons/md";
-import { GoFile } from "react-icons/go";
+import S from '@sanity/desk-tool/structure-builder'
+import { MdStop, MdSettings } from 'react-icons/md'
+import { GoFile } from 'react-icons/go'
 
-const hiddenTypes = [
-  "category",
-  "companyInfo",
-  "page",
-  "person",
-  "post",
-  "project",
-  "siteSettings"
-];
+// const hiddenTypes = [
+//   'category',
+//   'companyInfo',
+//   'page',
+//   'person',
+//   'post',
+//   'project',
+//   'siteSettings'
+// ]
 
 export default () =>
   S.list()
-    .title("HNSF Content")
+    .title('HNSF Content')
     .items([
       // Settings
       // _________________________________________________________________
       S.listItem()
-        .title("Site Settings")
+        .title('Site Settings')
         .child(
           S.editor()
-            .id("siteSettings")
-            .schemaType("siteSettings")
-            .documentId("siteSettings")
+            .id('siteSettings')
+            .schemaType('siteSettings')
+            .documentId('siteSettings')
         )
         .icon(MdSettings),
+
+      // Social
+      // _________________________________________________________________
+      S.listItem()
+        .title('Social Links')
+        .schemaType('social')
+        .child(S.documentTypeList('social').title('Social Links')),
 
       // People
       // _________________________________________________________________
 
       S.listItem()
-        .title("People")
-        .schemaType("person")
-        .child(S.documentTypeList("person").title("People")),
+        .title('People')
+        .schemaType('person')
+        .child(S.documentTypeList('person').title('People')),
 
       // Post Category
       // _________________________________________________________________
 
       S.listItem()
-        .title("Post Categories")
-        .schemaType("postCategory")
-        .child(S.documentTypeList("postCategory").title("Post Category"))
+        .title('Post Categories')
+        .schemaType('postCategory')
+        .child(S.documentTypeList('postCategory').title('Post Category'))
 
         .icon(MdStop),
 
@@ -50,12 +57,12 @@ export default () =>
       // _________________________________________________________________
 
       S.listItem()
-        .title("Posts")
-        .schemaType("post")
-        .child(S.documentTypeList("post").title("Post"))
+        .title('Posts')
+        .schemaType('post')
+        .child(S.documentTypeList('post').title('Post'))
 
         .icon(GoFile)
 
       // End
       // _________________________________________________________________
-    ]);
+    ])

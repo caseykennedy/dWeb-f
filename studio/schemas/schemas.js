@@ -14,10 +14,10 @@ import person from './person'
 import post from './post'
 import postCategory from './postCategory'
 import siteSettings from './siteSettings'
+import social from './social'
 import source from './source'
 import tag from './tag'
 import video from './video'
-
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -37,9 +37,10 @@ export default createSchema({
     post,
     postCategory,
     siteSettings,
+    social,
     source,
     tag,
-    video,
+    video
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
